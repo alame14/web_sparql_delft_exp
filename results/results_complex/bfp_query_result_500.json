@@ -1,0 +1,2491 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 168.29844975471497
+    },
+    "queries": [
+        {
+            "query_id": 118,
+            "pattern_id": 15,
+            "en_query": "Give me the price of the first 10 books whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0b8b779155cb48a2ab57414150f0004f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4816c3d3487b48db9c7b8f5547ebe16d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbb814fcdbfd4418d8094d125ff39bf42"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nabe909e76d9f40dc8be6601f6150edee"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "492"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N48dce47f50134f59b67963c22d1660a6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7f76e39f0af7484d8763cf42745c79a7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "2588.80"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6a65f798186f495ebb74c88318190fee"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf483861196d2495c8635c8155936013f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.4"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf97d5d5cc51a466bbdb1aac76440af1f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4faba05de946492d9df690b3227ac1bf"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "258"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Naf3fc523bca04350aeecdd711aa1d908"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N036e4ef2a5564d22a0461a7fe6683e07"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "43.97"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfa47a5b5b8c34e6ea0fb0494858a5826"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N911fa0cf10194e529d296f6ed1c6f1ca"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Necfaba484eca475c9abd9ba1734ed0e0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N30195782a98a4358bd53d3ea9b85a4b8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "575.69"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd8c90340200c4c6eb3aff5451948a6ce"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb64a1633aac54095a66ffa79ec8e6da5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "22.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9c618ecd74a24556bc3430ce5e3f8884"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1c431d7073b04fc9908a11de1d178a90"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1119"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 16.62864875793457,
+            "processing_times": {
+                "query_decomposition": 0.08754634857177734,
+                "static_query_evakluation": 0.10328340530395508,
+                "web_data_retrieval": 45.53020882606506,
+                "dynamic_query_evaluation": 0.009624958038330078,
+                "result_merge": 0.0010058879852294922,
+                "total": 45.731669425964355
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004389047622680664,
+                    "searches": 29.305870294570923,
+                    "web_formatting": 0.0047664642333984375,
+                    "total": 29.315025806427002
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004269838333129883,
+                        "building": 16.284935235977173,
+                        "builder_init": 0.033696651458740234,
+                        "microdata_adding": 16.21091318130493,
+                        "total": 16.343626022338867
+                    },
+                    "property_access_init": 0.05526471138000488,
+                    "properties_update": 0.0031495094299316406,
+                    "total": 16.40206789970398
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 29.315025806427002,
+                    "microdata_extraction": 0.004269838333129883,
+                    "storing": 16.21091318130493,
+                    "total": 45.53020882606506
+                },
+                "microdata_query_evaluation": 0.009285211563110352,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 119,
+            "pattern_id": 16,
+            "en_query": "Give me the publisher of the first 10 books whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisherName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n?publisher schema:name ?publisherName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisherName"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 16.852028131484985,
+            "processing_times": {
+                "query_decomposition": 0.09415531158447266,
+                "static_query_evakluation": 0.09101033210754395,
+                "web_data_retrieval": 45.76203656196594,
+                "dynamic_query_evaluation": 0.01026296615600586,
+                "result_merge": 0.00031828880310058594,
+                "total": 45.957783460617065
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0022878646850585938,
+                    "searches": 29.305869579315186,
+                    "web_formatting": 0.006441831588745117,
+                    "total": 29.31459927558899
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004361629486083984,
+                        "building": 16.517640829086304,
+                        "builder_init": 0.03399085998535156,
+                        "microdata_adding": 16.44307565689087,
+                        "total": 16.573161840438843
+                    },
+                    "property_access_init": 0.05545210838317871,
+                    "properties_update": 0.0033173561096191406,
+                    "total": 16.6319580078125
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 29.31459927558899,
+                    "microdata_extraction": 0.004361629486083984,
+                    "storing": 16.44307565689087,
+                    "total": 45.76203656196594
+                },
+                "microdata_query_evaluation": 0.009920358657836914,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 120,
+            "pattern_id": 17,
+            "en_query": "Give me the price and availability of the first 10 books whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd2a47ecfabfe4caeaf2b8d917688243a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbffb82d6405945c6bd30fd6d531c821e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4788b3e2bd7c4ff99d0c8ebe399d0fea"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4144b4142b8e419faec37158be04068d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "492"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfd0cbcc6d8d94bdd87ec2b88495e0356"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6882435a2d32471a8fafa0df92244150"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "2588.80"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N68f6ac0fe7eb413d952f11a2413ecc6a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf06a78259705417badd40ce6c8f69c6f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.4"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N10e3e9edde18472487b7a707f55d37ac"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3154e01bdcb04c278ac9041732a39645"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "258"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N194cf38357a64a899b5a2669144598c5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N71c538658ca74bfc89648c7cae997f36"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "43.97"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb2f41222470540a9ab3a90d56d6d3afb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nececd119677e4b388b94c0b3523f345a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.2"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndfda39f6b487478482415a0836f3f3a7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb1a20c506e374b028bdf6342385e44ab"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "575.69"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4e4d8e329c8c4dbfb5d688350bf7622f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2bf20b19c1c04d47ab03d29ef2920acb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "22.6"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8999d7c4bc7c4812a7356d011c396277"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6b990faff26a4e979a49e292c7878b2c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1119"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 16.696722984313965,
+            "processing_times": {
+                "query_decomposition": 0.09418463706970215,
+                "static_query_evakluation": 0.09612679481506348,
+                "web_data_retrieval": 45.60089349746704,
+                "dynamic_query_evaluation": 0.0100555419921875,
+                "result_merge": 0.0011675357818603516,
+                "total": 45.802428007125854
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003058910369873047,
+                    "searches": 29.305869102478027,
+                    "web_formatting": 0.0019702911376953125,
+                    "total": 29.310898303985596
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 2.6226043701171875e-06,
+                    "graph_computing": {
+                        "extraction": 0.004411935806274414,
+                        "building": 16.360798597335815,
+                        "builder_init": 0.03461790084838867,
+                        "microdata_adding": 16.28558325767517,
+                        "total": 16.415583610534668
+                    },
+                    "property_access_init": 0.054677486419677734,
+                    "properties_update": 0.0031156539916992188,
+                    "total": 16.47339963912964
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 29.310898303985596,
+                    "microdata_extraction": 0.004411935806274414,
+                    "storing": 16.28558325767517,
+                    "total": 45.60089349746704
+                },
+                "microdata_query_evaluation": 0.009718179702758789,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 121,
+            "pattern_id": 18,
+            "en_query": "Give me the books available for the first 10 books whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2586063bfcb34d56a69dbddea4d872b8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd2a76f48cd0247b5a89da027a67cda13"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Foucault&apos;s Pendulum : Eco, Umberto, Weaver, William: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5ad071fc92224d2db5e58d4884bdfee5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1e855db2a49840929a3466fe0920ebcf"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Foucault&apos;s Pendulum : Eco, Umberto: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nabdf8c58813b4cffb7c00e92fddf0330"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N80a1e6c7e4a340c784d4653adc64df17"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Foucault\u2019s Pendulum"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf07df0f71ad5467e8656a443b9dc3d4d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfadc6ff0ea77469680c09193e26015ad"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Amazon.com: The Island Of The Day Before: 9780156030373: Eco, Umberto: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7b4737f17ce44abbb1099eaf2dcf8bca"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4eeea07b3e104e5488b60da852347812"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy The Island of the Day Before: Stories Book Online at Low Prices in India | The Island of the Day Before: Stories Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5925e78fd05241929572812cbdf553f1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2e3b822780604637b41dd0fe92481c39"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Island of the Day Before : Eco, Umberto, Weaver, William: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N06df759f968340d19bc8e6e91b734628"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7214ce9f87e54c73b7b5510a505ebdbf"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Island of the Day Before: Amazon.co.uk: Umberto Eco: 9780140259193: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N37a6daac34874c3b85dba30f1b8c83bb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne8eacc8613cf409f9c3c589abf6cd729"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Island of the Day Before : Eco, Umberto: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7d0047284275485cbae6126c494c1771"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N759b0707ef4044c5966096bf60d9775b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Mysterious Flame of Queen Loana By Umberto Eco: -Author-: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncf6f13d065414d7e95955f96ca2a537f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N921a4f1928924d7ca03752f5f66b57ff"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Prague Cemetery"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 16.91156554222107,
+            "processing_times": {
+                "query_decomposition": 0.10106778144836426,
+                "static_query_evakluation": 0.09133768081665039,
+                "web_data_retrieval": 45.8074369430542,
+                "dynamic_query_evaluation": 0.010435819625854492,
+                "result_merge": 0.0011265277862548828,
+                "total": 46.01140475273132
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0039713382720947266,
+                    "searches": 29.305869102478027,
+                    "web_formatting": 0.004977703094482422,
+                    "total": 29.314818143844604
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004305601119995117,
+                        "building": 16.562670946121216,
+                        "builder_init": 0.03388094902038574,
+                        "microdata_adding": 16.4883131980896,
+                        "total": 16.62284517288208
+                    },
+                    "property_access_init": 0.055779457092285156,
+                    "properties_update": 0.003325939178466797,
+                    "total": 16.681981086730957
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 29.314818143844604,
+                    "microdata_extraction": 0.004305601119995117,
+                    "storing": 16.4883131980896,
+                    "total": 45.8074369430542
+                },
+                "microdata_query_evaluation": 0.010102272033691406,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 122,
+            "pattern_id": 19,
+            "en_query": "Give me the price of the books available for the first 10 books whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N303eb5c9c1f64499895371588f7b2a27"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N97e185d6878540f9890120123690ccbf"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8ad336d83e534b5cba8f0b6daecfe84e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nffe7722b6bc24551918335c81c85498f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "492"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2fe3d9a7e8664cdc85a543784df74d20"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na825d30690644667bd087fc8a0a3da96"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "2588.80"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3b552f5c8ae1485b8acb386a8f7b5f63"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6a1947b1aa00489a9cba7d9ead713d46"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.4"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfcacffe6e21840e0b3f5913d06e35ca2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne1c7fe16e32e42b0a7a40a9a306e8f27"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "258"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N814b703223184363ab89f161a9b1a194"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8a6fc49376ac415ea7666c0a6f6be155"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "43.97"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nadf26c3dc0d34f969864cfb828f83e09"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N00af6cdf7c844b86874575aafcc317dc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7f337232149c4d9e80e6b24bc9a778c4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd4c55be8b0624dcc956437a4e0380e20"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "575.69"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8c585c48a7a84d4d854983098018c1c8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd9a9a8bc13c24e44922c6475e5f4692e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "22.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9c0dde0e8f51446697749d9a8afcb71f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc084262a5e524be684e97a42b06e5c88"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1119"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 17.09414792060852,
+            "processing_times": {
+                "query_decomposition": 0.10498285293579102,
+                "static_query_evakluation": 0.10349702835083008,
+                "web_data_retrieval": 45.974979877471924,
+                "dynamic_query_evaluation": 0.01017141342163086,
+                "result_merge": 0.0010364055633544922,
+                "total": 46.19466757774353
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004055023193359375,
+                    "searches": 29.305869817733765,
+                    "web_formatting": 0.005603790283203125,
+                    "total": 29.315528631210327
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.245208740234375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0044476985931396484,
+                        "building": 16.731384992599487,
+                        "builder_init": 0.034364938735961914,
+                        "microdata_adding": 16.655003547668457,
+                        "total": 16.789226293563843
+                    },
+                    "property_access_init": 0.05584406852722168,
+                    "properties_update": 0.0032236576080322266,
+                    "total": 16.848324298858643
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 29.315528631210327,
+                    "microdata_extraction": 0.0044476985931396484,
+                    "storing": 16.655003547668457,
+                    "total": 45.974979877471924
+                },
+                "microdata_query_evaluation": 0.009829044342041016,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 40,
+            "pattern_id": 1,
+            "en_query": "Give me the price of every book whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N711099ac8f8b4aaf82b759dc57d4dcd4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndbdb991afea74de0baf1afb15b5be016"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N159118beb16c4e1c88af7f05946f8f36"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1b142273f7e7459eba4bc27efc33e88f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "492"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne37a0683649b4f339fca25c646151ff0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0762174c1fd24ea1a8ee76d55f2acb56"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "2588.80"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7096221b976045ae8d2b18214ace0310"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0d901d94fa0445a9a2d883b654fb859b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.4"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N444b4b90118740bda94eab67af734520"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0cc356da00e943bf8f8f44d5d7a2e334"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "258"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8ccd3ca2d7a045b89113c71cbac10241"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2f6f9390068f4234a8c360272ed0e83d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "43.97"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N40e8f677978743ad9e78605e0cf3c710"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N184e12084b354deebdfa740e8e90ddb9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na83c0d66c0284589a9bbbcad55497130"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8f077954df51407ebfde98a67f4af55e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "575.69"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nadc1a08b88ba4865baf95019b8e459e0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nae80c0147d8349a79233ef253e0ead34"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "22.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N996b784aad914c76a041b38bb54ab135"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N351efb5b10424076af50734d60a6034e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1119"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 17.020006895065308,
+            "processing_times": {
+                "query_decomposition": 0.0961599349975586,
+                "static_query_evakluation": 0.10219335556030273,
+                "web_data_retrieval": 45.90498065948486,
+                "dynamic_query_evaluation": 0.009645462036132812,
+                "result_merge": 0.00101470947265625,
+                "total": 46.113994121551514
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004096508026123047,
+                    "searches": 29.305870294570923,
+                    "web_formatting": 0.004385471343994141,
+                    "total": 29.31435227394104
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004679441452026367,
+                        "building": 16.668615341186523,
+                        "builder_init": 0.03876090049743652,
+                        "microdata_adding": 16.585948944091797,
+                        "total": 16.727850675582886
+                    },
+                    "property_access_init": 0.05546116828918457,
+                    "properties_update": 0.003202199935913086,
+                    "total": 16.78654456138611
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 29.31435227394104,
+                    "microdata_extraction": 0.004679441452026367,
+                    "storing": 16.585948944091797,
+                    "total": 45.90498065948486
+                },
+                "microdata_query_evaluation": 0.00929403305053711,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 41,
+            "pattern_id": 2,
+            "en_query": "Give me the publisher of every book whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisherName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n?publisher schema:name ?publisherName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisherName"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 16.617232084274292,
+            "processing_times": {
+                "query_decomposition": 0.03943324089050293,
+                "static_query_evakluation": 0.10092401504516602,
+                "web_data_retrieval": 45.55982518196106,
+                "dynamic_query_evaluation": 0.010013818740844727,
+                "result_merge": 0.00032258033752441406,
+                "total": 45.7105188369751
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003125905990600586,
+                    "searches": 29.305870056152344,
+                    "web_formatting": 0.0039331912994384766,
+                    "total": 29.312929153442383
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004622697830200195,
+                        "building": 16.32232141494751,
+                        "builder_init": 0.03522825241088867,
+                        "microdata_adding": 16.242273330688477,
+                        "total": 16.378843307495117
+                    },
+                    "property_access_init": 0.05535125732421875,
+                    "properties_update": 0.003283262252807617,
+                    "total": 16.437507152557373
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 29.312929153442383,
+                    "microdata_extraction": 0.004622697830200195,
+                    "storing": 16.242273330688477,
+                    "total": 45.55982518196106
+                },
+                "microdata_query_evaluation": 0.009680986404418945,
+                "microdata_stats_computing": 9.5367431640625e-07
+            }
+        },
+        {
+            "query_id": 42,
+            "pattern_id": 3,
+            "en_query": "Give me the price and availability of every book whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb5561fd12143457fb654e1ea56c4d5c5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ned60e2fa93084e9ead094d7c2844391d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfd04d31841b94a9fad5d35cf5d207d49"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N43a3e739389c4604b6f7d9cbb8085069"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "492"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0023de6ce6b74005ab47a236ace4a011"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne8011d76650044fbb86be4fb6e009b82"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "2588.80"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nde5c6c74613a495d8e6085c3c0103969"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne97cc4c940f041d4a3df8bfed8a4aac0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.4"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3b067b8f4d7b4c0f83a50fd2288535f2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndebe5af0a7f64937bbfb5352a3946fe2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "258"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbe3e07b2ae4c4dda8098d13f3d5b9244"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N812562ede2e04888b62a5082166dd115"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "43.97"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0c5757dc7b8c48568f70a37c2c167241"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N28b7f9585090437c92b4adb7b9ec7ce4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.2"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb723922fbb19470e9d204157df6822c5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndfed6e6d0b86468da3eb0c6d08b60078"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "575.69"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7f9aee1ea51546bfbb6a07c7dc3098fc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1bb7b0e0d12d4a249a9fdfe4c0692d6a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "22.6"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N561af944af8646f2aa8524d825bc2c2c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf6091202c0c84f478e63b56f7be18dad"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1119"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 16.73013973236084,
+            "processing_times": {
+                "query_decomposition": 0.1139826774597168,
+                "static_query_evakluation": 0.09359169006347656,
+                "web_data_retrieval": 45.61007738113403,
+                "dynamic_query_evaluation": 0.010374784469604492,
+                "result_merge": 0.001203298568725586,
+                "total": 45.82922983169556
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0034596920013427734,
+                    "searches": 29.305869340896606,
+                    "web_formatting": 0.005084514617919922,
+                    "total": 29.31441354751587
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.198883056640625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004535675048828125,
+                        "building": 16.367353677749634,
+                        "builder_init": 0.03449082374572754,
+                        "microdata_adding": 16.291128158569336,
+                        "total": 16.427489280700684
+                    },
+                    "property_access_init": 0.055425405502319336,
+                    "properties_update": 0.0031328201293945312,
+                    "total": 16.48607635498047
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 29.31441354751587,
+                    "microdata_extraction": 0.004535675048828125,
+                    "storing": 16.291128158569336,
+                    "total": 45.61007738113403
+                },
+                "microdata_query_evaluation": 0.010020971298217773,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 43,
+            "pattern_id": 4,
+            "en_query": "Give me the books available for every book whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne8189166296e4e19a63925c74c644a3d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne6de6d2a04f2401bab5737199ab2ecd2"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Foucault&apos;s Pendulum : Eco, Umberto, Weaver, William: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N58f1dbd5cb6340a7a1498fce287b8c91"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8da35c3896e846caa238e768bdbf7937"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Foucault&apos;s Pendulum : Eco, Umberto: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5837eae6652c43c4aff9af7039c724e1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbd94c858efe8415284b6f253c5272ac8"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Foucault\u2019s Pendulum"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N05a3b3577edc4a97b2df5f0970c54282"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nec98d2b0609e4af985856a2705c53f4b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Amazon.com: The Island Of The Day Before: 9780156030373: Eco, Umberto: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc375d0e681704e669c85f23e56b28995"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N061475e1371245c3b8d56b18b807f97d"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy The Island of the Day Before: Stories Book Online at Low Prices in India | The Island of the Day Before: Stories Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na330a6d064914b5da10d7553003115ec"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf76d9c6892dc4023ba1a3031905ced3a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Island of the Day Before : Eco, Umberto, Weaver, William: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6084ca1c88f345bc90b966dc889d0d83"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na1aa18e7d5da4950ae44b9120ca1738b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Island of the Day Before: Amazon.co.uk: Umberto Eco: 9780140259193: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0cdd88f940ff4b2384a15d611cf01bec"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3846016547a0487482de6330d51f57c7"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Island of the Day Before : Eco, Umberto: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd7e6ea3ed93246e6b012c78f04307b82"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nafe42125896e41719e6a5a0378bad4e1"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Mysterious Flame of Queen Loana By Umberto Eco: -Author-: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N74bbd728f9d846d3b781de09100eda42"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N80b48bea52374dea80cab0c602dc6294"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Prague Cemetery"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 16.846344709396362,
+            "processing_times": {
+                "query_decomposition": 0.10372710227966309,
+                "static_query_evakluation": 0.09358763694763184,
+                "web_data_retrieval": 45.73807692527771,
+                "dynamic_query_evaluation": 0.010415792465209961,
+                "result_merge": 0.001027822494506836,
+                "total": 45.94683527946472
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004070758819580078,
+                    "searches": 29.30587100982666,
+                    "web_formatting": 0.004610776901245117,
+                    "total": 29.314552545547485
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0044515132904052734,
+                        "building": 16.494323015213013,
+                        "builder_init": 0.03446602821350098,
+                        "microdata_adding": 16.41907286643982,
+                        "total": 16.553471326828003
+                    },
+                    "property_access_init": 0.05578756332397461,
+                    "properties_update": 0.0031731128692626953,
+                    "total": 16.612459182739258
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 29.314552545547485,
+                    "microdata_extraction": 0.0044515132904052734,
+                    "storing": 16.41907286643982,
+                    "total": 45.73807692527771
+                },
+                "microdata_query_evaluation": 0.01007390022277832,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 44,
+            "pattern_id": 5,
+            "en_query": "Give me the price of the books available for every book whose author is Umberto Eco",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Umberto_Eco> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N542ae39219d74fe0863cc2bb82a5ec43"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N93ad8e677c65442ba5034a78dcc4606b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Foucaults-Pendulum-Umberto-Eco/dp/0099287153"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Necfcf819f8c943c1939f836b042b8c43"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0638c36cdec34c1ea860857ed23368bf"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "492"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Foucault's_Pendulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.flinnsci.com/foucaults-pendulum/ap7862/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na3083f20f5ee4718be917d34225afe7d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N799b7dc720394b018648a6a3848e73d5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "2588.80"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Island-Day-Before-Umberto-Eco/dp/0156030373"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6da17083a56048569ac2e3f9732ad215"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfcbf1ace06084be08c87359efa1c96d2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.4"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Stories/dp/9353022878"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N848b1e1a2db8419c916f6d9a4dc72302"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc300a3a5963a415b95a89fadd98dc209"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "258"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Island-Day-Before-Umberto-Eco/dp/0151001510"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N52a8c2802afa4e39ada5fa993ee7324c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9ebae43183504439a45ee887702c5182"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "43.97"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Island-Day-Before-Umberto-Eco/dp/0140259198"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbd9934b82cea4e7382f6e748629176f3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N44e3cccf95194d3287ad430a2048f495"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Island_of_the_Day_Before"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Island-Day-Before-Umberto-Eco/dp/0749396660"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4e05106b59aa447fa649cb648b21ebfb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9edd7aa46ef8406a99380b792a69a8f2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "575.69"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Mysterious-Flame-Queen-Loana-Umberto/dp/B004SIAEKG"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2d1d340c3b374dac802b3daf37456d94"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na4e3cad8151343789d05f8923711963d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "22.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Prague_Cemetery"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://thuprai.com/book/the-prague-cemetery"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8dbe5c341743441ebcb01e4abdc4ae8f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5404ce02cc9046589e96cf1731726005"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1119"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 9,
+                "number_of_web_results": 270,
+                "number_of_extracted_microdata": 94,
+                "number_of_query_results": 10
+            },
+            "evaluation_time": 16.881267309188843,
+            "processing_times": {
+                "query_decomposition": 0.10547518730163574,
+                "static_query_evakluation": 0.10569620132446289,
+                "web_data_retrieval": 45.749722957611084,
+                "dynamic_query_evaluation": 0.010737419128417969,
+                "result_merge": 0.001062154769897461,
+                "total": 45.9726939201355
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0029754638671875,
+                    "searches": 29.305870056152344,
+                    "web_formatting": 0.004208564758300781,
+                    "total": 29.313054084777832
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004770755767822266,
+                        "building": 16.516560316085815,
+                        "builder_init": 0.04036998748779297,
+                        "microdata_adding": 16.43189811706543,
+                        "total": 16.57571840286255
+                    },
+                    "property_access_init": 0.05660867691040039,
+                    "properties_update": 0.0032601356506347656,
+                    "total": 16.63561511039734
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 29.313054084777832,
+                    "microdata_extraction": 0.004770755767822266,
+                    "storing": 16.43189811706543,
+                    "total": 45.749722957611084
+                },
+                "microdata_query_evaluation": 0.010389328002929688,
+                "microdata_stats_computing": 9.5367431640625e-07
+            }
+        }
+    ]
+}

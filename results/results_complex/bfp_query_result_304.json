@@ -1,0 +1,4053 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 125.4903564453125
+    },
+    "queries": [
+        {
+            "query_id": 396,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of The New Annotated Sherlock Holmes",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The New Annotated Sherlock Holmes\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N19f2237bcaf04519b225a7c37adb8770"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8efdafdcdcae4a9a961c600482a03c1c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "350"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N02c16b7a018e437fb54ddd3604fd96f6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3c437048b65249658aa0f26c4a3f7d4a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "141"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N315756443cc04a208f13915e3819be4e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne8053455e28245a281ebc66341432b75"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "119"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N00ae6174065543ce8a43aa1ecdb819cd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N01c0cdb8786a4ca69175c783e8a39960"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.68"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N489fb7c065d346e19f54297c353a5219"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N23f8620cdc4946f1807ebe45214f1918"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/micah-clarke/id1089791539"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0b5d9fbfd3234da093b107eb77d94d1f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N24588aed277448c5992d8142026f59d0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9e91a9b4c6744a5ebd6dafce67576fa3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf5306bd21abf43fb81b18f0458878183"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nccf1307ec9b249c88415d03d1b2289f3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0276699934fe4e969b832880fd51faa0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd959ef69b7b248bcbc6a9d5006abdc74"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na1e4ddb1b9cd42d4b72983633461603f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N845fd264e591448b96e588a5c0977598"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N79c8037c075c473780dda57a13df0620"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.76"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N57b7c6d5a00c4f20a6afa912ad342ab1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7ae0f459b0144f85ae15d878c492b09e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "31.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5c882e346ab54ed5a1d18e38d5fd4985"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8a3061ea70a74d8e9ba56b8a75553775"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "180"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/the-disintegration-machine_arthur-conan-doyle/14272451/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1ff5647b67294758a0b2bdc9679223b1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6e6f2dad47b2462587c254848f48f6f7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3fa59847886b4f7b91c532571eaccaad"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N522fdcb9367747648b57901aed0f863f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "100.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N18a3a450953144a888d46a61b20ab920"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8deb3a86386047b1942979a2d147082b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "5.49"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N72e6a23cdebd4981bbc5dd65c1d85ef0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne2fa855e562c48fc8a627cbee5435f10"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.43"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nae86c5df047949d6a89f7274bb6b0343"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N07407a6d14be45a69cbeda017e10f2c0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.74"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf8d3bee705014ba5a35fb6e6a3f8681d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne568be47a87648b481b8fac0118d3843"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "371"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Naccb83515fa94d208017c278551f111c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6230289bff594877b7690cceae1ffb8b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.49"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 19
+            },
+            "evaluation_time": 12.469733238220215,
+            "processing_times": {
+                "query_decomposition": 0.11031389236450195,
+                "static_query_evakluation": 0.11033248901367188,
+                "web_data_retrieval": 44.192054748535156,
+                "dynamic_query_evaluation": 0.009914636611938477,
+                "result_merge": 0.0016319751739501953,
+                "total": 44.42424774169922
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004119157791137695,
+                    "searches": 32.21100425720215,
+                    "web_formatting": 0.004858255386352539,
+                    "total": 32.21998167037964
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004229068756103516,
+                        "building": 12.104506731033325,
+                        "builder_init": 0.03555464744567871,
+                        "microdata_adding": 11.967844009399414,
+                        "total": 12.158053874969482
+                    },
+                    "property_access_init": 0.05161786079406738,
+                    "properties_update": 0.002927064895629883,
+                    "total": 12.212626457214355
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 32.21998167037964,
+                    "microdata_extraction": 0.004229068756103516,
+                    "storing": 11.967844009399414,
+                    "total": 44.192054748535156
+                },
+                "microdata_query_evaluation": 0.009563684463500977,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 397,
+            "pattern_id": 26,
+            "en_query": "Give me the publisher of every book written by the author of The New Annotated Sherlock Holmes",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The New Annotated Sherlock Holmes\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/micah-clarke/id1089791539"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc4c99d0a3e084e6abd66fb680c4e0a03"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9f6def99537843ed988b6329e9628eca"
+                        },
+                        "publisher": {
+                            "type": "uri",
+                            "value": "Otbebookpublishing"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Necd9eeb076e74f399daf287fba309745"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N745f2786efe64bc8969d322e5e176736"
+                        },
+                        "publisher": {
+                            "type": "uri",
+                            "value": "Ne54b3c6b77d442b18def1a566819f623"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 2
+            },
+            "evaluation_time": 12.257791519165039,
+            "processing_times": {
+                "query_decomposition": 0.11573910713195801,
+                "static_query_evakluation": 0.09270167350769043,
+                "web_data_retrieval": 44.053712129592896,
+                "dynamic_query_evaluation": 0.009275674819946289,
+                "result_merge": 0.0006587505340576172,
+                "total": 44.27208733558655
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0037012100219726562,
+                    "searches": 32.21100568771362,
+                    "web_formatting": 0.005355119705200195,
+                    "total": 32.220062017440796
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004342079162597656,
+                        "building": 11.905567407608032,
+                        "builder_init": 0.035758256912231445,
+                        "microdata_adding": 11.829308032989502,
+                        "total": 11.960427522659302
+                    },
+                    "property_access_init": 0.051000356674194336,
+                    "properties_update": 0.0030851364135742188,
+                    "total": 12.01454210281372
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.220062017440796,
+                    "microdata_extraction": 0.004342079162597656,
+                    "storing": 11.829308032989502,
+                    "total": 44.053712129592896
+                },
+                "microdata_query_evaluation": 0.008913993835449219,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 398,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of The New Annotated Sherlock Holmes",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The New Annotated Sherlock Holmes\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N187da343197f4da8b873dc83fa8b1464"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N20d3c8c821c94e86bde5a2396f8e6a78"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "350"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5d27310bbe634edfb0573652f256a039"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na8c30826efd346bc854dd689e4c19800"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "141"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N719cb6ca18184eac922a7279da2a9f68"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne9d386c1839e45bfae80fc747f3654bb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "119"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N42cc4b3745aa4378860b5c1f3f95185e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbe38ae8f131246438fd98a107d154ae4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.68"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc0908a87cbf5493ca2c2af5764b639d8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne952e65d3c18460cb54c7432a0ca91e6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.2"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc9d2cfc1642d4aed963c1a80082b2eb6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne8a0e0d96abe4d1f86c185965c06c961"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2ed7c31660dc40e0816940bf163db1da"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7739184d9afa402e815a6bf2850f16ac"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N12c1a72cf2474a97be8410bbee5a2db2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N24de83694a554d2b9ab5829f1de31446"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfc5b66acd9cc41ff904d576d6ebcb4d7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3b4306d8757e41c78f5b78c2dd889b12"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.76"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N368b1353a35642abbef3bf05257a306c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbacacce0228e48c0bac066b04fa92b1f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "31.6"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd46e3bf72e274e5b9dfe7eac483e9096"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N31ab9bcbaf434c85a7c3b7198b1ae0dc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "180"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/the-disintegration-machine_arthur-conan-doyle/14272451/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N348361fdae9246f7858822cf9f25bea2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N06d4d639780a4c5997c4977e84a4a2e2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf764e17d8a54403091c71883d5520415"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N35755488928f48ac8b7aac105d54c581"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "100.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndc059dbaa85442e799cb61fee5879ce7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9f60faa26578445e9fb0e15230fab78d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "5.49"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6bbceedd919b4001ab41dc5a9edaee6d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na186e9c5cee140d9b51cd612a56972ab"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.43"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne69d31c944664b1081bd021ae095248a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7e85cd76871d43658b7ecd486a7c3b00"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.74"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N61539b5948984d668a436462b504cb50"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf1af3a4f0d9b432ba46efcac9e3c0732"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "371"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N87dcfc897ddc4e0690c50fa88ba90939"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3389479b19c94e5293be0dc8a89600af"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.49"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 18
+            },
+            "evaluation_time": 12.352760076522827,
+            "processing_times": {
+                "query_decomposition": 0.11333441734313965,
+                "static_query_evakluation": 0.09337377548217773,
+                "web_data_retrieval": 44.10011529922485,
+                "dynamic_query_evaluation": 0.010609626770019531,
+                "result_merge": 0.0017232894897460938,
+                "total": 44.31915640830994
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.002871274948120117,
+                    "searches": 32.21100568771362,
+                    "web_formatting": 0.005504131317138672,
+                    "total": 32.21938109397888
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0042264461517333984,
+                        "building": 11.99448847770691,
+                        "builder_init": 0.03526639938354492,
+                        "microdata_adding": 11.876507759094238,
+                        "total": 12.047447919845581
+                    },
+                    "property_access_init": 0.05870676040649414,
+                    "properties_update": 0.003027200698852539,
+                    "total": 12.109208106994629
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.21938109397888,
+                    "microdata_extraction": 0.0042264461517333984,
+                    "storing": 11.876507759094238,
+                    "total": 44.10011529922485
+                },
+                "microdata_query_evaluation": 0.010260581970214844,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 399,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of The New Annotated Sherlock Holmes",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The New Annotated Sherlock Holmes\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2bc81905ca234a88976b0e74f7928201"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N431cd4b34a724f3493d56200087e5bc2"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet : Doyle, Sir Arthur Conan: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N28a70220ceaa45cc897a17060e986f42"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc3a7c6cf042f4c7f98f54c1aa26b4118"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet : Sir Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc059166b3be34849a1d85b6047036908"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0b46e1fc6df14dc2b40a909fcf513afd"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet : Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1ab774e691c04320b61967c8be037585"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb397b78754fe4d0495d8c1f249fe27d5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet: A Sherlock Holmes Adventure (Collins Classics): Arthur Conan Doyle: 9780007558049: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2ab06233d0ec4a74bf46cad9a67b9331"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5fb4cdc1699341f6ab12d80885944a7e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Micah Clarke (1889) By: Arthur Conan Doyle: Historical novel: Amazon.co.uk: Doyle, Arthur Conan: 9781544138558: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2ce61370a2aa4794a43e67dc98dd760a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N773b95b6376a40a0917459991a19faef"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Micah Clarke: Amazon.co.uk: Conan Doyle, Sir Arthur, Appelbaum, Stanley: 9780486813455: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb470a92d4eb945fe9f3188cd96e71763"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd735278696b74efba8ada9be53020585"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfefc35dbafe847ee9fe79d129d0376df"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf38c61b33d124189adae1b7e7e80d93a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel: A Novel of the Hundred Years&apos; War (Dover Literature: Historical Fiction): Amazon.co.uk: Conan Doyle, Sir Arthur: 9780486471440: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na442385fbb1449058a40cb350558b68f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5c160396df434794aca1d63c9551272f"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel (1906) historical NOVEL by: Arthur Conan Doyle: Amazon.co.uk: Doyle, Arthur Conan: 9781542686549: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nddce49db21824a35aa6dbf326b43dd01"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7b9235e2254241cdb37ad9d83644eef9"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel: A Novel of the Hundred Years&apos; War : DOYLE, SIR ARTHUR CONAN: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N38f0cb695e7c4582b4900bedc156c9f4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N011b7618ae584eb7b1377caa855f5441"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Case Book of Sherlock Holmes : Sir Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N77f0e4b4aed64ed58e160f14de5a11b0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0f3d0e1c89ba4eb4bbbfe83c1101df3e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Disintegration Machine: Sir Arthur Conan Doyle | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc61c5df7f9a340899c7f68cd52bcd3fe"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N20a721ccf3c34015b71599dd5d7fa78e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Final Problem: Amazon.co.uk: Doyle, Arthur Conan: 9781545385333: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6459000d7a324121b1d102f40de5bdd4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N76498ea5354d43d3b55371ed4625de8a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sherlock Holmes: The Final Problem (Easy Classics): 20 (The Sherlock Holmes Children&apos;s Collection: Mystery, Mischief and Mayhem (Easy Classics)): Amazon.co.uk: Sir Arthur Conan Doyle, Arianna Bellucci, Arianna Bellucci: 9781782264293: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd525dc266bbd456c97d464dbb07c155a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8355718e15094a8d83ecf9d43b8d12b3"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Final Problem"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd8e4ee1cd0604c8aa2cff0ed3ab44ed0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9ceb31572f6648e9b8fa5f4f802e8feb"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Firm Of Girdlestone : Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N891f669731f34b5fa4d698c8540d856a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N28102034d2a74360b1d745aab4199c3a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Firm of Girdlestone: Amazon.co.uk: Doyle, Arthur Conan: 9781500723293: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 17
+            },
+            "evaluation_time": 12.458211660385132,
+            "processing_times": {
+                "query_decomposition": 0.12157726287841797,
+                "static_query_evakluation": 0.10219001770019531,
+                "web_data_retrieval": 44.19192671775818,
+                "dynamic_query_evaluation": 0.01061558723449707,
+                "result_merge": 0.0016264915466308594,
+                "total": 44.42793607711792
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0031135082244873047,
+                    "searches": 32.21100401878357,
+                    "web_formatting": 0.004341840744018555,
+                    "total": 32.218459367752075
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.004106760025024414,
+                        "building": 12.08569884300232,
+                        "builder_init": 0.03498411178588867,
+                        "microdata_adding": 11.969360589981079,
+                        "total": 12.139124870300293
+                    },
+                    "property_access_init": 0.05067276954650879,
+                    "properties_update": 0.0031082630157470703,
+                    "total": 12.192935228347778
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.218459367752075,
+                    "microdata_extraction": 0.004106760025024414,
+                    "storing": 11.969360589981079,
+                    "total": 44.19192671775818
+                },
+                "microdata_query_evaluation": 0.010255813598632812,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 400,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of The New Annotated Sherlock Holmes",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The New Annotated Sherlock Holmes\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nee67844ad62c41f58a121032da2a709b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb0dbb6e45cba4396a10431f0ae6e91cf"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "350"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N77585270863b4dd69fc90a93d5fd0348"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Necf34cabcdfd4edeb665e81e4c5dd571"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "141"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7dfd9281c05849f0944c623b1af501c9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb4abc62ab97e41d8b1edd31b8017947d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "119"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc665a78214b04be0b69066e2673693c9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5776a416f1e5486cbeb399ea765452b5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.68"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N35c6674ed96a4390807b12104314b9d7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4774149eece3451f84b28330c48c5be2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na7f028eec0b347338b49693d0b18557d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6b2983ee80164c1a9753cdeca4ef7da2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndee556d0469b4c1bb3646769a708131c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nce13959d8ac740479a397560443b1b18"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfb7d9f81be5f4800bd81fb834f716ae3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbc961de6a8884718b8ad24f54b9d9b54"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc8621ba13c644e89b81937ce8ee40798"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N71fe28a00c74406c8e60b4ffed5b80b9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.76"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N53dcd41ae78e4f3cbd5937e1c70d8baf"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6109b205a5dc443eab28bb5044dcbe27"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "31.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N153789e2c7f44c1a8a7d0c620783440a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N598faae06d6640fd90574f6764b1d8b4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "180"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/the-disintegration-machine_arthur-conan-doyle/14272451/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1c3ff7ea970e4372936970f045e87082"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5752591d3e134beb8dda873a43a68fa4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0c709d56c22e475689eea66f8e219a3a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N65d1d593579047108249f9638a18fbf4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "100.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8a3fb8e726734c2da7377c7be64f3a18"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neabfd00426fb42dd9168b119b40982ed"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "5.49"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na5664eb4d99341cbb4be2d90df270489"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2eeb387ab7ab45f3961ef12e5253e358"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.43"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N23824ad7c90347178a0071c1ebd976fa"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na8eaf3f8765c42d8b2cb005bde2dbf59"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.74"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N73f948d239324c74b9168beebceeaf50"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N36cf83ed77174ceaace8cb0ceebd3b5a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "371"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4d420bf2cb6d418c8097a5f2eba0326f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndedee672593f49cd94cbe4bd6b6a8505"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.49"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 18
+            },
+            "evaluation_time": 12.358898401260376,
+            "processing_times": {
+                "query_decomposition": 0.10950779914855957,
+                "static_query_evakluation": 0.09135055541992188,
+                "web_data_retrieval": 44.1147882938385,
+                "dynamic_query_evaluation": 0.009622335433959961,
+                "result_merge": 0.002543926239013672,
+                "total": 44.327812910079956
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0037856101989746094,
+                    "searches": 32.211004972457886,
+                    "web_formatting": 0.004290103912353516,
+                    "total": 32.219080686569214
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004297733306884766,
+                        "building": 11.969615936279297,
+                        "builder_init": 0.037111759185791016,
+                        "microdata_adding": 11.891409873962402,
+                        "total": 12.023411750793457
+                    },
+                    "property_access_init": 0.09565472602844238,
+                    "properties_update": 0.0029370784759521484,
+                    "total": 12.122029304504395
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.219080686569214,
+                    "microdata_extraction": 0.004297733306884766,
+                    "storing": 11.891409873962402,
+                    "total": 44.1147882938385
+                },
+                "microdata_query_evaluation": 0.009275197982788086,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 31,
+            "pattern_id": 1,
+            "en_query": "Give me the price of every book whose author is Arthur Conan Doyle",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Arthur_Conan_Doyle> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2c646139e48b45d3ae41dd41851688b3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N92a54638998e4a7483ec799e50f6a38a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "350"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N980db70b59d646a8b1ceaebbe412bdb0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc996439cff574e2db063e629e22ade5f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "141"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nca57a423fdac48beadc972c74889ee2b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N29d495d959f74dbba7050ce7bc475db8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "119"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2a90256da1b440f3a765f843414b0785"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5652ba881d8e4c9886212e4ced533460"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.68"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N661555dfbcde4774b7a9a8607aded558"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N729996ad4188460bb527219f583ae410"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/micah-clarke/id1089791539"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5f2d8ba005854f8daf3289c5439c57d9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N764e23833ca74c52a07fe212eb5c4c66"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N821d4e83f95f44cc94338d2510793a72"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N94fde7578008410597f65b8a92b030e1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nec98ee549b454cc2b9712be948440f33"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nadf4bc78d6ce4ce8a3b4700a81191c8e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Neb1edaaac0cc4df6a9d6fa0c83dcdb0f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nff7359b207fe4c518e9bf8fc2666950e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Neb6c4fedbc32499c8a44cb2d9a9974c2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne46b71a1f22547e8a49d7b5a23eec7fa"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.76"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd37c2ec799a64cf79fdc64bcc7256e65"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N787f0e7d4780478d8f0a9ba7dd2a1e92"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "31.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1943f1e08e4646739047cbabcb1f5df1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6c1f274585814dbcb4631f4c01afad3e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "180"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/the-disintegration-machine_arthur-conan-doyle/14272451/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5e7530f4c5954c6c9ae8f99f33df9ccb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nccb1fbc61f3140a8970847af8904cfe2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3ef4c21cc97a43a8a3523176a168c78a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5f4f48a48cad4bb891b70cf2b3fb2a83"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "100.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N96958bee88c24976bee9848364026572"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd01899032fa940ad84e323e15bfbd07c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "5.49"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc7ae72764f674aaaa30aa8036335541b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1329a353bc234b67be4158d757c6a000"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.43"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N06dfd852684640fd852feb08e078d380"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N191354d8e9484656982a1f61cddd038c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.74"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7434e5db9dfa4db6bd0bdbdaf2c1265e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N188aec8b527645fc8e641b18d09a238c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "371"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfa030058ed67437d8207a2517bad1aa2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd786818e0fd64a49b2dca77cabb21cf2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.49"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 19
+            },
+            "evaluation_time": 12.556742906570435,
+            "processing_times": {
+                "query_decomposition": 0.03812766075134277,
+                "static_query_evakluation": 0.105865478515625,
+                "web_data_retrieval": 44.36519432067871,
+                "dynamic_query_evaluation": 0.008934497833251953,
+                "result_merge": 0.001522064208984375,
+                "total": 44.519644021987915
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0038263797760009766,
+                    "searches": 32.21100473403931,
+                    "web_formatting": 0.006890058517456055,
+                    "total": 32.221721172332764
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.4836273193359375e-06,
+                    "graph_computing": {
+                        "extraction": 0.004469871520996094,
+                        "building": 12.218545913696289,
+                        "builder_init": 0.037110328674316406,
+                        "microdata_adding": 12.139003276824951,
+                        "total": 12.2727792263031
+                    },
+                    "property_access_init": 0.09970688819885254,
+                    "properties_update": 0.0028891563415527344,
+                    "total": 12.375404119491577
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.221721172332764,
+                    "microdata_extraction": 0.004469871520996094,
+                    "storing": 12.139003276824951,
+                    "total": 44.36519432067871
+                },
+                "microdata_query_evaluation": 0.008596420288085938,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 32,
+            "pattern_id": 2,
+            "en_query": "Give me the publisher of every book whose author is Arthur Conan Doyle",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Arthur_Conan_Doyle> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/micah-clarke/id1089791539"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne692229c8a5f4e8b8327493633b64551"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nba6d3218365449aa8f90f93eb120f3c0"
+                        },
+                        "publisher": {
+                            "type": "uri",
+                            "value": "Otbebookpublishing"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc93c2e18db7b4b74b482b0a4b900144f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N96a529ad1e7f481f8c44e36f6882720a"
+                        },
+                        "publisher": {
+                            "type": "uri",
+                            "value": "N826ab13715b6445b83f2b221bb34ef85"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 2
+            },
+            "evaluation_time": 13.649766445159912,
+            "processing_times": {
+                "query_decomposition": 0.037850141525268555,
+                "static_query_evakluation": 0.1015627384185791,
+                "web_data_retrieval": 45.46630263328552,
+                "dynamic_query_evaluation": 0.009519815444946289,
+                "result_merge": 0.0004923343658447266,
+                "total": 45.61572766304016
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.002892732620239258,
+                    "searches": 32.211004972457886,
+                    "web_formatting": 0.004482269287109375,
+                    "total": 32.218379974365234
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.00466465950012207,
+                        "building": 13.366577625274658,
+                        "builder_init": 0.03913283348083496,
+                        "microdata_adding": 13.243257999420166,
+                        "total": 13.421260833740234
+                    },
+                    "property_access_init": 0.05243563652038574,
+                    "properties_update": 0.0033812522888183594,
+                    "total": 13.477108478546143
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.218379974365234,
+                    "microdata_extraction": 0.00466465950012207,
+                    "storing": 13.243257999420166,
+                    "total": 45.46630263328552
+                },
+                "microdata_query_evaluation": 0.009151220321655273,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 33,
+            "pattern_id": 3,
+            "en_query": "Give me the price and availability of every book whose author is Arthur Conan Doyle",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Arthur_Conan_Doyle> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8ea9e756189b4553b16d72d8d9a3ee65"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N11850397f6db4e478efc8e5adc225753"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "350"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N55d36857b6cd4b5d899ac0c8afe0cf4b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N61908cbfd23b4d49aaef6aaeb4d765a5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "141"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0ed999d7df2f4bc89bc6d2f73b2b51cc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbdcbc8cba8554a4995436a7e06fb323e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "119"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N940d44b83dd941bdadbad42793961816"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N02c843f1ee5d4376a4666c42d2b93f73"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.68"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N441e5260b7b44667a2cea92b13c12570"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8ff0a15e2f54445388b03e801e548806"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.2"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb295d7b8e71a4247a9bf8ac20e943fcb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N01c9934c8b4c49e3b9100281dd6a9714"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb587ef9f6f77420baa1509278edd86dd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N78bda3c159ff45518ee08d411c90c1b6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2d241fb072ba470aae70b89dac8839de"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1d1dba672c2e442a891d00ee2736d1a8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb66bb6424562473eb19b246697258089"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7a2f7281fd0c4e13b6f9e40e51454172"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.76"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0da2bf5117624828b1d036c633554b23"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4fb55e55b44a4e9e955b921b33b2a689"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "31.6"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N20d7ee3c2c304e9a980b5e57d1026696"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd2f524c25da4401b98df59b299487b8c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "180"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/the-disintegration-machine_arthur-conan-doyle/14272451/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf81b0a450fc14d2aa8edbf0bf45e4f5c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3ac953f72899485ea4b3c463d6a3f090"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4b085ab5177842b793edb34bfbde6df0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb605656fa6b04dcfb9d1d5e701ec3fab"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "100.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N05d76f1d5c5e4cebb35ffeb7c7005824"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N19f049b551eb4795934bc2951b8eb4ff"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "5.49"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1b3e54c26e0b48609ea3b795d28c51a8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N109761416590491c8b2992438a0b00f7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.43"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6e2192fb645e4ca094398912f138a1be"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf24d1b4f4bf3421ab42fd96c9bff1413"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.74"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbf5a39fd5634432c9037fd31f9961ee7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N85528c87aad64f57a78d0fc5b52277f4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "371"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N61915b18873e43869dd892f096fdbfeb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N382fcbabf56a401294180a125ad5218b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.49"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 18
+            },
+            "evaluation_time": 12.758172512054443,
+            "processing_times": {
+                "query_decomposition": 0.04611063003540039,
+                "static_query_evakluation": 0.10031986236572266,
+                "web_data_retrieval": 44.60450839996338,
+                "dynamic_query_evaluation": 0.01098322868347168,
+                "result_merge": 0.0017402172088623047,
+                "total": 44.763662338256836
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004015207290649414,
+                    "searches": 32.211005449295044,
+                    "web_formatting": 0.002061128616333008,
+                    "total": 32.217081785202026
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 2.86102294921875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0043489933013916016,
+                        "building": 12.460793018341064,
+                        "builder_init": 0.036622047424316406,
+                        "microdata_adding": 12.383077621459961,
+                        "total": 12.514808177947998
+                    },
+                    "property_access_init": 0.05126190185546875,
+                    "properties_update": 0.0032029151916503906,
+                    "total": 12.569299936294556
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 32.217081785202026,
+                    "microdata_extraction": 0.0043489933013916016,
+                    "storing": 12.383077621459961,
+                    "total": 44.60450839996338
+                },
+                "microdata_query_evaluation": 0.010630130767822266,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 34,
+            "pattern_id": 4,
+            "en_query": "Give me the books available for every book whose author is Arthur Conan Doyle",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Arthur_Conan_Doyle> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0f2dc42882654db2a27d8b283cc597a5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5e92b7d2a0ee4a6aa71636ce010bb8e4"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet : Doyle, Sir Arthur Conan: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N325dd68caa37401881076d3f2bfe55b4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc1495036dc2d47599fc704d87c34c7b5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet : Sir Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N616b8d0887a24ea9b5732f0b9836df72"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N479f147e1c83471e8dc5d3afcdb59dca"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet : Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1b2f7447123d48a5bb49ce432ff803fd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N01956779d2f3442b8e90d1a1a15adc42"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Study in Scarlet: A Sherlock Holmes Adventure (Collins Classics): Arthur Conan Doyle: 9780007558049: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7f8d65c6f2434a4ebd64959049c0bff2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf035a293347c4b6593bc5b8e971359c5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Micah Clarke (1889) By: Arthur Conan Doyle: Historical novel: Amazon.co.uk: Doyle, Arthur Conan: 9781544138558: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N686545c2e290408d968cfebccd4117e6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3934af1ef9dd493a9765f0d4412d3992"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Micah Clarke: Amazon.co.uk: Conan Doyle, Sir Arthur, Appelbaum, Stanley: 9780486813455: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nba02949daa42412a961133bcb3379b2d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N16d067de18154e07a286d464377e3197"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N57dced9190804181beb7da00e0e5bef2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb4450acce86840b18d7da0f4b19a6a96"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel: A Novel of the Hundred Years&apos; War (Dover Literature: Historical Fiction): Amazon.co.uk: Conan Doyle, Sir Arthur: 9780486471440: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne94d80888bc143b7a8b6f3efb40ba3d2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndb1c6e4f0c4f4dad98e45800d7470608"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel (1906) historical NOVEL by: Arthur Conan Doyle: Amazon.co.uk: Doyle, Arthur Conan: 9781542686549: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9474bfdc8567483cac3604aa356de2cd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4fdb628d9ec54b69b7d8ca16abd3fd81"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sir Nigel: A Novel of the Hundred Years&apos; War : DOYLE, SIR ARTHUR CONAN: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nda2635939dcb4f7d904c8de6268e7abe"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N339d066d47e44c4c987a28ce5b9a3384"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Case Book of Sherlock Holmes : Sir Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5e0bcd4f31c9442e9be5d654f015d69c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N62526b81e5804f3da834e71213aeadce"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Disintegration Machine: Sir Arthur Conan Doyle | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na4986399caa7405bad6f3d87bac58839"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neae0aa96f00b43049b7db9bf7a43bd17"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Final Problem: Amazon.co.uk: Doyle, Arthur Conan: 9781545385333: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N17a46cde7a2944b1a18cb09f2a210b84"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc7fa7b7752ae481f88f283d817c9ef40"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Sherlock Holmes: The Final Problem (Easy Classics): 20 (The Sherlock Holmes Children&apos;s Collection: Mystery, Mischief and Mayhem (Easy Classics)): Amazon.co.uk: Sir Arthur Conan Doyle, Arianna Bellucci, Arianna Bellucci: 9781782264293: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N251985c02b1c4c24abf4e0d3b04af46d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5358cadd91ce4b8ba05dd4f0913442b1"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Final Problem"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0c2c2e4e5251495b96239ce04ab5d47c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6f8efc201a6043a29eb75696d63032a1"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Firm Of Girdlestone : Arthur Conan Doyle: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ned7c2fa5d3434ce7bc7d3c1a30d2417a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7b503c1284734983984a3b07d515cb29"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Firm of Girdlestone: Amazon.co.uk: Doyle, Arthur Conan: 9781500723293: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 17
+            },
+            "evaluation_time": 12.223814725875854,
+            "processing_times": {
+                "query_decomposition": 0.04941225051879883,
+                "static_query_evakluation": 0.09806036949157715,
+                "web_data_retrieval": 43.98594665527344,
+                "dynamic_query_evaluation": 0.010695219039916992,
+                "result_merge": 0.0014491081237792969,
+                "total": 44.14556360244751
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.002793550491333008,
+                    "searches": 32.211005449295044,
+                    "web_formatting": 0.008405685424804688,
+                    "total": 32.22220468521118
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.004293918609619141,
+                        "building": 11.882549047470093,
+                        "builder_init": 0.035654544830322266,
+                        "microdata_adding": 11.759448051452637,
+                        "total": 11.93747878074646
+                    },
+                    "property_access_init": 0.0960085391998291,
+                    "properties_update": 0.0029420852661132812,
+                    "total": 12.036456108093262
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.22220468521118,
+                    "microdata_extraction": 0.004293918609619141,
+                    "storing": 11.759448051452637,
+                    "total": 43.98594665527344
+                },
+                "microdata_query_evaluation": 0.010331869125366211,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 35,
+            "pattern_id": 5,
+            "en_query": "Give me the price of the books available for every book whose author is Arthur Conan Doyle",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Arthur_Conan_Doyle> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Scarlet-Penguin-Sherlock-Holmes-Collection/dp/0241952891"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N81a5bcafc40347adab81a32dbc7a6de3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4d7003fdc0ec4395baf60e5ae5a1f402"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "350"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9355208944"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N968ffe93be8540ee82d5cdddc37237a8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8b71ed46ba6d4a54b493f1057c631359"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "141"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Study-Scarlet-Arthur-Conan-Doyle/dp/9362149133"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N94dcfb43c23647dda67ac54a451f0c45"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N87de4e87de324c90842ca17e789976e0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "119"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Study_in_Scarlet"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Study-Scarlet-Collins-Classics/dp/000755804X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ned5a53ae9b594c30bc070daac62e2d73"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf1399643a373426e8554e615dd5980c8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.68"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Historical/dp/1544138555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5c92e906bdf94c0caf6e107636b6ed0f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc87ac20125de447693908088bc3cafce"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.2"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Micah_Clarke"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Micah-Clarke-Arthur-Conan-Doyle/dp/0486813452"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd0732cdb76424125b11ec5cb39c1b991"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1d8f2dd00f504f6c80a4657d28b81415"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://store.doverpublications.com/products/9780486471440"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nafd8b23969aa435b913bdc12b4f00651"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8d10ad9e8e624c6eade40a3ab061e6b9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-Novel-Hundred-Years/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfe8d773466c04470b9fa04bdc49980af"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc9a8823575fd4625b885f15268117eb5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Sir-Nigel-historical-NOVEL-Arthur/dp/1542686547"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N60b63c50aaa6486fbacdd38286615e82"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N44f8254688ce416fbbcf263e4928cf3a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.76"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Sir_Nigel"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Sir-Nigel-ARTHUR-CONAN-DOYLE/dp/0486471446"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5d4ec35cf2af409fa1aa333dca55b498"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N14e3b2ba633947259d1e6a6faf11e930"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "31.6"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Case-Book_of_Sherlock_Holmes"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Case-Book-Sherlock-Holmes/dp/9383299223"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8b088b6301c648109acfaa2c380b9a97"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4d9a3b386cc54bd6bf7e80356628a8ff"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "180"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/the-disintegration-machine_arthur-conan-doyle/14272451/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N78e9d0ee0f04463aae5e74938da42a4c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N98b92f00cebe4d62904cec10b3333a40"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Disintegration_Machine"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/427667/the-disintegration-machine"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0c789663c2c74e70a6206f8f7c1ca54a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1930a8e3f03842a893b369dfa3d3b1cc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "100.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Final-Problem-Arthur-Conan-Doyle/dp/1545385335"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nea423e7bb10948baa1ea001ae340798f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na7d3e6b11db24d869ac599dd2e53dbcb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "5.49"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Problem-Sherlock-Childrens-Collection-Classics/dp/1782264299"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbc2e2364c99c4521b6740d0c47c78e56"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5f0d0ebe9bfd47d2a61a3e72071d4236"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.43"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Final_Problem"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://bookroo.com/books/the-final-problem-easy-classics"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N77354f6269f8457c9042dfedecf208e3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N76d0183568bb4fa0b87b6d6aaa0d6c93"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.74"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Firm-Girdlestone-Arthur-Conan-Doyle/dp/9361152777"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na577d244c2714b688a41772d3f215491"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N75e777bbdbcc493cbd75a290836c6dc5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "371"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Firm_of_Girdlestone"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Firm-Girdlestone-Arthur-Conan-Doyle/dp/1500723290"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N196b2d89027e4654ae597fcac0dba848"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N305dfac0cd504456b5544b9e198e806d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.49"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 70,
+                "number_of_query_results": 18
+            },
+            "evaluation_time": 12.385110139846802,
+            "processing_times": {
+                "query_decomposition": 0.04962325096130371,
+                "static_query_evakluation": 0.10918331146240234,
+                "web_data_retrieval": 44.13589000701904,
+                "dynamic_query_evaluation": 0.010203838348388672,
+                "result_merge": 0.0014920234680175781,
+                "total": 44.306392431259155
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0053331851959228516,
+                    "searches": 32.21100616455078,
+                    "web_formatting": 0.009217977523803711,
+                    "total": 32.22555732727051
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004247903823852539,
+                        "building": 12.024040460586548,
+                        "builder_init": 0.0356287956237793,
+                        "microdata_adding": 11.906084775924683,
+                        "total": 12.077079057693481
+                    },
+                    "property_access_init": 0.10335731506347656,
+                    "properties_update": 0.0029947757720947266,
+                    "total": 12.183465480804443
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.22555732727051,
+                    "microdata_extraction": 0.004247903823852539,
+                    "storing": 11.906084775924683,
+                    "total": 44.13589000701904
+                },
+                "microdata_query_evaluation": 0.009858846664428711,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        }
+    ]
+}

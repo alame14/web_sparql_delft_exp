@@ -1,0 +1,123 @@
+{
+    "core-english-dbpedia": {
+        "id": "core-english-dbpedia",
+        "title": "Core English DBpedia",
+        "endpoint": "http://servolis.irisa.fr/dbpedia/sparql"
+    },
+    "dbpedia": {
+        "id": "dbpedia",
+        "title": "DBpedia",
+        "endpoint": "https://dbpedia.org/sparql",
+        "regexp_hidden_URIs": "^(http://www.w3.org/2002/07/owl#|http://www.openlinksw.com/|nodeID://|#|http://www.wikidata.org/|http://dbpedia.org/(class/yago/|ontology/Wikidata))",
+        "entity_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "entity_lexicon_lang": "en",
+        "fulltext_search": "bif:contains"
+    },
+    "live-dbpedia": {
+        "id": "live-dbpedia",
+        "title": "Live DBpedia",
+        "endpoint": "https://live.dbpedia.org/sparql",
+        "class_hierarchy": "false",
+        "property_hierarchy": "false",
+        "fulltext_search": "bif:contains"
+    },
+    "wikidata": {
+        "id": "wikidata",
+        "title": "Wikidata",
+        "endpoint": "https://query.wikidata.org/sparql",
+        "wikidata_mode": "true",
+        "wikidata_hide_ID_properties": "true",
+        "class_hierarchy": "false",
+        "property_hierarchy": "false",
+        "nary_relations": "true",
+        "hierarchy_inheritance": "false",
+        "intentional_init_concepts": "false",
+        "entity_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "entity_lexicon_lang": "en",
+        "concept_lexicons_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "concept_lexicons_lang": "en",
+        "lang": "en"
+    },
+    "mondial": {
+        "id": "mondial",
+        "title": "Mondial",
+        "endpoint": "http://servolis.irisa.fr/mondial/sparql",
+        "class_hierarchy": "false",
+        "property_hierarchy": "false",
+        "nary_relations": "true",
+        "entity_lexicon_property": "http://www.semwebtech.org/mondial/10/meta#name",
+        "concept_lexicons_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "concept_lexicons_lang": "en",
+        "entity_tooltips_property": "http://www.semwebtech.org/mondial/10/meta#othername",
+        "open_links_select": "void"
+    },
+    "insee": {
+        "id": "insee",
+        "title": "INSEE",
+        "endpoint": "https://rdf.insee.fr/sparql",
+        "entity_lexicon_property": "http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/2004/02/skos/core#prefLabel, http://rdf.insee.fr/def/geo#nom",
+        "entity_lexicon_lang": "fr",
+        "concept_lexicons_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "concept_lexicons_lang": "fr,en,",
+        "lang": "fr"
+    },
+    "persee": {
+        "id": "persee",
+        "title": "Persée",
+        "endpoint": "https://data.persee.fr/sparql",
+        "regexp_hidden_URIs": "^(http://www.w3.org/2002/07/owl#|http://www.openlinksw.com/|nodeID://|#|http://www.wikidata.org/|http://dbpedia.org/(class/yago/|ontology/Wikidata))",
+        "entity_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "european-television-heritage": {
+        "id": "european-television-heritage",
+        "title": "European Television Heritage",
+        "endpoint": "http://lod.euscreen.eu/sparql",
+        "intentional_init_concepts": "false"
+    },
+    "tourisme-en-bretagne": {
+        "id": "tourisme-en-bretagne",
+        "title": "Tourisme en Bretagne",
+        "endpoint": "http://servolis.irisa.fr/BretagneTourism/sparql",
+        "entity_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "concept_lexicons_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "concept_lexicons_lang": "fr",
+        "entity_tooltips_property": "http://www.data-tourisme-bretagne.com/property#descriptif",
+        "concept_tooltips_select": "void",
+        "open_links_property": "http://www.data-tourisme-bretagne.com/property#web",
+        "lang": "fr"
+    },
+    "kartu-verbs": {
+        "id": "kartu-verbs",
+        "title": "Kartu-Verbs: Georgian Verb Forms<br>",
+        "endpoint": "http://servolis.irisa.fr:3737/kartuverbs/sparql",
+        "sparklis-query": "[VId]Return(Det(An(1,Modif(Select,Unordered),Class(\"file:///home/ferre/data/ontologies/Kartu-verbs/verb\")),Some(And(Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/Georgian_form\",Fwd,Det(An(38,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/person\",Fwd,Det(An(42,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/number\",Fwd,Det(An(46,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/tense\",Fwd,Det(An(50,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/preverb\",Fwd,Det(An(54,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/preradical\",Fwd,Det(An(58,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/root\",Fwd,Det(An(62,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/postradical\",Fwd,Det(An(66,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/pFSF\",Fwd,Det(An(70,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/ending\",Fwd,Det(An(74,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/English_infinitive\",Fwd,Det(An(78,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/French_infinitive\",Fwd,Det(An(82,Modif(Select,Unordered),Thing),None)),Rel(\"file:///home/ferre/data/ontologies/Kartu-verbs/Georgian_infinitive\",Fwd,Det(An(86,Modif(Select,Unordered),Thing),None))))))",
+        "sparklis-path": "DDDRRRRRRRRRRRRD",
+        "regexp_hidden_URIs": "",
+        "entity_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "concept_lexicons_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "entity_tooltips_select": "void",
+        "concept_tooltips_select": "void",
+        "open_links_select": "void",
+        "short-permalink": "false"
+    },
+    "panama-papers-by-derivo": {
+        "id": "panama-papers-by-derivo",
+        "title": "Panama papers (by derivo)",
+        "endpoint": "http://servolis.irisa.fr/panama-papers/sparql",
+        "entity_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "entity_lexicon_lang": "en",
+        "class_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "class_lexicon_lang": "en",
+        "property_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "property_lexicon_lang": "en"
+    },
+    "iswc-2017-metadata": {
+        "id": "iswc-2017-metadata",
+        "title": "ISWC 2017 metadata",
+        "endpoint": "http://servolis.irisa.fr/iswc2017/sparql",
+        "intentional_init_concepts": "false",
+        "entity_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "class_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label",
+        "property_lexicon_select": "http://www.w3.org/2000/01/rdf-schema#label"
+    }
+}

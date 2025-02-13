@@ -1,0 +1,2558 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 97.71153235435486
+    },
+    "queries": [
+        {
+            "query_id": 1,
+            "pattern_id": 1,
+            "en_query": "Give me the price of every book whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.bookchor.com/book/9780385618984/a-blink-of-the-screen-collected-shorter-fiction"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N65ba63ccc8e546cc88653d993d173647"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0891a4821566460cba60b70a2f543187"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "410"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394508/a-blink-of-the-screen"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb49d7b88cdb9481c9c0f45399086da54"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2ed19550738b4b8c99cb5a9b9c97f43b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3700.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394245/a-hat-full-of-sky"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N46e6f95e8a2d47ea983e8929d56fd8a3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na80dd638d83548aebdebbbfffc84a05a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "900.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Hat-Full-Sky-Discworld/dp/B0CCKGQ2VS"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd042cd22970b4923a5841ae458105027"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4ab6272c251e40fe88d296f32d6b9117"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "30.54"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Slip_of_the_Keyboard"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/a-slip-of-the-keyboard-collected-non-fiction_terry-pratchett/8942976"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nff4adc05d9c44c8e9bd0fa37c0ab0228"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne9a65596fe2b4fa885eec023bd9e897c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "13.09"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Slip_of_the_Keyboard"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394496/a-slip-of-the-keyboard"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8d899c19f2a943c3ba1bff0cc788d943"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N864f78ba316a4e89b37f7a105995cfe5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1006.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Terry-Pratchett-Tourist-Guide-Lancre/dp/B00NBKCZMW"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N80b53d59c41c4c289c17b09ac70ca7cb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9147771e653c4ed89e3d443e271b958b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "56.48"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8ff5d7e97b154a588758d52b3e53f945"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9c0bfeaae13a465db0955b4e99557d05"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.14"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nece39d23e4784936afe49f261ac9961d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8c9097d5ba79489aa6a0e38daf435712"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "38.59"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/TOURIST-LANCRE-DISCWORLD-STEPHEN-PAPERBACK/dp/B009RIAJ98"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6862d75a81c44542b8230ade8574d70c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncf6528f31cff4c28af75ab97a9e3284b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "57.36"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Carpe_Jugulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Carpe-Jugulum-Discworld-Novel-Witches/dp/0063385635"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N190d32a415af4285bd93ccdb90b26857"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1e71ad90e1504fcf9f9124fcc1c0c914"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.73"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Deaths-Domain-Discworld-Terry-Pratchett/dp/0552146722"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3b6c87ca97784bf8afc75f37e4af5f07"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7f47f248e938431cab9cff748ff7e80a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "13.15"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394372/death-s-domain"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8d09c19491f540bd9b165692f053063c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0dc8313fdb6547efa4e2b09ab5376fae"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3486.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/dodger/id508211347"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N84bb5ef957b842a0b94bd8dcea17cbad"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6f658f40d77f4594a135a71242524bac"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Dodger-Terry-Pratchett/dp/0552577200"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf23e99a16a20413e8ec459ec518c8252"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3bc397fa5b044701adc771496af2965e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.61"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2dc4f8626c0e4d2e86d8042b73d1d436"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "45.00"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Equal_Rites"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Equal-Rites-Discworld-Novel-Novels/dp/1804990159"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8456e5d18909421e989badf8cbdaf09e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N824485bc258b43f5919e6571b4b0ac75"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Eric_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Eric-Novel-Discworld-Terry-Pratchett/dp/0062237330"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3eed9589644349aca4909ae783ffd32e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0b00b7d4e041411cbb3f811653501420"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "945"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/feet-of-clay/id360605316"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne71486346ab346c5bd1f5366478e64ed"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb07f82409fa34d8fb3101c22854f6df1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/180499071X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1a88741df54547e8b9bd30294a84149e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N94e216116ee8474291db3add273c6001"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.39"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/0552167576"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne1451e250b344d0a9bc32e75cab8c272"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb3167034afde4d65a962b5efb5ccbc77"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.99"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 115,
+                "number_of_query_results": 21
+            },
+            "evaluation_time": 17.075011730194092,
+            "processing_times": {
+                "query_decomposition": 0.03744006156921387,
+                "static_query_evakluation": 0.1150059700012207,
+                "web_data_retrieval": 48.56372785568237,
+                "dynamic_query_evaluation": 0.010216951370239258,
+                "result_merge": 0.0017516613006591797,
+                "total": 48.728142499923706
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0035495758056640625,
+                    "searches": 31.968417167663574,
+                    "web_formatting": 0.004984378814697266,
+                    "total": 31.976951122283936
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0048177242279052734,
+                        "building": 16.671640634536743,
+                        "builder_init": 0.03727889060974121,
+                        "microdata_adding": 16.581959009170532,
+                        "total": 16.74903893470764
+                    },
+                    "property_access_init": 0.13266873359680176,
+                    "properties_update": 0.004680633544921875,
+                    "total": 16.886417627334595
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.976951122283936,
+                    "microdata_extraction": 0.0048177242279052734,
+                    "storing": 16.581959009170532,
+                    "total": 48.56372785568237
+                },
+                "microdata_query_evaluation": 0.00987386703491211,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 2,
+            "pattern_id": 2,
+            "en_query": "Give me the publisher of every book whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/dodger/id508211347"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N57485638044b4d65b815f4b873bbd945"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N87dd1f5a66ce404abad9a4f63b024978"
+                        },
+                        "publisher": {
+                            "type": "uri",
+                            "value": "Clarion Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/feet-of-clay/id360605316"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N238d49d8fee3466aba465d3de75b8ba7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N42e2d3878b2d4adb801af29315b67192"
+                        },
+                        "publisher": {
+                            "type": "uri",
+                            "value": "Harper Paperbacks"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 115,
+                "number_of_query_results": 2
+            },
+            "evaluation_time": 17.68870973587036,
+            "processing_times": {
+                "query_decomposition": 0.036882877349853516,
+                "static_query_evakluation": 0.1018514633178711,
+                "web_data_retrieval": 49.186279296875,
+                "dynamic_query_evaluation": 0.009470939636230469,
+                "result_merge": 0.00045680999755859375,
+                "total": 49.334941387176514
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0038192272186279297,
+                    "searches": 31.968417644500732,
+                    "web_formatting": 0.005129814147949219,
+                    "total": 31.97736668586731
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004929542541503906,
+                        "building": 17.293343544006348,
+                        "builder_init": 0.03741288185119629,
+                        "microdata_adding": 17.203983068466187,
+                        "total": 17.385538578033447
+                    },
+                    "property_access_init": 0.12509536743164062,
+                    "properties_update": 0.004931926727294922,
+                    "total": 17.515594482421875
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.97736668586731,
+                    "microdata_extraction": 0.004929542541503906,
+                    "storing": 17.203983068466187,
+                    "total": 49.186279296875
+                },
+                "microdata_query_evaluation": 0.009145736694335938,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 3,
+            "pattern_id": 3,
+            "en_query": "Give me the price and availability of every book whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.bookchor.com/book/9780385618984/a-blink-of-the-screen-collected-shorter-fiction"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6a98057d22354053b8dc63e8ecf9e333"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc254ec5c20574dfd8fd0c763133be2fe"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "410"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394508/a-blink-of-the-screen"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N403bed164f8746fc8866285f167fe659"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbb084f37db284a4a933c295d208a2d11"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3700.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394245/a-hat-full-of-sky"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4b06acd4def84647a0506607a15b76a0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd39972700b384b0f80346e9738641725"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "900.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Hat-Full-Sky-Discworld/dp/B0CCKGQ2VS"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf51aa4dfa81f4da4b63c97c76d93b7c7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1ca38b9a26764c1f9464c035a2d04ad8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "30.54"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Slip_of_the_Keyboard"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/a-slip-of-the-keyboard-collected-non-fiction_terry-pratchett/8942976"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7caa67eb3557415b8b1ad66f0005b07a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1f5fd44e7e28440d9b9e7f6c301215a2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "13.09"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Slip_of_the_Keyboard"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394496/a-slip-of-the-keyboard"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6c379ca62267421c8599f4d959986635"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6d4d2924adf44964ba5004769d5ea503"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1006.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Terry-Pratchett-Tourist-Guide-Lancre/dp/B00NBKCZMW"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc95fd7ad9f344911a15b3e3069eca4be"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd7101feabb82430f9ca3e9a1f352be26"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "56.48"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2dfbbf76d8944901998c38b032aa21bb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N20a079c73d684a9780d9a975cf440dec"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.14"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na95770872a7a455a90498eeccf2173d9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1e8392fad76b477d9dce6a56224bc13a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "38.59"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/TOURIST-LANCRE-DISCWORLD-STEPHEN-PAPERBACK/dp/B009RIAJ98"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N298ea8dead314d938678fb35d8a9d9d1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3c57152e2845425bba323ef07657a27f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "57.36"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Carpe_Jugulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Carpe-Jugulum-Discworld-Novel-Witches/dp/0063385635"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd12fa5bb17ac4626a09bdb457ff0e0ab"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5f30a095be964fe09054f492aa79389b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.73"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Deaths-Domain-Discworld-Terry-Pratchett/dp/0552146722"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndf64e5cddf164ac48a36a9780eedef27"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N70a203ecbfdf42a0aea298fc2430a89d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "13.15"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394372/death-s-domain"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N058c565af3194b299a431f967e02308a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N73cef258a8114a458a741a3a86b608f6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3486.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Dodger-Terry-Pratchett/dp/0552577200"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc639d4a8590846e0bcb4159d94bdfa52"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf8ee52f97c194a40992741fa8afcb262"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.61"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nda36ab311dd549ee8c6448e9e6be0adb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "45.00"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Equal_Rites"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Equal-Rites-Discworld-Novel-Novels/dp/1804990159"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N90874c9b0da04e8a82dd751123f8e556"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd78fc366a5634af888329ff5f04107f9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Eric_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Eric-Novel-Discworld-Terry-Pratchett/dp/0062237330"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfb175b73b60644f39e188c52c1968141"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb65bfe805d804a079314d443a7d839e6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "945"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/180499071X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf36c04ad0e9e46a1b94a195fb9833c78"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3c13b863d8244d77afe5fe08abd13918"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.39"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/0552167576"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0fdcb21caa51415a9a9df2a2d6f78e80"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7b642105834d4b56b1f7b443aac9b639"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 115,
+                "number_of_query_results": 19
+            },
+            "evaluation_time": 16.907474040985107,
+            "processing_times": {
+                "query_decomposition": 0.0391390323638916,
+                "static_query_evakluation": 0.09464836120605469,
+                "web_data_retrieval": 48.47043800354004,
+                "dynamic_query_evaluation": 0.010254621505737305,
+                "result_merge": 0.0017695426940917969,
+                "total": 48.616249561309814
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003950595855712891,
+                    "searches": 31.968416690826416,
+                    "web_formatting": 0.008181333541870117,
+                    "total": 31.980548620224
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0048029422760009766,
+                        "building": 16.57257390022278,
+                        "builder_init": 0.036293983459472656,
+                        "microdata_adding": 16.48508644104004,
+                        "total": 16.649319410324097
+                    },
+                    "property_access_init": 0.0798799991607666,
+                    "properties_update": 0.004593849182128906,
+                    "total": 16.733819484710693
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.980548620224,
+                    "microdata_extraction": 0.0048029422760009766,
+                    "storing": 16.48508644104004,
+                    "total": 48.47043800354004
+                },
+                "microdata_query_evaluation": 0.009915351867675781,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 4,
+            "pattern_id": 4,
+            "en_query": "Give me the books available for every book whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.bookchor.com/book/9780385618984/a-blink-of-the-screen-collected-shorter-fiction"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N98830789050a4406b1e3f5315fed610f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N739e2927eea249728266282d45cd9e69"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Blink of the Screen: Collected Shorter Fiction"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394508/a-blink-of-the-screen"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1befab55117d49459ed606ffdc55c660"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc6f5e4092fa94f0d9f855c7b2df96287"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Blink of the Screen: Terry Pratchett | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394245/a-hat-full-of-sky"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne1a8150349094f47b0f0700df53be7f7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N97c459dd6aa043328b5f5dcebfd439f9"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Hat Full of Sky: Terry Pratchett | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Hat-Full-Sky-Discworld/dp/B0CCKGQ2VS"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N07b0e2eedf384d8cafd18320eb5c23f7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncbd12850d676496998ad3e27e2ea6904"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Amazon.com: A Hat Full of Sky (The Discworld Series): 9798212882217: Terry Pratchett: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Slip_of_the_Keyboard"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394496/a-slip-of-the-keyboard"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N82991f74164340708ba9dca73d67de7c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N61bc2a2e098e43348f9f32d766b8bee5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Slip of the Keyboard: Terry Pratchett | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Terry-Pratchett-Tourist-Guide-Lancre/dp/B00NBKCZMW"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ned745a3ce5894e388b82b3e1aabb61c0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N832dfcc16dbd43dbbb79323cff2deee8"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "By Terry Pratchett A Tourist Guide To Lancre: A Discworld Mapp (paperback / softcover): Amazon.co.uk: 8601405932495: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7c56d3d8a5024195b9504a2d509c7947"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N590fd09ca54945ddbc7700e3de451d33"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Tourist Guide To Lancre (Discworld): Amazon.co.uk: Terry Pratchett: 9780552146081: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbc356f0d92aa4e19939792441de02a75"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3e088a8e48614f518b109ee1cdf7ce08"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Tourist Guide To Lancre: A Discworld Mapp : Pratchett, Terry: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/TOURIST-LANCRE-DISCWORLD-STEPHEN-PAPERBACK/dp/B009RIAJ98"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7d40f8bc08e44fe2b1b5cec11e9e686c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0ea8919df9d6463db793c1a931fb7f2b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "[ A TOURIST GUIDE TO LANCRE A DISCWORLD MAPP BY BRIGGS, STEPHEN](AUTHOR)PAPERBACK: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Carpe_Jugulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Carpe-Jugulum-Discworld-Novel-Witches/dp/0063385635"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nda5b4f583dd842f6ba1d49c91e2e49bf"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4dea5cfc865743e397ff0185d7b3f282"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Carpe Jugulum: A Discworld Novel (Witches, 6): Pratchett, Terry: 9780063385634: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Deaths-Domain-Discworld-Terry-Pratchett/dp/0552146722"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N20bca2307cc149d9bc3a6ae8373488f8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7f2c63d485f140f2a1c7b3659c541265"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Death&apos;s Domain: A Discworld Mapp: v: Amazon.co.uk: Terry Pratchett: 9780552146722: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394372/death-s-domain"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb44c306fb4bc432a85dea687b52a3581"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N47f0ec5d54224ac28eaff45ce4c7b744"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Death's Domain: Terry Pratchett | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Dodger-Terry-Pratchett/dp/0552577200"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N793241b56e314add9d383d68d1ff63fa"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8471e6da2e6940fabf69609ce4a69cda"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Dodger : Terry Pratchett: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6e3d8b9858a442c99e89fc39244f332b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Best in Sho: The Los Angeles Dodgers\u2019 Run to the Championship in 2024"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Equal_Rites"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Equal-Rites-Discworld-Novel-Novels/dp/1804990159"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc202926d8aed4bffa2a8ca548d35c764"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8ba1272003834da89b39e8e2ef611bab"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Equal Rites: (Discworld Novel 3) (Discworld Novels, 3): Amazon.co.uk: Terry Pratchett: 9781804990155: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Eric_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Eric-Novel-Discworld-Terry-Pratchett/dp/0062237330"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N560e953671274ea78f160c1e5d383cb7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1cd82597c2c94352b4bc40d4d8b72a3f"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Eric: A Novel of Discworld : Pratchett, Terry: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/180499071X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb75a75a2f53243a192482500e9a74d98"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N84efb68ae749448983fe4b1609b9e5a5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Feet Of Clay: (Discworld Novel 19) (Discworld Novels, 19) : Terry Pratchett: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/0552167576"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne9286e807c644fdb84a8ed3922c7de9d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N67932acbcbf24b5abd9e8b5711ab10d5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Feet Of Clay: (Discworld Novel 19) (Discworld Novels, 19) : Terry Pratchett: Amazon.co.uk: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 115,
+                "number_of_query_results": 18
+            },
+            "evaluation_time": 19.03150510787964,
+            "processing_times": {
+                "query_decomposition": 0.10764646530151367,
+                "static_query_evakluation": 1.6403746604919434,
+                "web_data_retrieval": 48.975162982940674,
+                "dynamic_query_evaluation": 0.010137557983398438,
+                "result_merge": 0.00152587890625,
+                "total": 50.73484754562378
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003809213638305664,
+                    "searches": 31.968416929244995,
+                    "web_formatting": 0.00461888313293457,
+                    "total": 31.976845026016235
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 0.000209808349609375,
+                    "graph_computing": {
+                        "extraction": 0.004917144775390625,
+                        "building": 17.083173036575317,
+                        "builder_init": 0.03787684440612793,
+                        "microdata_adding": 16.993400812149048,
+                        "total": 17.161227226257324
+                    },
+                    "property_access_init": 0.07852649688720703,
+                    "properties_update": 0.005109071731567383,
+                    "total": 17.245091199874878
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.976845026016235,
+                    "microdata_extraction": 0.004917144775390625,
+                    "storing": 16.993400812149048,
+                    "total": 48.975162982940674
+                },
+                "microdata_query_evaluation": 0.009779691696166992,
+                "microdata_stats_computing": 9.5367431640625e-07
+            }
+        },
+        {
+            "query_id": 5,
+            "pattern_id": 5,
+            "en_query": "Give me the price of the books available for every book whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.bookchor.com/book/9780385618984/a-blink-of-the-screen-collected-shorter-fiction"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc1d5d816e873473f8564adada90070b3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nde8be2f673774d8d93be6e4786bdfb17"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "410"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Blink_of_the_Screen"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394508/a-blink-of-the-screen"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5bde6a9386d64491b2a635fd876247dd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Naa1a8a82c6cf4e56b8ddd84d6d6f6da8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3700.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394245/a-hat-full-of-sky"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1c4b6d0acf2e43bdb0cfc685cfcafd9f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2d29d9e5a7d5403a9d69ef691b294263"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "900.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Hat_Full_of_Sky"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Hat-Full-Sky-Discworld/dp/B0CCKGQ2VS"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N741b27cebccd4210888784e7fbf5222e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne868e1ed3b9d4383b5342580a27fae80"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "30.54"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Slip_of_the_Keyboard"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/a-slip-of-the-keyboard-collected-non-fiction_terry-pratchett/8942976"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N625e370b8ae64e38b2241193f0fe8085"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N998082cd9d9144048b6e36131e5c385c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "13.09"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Slip_of_the_Keyboard"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394496/a-slip-of-the-keyboard"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndaf074f3b8dc48bc8d2f1a5f3465d467"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc574cc722806473faf5570cfb935b603"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1006.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Terry-Pratchett-Tourist-Guide-Lancre/dp/B00NBKCZMW"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf7a36d1f77794f66b3ecca9e8134d7e8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nccebc85e111444bb882fc07e18377226"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "56.48"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N262d19ed6d1f4677859fb38bb937363f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbee21a272f8f40b784b58e6513037b19"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.14"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Tourist-Guide-Lancre-Discworld-Mapp/dp/0552146080"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbaf13e9d233c4ccab01e9954d1cfc5f4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na7bd28ea3d1349ed938df171223dc058"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "38.59"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tourist_Guide_to_Lancre"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/TOURIST-LANCRE-DISCWORLD-STEPHEN-PAPERBACK/dp/B009RIAJ98"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3736fee3188e405492f2bd24bf9421c3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf2d9d714cab5470abeb6c22cb64caf23"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "57.36"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Carpe_Jugulum"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Carpe-Jugulum-Discworld-Novel-Witches/dp/0063385635"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N86d9d5fdca2e46349ac09326df75180d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nba191b2150ae41dc81a360e4ff811b47"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.73"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Deaths-Domain-Discworld-Terry-Pratchett/dp/0552146722"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4740fc7ae14c4ac998ab13bea9fced2d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndf6e94ccef2440729ced3afa406240fa"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "13.15"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Death's_Domain"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/394372/death-s-domain"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne8f8c841437b4bb5bb15d2354adf541f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0d97bdb94ece421ca42091bbbeeb0a3f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3486.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Dodger-Terry-Pratchett/dp/0552577200"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N29722e43508b4d3199e3ad8f81fc7c0b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7a1e74de01b847b6bca622a1b79d7493"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.61"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dodger_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://www.pediment.com/products/la-times-los-angeles-dodgers-2024-world-series-hardcover-collectors-book#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N917818d9d2fb4fb696fe053fac66e50e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "45.00"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Equal_Rites"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Equal-Rites-Discworld-Novel-Novels/dp/1804990159"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N48f82980a8094bcba72f64b29b01f4b6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfedfd23eb297403a910f9df03a136970"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Eric_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Eric-Novel-Discworld-Terry-Pratchett/dp/0062237330"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na9ae92bf60b44aaf97e8923a24ade27e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na1660f3a25f24bbab9d5bb2783fb03d0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "945"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/180499071X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nac15656b5f9a44fd9b79034e92bb69c2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N01c48ca96b6f438b94f47333da4e6f86"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.39"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Feet_of_Clay_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Feet-Clay-Discworld-Novel-Novels/dp/0552167576"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf9b85cde4f6649e5b6f4608784f59a78"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N35d7c31bc1ea4e25ad7a496681d79966"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.99"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 115,
+                "number_of_query_results": 19
+            },
+            "evaluation_time": 18.157240867614746,
+            "processing_times": {
+                "query_decomposition": 0.04332256317138672,
+                "static_query_evakluation": 0.0963435173034668,
+                "web_data_retrieval": 49.71255874633789,
+                "dynamic_query_evaluation": 0.010759830474853516,
+                "result_merge": 0.0015616416931152344,
+                "total": 49.86454629898071
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0040166378021240234,
+                    "searches": 31.968416452407837,
+                    "web_formatting": 0.005299091339111328,
+                    "total": 31.977732181549072
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004948854446411133,
+                        "building": 17.81826162338257,
+                        "builder_init": 0.03696894645690918,
+                        "microdata_adding": 17.729877710342407,
+                        "total": 17.894686460494995
+                    },
+                    "property_access_init": 0.07911419868469238,
+                    "properties_update": 0.004717826843261719,
+                    "total": 17.97854447364807
+                },
+                "web_microdata_graph_update": 4.76837158203125e-07,
+                "web_data_retrieval": {
+                    "url_finding": 31.977732181549072,
+                    "microdata_extraction": 0.004948854446411133,
+                    "storing": 17.729877710342407,
+                    "total": 49.71255874633789
+                },
+                "microdata_query_evaluation": 0.010396003723144531,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 45,
+            "pattern_id": 6,
+            "en_query": "Give me the price of the book whose title is Pyramids (novel) and whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?book foaf:name \"Pyramids\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Pyramids_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Pyramids-Discworld-Novel-Novels/dp/0552166650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N08b686c845484f0998752396a18c72d5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N66135b848a714dfba81de88a1cbc15a0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 11,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.7680010795593262,
+            "processing_times": {
+                "query_decomposition": 0.10698938369750977,
+                "static_query_evakluation": 0.10860943794250488,
+                "web_data_retrieval": 5.17950439453125,
+                "dynamic_query_evaluation": 0.0066070556640625,
+                "result_merge": 0.00033593177795410156,
+                "total": 5.402046203613281
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.00356292724609375,
+                    "searches": 3.671664237976074,
+                    "web_formatting": 0.0008149147033691406,
+                    "total": 3.676042079925537
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0003402233123779297,
+                        "building": 1.5117523670196533,
+                        "builder_init": 0.004121541976928711,
+                        "microdata_adding": 1.503122091293335,
+                        "total": 1.518190860748291
+                    },
+                    "property_access_init": 0.0066852569580078125,
+                    "properties_update": 0.00043487548828125,
+                    "total": 1.525336742401123
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.676042079925537,
+                    "microdata_extraction": 0.0003402233123779297,
+                    "storing": 1.503122091293335,
+                    "total": 5.17950439453125
+                },
+                "microdata_query_evaluation": 0.006552219390869141,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 46,
+            "pattern_id": 7,
+            "en_query": "Give me the publisher of the book whose title is Pyramids (novel) and whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?book foaf:name \"Pyramids\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 11,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 1.6819953918457031,
+            "processing_times": {
+                "query_decomposition": 0.038196563720703125,
+                "static_query_evakluation": 0.0929405689239502,
+                "web_data_retrieval": 5.177251815795898,
+                "dynamic_query_evaluation": 0.006620883941650391,
+                "result_merge": 0.000263214111328125,
+                "total": 5.31527304649353
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0043413639068603516,
+                    "searches": 3.671664237976074,
+                    "web_formatting": 0.00047850608825683594,
+                    "total": 3.6764841079711914
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.4836273193359375e-06,
+                    "graph_computing": {
+                        "extraction": 0.00034737586975097656,
+                        "building": 1.5096523761749268,
+                        "builder_init": 0.004326820373535156,
+                        "microdata_adding": 1.500420331954956,
+                        "total": 1.5161497592926025
+                    },
+                    "property_access_init": 0.006784677505493164,
+                    "properties_update": 0.0004363059997558594,
+                    "total": 1.523397445678711
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 3.6764841079711914,
+                    "microdata_extraction": 0.00034737586975097656,
+                    "storing": 1.500420331954956,
+                    "total": 5.177251815795898
+                },
+                "microdata_query_evaluation": 0.006571769714355469,
+                "microdata_stats_computing": 2.384185791015625e-07
+            }
+        },
+        {
+            "query_id": 47,
+            "pattern_id": 8,
+            "en_query": "Give me the price and availability of the book whose title is Pyramids (novel) and whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?book foaf:name \"Pyramids\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Pyramids_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Pyramids-Discworld-Novel-Novels/dp/0552166650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N72721806c7354d7593c7df95b4b7917e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N007e296b4e894a44bb0f4fd1ef8807f4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 11,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.7199864387512207,
+            "processing_times": {
+                "query_decomposition": 0.04153871536254883,
+                "static_query_evakluation": 0.10100173950195312,
+                "web_data_retrieval": 5.201792240142822,
+                "dynamic_query_evaluation": 0.0065555572509765625,
+                "result_merge": 0.0003609657287597656,
+                "total": 5.3512492179870605
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003793001174926758,
+                    "searches": 3.6716644763946533,
+                    "web_formatting": 0.00044846534729003906,
+                    "total": 3.67590594291687
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.00036406517028808594,
+                        "building": 1.535506248474121,
+                        "builder_init": 0.004683732986450195,
+                        "microdata_adding": 1.525522232055664,
+                        "total": 1.5434622764587402
+                    },
+                    "property_access_init": 0.006879329681396484,
+                    "properties_update": 0.00042438507080078125,
+                    "total": 1.5507919788360596
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.67590594291687,
+                    "microdata_extraction": 0.00036406517028808594,
+                    "storing": 1.525522232055664,
+                    "total": 5.201792240142822
+                },
+                "microdata_query_evaluation": 0.0065059661865234375,
+                "microdata_stats_computing": 2.384185791015625e-07
+            }
+        },
+        {
+            "query_id": 48,
+            "pattern_id": 9,
+            "en_query": "Give me the books available for the book whose title is Pyramids (novel) and whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?book foaf:name \"Pyramids\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Pyramids_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Pyramids-Discworld-Novel-Novels/dp/0552166650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N209329935341439393a9945c25f64046"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfcf2fcbbd25e4aec90085eda792422b6"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Pyramids: (Discworld Novel 7) (Discworld Novels, 7): Amazon.co.uk: Terry Pratchett: 9780552166652: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 11,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.9199111461639404,
+            "processing_times": {
+                "query_decomposition": 0.0968179702758789,
+                "static_query_evakluation": 0.09568452835083008,
+                "web_data_retrieval": 5.352668285369873,
+                "dynamic_query_evaluation": 0.007348537445068359,
+                "result_merge": 0.00034117698669433594,
+                "total": 5.552860498428345
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004045009613037109,
+                    "searches": 3.6716647148132324,
+                    "web_formatting": 0.0004706382751464844,
+                    "total": 3.676180362701416
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.00033211708068847656,
+                        "building": 1.6849884986877441,
+                        "builder_init": 0.004142284393310547,
+                        "microdata_adding": 1.6761558055877686,
+                        "total": 1.691709280014038
+                    },
+                    "property_access_init": 0.006727695465087891,
+                    "properties_update": 0.0004069805145263672,
+                    "total": 1.6988701820373535
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.676180362701416,
+                    "microdata_extraction": 0.00033211708068847656,
+                    "storing": 1.6761558055877686,
+                    "total": 5.352668285369873
+                },
+                "microdata_query_evaluation": 0.007297039031982422,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 49,
+            "pattern_id": 10,
+            "en_query": "Give me the price of the books available for the book whose title is Pyramids (novel) and whose author is Terry Pratchett",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Terry_Pratchett> .\n?book foaf:name \"Pyramids\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Pyramids_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Pyramids-Discworld-Novel-Novels/dp/0552166650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8dfd2adab85544e0abe58540110cd264"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N505534d85df947349fecc636e4696a11"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.11"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 11,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.739609718322754,
+            "processing_times": {
+                "query_decomposition": 0.0486299991607666,
+                "static_query_evakluation": 0.10221028327941895,
+                "web_data_retrieval": 5.203076362609863,
+                "dynamic_query_evaluation": 0.007243633270263672,
+                "result_merge": 0.0003497600555419922,
+                "total": 5.3615100383758545
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0036737918853759766,
+                    "searches": 3.671664237976074,
+                    "web_formatting": 0.0005054473876953125,
+                    "total": 3.6758434772491455
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.4836273193359375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0003998279571533203,
+                        "building": 1.5360989570617676,
+                        "builder_init": 0.004302263259887695,
+                        "microdata_adding": 1.5268330574035645,
+                        "total": 1.548717737197876
+                    },
+                    "property_access_init": 0.0067920684814453125,
+                    "properties_update": 0.00041961669921875,
+                    "total": 1.555957317352295
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.6758434772491455,
+                    "microdata_extraction": 0.0003998279571533203,
+                    "storing": 1.5268330574035645,
+                    "total": 5.203076362609863
+                },
+                "microdata_query_evaluation": 0.0071926116943359375,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        }
+    ]
+}

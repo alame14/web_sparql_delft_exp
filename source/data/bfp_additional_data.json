@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "web_query": [
+            "Pyramids purchase",
+            "Pyramids_(novel) purchase",
+            "Pyramids (novel) purchase"
+        ]
+    },
+    {
+        "id": 2,
+        "web_query": [
+            "Les Mis\u00e9rables purchase",
+            "Les Misérables purchase",
+            "Les Miserables purchase"
+        ]
+    },
+    {
+        "id": 3,
+        "web_query": [
+            "The Count of Monte Cristo purchase"
+        ]
+    },
+    {
+        "id": 4,
+        "web_query": [
+            "Dune purchase",
+            "Dune_(novel) purchase",
+            "Dune (novel) purchase"
+        ]
+    },
+    {
+        "id": 5,
+        "web_query": [
+            "The Lord of the Rings purchase"
+        ]
+    },
+    {
+        "id": 6,
+        "web_query": [
+            "Alice's Adventures in Wonderland purchase",
+            "Alice s Adventures in Wonderland purchase",
+            "Alice Adventures in Wonderland purchase",
+            "Alices Adventures in Wonderland purchase"
+        ]
+    },
+    {
+        "id": 7,
+        "web_query": [
+            "The Little Prince purchase"
+        ]
+    },
+    {
+        "id": 8,
+        "web_query": [
+            "The Adventures of Sherlock Holmes purchase"
+        ]
+    },
+    {
+        "id": 9,
+        "web_query": [
+            "Ars\u00e8ne Lupin, Gentleman Burglar purchase",
+            "Arsène Lupin, Gentleman Burglar purchase",
+            "Arsene Lupin, Gentleman Burglar purchase",
+            "Arsène Lupin Gentleman Burglar purchase",
+            "Arsene Lupin Gentleman Burglar purchase"
+        ]
+    },
+    {
+        "id": 10,
+        "web_query": [
+            "The Name of the Rose purchase"
+        ]
+    }
+]

@@ -1,0 +1,301 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 2,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 38.72261023521423
+    },
+    "queries": [
+        {
+            "query_id": 94,
+            "pattern_id": 18,
+            "en_query": "Give me the books available for the first 10 books whose author is Alexandre Dumas",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Alexandre_Dumas> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne359c94b684744a3bc31bee36afc0522"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb436817459bb47098c5281dd86776cb7"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Captain Pamphile | Dumas Alexandre | Good Condition"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2122f92610ec46ec935fa9a08d39ae41"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6679b1e3837140588a6a87b5f1eb5dde"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Captain Pamphile | VGC"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N60044ca5bffd4dc0aa5a99bf15e3f223"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N55d4512c24c64656bfdcbba0a7c08273"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "La Dame de Monsoreau: Dumas, Alexandre, Garrisson, Janine: 9782070316366: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_New_Troy"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.eventticketscenter.com/the-fall-of-troy-new-york-06-15-2025/6927865/t"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://www.eventticketscenter.com/the-fall-of-troy-new-york-06-15-2025/6927865/t#musicEvent"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb01c52b8456246b2a0f572beb3a18e35"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Fall of Troy    in New York Tickets - 06/15/2025 7:00 PM"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 101,
+                "number_of_query_results": 4
+            },
+            "evaluation_time": 19.379006147384644,
+            "processing_times": {
+                "query_decomposition": 0.04654669761657715,
+                "static_query_evakluation": 0.10354328155517578,
+                "web_data_retrieval": 50.16530466079712,
+                "dynamic_query_evaluation": 0.009897947311401367,
+                "result_merge": 0.0005838871002197266,
+                "total": 50.32587647438049
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0037746429443359375,
+                    "searches": 31.18897032737732,
+                    "web_formatting": 0.004546403884887695,
+                    "total": 31.197291374206543
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.005096912384033203,
+                        "building": 19.047656059265137,
+                        "builder_init": 0.03679537773132324,
+                        "microdata_adding": 18.962916374206543,
+                        "total": 19.118639707565308
+                    },
+                    "property_access_init": 0.07216954231262207,
+                    "properties_update": 0.0042247772216796875,
+                    "total": 19.19506072998047
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.197291374206543,
+                    "microdata_extraction": 0.005096912384033203,
+                    "storing": 18.962916374206543,
+                    "total": 50.16530466079712
+                },
+                "microdata_query_evaluation": 0.009510993957519531,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 95,
+            "pattern_id": 19,
+            "en_query": "Give me the price of the books available for the first 10 books whose author is Alexandre Dumas",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Alexandre_Dumas> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N27dd18f2e3de4bffbef40eaa86e666c7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne6ed26c3300749b2acb36cbeaee5c3d9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na76167a9090141a9936e396e756d6c3e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7c89aaf1bf704b959d49ecd84a309f92"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb701c21014ed4f68a966e90a9ef0225e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1ea25909293c45b3967a0530c2481a61"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 101,
+                "number_of_query_results": 3
+            },
+            "evaluation_time": 19.33838129043579,
+            "processing_times": {
+                "query_decomposition": 0.10456490516662598,
+                "static_query_evakluation": 0.08999204635620117,
+                "web_data_retrieval": 50.07970881462097,
+                "dynamic_query_evaluation": 0.010501623153686523,
+                "result_merge": 0.0005273818969726562,
+                "total": 50.28529477119446
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004029750823974609,
+                    "searches": 31.188971281051636,
+                    "web_formatting": 0.0046312808990478516,
+                    "total": 31.197632312774658
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.005048513412475586,
+                        "building": 18.961002588272095,
+                        "builder_init": 0.03622174263000488,
+                        "microdata_adding": 18.877027988433838,
+                        "total": 19.031376600265503
+                    },
+                    "property_access_init": 0.07307291030883789,
+                    "properties_update": 0.004124164581298828,
+                    "total": 19.10859990119934
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 31.197632312774658,
+                    "microdata_extraction": 0.005048513412475586,
+                    "storing": 18.877027988433838,
+                    "total": 50.07970881462097
+                },
+                "microdata_query_evaluation": 0.010112762451171875,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        }
+    ]
+}

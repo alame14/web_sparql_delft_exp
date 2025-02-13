@@ -1,0 +1,3030 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 81.94900751113892
+    },
+    "queries": [
+        {
+            "query_id": 14,
+            "pattern_id": 1,
+            "en_query": "Give me the price of every book whose author is Frank Herbert",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nea1a0a3b50fe405b8337520301d26bf7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbe5dc920ca484a4ca0e8dfe1cbb54fd0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8feff503da1e4204b51b3f6a281d908b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8b244984dbd34eac9e86c5ebe3039ac5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1680574361"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N35506f30bfd044a78e52d8865369c1b8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N14e4b01de5074bd29b89193fed6103aa"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1614750769"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3a8f6bc2882649259fb18a2cbb2444d8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndbd3234c897540858cbf9b368ebbd7b3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Game-Thrones-George-R-Martin/dp/000647988X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1f09f34b755d40119992c3b84f565720"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbbb37f39fb5c459f804ec15294a12b56"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.7"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nea1a0a3b50fe405b8337520301d26bf7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbe5dc920ca484a4ca0e8dfe1cbb54fd0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8feff503da1e4204b51b3f6a281d908b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8b244984dbd34eac9e86c5ebe3039ac5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Thorn-Bush-Frank-Herbert/dp/1614752834"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nda7a1b3f534845538a2ac2b3051dce41"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5c068b0d687647d286d30adfa7b645c4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Angels'_Fall"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://gg.deals/game/angels-fall-first/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd007bcdd3bc8473c90925e4a81092b2f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N028e8d8a605c4d2297c458fdf713657a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/chapterhouse-dune/id396269736"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N67caadb1bb2b4c18ad50e3175c7d28c3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nab0884325e354e0a83bb23b7217bb09a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Complete-Messiah-Children-Heretics-Chapterhouse/dp/B000NRVSMY"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd0fbaf3967084c678025b9b464b76dd4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N447760eaed014e2c9bb3c81064fcf5e7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "68.49"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Destination:_Void"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Destination-Void-Prequel-Pandora-Sequence/dp/1680574906"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N893510d740fb4cca9804696e84dfe60b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6bdf41092fcc430ba5be65920493c95f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.53"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncba2096f6564422297259366ea58a510"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8f7f54cabd384356822de2dde5d6eaeb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.69"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N17346056c39b487e9ad4398f4ae447ae"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nca9dacc2a799408081dcf973abe6c7d5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1680574426"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfbb4c5c54de04cd68025e3aadb9a894e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0e47e86d606c4761a4e9d1adc94243df"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na08cb1a4f5c9483a85e4a0a182d744f7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N107c74c4901e49f9805be6ce94ece14a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_Messiah"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Messiah-Frank-Herbert/dp/0593098234"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4890967e32784fb6866347663b972478"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbcd198a7dce647d8bf4eba8faaa0b457"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "362"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 80,
+                "number_of_query_results": 17
+            },
+            "evaluation_time": 12.446881532669067,
+            "processing_times": {
+                "query_decomposition": 0.04016757011413574,
+                "static_query_evakluation": 0.11315679550170898,
+                "web_data_retrieval": 44.876150608062744,
+                "dynamic_query_evaluation": 0.008994102478027344,
+                "result_merge": 0.002248525619506836,
+                "total": 45.04071760177612
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.07735943794250488,
+                    "searches": 32.86416292190552,
+                    "web_formatting": 0.0020499229431152344,
+                    "total": 32.94357228279114
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 1.9073486328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.005200386047363281,
+                        "building": 12.014764070510864,
+                        "builder_init": 0.03680300712585449,
+                        "microdata_adding": 11.927377939224243,
+                        "total": 12.095061540603638
+                    },
+                    "property_access_init": 0.08681941032409668,
+                    "properties_update": 0.00506281852722168,
+                    "total": 12.186967134475708
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.94357228279114,
+                    "microdata_extraction": 0.005200386047363281,
+                    "storing": 11.927377939224243,
+                    "total": 44.876150608062744
+                },
+                "microdata_query_evaluation": 0.008639812469482422,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 15,
+            "pattern_id": 3,
+            "en_query": "Give me the price and availability of every book whose author is Frank Herbert",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N00ae8a66aaf141739d1a1e71f8f1ab97"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N95d0e80b77494d4eb611de8353e0962c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbfded46b77d743e692b0b88720d9ff41"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc7127f0bc4984997ab85adaf032eb05c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1680574361"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N566d04fd2d8b4a68875c38d4244c87e3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8fd1076221e14cecb32933584bbaae06"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1614750769"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5e856dfd0ea74ff98c5a775e36668828"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nabc45ecaf8e64cbbb155a5291cce5bc6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Game-Thrones-George-R-Martin/dp/000647988X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nedf6a756ac3b48b697a6d8d6aeacda6c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2d6379dc5db14d0b8dd6cf851676cd8c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.7"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N00ae8a66aaf141739d1a1e71f8f1ab97"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N95d0e80b77494d4eb611de8353e0962c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbfded46b77d743e692b0b88720d9ff41"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc7127f0bc4984997ab85adaf032eb05c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Thorn-Bush-Frank-Herbert/dp/1614752834"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5f1cc04bcacd48a6a3aab72b65ef3b03"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5eeebff0d23142f7af1a281cb775c655"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Angels'_Fall"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://gg.deals/game/angels-fall-first/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8cba9b0a98924c6192561bb351c16424"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd30d8c1548d047c58baab731bc906d88"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "OnlineOnly"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Complete-Messiah-Children-Heretics-Chapterhouse/dp/B000NRVSMY"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N794b36131d6a49fea3ddb22cdb1017cd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N364ed19d5e9542ef806b6e5154fb485b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "68.49"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Destination:_Void"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Destination-Void-Prequel-Pandora-Sequence/dp/1680574906"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3144b8188da14abfa0f52cf6e63630ee"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nac63b31e830c44a593f72cce991666a7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.53"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4397d15608464c608fdb1fb75afcb2db"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne1637b9dfe5d4c2392200d89a4d167c4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.69"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N45eb5dbd2c2d49c3ae368527df5be815"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd11d4a49f0fe4e70927ad7c33ed4f52e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1680574426"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nba8146faaae843d19e6570cc133c1963"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2a7d0f1eb4d3497ba24886f7b8801d6a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf60edf2a9af94e319ec94777c1a71237"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N720ccde9d8e045e788bcaaee6d3792bb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_Messiah"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Messiah-Frank-Herbert/dp/0593098234"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N584a007dcbd4412ba6121b15fa710bff"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nef7258945f954b16b7a764c2af35283d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "362"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 80,
+                "number_of_query_results": 16
+            },
+            "evaluation_time": 12.52179741859436,
+            "processing_times": {
+                "query_decomposition": 0.11275506019592285,
+                "static_query_evakluation": 0.10181975364685059,
+                "web_data_retrieval": 44.88577961921692,
+                "dynamic_query_evaluation": 0.010559320449829102,
+                "result_merge": 0.0015935897827148438,
+                "total": 45.112507343292236
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0034253597259521484,
+                    "searches": 32.86416554450989,
+                    "web_formatting": 0.005188703536987305,
+                    "total": 32.87277960777283
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.245208740234375e-06,
+                    "graph_computing": {
+                        "extraction": 0.005675554275512695,
+                        "building": 12.096009969711304,
+                        "builder_init": 0.03765106201171875,
+                        "microdata_adding": 12.007324457168579,
+                        "total": 12.177326202392578
+                    },
+                    "property_access_init": 0.08831024169921875,
+                    "properties_update": 0.004932880401611328,
+                    "total": 12.270597457885742
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.87277960777283,
+                    "microdata_extraction": 0.005675554275512695,
+                    "storing": 12.007324457168579,
+                    "total": 44.88577961921692
+                },
+                "microdata_query_evaluation": 0.010213375091552734,
+                "microdata_stats_computing": 9.5367431640625e-07
+            }
+        },
+        {
+            "query_id": 16,
+            "pattern_id": 4,
+            "en_query": "Give me the books available for every book whose author is Frank Herbert",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5a6caab6b80145599aac9f5d63a80900"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7fa35f98afa3488bb5ce16651880b866"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Four Unpublished Novels: High-Opp, Angel&rsquo;s Fall, A Game of Authors, A Thorn in the Bush: Amazon.co.uk: Herbert, Frank: 9781614753391: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N80842f245a794e2fbf2e18017e88867e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7d526089b31d4fc6abf93be1f5f3ff92"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Four Unpublished Novels: High-Opp, Angel&rsquo;s Fall, A Game of Authors, A Thorn in the Bush: Amazon.co.uk: Herbert, Frank: 9781614753391: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1680574361"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4ab2bd2394fd40d1932f80e7e4ef1990"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0472e4fc708341c49714dbd6b7e4350e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Game of Authors: Amazon.co.uk: Herbert, Frank: 9781680574364: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1614750769"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N31353bdf34c845c1b1965c3970915815"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N673df7d9a4ee4de0a7a3e2dc6f8796d3"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Game of Authors: Amazon.co.uk: Herbert, Frank: 9781614750765: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Game-Thrones-George-R-Martin/dp/000647988X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncc5fecbe89064cb3993f8fbcda5368a4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne24d2992201b4846a3cdb4e15127033e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Game of Thrones: The bestselling classic epic fantasy series behind the award-winning HBO and Sky TV show and phenomenon GAME OF THRONES: Book 1 : Martin, George R R: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5a6caab6b80145599aac9f5d63a80900"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7fa35f98afa3488bb5ce16651880b866"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Four Unpublished Novels: High-Opp, Angel&rsquo;s Fall, A Game of Authors, A Thorn in the Bush: Amazon.co.uk: Herbert, Frank: 9781614753391: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N80842f245a794e2fbf2e18017e88867e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7d526089b31d4fc6abf93be1f5f3ff92"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Four Unpublished Novels: High-Opp, Angel&rsquo;s Fall, A Game of Authors, A Thorn in the Bush: Amazon.co.uk: Herbert, Frank: 9781614753391: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Thorn-Bush-Frank-Herbert/dp/1614752834"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N722913e332f44960bb97ad8765baca0b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1b83cecb9e9742eaaebb08efde1bbdf6"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Thorn in the Bush: Amazon.co.uk: Herbert, Frank: 9781614752837: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Angels'_Fall"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://gg.deals/game/angels-fall-first/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nffb369a8b7ce43a7aa115b92a83d4207"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N91e0d0fdcb0f4366a5c665680e37bdf3"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Angels Fall First"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Complete-Messiah-Children-Heretics-Chapterhouse/dp/B000NRVSMY"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4c96709adcf94d3a9797768d8e534f60"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc868c3354dd246b896557f912bd14c02"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Complete Dune Series Set ( 6 Books ) Dune; Dune Messiah; Children of Dune; God Emperor of Dune; Heretics of Dune; Chapterhouse Dune: Frank Herbert: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Destination:_Void"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Destination-Void-Prequel-Pandora-Sequence/dp/1680574906"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7ccf4119ea6a494aa9a410e07cacbb06"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfe239374506f4f5db5bd787d1c3c7b39"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Destination Void: Void: Prequel to the Pandora Sequence: Amazon.co.uk: Herbert, Frank: 9781680574906: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4778a801d9264e4e901891c3556c56f5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc8e704ca86144bce9ace47058d14bcf6"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Direct Descent : Herbert, Frank: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5ffdc43b5f4e4abb98a6ce56d95eb575"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndc2b51d4819c4c20b3d2d4e625d5fbfa"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Direct Descent: Amazon.co.uk: Herbert, Frank: 9781614752929: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1680574426"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1d9ebe4d8aad4c3690c4aee73d6fe646"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4d60438c59f04c57b335cb9d6126ed04"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Direct Descent: Amazon.co.uk: Herbert, Frank: 9781680574425: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N954a6f33c2bd4ef39f711f7927c0af99"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5073e56add4e44778627fc2d14669bd5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Dune : Herbert, Frank: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_Messiah"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Messiah-Frank-Herbert/dp/0593098234"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc1b25f0d437044eba3c0945d8f8451b6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N191fc80c17d841499280a5c3c73a40ea"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Dune Messiah : Frank Herbert: Amazon.in: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 80,
+                "number_of_query_results": 16
+            },
+            "evaluation_time": 12.916159629821777,
+            "processing_times": {
+                "query_decomposition": 0.047892093658447266,
+                "static_query_evakluation": 0.09318113327026367,
+                "web_data_retrieval": 45.15488862991333,
+                "dynamic_query_evaluation": 0.022864103317260742,
+                "result_merge": 0.0014376640319824219,
+                "total": 45.320263624191284
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004186868667602539,
+                    "searches": 32.86416578292847,
+                    "web_formatting": 0.0066471099853515625,
+                    "total": 32.87499976158142
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.9141387939453125e-06,
+                    "graph_computing": {
+                        "extraction": 0.00903630256652832,
+                        "building": 12.410829544067383,
+                        "builder_init": 0.05722951889038086,
+                        "microdata_adding": 12.27085256576538,
+                        "total": 12.510233879089355
+                    },
+                    "property_access_init": 0.20132112503051758,
+                    "properties_update": 0.012154102325439453,
+                    "total": 12.723758220672607
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 32.87499976158142,
+                    "microdata_extraction": 0.00903630256652832,
+                    "storing": 12.27085256576538,
+                    "total": 45.15488862991333
+                },
+                "microdata_query_evaluation": 0.022142887115478516,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 17,
+            "pattern_id": 5,
+            "en_query": "Give me the price of the books available for every book whose author is Frank Herbert",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8a31cdd243124e55927f8d2d580ea0c5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf41ec660640e47f68ee26310daa717e0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0bb0474e718b4c678c5a4982834952aa"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5cb90dee4dc74d719eec6312f508f1c6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1680574361"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N55314909d74f43efb8afdddd34454eea"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N69f043d6ea8a4f12a38396362ea142cd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1614750769"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N13421c409ced4dfb99d13262847bbfe6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0b0013617a584a219923cd85e3393aa6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Game-Thrones-George-R-Martin/dp/000647988X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd22cb51382194fcead22b049c73709ce"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nef23bf33eaf24399bd509f886f0bc3ba"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.7"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8a31cdd243124e55927f8d2d580ea0c5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf41ec660640e47f68ee26310daa717e0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0bb0474e718b4c678c5a4982834952aa"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5cb90dee4dc74d719eec6312f508f1c6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Thorn-Bush-Frank-Herbert/dp/1614752834"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne3c8097156f544d1980ce84280960126"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1d7ab9f4838e44e0bf1e8f839a412713"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Angels'_Fall"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://gg.deals/game/angels-fall-first/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1235cdb0cdbd4fe391cdf2cae1cad2f2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8e3b94351ad44f1abad06c2674973475"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Complete-Messiah-Children-Heretics-Chapterhouse/dp/B000NRVSMY"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4250aed101a0416684041bd7892f6461"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb4ff248823ed4a7ebdac5b7e7cdbb6e6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "68.49"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Destination:_Void"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Destination-Void-Prequel-Pandora-Sequence/dp/1680574906"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7b556fc5f0864fc68b37550f17ada55a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N54883872916b4209b265b7db77152490"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.53"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N40f613d7fda6459f82301872d7a5373f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2bf31903891a47b680a68d504c7753c0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.69"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf6dbae0b61494f988365f72bddcb17f3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne5e4d79ab57e4ac9a5adcccf272776b9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1680574426"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N528461c222d541bb93d999cfd167cd25"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne83b9b8b9a904dd7a708cfa35732cadf"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne8e4f0e0df014df685e88b44fb871399"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0f10326529fc48409c701e8b4a98186d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_Messiah"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Messiah-Frank-Herbert/dp/0593098234"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7f3389ce9bc1458396b87a8506e5b391"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc94d5752499f4916bc1d75338f68bf48"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "362"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 80,
+                "number_of_query_results": 16
+            },
+            "evaluation_time": 13.107434272766113,
+            "processing_times": {
+                "query_decomposition": 0.08296656608581543,
+                "static_query_evakluation": 0.10301423072814941,
+                "web_data_retrieval": 45.28891968727112,
+                "dynamic_query_evaluation": 0.013934850692749023,
+                "result_merge": 0.00325775146484375,
+                "total": 45.492093086242676
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0031473636627197266,
+                    "searches": 32.864166021347046,
+                    "web_formatting": 0.003609895706176758,
+                    "total": 32.87092328071594
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.337860107421875e-06,
+                    "graph_computing": {
+                        "extraction": 0.007543325424194336,
+                        "building": 12.536644220352173,
+                        "builder_init": 0.054579734802246094,
+                        "microdata_adding": 12.410453081130981,
+                        "total": 12.67099642753601
+                    },
+                    "property_access_init": 0.189971923828125,
+                    "properties_update": 0.006827592849731445,
+                    "total": 12.86782717704773
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.87092328071594,
+                    "microdata_extraction": 0.007543325424194336,
+                    "storing": 12.410453081130981,
+                    "total": 45.28891968727112
+                },
+                "microdata_query_evaluation": 0.01356196403503418,
+                "microdata_stats_computing": 9.5367431640625e-07
+            }
+        },
+        {
+            "query_id": 58,
+            "pattern_id": 6,
+            "en_query": "Give me the price of the book whose title is Dune (novel) and whose author is Frank Herbert",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?book foaf:name \"Dune\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbd6a7bbd29644ef2bcc13a0719ac348c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nead5af559ec74135aa0479987e7dce6a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 7,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.1410555839538574,
+            "processing_times": {
+                "query_decomposition": 0.05393791198730469,
+                "static_query_evakluation": 0.10426640510559082,
+                "web_data_retrieval": 4.492095232009888,
+                "dynamic_query_evaluation": 0.011539697647094727,
+                "result_merge": 0.0003724098205566406,
+                "total": 4.662211656570435
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004255056381225586,
+                    "searches": 3.613041400909424,
+                    "web_formatting": 0.0006482601165771484,
+                    "total": 3.6179447174072266
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.198883056640625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0006201267242431641,
+                        "building": 0.8968958854675293,
+                        "builder_init": 0.009192705154418945,
+                        "microdata_adding": 0.873530387878418,
+                        "total": 0.9187877178192139
+                    },
+                    "property_access_init": 0.021902799606323242,
+                    "properties_update": 0.0012385845184326172,
+                    "total": 0.9419610500335693
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.6179447174072266,
+                    "microdata_extraction": 0.0006201267242431641,
+                    "storing": 0.873530387878418,
+                    "total": 4.492095232009888
+                },
+                "microdata_query_evaluation": 0.011480331420898438,
+                "microdata_stats_computing": 1.1920928955078125e-06
+            }
+        },
+        {
+            "query_id": 59,
+            "pattern_id": 8,
+            "en_query": "Give me the price and availability of the book whose title is Dune (novel) and whose author is Frank Herbert",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?book foaf:name \"Dune\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na06fe2a91c7848818b3e45c5840f9928"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N375cbddd164a4648a38ecef8197cda9e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 7,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.0666513442993164,
+            "processing_times": {
+                "query_decomposition": 0.05492591857910156,
+                "static_query_evakluation": 0.10057497024536133,
+                "web_data_retrieval": 4.438181638717651,
+                "dynamic_query_evaluation": 0.006630897521972656,
+                "result_merge": 0.0004050731658935547,
+                "total": 4.6007184982299805
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0032656192779541016,
+                    "searches": 3.6130411624908447,
+                    "web_formatting": 0.0001971721649169922,
+                    "total": 3.616503953933716
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 1.9073486328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0002923011779785156,
+                        "building": 0.8332619667053223,
+                        "builder_init": 0.004080295562744141,
+                        "microdata_adding": 0.821385383605957,
+                        "total": 0.8498625755310059
+                    },
+                    "property_access_init": 0.029842138290405273,
+                    "properties_update": 0.0012059211730957031,
+                    "total": 0.8809347152709961
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.616503953933716,
+                    "microdata_extraction": 0.0002923011779785156,
+                    "storing": 0.821385383605957,
+                    "total": 4.438181638717651
+                },
+                "microdata_query_evaluation": 0.006574392318725586,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 60,
+            "pattern_id": 9,
+            "en_query": "Give me the books available for the book whose title is Dune (novel) and whose author is Frank Herbert",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?book foaf:name \"Dune\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N824312408e694e52a2eb874690619fd7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd791d205d5df43b98a387d9d694da848"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Dune : Herbert, Frank: Amazon.in: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 7,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.0693564414978027,
+            "processing_times": {
+                "query_decomposition": 0.05182480812072754,
+                "static_query_evakluation": 0.10010075569152832,
+                "web_data_retrieval": 4.451802492141724,
+                "dynamic_query_evaluation": 0.007720947265625,
+                "result_merge": 0.0005116462707519531,
+                "total": 4.6119606494903564
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0035254955291748047,
+                    "searches": 3.613041877746582,
+                    "web_formatting": 0.0005583763122558594,
+                    "total": 3.6171257495880127
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 7.152557373046875e-06,
+                    "graph_computing": {
+                        "extraction": 0.00036334991455078125,
+                        "building": 0.8484554290771484,
+                        "builder_init": 0.005476951599121094,
+                        "microdata_adding": 0.8343133926391602,
+                        "total": 0.8653502464294434
+                    },
+                    "property_access_init": 0.02244400978088379,
+                    "properties_update": 0.0011944770812988281,
+                    "total": 0.8890230655670166
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.6171257495880127,
+                    "microdata_extraction": 0.00036334991455078125,
+                    "storing": 0.8343133926391602,
+                    "total": 4.451802492141724
+                },
+                "microdata_query_evaluation": 0.007656574249267578,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 61,
+            "pattern_id": 10,
+            "en_query": "Give me the price of the books available for the book whose title is Dune (novel) and whose author is Frank Herbert",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?book foaf:name \"Dune\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc81412e7d15740088d551fcb08ee28a6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6b6194b7f3b5479e97d5a396e3e096f5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 7,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 1.0699708461761475,
+            "processing_times": {
+                "query_decomposition": 0.12320852279663086,
+                "static_query_evakluation": 0.09603357315063477,
+                "web_data_retrieval": 4.385910272598267,
+                "dynamic_query_evaluation": 0.006752967834472656,
+                "result_merge": 0.0003523826599121094,
+                "total": 4.612257719039917
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003603219985961914,
+                    "searches": 3.613041639328003,
+                    "web_formatting": 0.00046753883361816406,
+                    "total": 3.617112398147583
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.4836273193359375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0003523826599121094,
+                        "building": 0.7827310562133789,
+                        "builder_init": 0.005425930023193359,
+                        "microdata_adding": 0.7684454917907715,
+                        "total": 0.7998740673065186
+                    },
+                    "property_access_init": 0.022348642349243164,
+                    "properties_update": 0.0012884140014648438,
+                    "total": 0.8235433101654053
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.617112398147583,
+                    "microdata_extraction": 0.0003523826599121094,
+                    "storing": 0.7684454917907715,
+                    "total": 4.385910272598267
+                },
+                "microdata_query_evaluation": 0.006699562072753906,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 96,
+            "pattern_id": 15,
+            "en_query": "Give me the price of the first 10 books whose author is Frank Herbert",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd7d778274646440a8f8cc3e8124e18c3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Needa5599957a4590b30bb650d32da715"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N26af1fdb27ab4d91a3d330883f66ae44"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7d62851af8d4483bb8c65489b8ebb0c3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1680574361"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5dbf7dd4ab5f45ec80558704655bdefa"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N75fceb85e1ac441dbe2983b12c18ccd3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1614750769"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na905f5d1d8a145e78f6f8adbb4ce57a4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5ec9eef28b6f4a7aafa7480c4ea4156c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Game-Thrones-George-R-Martin/dp/000647988X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc877fb62ca54446ea11eba0e1e70cca8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0a903656778647dea82c3d5fc779b9b2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.7"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd7d778274646440a8f8cc3e8124e18c3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Needa5599957a4590b30bb650d32da715"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N26af1fdb27ab4d91a3d330883f66ae44"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7d62851af8d4483bb8c65489b8ebb0c3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Thorn-Bush-Frank-Herbert/dp/1614752834"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Naf2f18a71eb1426d968640dc2afa04e3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N08ba91731daf42f8b53140364e21e3b7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Angels'_Fall"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://gg.deals/game/angels-fall-first/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5e88e3ac8418459cab833856e4e02e2e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndafeb3bad1144f04866e6d1886a971cd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://books.apple.com/us/book/chapterhouse-dune/id396269736"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne9e227a7d9484a81b50dfbfbc2c7f41e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf6a659ddc85c4066b7e94b45a6d6c2ab"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Complete-Messiah-Children-Heretics-Chapterhouse/dp/B000NRVSMY"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na6b9b2839fff48e5ab113054908c386b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N737f7edc181f41098727a7b8c0f133f3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "68.49"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Destination:_Void"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Destination-Void-Prequel-Pandora-Sequence/dp/1680574906"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N001e5c8692dc40feab9a53352722c0a5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neef5e6be46d341668d0ad619301efac8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.53"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf4026ddf6df94162ab2147c6c4eafd17"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N927a1df8e7b846cb9f516ea8ee8df6e8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.69"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2b62b6c0ed4647ecba54316a9e496e3e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N32c69fa285cd4a6eae67d18d0294b1a2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1680574426"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4a2c3f7620ac470dbb354579a5ca1626"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N629e80ec0d774323a196f0a1c8c70404"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4f03eba5932242e7912d4c8eba2a892f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8e6896dac88648989a4e4a9b85139e1c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_Messiah"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Messiah-Frank-Herbert/dp/0593098234"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf10679cf215f4fb3bb2e4e8875db31e3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0812100245e84b6d9668dc653ac732f8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "362"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 80,
+                "number_of_query_results": 17
+            },
+            "evaluation_time": 12.816354513168335,
+            "processing_times": {
+                "query_decomposition": 0.11277318000793457,
+                "static_query_evakluation": 0.11047649383544922,
+                "web_data_retrieval": 45.15926384925842,
+                "dynamic_query_evaluation": 0.009437084197998047,
+                "result_merge": 0.0015177726745605469,
+                "total": 45.393468379974365
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.00379180908203125,
+                    "searches": 32.864166021347046,
+                    "web_formatting": 0.006461620330810547,
+                    "total": 32.87441945075989
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.198883056640625e-06,
+                    "graph_computing": {
+                        "extraction": 0.006199836730957031,
+                        "building": 12.380166053771973,
+                        "builder_init": 0.04307913780212402,
+                        "microdata_adding": 12.278644561767578,
+                        "total": 12.461135149002075
+                    },
+                    "property_access_init": 0.08859515190124512,
+                    "properties_update": 0.005449533462524414,
+                    "total": 12.555210590362549
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.87441945075989,
+                    "microdata_extraction": 0.006199836730957031,
+                    "storing": 12.278644561767578,
+                    "total": 45.15926384925842
+                },
+                "microdata_query_evaluation": 0.009078502655029297,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 97,
+            "pattern_id": 17,
+            "en_query": "Give me the price and availability of the first 10 books whose author is Frank Herbert",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Frank_Herbert> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nda4849ede4a44d3ebab1cb564804500d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbc9b4bb32b304ce980416a025e226041"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbee94682f66f42a09c52764c44882e5f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6865c711d44e4a45ad0dd182856963ed"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1680574361"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0262d0c1d360406e88fa4af1a570dd79"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4d09324621b04b62b6b0a3e2cc42de1e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Game-Authors-Frank-Herbert/dp/1614750769"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N77fbcc01264c45f4830cc7374207572c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd87f4e20e483493abad4fe8cf32a02f1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Game_of_Authors"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Game-Thrones-George-R-Martin/dp/000647988X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne698ac0ee021467c878df3adfc2ae5aa"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc3d7eb4b6aa346eaa0842d1b7265ecc9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.7"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nda4849ede4a44d3ebab1cb564804500d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbc9b4bb32b304ce980416a025e226041"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Four-Unpublished-Novels-High-Opp-Authors/dp/1614753393"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbee94682f66f42a09c52764c44882e5f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6865c711d44e4a45ad0dd182856963ed"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.29"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Thorn_in_the_Bush"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Thorn-Bush-Frank-Herbert/dp/1614752834"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N665b1c073bf84b378f75e55240b21b69"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N81c0ab7a6c60494b87fc2776368b893b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Angels'_Fall"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://gg.deals/game/angels-fall-first/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc1dc58b07a624ffe9c35ca6ac09f85f0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2f9b7e3c98db4f29b7270241e775ec8e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.28"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "OnlineOnly"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Chapterhouse:_Dune"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Complete-Messiah-Children-Heretics-Chapterhouse/dp/B000NRVSMY"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4f6995d95e374f7486c77b58d7c103fc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb482ad46ba2446fb9045fe4fe1e510bd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "68.49"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Destination:_Void"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Destination-Void-Prequel-Pandora-Sequence/dp/1680574906"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na4ce700500b64159ba7e9732991b79b7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N535cacc208914aaab4ea238bd1f1884f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.53"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3996b93d136848fe99609f9cc379fbd0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfef53502f01b468a8c3e690e4e242c3a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.69"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1614752923"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne4dfc8da3dd54b1bbb7ad4864a7ee0dc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N48cfd5b404444db487f8e5f4803e1ec3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "10.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Direct_Descent"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Direct-Descent-Frank-Herbert/dp/1680574426"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9ad107fd1e434223bbadd75f0794dbf3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf52bcc92459e4c4f88ad051011654d97"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "15.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Frank-Herbert/dp/0441172717"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5b2b06866921437b9a11072230498f8c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbda258f19f0d4814bebb4dfdfedd71d5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "369"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dune_Messiah"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Dune-Messiah-Frank-Herbert/dp/0593098234"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N116802e23e7c433fba22019c8d9f83d3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N275c197d594e40cfa4e2401869554ed0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "362"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 80,
+                "number_of_query_results": 16
+            },
+            "evaluation_time": 13.771672487258911,
+            "processing_times": {
+                "query_decomposition": 0.11333084106445312,
+                "static_query_evakluation": 1.100898027420044,
+                "web_data_retrieval": 45.024571657180786,
+                "dynamic_query_evaluation": 0.011361837387084961,
+                "result_merge": 0.0016884803771972656,
+                "total": 46.251850843429565
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.005099058151245117,
+                    "searches": 32.86416554450989,
+                    "web_formatting": 0.007234811782836914,
+                    "total": 32.87649941444397
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.9141387939453125e-06,
+                    "graph_computing": {
+                        "extraction": 0.008822202682495117,
+                        "building": 12.268022537231445,
+                        "builder_init": 0.05459403991699219,
+                        "microdata_adding": 12.139250040054321,
+                        "total": 12.366259098052979
+                    },
+                    "property_access_init": 0.14458441734313965,
+                    "properties_update": 0.005595207214355469,
+                    "total": 12.51647424697876
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 32.87649941444397,
+                    "microdata_extraction": 0.008822202682495117,
+                    "storing": 12.139250040054321,
+                    "total": 45.024571657180786
+                },
+                "microdata_query_evaluation": 0.010989665985107422,
+                "microdata_stats_computing": 1.1920928955078125e-06
+            }
+        }
+    ]
+}

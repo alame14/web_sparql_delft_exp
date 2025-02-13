@@ -1,0 +1,4237 @@
+{
+    "query_details": [
+        {
+            "query_id": 1,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 1,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 1,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 2,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 2,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 2,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 3,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 3,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 3,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 4,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 4,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 4,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 5,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 5,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 5,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 6,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 6,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 6,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 7,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 7,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 7,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 8,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 8,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 8,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 9,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 9,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 9,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 10,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 16,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 10,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 16,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 10,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 16,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 11,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 11,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 11,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 12,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 12,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 12,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 13,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 13,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 13,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 14,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 14,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 14,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 15,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 15,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 15,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 16,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 16,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 16,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 17,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 17,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 1
+        },
+        {
+            "query_id": 17,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 18,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 18,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 18,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 19,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 19,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 19,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 20,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 3,
+            "prices": 0,
+            "availabilities": 3,
+            "publishers": 0
+        },
+        {
+            "query_id": 20,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 20,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 21,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 21,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 21,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 22,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 22,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 22,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 23,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 3,
+            "prices": 0,
+            "availabilities": 3,
+            "publishers": 0
+        },
+        {
+            "query_id": 23,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 23,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 24,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 24,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 1
+        },
+        {
+            "query_id": 24,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 25,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 6,
+            "prices": 0,
+            "availabilities": 6,
+            "publishers": 0
+        },
+        {
+            "query_id": 25,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 25,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 6,
+            "prices": 6,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 26,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 23,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 26,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 23,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 26,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 23,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 27,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 27,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 27,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 28,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 28,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 28,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 29,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 3,
+            "prices": 0,
+            "availabilities": 3,
+            "publishers": 0
+        },
+        {
+            "query_id": 29,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 29,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 30,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 30,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 30,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 31,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 31,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 31,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 32,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 3,
+            "prices": 0,
+            "availabilities": 3,
+            "publishers": 0
+        },
+        {
+            "query_id": 32,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 32,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 33,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 33,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 33,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 34,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 34,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 34,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 35,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 35,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 1
+        },
+        {
+            "query_id": 35,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 36,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 36,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 36,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 37,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 4,
+            "prices": 0,
+            "availabilities": 4,
+            "publishers": 0
+        },
+        {
+            "query_id": 37,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 37,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 4,
+            "prices": 4,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 38,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 38,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 38,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 39,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 39,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 39,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 40,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 40,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 40,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 41,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 3,
+            "prices": 0,
+            "availabilities": 3,
+            "publishers": 0
+        },
+        {
+            "query_id": 41,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 41,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 42,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 42,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 42,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 17,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 43,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 43,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 43,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 44,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 44,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 44,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 45,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 45,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 45,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 46,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 46,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 46,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 47,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 47,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 47,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 48,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 48,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 1
+        },
+        {
+            "query_id": 48,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 49,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 49,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 49,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 50,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 50,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 50,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 51,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 51,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 51,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 52,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 52,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 52,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 53,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 53,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 53,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 54,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 54,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 54,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 55,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 55,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 55,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 56,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 4,
+            "prices": 0,
+            "availabilities": 4,
+            "publishers": 0
+        },
+        {
+            "query_id": 56,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 56,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 8,
+            "offers": 4,
+            "prices": 4,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 57,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 57,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 57,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 58,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 3,
+            "prices": 0,
+            "availabilities": 3,
+            "publishers": 0
+        },
+        {
+            "query_id": 58,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 1
+        },
+        {
+            "query_id": 58,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 59,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 59,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 59,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 11,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 60,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 5,
+            "prices": 0,
+            "availabilities": 5,
+            "publishers": 0
+        },
+        {
+            "query_id": 60,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 60,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 5,
+            "prices": 5,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 61,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 61,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 61,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 62,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 62,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 62,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 14,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 63,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 63,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 63,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 64,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 64,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 64,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 65,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 65,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 65,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 66,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 66,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 66,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 10,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 67,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 67,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 67,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 68,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 3,
+            "prices": 0,
+            "availabilities": 3,
+            "publishers": 0
+        },
+        {
+            "query_id": 68,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 68,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 3,
+            "prices": 3,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 69,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 69,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 69,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 70,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 70,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 70,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 9,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 71,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 71,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 71,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 5,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 72,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 0,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 72,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 0,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 72,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 0,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 73,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 73,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 73,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 74,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 74,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 74,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 12,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 75,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 4,
+            "prices": 0,
+            "availabilities": 4,
+            "publishers": 0
+        },
+        {
+            "query_id": 75,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 75,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 6,
+            "offers": 4,
+            "prices": 4,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 76,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 4,
+            "prices": 0,
+            "availabilities": 4,
+            "publishers": 0
+        },
+        {
+            "query_id": 76,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 76,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 13,
+            "offers": 4,
+            "prices": 4,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 77,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 16,
+            "offers": 2,
+            "prices": 0,
+            "availabilities": 2,
+            "publishers": 0
+        },
+        {
+            "query_id": 77,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 16,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 77,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 16,
+            "offers": 2,
+            "prices": 2,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 78,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 78,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 78,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 79,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 79,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 79,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 80,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 80,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 80,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 4,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 81,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 81,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 81,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 7,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 82,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 82,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 82,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 3,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 83,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?availability"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 1,
+            "prices": 0,
+            "availabilities": 1,
+            "publishers": 0
+        },
+        {
+            "query_id": 83,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?publisher"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 0,
+            "prices": 0,
+            "availabilities": 0,
+            "publishers": 0
+        },
+        {
+            "query_id": 83,
+            "selected_elements": [
+                "?book",
+                "?web",
+                "?microdata",
+                "?offer",
+                "?price"
+            ],
+            "books_from_kg": 1,
+            "webs": 30,
+            "microdatas": 15,
+            "offers": 1,
+            "prices": 1,
+            "availabilities": 0,
+            "publishers": 0
+        }
+    ]
+}

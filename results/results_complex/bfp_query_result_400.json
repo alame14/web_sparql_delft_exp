@@ -1,0 +1,2046 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 52.13690710067749
+    },
+    "queries": [
+        {
+            "query_id": 114,
+            "pattern_id": 15,
+            "en_query": "Give me the price of the first 10 books whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N808514fd02a44c7082cc0e71cb85a013"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3f12f2221fc14ffc96eedd688497b4e8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N053c9d5e15094d3d9e3a0862a0d0fcb1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4fb339ea2e494e76b24aa85cc7fd3c55"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8811d446769f47f3ad756911405b5697"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neff3e18a43a542078d442702c6bd89bb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N545502bfad5c47dc97f059d4229a93e7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N08fe2fc71b5c43c8ae22c94b8dfe8087"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndd8e29e3d5274abe999a115b36b75038"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb9f83da1b3f345598d4d4c22b5dd5d9d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7b7ecda4c1a440c3a70c34c24f26e243"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nba840e2448c24556b53fde20d38e30e7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 6.100495338439941,
+            "processing_times": {
+                "query_decomposition": 0.03895902633666992,
+                "static_query_evakluation": 0.10254430770874023,
+                "web_data_retrieval": 18.543753385543823,
+                "dynamic_query_evaluation": 0.007989883422851562,
+                "result_merge": 0.0007414817810058594,
+                "total": 18.69398808479309
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0036835670471191406,
+                    "searches": 12.774706602096558,
+                    "web_formatting": 0.003056049346923828,
+                    "total": 12.7814462184906
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 7.152557373046875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0018551349639892578,
+                        "building": 5.872609853744507,
+                        "builder_init": 0.015331268310546875,
+                        "microdata_adding": 5.760452032089233,
+                        "total": 5.897550582885742
+                    },
+                    "property_access_init": 0.02382683753967285,
+                    "properties_update": 0.0013957023620605469,
+                    "total": 5.922805309295654
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 12.7814462184906,
+                    "microdata_extraction": 0.0018551349639892578,
+                    "storing": 5.760452032089233,
+                    "total": 18.543753385543823
+                },
+                "microdata_query_evaluation": 0.007812976837158203,
+                "microdata_stats_computing": 1.6689300537109375e-06
+            }
+        },
+        {
+            "query_id": 115,
+            "pattern_id": 17,
+            "en_query": "Give me the price and availability of the first 10 books whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0f1db65632c94281b0374e9caf287f10"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2d8ccbf052424df3b708fa3a03460d64"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7f3d59a0045b4552aec780bc6a229463"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0b2dc66ddda74082b808fa355b7841f3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndc09223537d243b79326b7d959e78020"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc8c1266f19134f93811b42336346d3be"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5354093ec5b24e2db8092f7523fc5115"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5b2a07807214438a8bef2dff3feda078"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Naf43fe991d77412ea27104f1cb6555ce"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf01fea6f4eaa4a498a3be2aceeadd240"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbf6e71716a0049f2a9109218fce1afff"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3bca3f9fcac5455a854ff44c9efda035"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 5.997679948806763,
+            "processing_times": {
+                "query_decomposition": 0.04306149482727051,
+                "static_query_evakluation": 0.09686017036437988,
+                "web_data_retrieval": 18.525983810424805,
+                "dynamic_query_evaluation": 0.007441043853759766,
+                "result_merge": 0.0007989406585693359,
+                "total": 18.674145460128784
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004018306732177734,
+                    "searches": 12.774705648422241,
+                    "web_formatting": 0.0022771358489990234,
+                    "total": 12.781001091003418
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.67572021484375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0017936229705810547,
+                        "building": 5.775082349777222,
+                        "builder_init": 0.014550924301147461,
+                        "microdata_adding": 5.743189096450806,
+                        "total": 5.799553155899048
+                    },
+                    "property_access_init": 0.024873971939086914,
+                    "properties_update": 0.0013804435729980469,
+                    "total": 5.825836658477783
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 12.781001091003418,
+                    "microdata_extraction": 0.0017936229705810547,
+                    "storing": 5.743189096450806,
+                    "total": 18.525983810424805
+                },
+                "microdata_query_evaluation": 0.007266044616699219,
+                "microdata_stats_computing": 1.1920928955078125e-06
+            }
+        },
+        {
+            "query_id": 116,
+            "pattern_id": 18,
+            "en_query": "Give me the books available for the first 10 books whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N12acea99e3d84a8b87c6239528a2afc8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nafbf550ede1941ba88f50fe5ab574fc0"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy The Complete Collection of Ars&egrave;ne Lupin 10 Books Box Set by Maurice LeBlanc(Gentleman Burglar, The Confessions, The Crystal Stopper, The Eight Strokes of the clock &amp; More) Book Online at Low Prices in India | The Complete Collection of Ars&egrave;ne Lupin 10 Books Box Set by Maurice LeBlanc(Gentleman Burglar, The Confessions, The Crystal Stopper, The Eight Strokes of the clock &amp; More) Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1ab4160e96034d0290ad8d15fc704709"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc129459d994a4751b766c2b15b962b96"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy Arsene Lupin: The Gentleman Burglar (Mint Editions) Book Online at Low Prices in India | Arsene Lupin: The Gentleman Burglar (Mint Editions) Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N139800cec2dc4f2ebdcd67eff67081e4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6860bc84d2f146098284b0533caab0ce"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Arsene Lupin, Gentleman Burglar: Amazon.co.uk: LeBlanc, Maurice: 9781434486851: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nefbbfc5d6497443596c46f44e11719eb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncf9925970e584475973ecdc174c9caea"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Ars&egrave;ne Lupin, Gentleman Burglar : LeBlanc, Maurice, Morehead, George: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb19d2cefd4434a7085838fd3f95126bd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N682386b0edf44a568e4f42dcf68c9bbf"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy Ars&egrave;ne Lupin, Gentleman Burglar Book Online at Low Prices in India | Ars&egrave;ne Lupin, Gentleman Burglar Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1991ae1cf5da477b9f6f6865f57e3020"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na2aadfe53d1e4b2995c13f2646880707"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy Arsene Lupin, Gentleman Burglar Book Online at Low Prices in India | Arsene Lupin, Gentleman Burglar Reviews &amp; Ratings - Amazon.in"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 6.069328784942627,
+            "processing_times": {
+                "query_decomposition": 0.04312562942504883,
+                "static_query_evakluation": 0.09880661964416504,
+                "web_data_retrieval": 18.5866801738739,
+                "dynamic_query_evaluation": 0.007977485656738281,
+                "result_merge": 0.0007989406585693359,
+                "total": 18.737388849258423
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0037147998809814453,
+                    "searches": 12.774705410003662,
+                    "web_formatting": 0.002300262451171875,
+                    "total": 12.780720472335815
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.001744985580444336,
+                        "building": 5.8361711502075195,
+                        "builder_init": 0.014611959457397461,
+                        "microdata_adding": 5.804214715957642,
+                        "total": 5.8642308712005615
+                    },
+                    "property_access_init": 0.02417445182800293,
+                    "properties_update": 0.0014064311981201172,
+                    "total": 5.889838457107544
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 12.780720472335815,
+                    "microdata_extraction": 0.001744985580444336,
+                    "storing": 5.804214715957642,
+                    "total": 18.5866801738739
+                },
+                "microdata_query_evaluation": 0.0078105926513671875,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 117,
+            "pattern_id": 19,
+            "en_query": "Give me the price of the books available for the first 10 books whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N028a72da8bfa41b5858335f134afd61b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N93eb71002d224c09bde7b45f79545bd4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf33cf11a14ac402b8325f4a755a209b1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na4f05ece7eec435496e20ffc757412eb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N12a2340716a846f9babe74d62b363839"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd0c5526dc1024283a69ea130adfe8cfa"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8067e24639274a1383b2990baa44afad"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0e9d004ba45e4e2cbddab7b24d96d203"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2a21ddb160784f6f82b3b491ca355dc7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N42c4fd544da24eb792146f6dd44b5f2b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0e2f29433ce343778f4616f5f73f326a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2fd9bd8772bd4160898e8bf38c44e3bc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 5.997787952423096,
+            "processing_times": {
+                "query_decomposition": 0.09876871109008789,
+                "static_query_evakluation": 0.10138821601867676,
+                "web_data_retrieval": 18.375494718551636,
+                "dynamic_query_evaluation": 0.055925846099853516,
+                "result_merge": 0.0008127689361572266,
+                "total": 18.63239026069641
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0031561851501464844,
+                    "searches": 12.774705410003662,
+                    "web_formatting": 0.002576589584350586,
+                    "total": 12.78043818473816
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0018680095672607422,
+                        "building": 5.668834924697876,
+                        "builder_init": 0.05442380905151367,
+                        "microdata_adding": 5.593188524246216,
+                        "total": 5.693610429763794
+                    },
+                    "property_access_init": 0.02383112907409668,
+                    "properties_update": 0.0013527870178222656,
+                    "total": 5.718818664550781
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 12.78043818473816,
+                    "microdata_extraction": 0.0018680095672607422,
+                    "storing": 5.593188524246216,
+                    "total": 18.375494718551636
+                },
+                "microdata_query_evaluation": 0.05575847625732422,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 36,
+            "pattern_id": 1,
+            "en_query": "Give me the price of every book whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7cb6ecd358a142cab540f552b845ad78"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndc3c1e5969a7464a952a7f43edc1728b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2bd4308ce2584f01a1ef3eba8f761718"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N927cb2f64c904f5a94fde9d736cfc71a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf0d0b9f669de4450bfdf937475263c0d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3a08e65f1adb488f942fdf7aa1a173a2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf9d4d4234c274b09899ed3dad00dfbdd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N07c45f17d4dd46dd8fdd2199c80db2e7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0ff47334853b461fb7e967909744443c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nae31d29189a049549426622f0e3f1dad"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ned95912b6f8b4f13ae3ae8abb68b6977"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N023dd89eac2a45f8b8a7fd90d076a2c7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 5.935753107070923,
+            "processing_times": {
+                "query_decomposition": 0.04272937774658203,
+                "static_query_evakluation": 0.09583592414855957,
+                "web_data_retrieval": 18.41320013999939,
+                "dynamic_query_evaluation": 0.007071971893310547,
+                "result_merge": 0.00075531005859375,
+                "total": 18.559592723846436
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0022306442260742188,
+                    "searches": 12.774705410003662,
+                    "web_formatting": 0.0023610591888427734,
+                    "total": 12.779297113418579
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0019996166229248047,
+                        "building": 5.712068557739258,
+                        "builder_init": 0.06121063232421875,
+                        "microdata_adding": 5.631903409957886,
+                        "total": 5.74076509475708
+                    },
+                    "property_access_init": 0.025130510330200195,
+                    "properties_update": 0.001483917236328125,
+                    "total": 5.76740837097168
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 12.779297113418579,
+                    "microdata_extraction": 0.0019996166229248047,
+                    "storing": 5.631903409957886,
+                    "total": 18.41320013999939
+                },
+                "microdata_query_evaluation": 0.006899833679199219,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 37,
+            "pattern_id": 3,
+            "en_query": "Give me the price and availability of every book whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7afec5a9f7894987bc7ca0938b515b34"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neebe9d59768d4090a8f89f712752158b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N80d39710a61a47ef806127a80eadc064"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3069867ad84b45da82f607f88f6b0902"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1045a933c5c3412f98215da25b44eaf9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na8a0f294ea24422e91fe6b5fccce92bb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N841dec69ac654e2188ab9bf7a16fa65e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4173549abaed4b9fb729a5e2673cd2fa"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na7cf40d514f847e098effe0b1a7fbcf0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb516fb96bb064c7c824a7ee3b9633b36"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N750223298d634685bc02fc85564481ab"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncf473fbda73b42b69414261b97bc9801"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 5.939709186553955,
+            "processing_times": {
+                "query_decomposition": 0.0430452823638916,
+                "static_query_evakluation": 0.09288430213928223,
+                "web_data_retrieval": 18.4705593585968,
+                "dynamic_query_evaluation": 0.008412599563598633,
+                "result_merge": 0.0008614063262939453,
+                "total": 18.615762948989868
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003934621810913086,
+                    "searches": 12.77470588684082,
+                    "web_formatting": 0.0022890567779541016,
+                    "total": 12.780929565429688
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0018947124481201172,
+                        "building": 5.721105098724365,
+                        "builder_init": 0.015151739120483398,
+                        "microdata_adding": 5.687735080718994,
+                        "total": 5.745901584625244
+                    },
+                    "property_access_init": 0.023953676223754883,
+                    "properties_update": 0.0014438629150390625,
+                    "total": 5.771327018737793
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 12.780929565429688,
+                    "microdata_extraction": 0.0018947124481201172,
+                    "storing": 5.687735080718994,
+                    "total": 18.4705593585968
+                },
+                "microdata_query_evaluation": 0.008242368698120117,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 38,
+            "pattern_id": 4,
+            "en_query": "Give me the books available for every book whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5576111c4a674bd58a62399b4592bdf9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N64381b8b87ec4523a0c9ca0d49a599f3"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy The Complete Collection of Ars&egrave;ne Lupin 10 Books Box Set by Maurice LeBlanc(Gentleman Burglar, The Confessions, The Crystal Stopper, The Eight Strokes of the clock &amp; More) Book Online at Low Prices in India | The Complete Collection of Ars&egrave;ne Lupin 10 Books Box Set by Maurice LeBlanc(Gentleman Burglar, The Confessions, The Crystal Stopper, The Eight Strokes of the clock &amp; More) Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3a065c29e1fd48ed8866c7804807e3d9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb4c76120fc714c4db9fd1c834d1f2d31"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy Arsene Lupin: The Gentleman Burglar (Mint Editions) Book Online at Low Prices in India | Arsene Lupin: The Gentleman Burglar (Mint Editions) Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N609e5651fa3446269da7ee1028fd3b3d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfcf9529e8b774117b3a77bd25263db1b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Arsene Lupin, Gentleman Burglar: Amazon.co.uk: LeBlanc, Maurice: 9781434486851: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne02d5b480efb4a03b3c9c0fdef0b30cd"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0b037563eef248278546d176d7c9d51e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Ars&egrave;ne Lupin, Gentleman Burglar : LeBlanc, Maurice, Morehead, George: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N123447af2f434ceaac59a58409fcef31"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2f5aca834ee446f3ba718e00c90a880f"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy Ars&egrave;ne Lupin, Gentleman Burglar Book Online at Low Prices in India | Ars&egrave;ne Lupin, Gentleman Burglar Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndef1d69da4af4e5e81425d658d407733"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8ca79d1cc61e46588d132b898decabd9"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy Arsene Lupin, Gentleman Burglar Book Online at Low Prices in India | Arsene Lupin, Gentleman Burglar Reviews &amp; Ratings - Amazon.in"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 5.973906755447388,
+            "processing_times": {
+                "query_decomposition": 0.0497128963470459,
+                "static_query_evakluation": 0.0947113037109375,
+                "web_data_retrieval": 18.487852811813354,
+                "dynamic_query_evaluation": 0.008691549301147461,
+                "result_merge": 0.0008244514465332031,
+                "total": 18.64179301261902
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0021872520446777344,
+                    "searches": 12.774705171585083,
+                    "web_formatting": 0.0025091171264648438,
+                    "total": 12.779401540756226
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.0994415283203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0020036697387695312,
+                        "building": 5.742122650146484,
+                        "builder_init": 0.016181230545043945,
+                        "microdata_adding": 5.706447601318359,
+                        "total": 5.7673492431640625
+                    },
+                    "property_access_init": 0.02467632293701172,
+                    "properties_update": 0.0014653205871582031,
+                    "total": 5.793516397476196
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 12.779401540756226,
+                    "microdata_extraction": 0.0020036697387695312,
+                    "storing": 5.706447601318359,
+                    "total": 18.487852811813354
+                },
+                "microdata_query_evaluation": 0.00852656364440918,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 39,
+            "pattern_id": 5,
+            "en_query": "Give me the price of the books available for every book whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb8f755e5d75b4f889f4b8e3afc2e396f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd428bc2e7d0f4e5da62e341c5cc99013"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N17714b30ebb14aca9012796c5f41094e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nceda57a5d35c43f9b0cf7a054abebbbb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfe1ffc47437344e29fc800ef654f400b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N883a7c8b7e0549c29b039a96e8014d14"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nca9abbca03504671af07d8d9ec6d8507"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N265b23729f334cafa9b49d7326a44cf3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N26fb439f26ee432f94d1a02f2388322b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N29f5c620d3d743749f0666c39264e803"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N06ba53d459374492b8524a2aa7115626"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbd2190159c2e4304af1278c3c908b92f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 4,
+                "number_of_web_results": 120,
+                "number_of_extracted_microdata": 36,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 6.734697341918945,
+            "processing_times": {
+                "query_decomposition": 0.10760021209716797,
+                "static_query_evakluation": 0.92122483253479,
+                "web_data_retrieval": 18.356735706329346,
+                "dynamic_query_evaluation": 0.009180068969726562,
+                "result_merge": 0.0006966590881347656,
+                "total": 19.395437479019165
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003056049346923828,
+                    "searches": 12.774705648422241,
+                    "web_formatting": 0.0025300979614257812,
+                    "total": 12.78029179573059
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0018606185913085938,
+                        "building": 5.607942581176758,
+                        "builder_init": 0.015193939208984375,
+                        "microdata_adding": 5.574583292007446,
+                        "total": 5.642286062240601
+                    },
+                    "property_access_init": 0.02873826026916504,
+                    "properties_update": 0.0014872550964355469,
+                    "total": 5.672548770904541
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 12.78029179573059,
+                    "microdata_extraction": 0.0018606185913085938,
+                    "storing": 5.574583292007446,
+                    "total": 18.356735706329346
+                },
+                "microdata_query_evaluation": 0.009007692337036133,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 75,
+            "pattern_id": 6,
+            "en_query": "Give me the price of the book whose title is Ars\u00e8ne Lupin, Gentleman Burglar and whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?book foaf:name \"Ars\u00e8ne Lupin, Gentleman Burglar\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2b678e202ca447a1ba446ee4fd0d9e2b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N624044baa59948e38ef568541d0deede"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne7be1bc31c9e4123b402401eb1c32827"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N20c4f279d6a14de185f0254b5ea4bbbd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N87f51ea0144e4f8296cb5cbe1ecbcd11"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3bd4b723253448a8819b4cad1ceec6a2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na56de0a4e3e3411586d9c2d84a7b23db"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N50938f68357c4a309ad7fe025ba12c09"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc2f8ff04adec444fb96f5d237772a409"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf3f39e4d4709440ab0592400af2f75f2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N02abde196cc34100b3c4203501cf8fa9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nea5c3fb0485a46cfb77bf7416b67d5d8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 9,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 1.7040772438049316,
+            "processing_times": {
+                "query_decomposition": 0.09165048599243164,
+                "static_query_evakluation": 0.10148477554321289,
+                "web_data_retrieval": 4.7239930629730225,
+                "dynamic_query_evaluation": 0.006902933120727539,
+                "result_merge": 0.0007359981536865234,
+                "total": 4.924767255783081
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0032253265380859375,
+                    "searches": 3.2677087783813477,
+                    "web_formatting": 0.0007798671722412109,
+                    "total": 3.271713972091675
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0002503395080566406,
+                        "building": 1.4625928401947021,
+                        "builder_init": 0.0048525333404541016,
+                        "microdata_adding": 1.452028751373291,
+                        "total": 1.4690806865692139
+                    },
+                    "property_access_init": 0.0072438716888427734,
+                    "properties_update": 0.0004177093505859375,
+                    "total": 1.4767675399780273
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.271713972091675,
+                    "microdata_extraction": 0.0002503395080566406,
+                    "storing": 1.452028751373291,
+                    "total": 4.7239930629730225
+                },
+                "microdata_query_evaluation": 0.0068433284759521484,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 76,
+            "pattern_id": 8,
+            "en_query": "Give me the price and availability of the book whose title is Ars\u00e8ne Lupin, Gentleman Burglar and whose author is Maurice Leblanc",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?book foaf:name \"Ars\u00e8ne Lupin, Gentleman Burglar\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Complete-Collection-Maurice-Gentleman-Confessions/dp/8195094805"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne308cd6c337841689885d7e7379e0802"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndf916bed5d4c42b68d321904517c77c0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1353"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Lupin-Gentleman-Burglar-Editions/dp/1513209310"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne23ef261b13d46299a3c4635f19dec69"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N098860afdf144c97b0f01dc8da4f2356"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "949"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf030f0e6e62145ae87c38f90601d983f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N73b0611576ee451d8d448db8ecaeb462"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.01"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-LeBlanc/dp/1640323236"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5ff78dd245da41ef8c2c0bdde62f72f6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na6f2b5307fa24af3992a547349f8d934"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "542"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Ars%C3%A8ne-Gentleman-Burglar-Maurice-Leblanc/dp/9355220049"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N89c7f0608a764583b48c1da6cecde3cb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N81587e114eb448eaaf66c152fea530b2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "183"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Ars\u00e8ne_Lupin,_Gentleman_Burglar"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Arsene-Gentleman-Burglar-Maurice-Leblanc/dp/1434486850"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2e97598499304a47ac49b27f2a09a7eb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N20c868addd6c47ab9f7b50cb0c7e25d7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1901"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 9,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 1.6618635654449463,
+            "processing_times": {
+                "query_decomposition": 0.09431242942810059,
+                "static_query_evakluation": 0.10033059120178223,
+                "web_data_retrieval": 4.683143615722656,
+                "dynamic_query_evaluation": 0.0074443817138671875,
+                "result_merge": 0.0006978511810302734,
+                "total": 4.8859288692474365
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004300832748413086,
+                    "searches": 3.2677090167999268,
+                    "web_formatting": 0.0005803108215332031,
+                    "total": 3.272590160369873
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.4836273193359375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0002269744873046875,
+                        "building": 1.419090747833252,
+                        "builder_init": 0.004124164581298828,
+                        "microdata_adding": 1.4103264808654785,
+                        "total": 1.4259157180786133
+                    },
+                    "property_access_init": 0.006907224655151367,
+                    "properties_update": 0.0004684925079345703,
+                    "total": 1.4333155155181885
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 3.272590160369873,
+                    "microdata_extraction": 0.0002269744873046875,
+                    "storing": 1.4103264808654785,
+                    "total": 4.683143615722656
+                },
+                "microdata_query_evaluation": 0.007384777069091797,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        }
+    ]
+}

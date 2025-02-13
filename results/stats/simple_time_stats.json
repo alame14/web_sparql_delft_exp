@@ -1,0 +1,39 @@
+{
+    "total_queries": 249,
+    "source_folder": "/tmp/tmpimx8zp6a/results_simple",
+    "source_files": [
+        "bfp_query_availability_result.json",
+        "bfp_query_publisher_result.json",
+        "bfp_query_price_result.json"
+    ],
+    "data_source": "dbpedia",
+    "pivot_variable": null,
+    "web_keyword": null,
+    "process_config": {
+        "web_service": "WebService.BFP_SWSS",
+        "web_extractor": "WebExtractor.BFP_CWTME",
+        "exec_mode": "cold",
+        "WEB_QUERY_MAX": null
+    },
+    "processing_total_time": 658.8570520877838,
+    "empty_query_count": 145,
+    "non_empty_query_count": 104,
+    "all_queries_evaluation_total": 658.8570520877838,
+    "all_queries_evaluation_avg": 0.0,
+    "all_queries_processing_times_total": {
+        "query_decomposition": 9.698318243026733,
+        "static_query_evakluation": 15.09355092048645,
+        "web_data_retrieval": 585.8270845413208,
+        "dynamic_query_evaluation": 1.2721610069274902,
+        "result_merge": 0.07979083061218262,
+        "total": 611.9709055423737
+    },
+    "all_queries_processing_times_avg": {
+        "query_decomposition": 0.0932530600291032,
+        "static_query_evakluation": 0.1451302973123697,
+        "web_data_retrieval": 5.632952735974238,
+        "dynamic_query_evaluation": 0.012232317374302791,
+        "result_merge": 0.0007672195251171405,
+        "total": 5.884335630215132
+    }
+}

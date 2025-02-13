@@ -1,0 +1,3845 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 176.499409198761
+    },
+    "queries": [
+        {
+            "query_id": 304,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of Beowulf and the Critics",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Beowulf and the Critics\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb28205d90c244e7cbe3f6d640d6cdd79"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0bc1d478d8c548ec81a2dce361c195e8"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien: J. R. R. Tolkien : Tolkien, J. R. R., Tolkien, Christopher, Lee, Alan: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7f8537e5d38c43b292f44ca94324e515"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9e68973b20e54264b4ed33c8604b051e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien: Tolkien, J. R. R., Tolkien, Christopher: 9780008503963: Books - Amazon.ca"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne718ed9cb00d436584f16a5c9fb139d0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Naf1262d3ffe94280bb95bc9f69d87826"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien : Tolkien, J. R. R., Tolkien, Christopher: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N669ebf78cb6a43459c3f80e7d01a191a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf1b3692da20e4849a084ff4f31537e50"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Bilbo&apos;s Last Song: At the Grey Havens: Amazon.co.uk: Tolkien, J R R, Baynes, Pauline: 9780375823732: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2a97601228f14daabf448c85b3a5811f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5fd195afffa243418905342204495faf"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Farmer Giles Of Ham"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0f1d6b7fdbcd4c9f8e0967f4d0aa6a47"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N21344b9d67e340c688aeb37e7cdf4159"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Farmer Giles of Ham: An enchanting fantasy tale for younger readers and adults alike from the Sunday Times bestselling author of The Lord of the Rings and The Hobbit : Tolkien, J. R. R., Scull, Christina, Hammond, Wayne G., Baynes, Pauline: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndca4a609e93d42a0b903549715bf65b9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N23a8184688324319b1d258c942dcc53d"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest : Tolkien, J r r: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nffa90817cac8489e8fb32b717cf0cfca"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N224a4ab9e6a640e8822bfd933277af8b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest: Amazon.co.uk: Tolkien: 9780261103559: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf1628050854f416598a86450016cddb1"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest (PDF/EPUB Version)"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0c8bea48ab92406f938afd6724e6539d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N717d497343694296a68b228f453270cd"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Morgoth&apos;s Ring : J. R. R. Tolkien, Christopher Tolkien: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncacf46decf8d453c9aa6d35ce88035ab"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncf1a3de77055474ea36915cff4cf42c0"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Mr Bliss: Amazon.co.uk: Tolkien, J. R. R., Tolkien, J. R. R.: 9780008705312: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf40b0b6f5c79463188f81dc87343c714"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc4bca40d8bd2496f999a3d9d2562d42a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Tolkien On Fairy-Stories: Amazon.co.uk: Flieger, Verlyn, Anderson, Douglas A.: 9780007582914: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf5182c50a11c49f88071e54a0b3e5fbb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne90fcb141abf4358a56962ce34bb88df"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Roverandom: The enchanting classic fantasy adventure for younger readers from the Sunday Times bestselling author : Tolkien, J .R. R, Scull, Christina, Hammond, Wayne G.: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na2dc24c1b10a44fbab10224e859da33f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9dce259e12f14f81964a8cf4b2a9ea91"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Roverandom: The enchanting classic fantasy adventure for younger readers from the Sunday Times bestselling author : Tolkien, J .R. R, Scull, Christina, Hammond, Wayne G.: Amazon.com.be: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.934735536575317,
+            "processing_times": {
+                "query_decomposition": 0.1368408203125,
+                "static_query_evakluation": 0.10756492614746094,
+                "web_data_retrieval": 49.35547614097595,
+                "dynamic_query_evaluation": 0.011104106903076172,
+                "result_merge": 0.0014147758483886719,
+                "total": 49.61240077018738
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003816843032836914,
+                    "searches": 31.942612886428833,
+                    "web_formatting": 0.0020749568939208984,
+                    "total": 31.94850468635559
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 2.1457672119140625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004984617233276367,
+                        "building": 17.489930391311646,
+                        "builder_init": 0.036879777908325195,
+                        "microdata_adding": 17.401986837387085,
+                        "total": 17.56834650039673
+                    },
+                    "property_access_init": 0.08187413215637207,
+                    "properties_update": 0.004950046539306641,
+                    "total": 17.65519881248474
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.94850468635559,
+                    "microdata_extraction": 0.004984617233276367,
+                    "storing": 17.401986837387085,
+                    "total": 49.35547614097595
+                },
+                "microdata_query_evaluation": 0.010709285736083984,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 305,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of Beowulf and the Critics",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Beowulf and the Critics\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N558629b8712e43579eec8d95ccf200e5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc55528213be84c0e89da927918f50051"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.08"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2aa348b06d1f4b59ac37a25b31cbb288"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N03c5ab8240a84b5dabba76ac550b2279"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2b16eea171af4a1db1ad86e5b4a89f57"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N84020aba46c54b03bea745cc97198bdd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N760eca5fb44346e1ae6ccbb9e121379d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N55b5b54e86b34c46abc28486a625f62c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.58"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na4e060c8db4b4054b86bd33a2954e428"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N641f1db2becd4513b321fe53518e0b41"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1bc01618ba6e4711bb9fff6b98e5107d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N314e01146f0f4bf09fbf2b43d2623b19"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.89"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N31ea9f37d20c48d2a85b96a62a7927ab"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N05a3f1dcf3504d12a67ee8191ec3187e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.56"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2e815676d39440229ac2ac55e008ee9d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc5a48eb3712743ff961b94bf988df484"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nff3a9c31cd2f4dda9a4de325a9036f96"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "19.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Naec38a7f14954b4ead88ce6bc736bfec"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd4c3e3903e9a477d82f587dd03b960ea"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb9a772bb74394580aab4e1bbb2eee825"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6b45abfe35b549d298ad49154a934e74"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.14"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb7c5bf7b0559411885e0a03388324062"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9db186eaf8bb47bdbe0cfe6ba31683f1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nec4829e6fed94123ba8aca6102f66a24"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6d8bee204ad64317b6ee730d06351a2e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N68e6c3db570446e4a23f9bbf0b5106f2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc1eced9c840f4cef912ad66aa6615e0f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.58"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.810211420059204,
+            "processing_times": {
+                "query_decomposition": 0.12666630744934082,
+                "static_query_evakluation": 0.09182620048522949,
+                "web_data_retrieval": 49.26546263694763,
+                "dynamic_query_evaluation": 0.010239839553833008,
+                "result_merge": 0.0013098716735839844,
+                "total": 49.49550485610962
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004621267318725586,
+                    "searches": 31.942614555358887,
+                    "web_formatting": 0.006634950637817383,
+                    "total": 31.95387077331543
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.9604644775390625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004862070083618164,
+                        "building": 17.393598079681396,
+                        "builder_init": 0.036401987075805664,
+                        "microdata_adding": 17.306729793548584,
+                        "total": 17.4696307182312
+                    },
+                    "property_access_init": 0.0789177417755127,
+                    "properties_update": 0.004510641098022461,
+                    "total": 17.553088426589966
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.95387077331543,
+                    "microdata_extraction": 0.004862070083618164,
+                    "storing": 17.306729793548584,
+                    "total": 49.26546263694763
+                },
+                "microdata_query_evaluation": 0.00984334945678711,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 306,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of Beren and L\u00fathien",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Beren and L\u00fathien\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N97cfec1bb2344025b98e4f7024b6e952"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncbfa39ac1998457a9f8480177cf90ce1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.08"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6bbe60bacf754a26bce1302d8859c14c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4950a0b5eca34048a44b156fabbb53f8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4e96add0f69b43bb8bd7adc0dad30e0b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na0655abff59648e1a4f2b542b99bcba7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0f825d15db244ad29f8f464f6ddf1673"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9f09dae38ee144ee8cd6404d40492c3e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.58"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5a72aff378574cc1a505d6538d5be253"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N71a5a7b648f548ffbebcc32ae41d0d39"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3f060c10c80f4968b8bc540191ddddd1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3035021ac4eb433da2e71ea53128fecd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.89"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N386174afdc904c118700f8fd56df053e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N12dc22d65f0b41dc969bca8cc369cd15"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.56"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N73e753343bc54951907059fe0fca2b35"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndb36881dc4394d878d557f01b2ec2caf"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf3445502773f487d97385c854127b1bf"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "19.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncf83096508e24c209ebd537cca48ef1b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neeba674400004079b431b6ab7b3a83c7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0d0b8a1d0a7f4e9e89afbf3416a97da0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N17d9569cab64497e9d6cb2150faca18c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.14"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na182e806d2394941b3465213e06232ca"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1fb0a8944457445695bdbffd3064eaf3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na730103714534c9b894ce58fd8b1c006"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfafb5066adc44b2e97d3bbe473bf5ed3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc50d5ae7411b4aa3ad6d4fd4543ddc6c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na351f5f55573469c8c78a1819c5b21da"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.58"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.935476064682007,
+            "processing_times": {
+                "query_decomposition": 0.04368424415588379,
+                "static_query_evakluation": 0.10756421089172363,
+                "web_data_retrieval": 49.402082681655884,
+                "dynamic_query_evaluation": 0.010053157806396484,
+                "result_merge": 0.0013685226440429688,
+                "total": 49.56475281715393
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004278659820556641,
+                    "searches": 31.94261384010315,
+                    "web_formatting": 0.00485992431640625,
+                    "total": 31.951752424240112
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.005028724670410156,
+                        "building": 17.538248300552368,
+                        "builder_init": 0.03903388977050781,
+                        "microdata_adding": 17.44530153274536,
+                        "total": 17.616587162017822
+                    },
+                    "property_access_init": 0.12691783905029297,
+                    "properties_update": 0.0048944950103759766,
+                    "total": 17.748424768447876
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.951752424240112,
+                    "microdata_extraction": 0.005028724670410156,
+                    "storing": 17.44530153274536,
+                    "total": 49.402082681655884
+                },
+                "microdata_query_evaluation": 0.009682655334472656,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 307,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of Beren and L\u00fathien",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Beren and L\u00fathien\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N04afc42888c44ee1a46f221d95f34106"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8e29b67cbc804c6291e3fded88d8eeab"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.08"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nceb24e2fa0f042058671ac933e602185"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7a60c771cf8742d49d5379a5fee6f6de"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne3985abf7830442cb90cb7f75e897ef2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N467a957074b745e89fbe99fa81d33eb2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nba52bef4d4894bfe8c97795b23871999"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N41e3cc72eba948bfa9118ecd6f9b6401"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.58"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf763dcba63f04832975274465c4a1c06"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N45d6eb6f2bcc4f68971a2afbff8b1fd6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/OutOfStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N193b26633395477e8ef474e2af2f076b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc0d5d327c0374cf89203ef148e0bea27"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.89"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N16e943ab973546a78de49f4364ba5792"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N47998774daf54686a4890af394ebaea3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.56"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4cb2ec97bae84c1982ddc76fec917247"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na3f205674e0243288e9d5bafe68ca18f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N271123d83f224b3a86a798d44dd00397"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "19.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Naa35fee37e33449dbb499ed09ac31d80"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8371d60d47b84cf7ba947776082fbd2c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfa14b5706c734501b8514500d156e272"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na01b3c3505c14a8489d47ff03e61e21f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.14"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N187dd7993b484ad9a26e9c35892956cf"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N26b26305fd264104b86d215a74e12703"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N770c1d0e36414fac88e9aaad936295e0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbd886cf9987642f889fa58909b772fcc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8430805dbc1d482998b4ff94cec6b4de"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9c033be24bb14028bc07f42a807b75a5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.58"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.317800283432007,
+            "processing_times": {
+                "query_decomposition": 0.04513072967529297,
+                "static_query_evakluation": 0.10772943496704102,
+                "web_data_retrieval": 48.83954048156738,
+                "dynamic_query_evaluation": 0.010120153427124023,
+                "result_merge": 0.0014595985412597656,
+                "total": 49.0039803981781
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0039370059967041016,
+                    "searches": 31.942614555358887,
+                    "web_formatting": 0.00423431396484375,
+                    "total": 31.950785875320435
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004885673522949219,
+                        "building": 16.971946239471436,
+                        "builder_init": 0.03685879707336426,
+                        "microdata_adding": 16.883868932724,
+                        "total": 17.046956777572632
+                    },
+                    "property_access_init": 0.07826900482177734,
+                    "properties_update": 0.004572391510009766,
+                    "total": 17.12982416152954
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.950785875320435,
+                    "microdata_extraction": 0.004885673522949219,
+                    "storing": 16.883868932724,
+                    "total": 48.83954048156738
+                },
+                "microdata_query_evaluation": 0.009751081466674805,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 308,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of Beren and L\u00fathien",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Beren and L\u00fathien\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf714ae6d1f57455285013850c97a52b4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd1ed6619f7574b30aa6e3ddd4e67189a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien: J. R. R. Tolkien : Tolkien, J. R. R., Tolkien, Christopher, Lee, Alan: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7151709c953d4e5c97099ebbd72e9fc6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6c5f3814fa04410f85ba740be3252fa8"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien: Tolkien, J. R. R., Tolkien, Christopher: 9780008503963: Books - Amazon.ca"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N18c71ba486e24690a86e1b79f28640a2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf4f3c151c40a4363aea0cd6de171771a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien : Tolkien, J. R. R., Tolkien, Christopher: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na31bdaa42b794812b189d32c28844287"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7e2315201eba473ca6759b65432a9a39"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Bilbo&apos;s Last Song: At the Grey Havens: Amazon.co.uk: Tolkien, J R R, Baynes, Pauline: 9780375823732: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne42b4d1d1a7944ca8db6201829a01f9c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N56a5991b948942349d996908abbca545"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Farmer Giles Of Ham"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne4e413ea1e3e45c18527c2d2aa1f27de"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf4c7770f22384740bfdd1f89fc545862"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Farmer Giles of Ham: An enchanting fantasy tale for younger readers and adults alike from the Sunday Times bestselling author of The Lord of the Rings and The Hobbit : Tolkien, J. R. R., Scull, Christina, Hammond, Wayne G., Baynes, Pauline: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbcd9f057c22c406f84fc669121e38d43"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N253c13d56a824276be470210a8988356"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest : Tolkien, J r r: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N56119b70d60e42d7ad2bc93e83a22a92"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfb010a535c0d4716ac967657b06e72a4"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest: Amazon.co.uk: Tolkien: 9780261103559: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N846145b36f42448386ad41626d5d00db"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest (PDF/EPUB Version)"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0cb1f5e5006e4f7295f6bd4b4345d3e1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0ac78c6cf0104a45b6fd713fb6e21ef7"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Morgoth&apos;s Ring : J. R. R. Tolkien, Christopher Tolkien: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7635a83f207d4fa68172ec9a0b4e95e5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne4d78386240a4db6b33e833db814c35c"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Mr Bliss: Amazon.co.uk: Tolkien, J. R. R., Tolkien, J. R. R.: 9780008705312: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3b58a2c8f2ea4f438cabfb96cd6d8f31"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5d7fa97f6ce440979fe3992768bba4d0"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Tolkien On Fairy-Stories: Amazon.co.uk: Flieger, Verlyn, Anderson, Douglas A.: 9780007582914: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5f32dcf773ef455a84491252d8fd0c94"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2361a04c1e5543f88ea0111aa72f349a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Roverandom: The enchanting classic fantasy adventure for younger readers from the Sunday Times bestselling author : Tolkien, J .R. R, Scull, Christina, Hammond, Wayne G.: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N000067a6b1b04da5a7a392e73e1a13bc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2f5783a2018844b8bf4798270b05e96b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Roverandom: The enchanting classic fantasy adventure for younger readers from the Sunday Times bestselling author : Tolkien, J .R. R, Scull, Christina, Hammond, Wayne G.: Amazon.com.be: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.23656415939331,
+            "processing_times": {
+                "query_decomposition": 0.1143805980682373,
+                "static_query_evakluation": 0.1084446907043457,
+                "web_data_retrieval": 48.63883566856384,
+                "dynamic_query_evaluation": 0.011156320571899414,
+                "result_merge": 0.001295328140258789,
+                "total": 48.874112606048584
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0043256282806396484,
+                    "searches": 31.94261407852173,
+                    "web_formatting": 0.004728078842163086,
+                    "total": 31.95166778564453
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.00484013557434082,
+                        "building": 16.771400213241577,
+                        "builder_init": 0.03658771514892578,
+                        "microdata_adding": 16.68232774734497,
+                        "total": 16.84641671180725
+                    },
+                    "property_access_init": 0.12585663795471191,
+                    "properties_update": 0.0044460296630859375,
+                    "total": 16.97674536705017
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.95166778564453,
+                    "microdata_extraction": 0.00484013557434082,
+                    "storing": 16.68232774734497,
+                    "total": 48.63883566856384
+                },
+                "microdata_query_evaluation": 0.01078176498413086,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 309,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of Beren and L\u00fathien",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Beren and L\u00fathien\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd1477563c35440efa84217528a8db178"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3ba43db2ef0a4f58bdcf756ba7729962"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.08"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N51bdd56050a14dc2837fce648b85286e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N456aee6fc1d84ef2bd800225373093a6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0a733c62887049abb75d49fc4e4aa445"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ned73b5d1a2fd45deb6c7d3291392595e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd87d2a473597449eb1c5c4f9e32d66fa"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9f9903d8f1a0485380b5cd726200127e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.58"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncb9649cce08f4927ab5b230fa6df6f44"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3bf0f270fb3342ba8c96096773914102"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb792d364265f4f3d902f62e2e484e6a5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6c492331e550433ba59e6f62426905c6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.89"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf270c5814a464c2aa7d3ba605409497c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N70aaa4aec9f64f1ab6fa2053ecc15e9a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.56"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd7819057bdb546a198b169a048b947d3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N627f02d8615c4149961701a6087e1df4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf4c97ab6155340b2b2b5857f108cf492"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "19.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N89f15d46ebe74139873fc1081e578c8b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5ab0a35a27f64838972b08f6e734b8ae"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N664612a0da914bf99d19cfa6e85625f9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N67034baf87bc4f12bd985ade0881b493"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.14"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N37c46867e0e443768d007526bbf90fd5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N743e391f26e54201ba7737ae8cb22822"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nac2cf2c80e0d497e8b9e28d0def0d6bb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na06c0f71d0644c18a3197fd73f423852"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9c9a767576fc428585a5b2a32c7e65d3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1a2738a34df445a18e4a73b9bde4afdc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.58"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.406219959259033,
+            "processing_times": {
+                "query_decomposition": 0.05145454406738281,
+                "static_query_evakluation": 0.106109619140625,
+                "web_data_retrieval": 48.866008043289185,
+                "dynamic_query_evaluation": 0.011093616485595703,
+                "result_merge": 0.0012860298156738281,
+                "total": 49.03595185279846
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.005725860595703125,
+                    "searches": 31.942617177963257,
+                    "web_formatting": 0.007718086242675781,
+                    "total": 31.956061124801636
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.7220458984375e-06,
+                    "graph_computing": {
+                        "extraction": 0.005197286605834961,
+                        "building": 16.996304512023926,
+                        "builder_init": 0.0387425422668457,
+                        "microdata_adding": 16.904749631881714,
+                        "total": 17.072479724884033
+                    },
+                    "property_access_init": 0.12994074821472168,
+                    "properties_update": 0.004721403121948242,
+                    "total": 17.207170963287354
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.956061124801636,
+                    "microdata_extraction": 0.005197286605834961,
+                    "storing": 16.904749631881714,
+                    "total": 48.866008043289185
+                },
+                "microdata_query_evaluation": 0.010721445083618164,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 310,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of The Two Towers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Two Towers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf7931c826dc348cfac3ad0f82c2eed0e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne84cb6e8662045aab5a23488f52d6e70"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.08"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5702e9dd23ce4bdf92f8fe4d1aae1220"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc4375217f864402997faf265b9a95d05"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6fb6dd51654d4560b3ecc8ee0712db79"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N49742de05f7f4ed897174fca70a0f849"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8168ac77aeea4540b5e6c6b9ff755687"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne0e2e27501474af0857d96518d7f5b73"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.58"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5669921eaf38483893f88a45f490066d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N86f16cf58741456a8e0d2dce739995ae"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7738fc163c664300b0c313d81b37dce2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4c16a0ff60264c0a9df138d84b9b3d7d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.89"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N188ae02f68f640dca16e5e0f193cd7d1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4c579dce557a4292a97cc901905412a5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.56"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd285e44a83ed441fa24164c879a3e91c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5dd0c09807ad414ca54d7d42b6b1a6cb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9845e0bead80408191a08a40eb59c842"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "19.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nee4164ff186b4cadb52adfa34e9b4226"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2bf1ababff9146b7ad0eb0fba2fab550"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N79b48c7cde4e44eea1bd7b8727dfd0d3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndd8d58e0633a4e36b39ec634340956f6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.14"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncab8f28bb8904353b550eb3b0dc69390"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6a4ba9fd0c9c47708ce36f37384387af"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N742a1f86e3724bd5a8fb88860e7e1a40"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N194dbc2fce4d427e97215d5e28b455ad"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfd0ee509f2284ee7bd605a58cbc012ed"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3807f83ea47e45d2aea2641eecbd1895"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.58"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.43160343170166,
+            "processing_times": {
+                "query_decomposition": 0.04369306564331055,
+                "static_query_evakluation": 0.10985088348388672,
+                "web_data_retrieval": 48.850430727005005,
+                "dynamic_query_evaluation": 0.010128021240234375,
+                "result_merge": 0.0013306140899658203,
+                "total": 49.0154333114624
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0046350955963134766,
+                    "searches": 31.94261384010315,
+                    "web_formatting": 0.004490852355957031,
+                    "total": 31.95173978805542
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0051670074462890625,
+                        "building": 17.031601428985596,
+                        "builder_init": 0.038376808166503906,
+                        "microdata_adding": 16.893523931503296,
+                        "total": 17.10971975326538
+                    },
+                    "property_access_init": 0.12819743156433105,
+                    "properties_update": 0.00450897216796875,
+                    "total": 17.24245572090149
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 31.95173978805542,
+                    "microdata_extraction": 0.0051670074462890625,
+                    "storing": 16.893523931503296,
+                    "total": 48.850430727005005
+                },
+                "microdata_query_evaluation": 0.009748697280883789,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 311,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of The Two Towers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Two Towers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc1f971dbd2fa4acabe945cba11338f65"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndccc79ac406d48e0b963454004c6e6e3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.08"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nab6fae48468a4074b495e591d1944390"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8154f742187e48c9b4e660989dda1722"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd00863991d5449de89c339580beea22c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N81057749530644dbb978ac4b238e30d8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd8f365479dd34ab8a6e4979cb38f8ed2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3eb9f0eec6054d55a90c0d36ce09d7dc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.58"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N232bfd3791c34c0bb40b699e3422bffc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N070a65b79bc84f889b0f1ae41809f454"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/OutOfStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N80f62aa8d59644d4be0278e77aa6eaa7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N81f79e9dff994d6cb49b076dcdf23262"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.89"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0dfa779107d44df98be82e44a0302b1c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nab6d7a394b724850885ef74028dcbd1b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.56"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb289b06e10f14064ba841247abd74b07"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N96a286ab7b8b4d82a6c2955162c0eaa9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na8e5c7dd5bb64dc998424f890abb0490"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "19.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N19d65a0ebd1e48a4bc19796d016b69da"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nac9ee1a9bc4842c8b03d105268629e34"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na9cac92de7574d328674b3793a3d68a3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N46ef48c966334807bed8df861dc96d43"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.14"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4d5d133fb7db4bf3848cdbd7a608800c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7ac24feb64db42e380dd7a51b649568c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N84b886e0ff424287b81700b1ae4a4730"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndde900b5b239475fb378990da3ad5b7b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf77e2b5a786f4d8d9d562f3d4af9bc30"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0248e6a099be48128b17a16eeeb0e352"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.58"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.84593415260315,
+            "processing_times": {
+                "query_decomposition": 0.04806804656982422,
+                "static_query_evakluation": 0.1031959056854248,
+                "web_data_retrieval": 49.29958462715149,
+                "dynamic_query_evaluation": 0.010689496994018555,
+                "result_merge": 0.0015740394592285156,
+                "total": 49.463112115859985
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004096031188964844,
+                    "searches": 31.94261384010315,
+                    "web_formatting": 0.004281282424926758,
+                    "total": 31.95099115371704
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.005529642105102539,
+                        "building": 17.44181537628174,
+                        "builder_init": 0.04123950004577637,
+                        "microdata_adding": 17.343063831329346,
+                        "total": 17.51966691017151
+                    },
+                    "property_access_init": 0.12853503227233887,
+                    "properties_update": 0.004999876022338867,
+                    "total": 17.653231143951416
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.95099115371704,
+                    "microdata_extraction": 0.005529642105102539,
+                    "storing": 17.343063831329346,
+                    "total": 49.29958462715149
+                },
+                "microdata_query_evaluation": 0.010307788848876953,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 312,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of The Two Towers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Two Towers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na209ecccca564dd9bfbedad4880f0e1b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9075a28d61f5438faeea246c1d251050"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien: J. R. R. Tolkien : Tolkien, J. R. R., Tolkien, Christopher, Lee, Alan: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8c56a5ee97ff421c822f7bf11366b573"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N29e64c22ac8d4ad582c4d5733f5e33ae"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien: Tolkien, J. R. R., Tolkien, Christopher: 9780008503963: Books - Amazon.ca"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N475f264158c04e338e0eb68608ed3cb2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1e4b13d6e9dc4e2083c9880e83461204"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Beren and L&uacute;thien : Tolkien, J. R. R., Tolkien, Christopher: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6281575644d04682a4e9c93a4cab3a9f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N72f4a79eb9e84efb854da20fca1a33ae"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Bilbo&apos;s Last Song: At the Grey Havens: Amazon.co.uk: Tolkien, J R R, Baynes, Pauline: 9780375823732: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne8b8c136bf0d4ac8a69ce2aa9c5341e9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb500152438f740a0abfa44bf516cfa0f"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Farmer Giles Of Ham"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf17246e3a1534840aec76bceeffdbba1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N909e7899e3c5474392875fd679d9ffab"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Farmer Giles of Ham: An enchanting fantasy tale for younger readers and adults alike from the Sunday Times bestselling author of The Lord of the Rings and The Hobbit : Tolkien, J. R. R., Scull, Christina, Hammond, Wayne G., Baynes, Pauline: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N39cff16deb3c41f8a0ba05e1b97fea1c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf9f45d8aaff646868d6ea7d207b84b19"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest : Tolkien, J r r: Amazon.com.au: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N05d64e7494554dd18d0ba8e678107d80"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5d30bc124daa4e1f89ea25c34f2aad40"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest: Amazon.co.uk: Tolkien: 9780261103559: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5218706c128d4005935d0c340b7eea76"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Finn and Hengest (PDF/EPUB Version)"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nef01afc19f374c5484b7b9bb5d839376"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N97de6681bafe405bb51c4cefddb0bf01"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Morgoth&apos;s Ring : J. R. R. Tolkien, Christopher Tolkien: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nabc766ce244d4427ad740dc5ed222adf"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N95ddd673f88748d5a85c57408fe5b264"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Mr Bliss: Amazon.co.uk: Tolkien, J. R. R., Tolkien, J. R. R.: 9780008705312: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne7200c7b20594c9c8ca753886eafb418"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfffda9b4a56d4555848a78516befaa0b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Tolkien On Fairy-Stories: Amazon.co.uk: Flieger, Verlyn, Anderson, Douglas A.: 9780007582914: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N18d88c05509245e1b2c679961b8e5445"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1985e5d6867e471db32b4cb1b1c8364d"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Roverandom: The enchanting classic fantasy adventure for younger readers from the Sunday Times bestselling author : Tolkien, J .R. R, Scull, Christina, Hammond, Wayne G.: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb0594b193f0e4450a7c6038bbff7208b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncdb95c016ef3488aba5e197bf6a26e9e"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Roverandom: The enchanting classic fantasy adventure for younger readers from the Sunday Times bestselling author : Tolkien, J .R. R, Scull, Christina, Hammond, Wayne G.: Amazon.com.be: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.769630432128906,
+            "processing_times": {
+                "query_decomposition": 0.05086255073547363,
+                "static_query_evakluation": 0.09832262992858887,
+                "web_data_retrieval": 49.282711029052734,
+                "dynamic_query_evaluation": 0.011267900466918945,
+                "result_merge": 0.001295328140258789,
+                "total": 49.444459438323975
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004218339920043945,
+                    "searches": 31.94261360168457,
+                    "web_formatting": 0.007893562316894531,
+                    "total": 31.95472550392151
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.005112648010253906,
+                        "building": 17.41809844970703,
+                        "builder_init": 0.040152549743652344,
+                        "microdata_adding": 17.32287287712097,
+                        "total": 17.49497413635254
+                    },
+                    "property_access_init": 0.08045721054077148,
+                    "properties_update": 0.004585981369018555,
+                    "total": 17.580042600631714
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.95472550392151,
+                    "microdata_extraction": 0.005112648010253906,
+                    "storing": 17.32287287712097,
+                    "total": 49.282711029052734
+                },
+                "microdata_query_evaluation": 0.010871648788452148,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 313,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of The Two Towers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Two Towers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008214190"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfa3f3c2163cd4bd18079c321880952b4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbf2685516ae44b98956e9a7ecc98275d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.08"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.ca/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008503966"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9994a5a139604c1ba37c183aa48311e3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5e60ab34c1b343a0ac83bf73153a9715"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "12.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Beren_and_L\u00fathien"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Beren-L%C3%BAthien-J-R-Tolkien/dp/0008655650"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3157ef4fac944935bf768494ead789af"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N84993a712ca8494bbace4689bace689c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Bilbo's_Last_Song"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Bilbos-Last-Song-J-Tolkien/dp/0375823735"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb3b30dfd0c2540629a86d61b6de02016"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0a30be636d21480386e18550ec184255"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "16.58"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://stmpress.com/products/farmer-giles-of-ham"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7f34ff08682f44898792831f43eca0bb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N12eea4c889cc45dd9b4d45f0ebbc83e3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Farmer_Giles_of_Ham"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Farmer-Giles-Ham-enchanting-bestselling/dp/0008705275"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne6b630aafff04745b600a467e72a9941"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N19c517dbb3c348f0a92fc330acd435ba"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.89"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.au/Finn-Hengest-J-R-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4b32f15933ab4a268fa53eb7f274cc47"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6ae7924ebbf94689b63525edcb58ac1b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "23.56"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Finn-Hengest-Fragment-J-Tolkien/dp/0261103555"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N01185cb20ccf4344b500bbbe98df2c7a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0c61990ba6e74aebb62da28fce70cf30"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "7.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Finn_and_Hengest"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://controses.com/product/finn-and-hengest/#product"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N571a063797884ecf95bf086f5acbbc5e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "19.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Morgoth's_Ring"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Morgoths-Ring-J-R-Tolkien/dp/0261103008"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nef8fcd3f195f43bb9651ab5b906061bc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N41d2f13555d74b569dcf18d0926d9971"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.99"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Mr._Bliss"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Mr-Bliss-J-R-Tolkien/dp/0008705313"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nef16a45d987d44ca8aec82c9b527acad"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7d36a3548e4f49cfb4486144aa03d1af"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "17.14"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/On_Fairy-Stories"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Tolkien-Fairy-Stories-Verlyn-Flieger/dp/0007582919"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8455a4c0e17045a6863826a1cdae90ab"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na17f1faee9554d06a27671ca5255198d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.67"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/ROVERANDOM-HB-enchanting-adventure-bestselling/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na81850ca0b904272b0dedf386b99bdf4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5c9fb43da6854e3b9c02630a8a6c36ec"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Roverandom"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com.be/-/en/J-R-R-Tolkien/dp/0007523289"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N79624de5cf2144e5af5a67e5cd56515c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3731bcf0aefb4eab98bb88e632fa92be"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.58"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 114,
+                "number_of_query_results": 14
+            },
+            "evaluation_time": 17.79068684577942,
+            "processing_times": {
+                "query_decomposition": 0.11398768424987793,
+                "static_query_evakluation": 0.09307408332824707,
+                "web_data_retrieval": 49.1973192691803,
+                "dynamic_query_evaluation": 0.06161355972290039,
+                "result_merge": 0.0013401508331298828,
+                "total": 49.46733474731445
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0042362213134765625,
+                    "searches": 31.94261384010315,
+                    "web_formatting": 0.004308223724365234,
+                    "total": 31.95115828514099
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004926204681396484,
+                        "building": 17.33614182472229,
+                        "builder_init": 0.04019308090209961,
+                        "microdata_adding": 17.24123477935791,
+                        "total": 17.41314458847046
+                    },
+                    "property_access_init": 0.07908487319946289,
+                    "properties_update": 0.004764556884765625,
+                    "total": 17.497020721435547
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.95115828514099,
+                    "microdata_extraction": 0.004926204681396484,
+                    "storing": 17.24123477935791,
+                    "total": 49.1973192691803
+                },
+                "microdata_query_evaluation": 0.06122279167175293,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        }
+    ]
+}

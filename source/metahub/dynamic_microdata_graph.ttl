@@ -1,0 +1,167 @@
+@prefix ns1: <http://mekano.org/> .
+@prefix schema: <https://schema.org/> .
+
+<https://forums.lotro.com/index.php?threads%2Fpurchase-cannot-be-completed.3585%2F> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://forums.lotro.com/index.php?threads/purchase-cannot-be-completed.3585/" .
+
+<https://gamefaqs.gamespot.com/boards/672704-lego-the-lord-of-the-rings/64760869> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://gamefaqs.gamespot.com/boards/672704-lego-the-lord-of-the-rings/64760869" .
+
+<https://lotrpremiumstore.com/products/the-lord-of-the-rings-the-rings-of-power-blu-ray> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    ns1:hasMicrodata [ a schema:Organization ;
+            schema:name "LotR Premium Store" ;
+            schema:sameAs <file:///home/alamerce/Workspace/mekano/sandydev24/box18/source/> ;
+            schema:url <https://lotrpremiumstore.com> ] ;
+    schema:url "https://lotrpremiumstore.com/products/the-lord-of-the-rings-the-rings-of-power-blu-ray" .
+
+<https://play.google.com/store/movies/details/The_Lord_of_the_Rings_3_Film_Collection_Extended_E?id=o8WClgEvnCA&hl=en-US> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://play.google.com/store/movies/details/The_Lord_of_the_Rings_3_Film_Collection_Extended_E?id=o8WClgEvnCA&hl=en-US" .
+
+<https://steamcommunity.com/app/212500/discussions/0/2792748953543415016/> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://steamcommunity.com/app/212500/discussions/0/2792748953543415016/" .
+
+<https://www.amazon.com/Art-Lord-Rings-J-R-R-Tolkien/dp/0544636341> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Art-Lord-Rings-J-R-R-Tolkien/dp/0544636341" .
+
+<https://www.amazon.com/Fellowship-Ring-Collectors-Being-First/dp/0063412616> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Fellowship-Ring-Collectors-Being-First/dp/0063412616" .
+
+<https://www.amazon.com/Fellowship-Ring-Visual-Companion-Rings/dp/0618154019> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Fellowship-Ring-Visual-Companion-Rings/dp/0618154019" .
+
+<https://www.amazon.com/LEGO-Rings-Hobbit-Mines-Moria/dp/B007Q0OUP8> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/LEGO-Rings-Hobbit-Mines-Moria/dp/B007Q0OUP8" .
+
+<https://www.amazon.com/Lord-Rings-Chess-Set-Return/dp/B0006H60DS> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Chess-Set-Return/dp/B0006H60DS" .
+
+<https://www.amazon.com/Lord-Rings-Christopher-Guard/dp/B00005MP5B> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Christopher-Guard/dp/B00005MP5B" .
+
+<https://www.amazon.com/Lord-Rings-Fellowship-Extended-Editions/dp/B007ZQAKHU> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Fellowship-Extended-Editions/dp/B007ZQAKHU" .
+
+<https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411" .
+
+<https://www.amazon.com/Lord-Rings-J-R-Tolkien/dp/0395489326> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-J-R-Tolkien/dp/0395489326" .
+
+<https://www.amazon.com/Lord-Rings-Picture-Extended-Theatrical/dp/B08KQBYM1Y> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Picture-Extended-Theatrical/dp/B08KQBYM1Y" .
+
+<https://www.amazon.com/Lord-Rings-Picture-Trilogy-Digital/dp/B002V8ZKTK> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Picture-Trilogy-Digital/dp/B002V8ZKTK" .
+
+<https://www.amazon.com/Lord-Rings-Rohirrim-Steelbook-Digital/dp/B0DPVRPJNM> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Rohirrim-Steelbook-Digital/dp/B0DPVRPJNM" .
+
+<https://www.amazon.com/Lord-Rings-Rohirrim-Visual-Companion/dp/0063422220> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Rohirrim-Visual-Companion/dp/0063422220" .
+
+<https://www.amazon.com/Lord-Rings-Trilogy-Omnibus-Fellowship/dp/0739408259> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.amazon.com/Lord-Rings-Trilogy-Omnibus-Fellowship/dp/0739408259" .
+
+<https://www.bestbuy.com/site/shop/lord-of-the-rings> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.bestbuy.com/site/shop/lord-of-the-rings" .
+
+<https://www.bestbuy.com/site/the-lord-of-the-rings-the-motion-picture-trilogy-extended-theatrical-4k-ultra-hd-blu-ray/6427700.p> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.bestbuy.com/site/the-lord-of-the-rings-the-motion-picture-trilogy-extended-theatrical-4k-ultra-hd-blu-ray/6427700.p" .
+
+<https://www.jenshansen.com/collections/the-one-ring-replica> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    ns1:hasMicrodata [ a schema:Organization ;
+            schema:logo <https://www.jenshansen.com/cdn/shop/files/Jens_Hansen_White_Logo.png?v=1718053892&width=500> ;
+            schema:name "Jens Hansen" ;
+            schema:sameAs <file:///home/alamerce/Workspace/mekano/sandydev24/box18/source/>,
+                <https://www.facebook.com/theringmaker>,
+                <https://www.instagram.com/jenshansen.co.nz/>,
+                <https://www.pinterest.com/theringmaker/>,
+                <https://www.tiktok.com/@jenshansen.com>,
+                <https://www.youtube.com/user/jenshansencom> ;
+            schema:url <https://www.jenshansen.com> ] ;
+    schema:url "https://www.jenshansen.com/collections/the-one-ring-replica" .
+
+<https://www.marinabaysands.com/entertainment/shows/the-lord-of-the-rings.html> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.marinabaysands.com/entertainment/shows/the-lord-of-the-rings.html" .
+
+<https://www.microsoft.com/en-us/p/the-lord-of-the-rings-motion-picture-trilogy-extended-edition/8d6kgwxn7m9w> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.microsoft.com/en-us/p/the-lord-of-the-rings-motion-picture-trilogy-extended-edition/8d6kgwxn7m9w" .
+
+<https://www.microsoft.com/en-us/p/the-lord-of-the-rings-the-motion-picture-trilogy/8d6kgwxn7m93> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.microsoft.com/en-us/p/the-lord-of-the-rings-the-motion-picture-trilogy/8d6kgwxn7m93" .
+
+<https://www.reddit.com/r/legogaming/comments/u2vqg9/why_cant_i_buy_lego_lord_of_the_rings_from_xbox/> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.reddit.com/r/legogaming/comments/u2vqg9/why_cant_i_buy_lego_lord_of_the_rings_from_xbox/" .
+
+<https://www.reddit.com/r/lotr/comments/t2zhce/where_can_i_buy_uhd4k_version_of_lord_of_the/> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.reddit.com/r/lotr/comments/t2zhce/where_can_i_buy_uhd4k_version_of_lord_of_the/" .
+
+<https://www.target.com/p/funko-bitty-pop-singles-lord-of-the-rings-one-random-bitty-pop-per-purchase/-/A-92724504> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.target.com/p/funko-bitty-pop-singles-lord-of-the-rings-one-random-bitty-pop-per-purchase/-/A-92724504" .
+
+<https://www.target.com/p/the-lord-of-the-rings-motion-picture-trilogy-extended-38-theatrical-4k-uhd/-/A-81478579> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.target.com/p/the-lord-of-the-rings-motion-picture-trilogy-extended-38-theatrical-4k-uhd/-/A-81478579" .
+
+<https://www.tdplace.ca/event/lord-of-the-rings-the-fellowship-of-the-ring/> a schema:WebSite ;
+    ns1:containsThing <http://dbpedia.org/resource/The_Lord_of_the_Rings> ;
+    ns1:containsWord "purchase" ;
+    schema:url "https://www.tdplace.ca/event/lord-of-the-rings-the-fellowship-of-the-ring/" .
+

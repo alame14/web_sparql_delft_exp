@@ -1,0 +1,2212 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 93.39203119277954
+    },
+    "queries": [
+        {
+            "query_id": 101,
+            "pattern_id": 17,
+            "en_query": "Give me the price and availability of the first 10 books whose author is Lewis Carroll",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Lewis_Carroll> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2705c481b9654a6b8f53481f664d2078"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nfdcc3534112f4fd09a13fb902e53a8b8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "26.24"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne30f96122b31477ca95d8663709b5bc3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N34cfed1d6c1943d5b721884f3be40a82"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1184.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nff4caa3e67ae4122b081989593c65ccb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N22a0944f6fe947869cf4606383fdea39"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3456.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncab37521300f41b9b5d698a051bf43b8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N22eb63a7ef0b409c945c714784b0cd16"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "484"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/nursery-alice_lewis-carroll/827691/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3ade3cb1b4214bf7bd5149f87653558b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf55b2cc382b346f2a03548d9e240ba67"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.19"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6e65a8c9d4b94f47811cc0d0dcebdca5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb9af2046c55b4724bf964c26241bac55"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfe5879e2eaee45c88abaee43ff5498f5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne3fe645f44754a1f8d5ca6e183abd893"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 7
+            },
+            "evaluation_time": 9.538451910018921,
+            "processing_times": {
+                "query_decomposition": 0.06440401077270508,
+                "static_query_evakluation": 0.16503620147705078,
+                "web_data_retrieval": 30.87318229675293,
+                "dynamic_query_evaluation": 0.051245927810668945,
+                "result_merge": 0.001007080078125,
+                "total": 31.15487551689148
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004551410675048828,
+                    "searches": 21.80409860610962,
+                    "web_formatting": 0.003567218780517578,
+                    "total": 21.812217235565186
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 7.62939453125e-06,
+                    "graph_computing": {
+                        "extraction": 0.002113819122314453,
+                        "building": 9.11774468421936,
+                        "builder_init": 0.026257991790771484,
+                        "microdata_adding": 9.05885124206543,
+                        "total": 9.171606063842773
+                    },
+                    "property_access_init": 0.045346736907958984,
+                    "properties_update": 0.002431631088256836,
+                    "total": 9.219415426254272
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 21.812217235565186,
+                    "microdata_extraction": 0.002113819122314453,
+                    "storing": 9.05885124206543,
+                    "total": 30.87318229675293
+                },
+                "microdata_query_evaluation": 0.05098295211791992,
+                "microdata_stats_computing": 2.1457672119140625e-06
+            }
+        },
+        {
+            "query_id": 102,
+            "pattern_id": 18,
+            "en_query": "Give me the books available for the first 10 books whose author is Lewis Carroll",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Lewis_Carroll> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na1a206073c2a4862ac70ef6111761803"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N156d9610583c457c86094c3fbc22ba4a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Tangled Tale: Carroll, Lewis: 9781716027949: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N487acadc62ee438b933f45cfacf0f1ee"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N30cf9d8d30ce449b876af9b2b1cc6437"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Alice&apos;s Adventures in Wonderland : Carroll, Lewis, Bond, Anna: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nba27689d5ac8481b9e52aa988109541d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na0f52e2a01e64706877795fc1937e461"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Alice in Wonderland: Retold in Words of One Syllable: Lewis Carroll  | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8b528fea092d4ec8bd552785b5e63610"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc460bbda74bc40c2b03ff47c675a5a82"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy The Hunting of the Snark Book Online at Low Prices in India | The Hunting of the Snark Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na3e276473b9a4a4689e6ffb3956e813e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N08b2a261d6894d0fa76e406beb283765"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Nursery &quot;Alice&quot; : Carroll, Lewis, Thomson, Emily Gertrude, Tenniel, Sir John: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N770d6c54fe4246dd99c8242bfef508bf"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7e4ede331bc545d1b9f3c3b09a06f8c8"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Nursery Alice: With original illustrations: Carroll, Lewis: 9798417488450: Amazon.com: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 9.31918716430664,
+            "processing_times": {
+                "query_decomposition": 0.04503440856933594,
+                "static_query_evakluation": 0.0928337574005127,
+                "web_data_retrieval": 30.812862873077393,
+                "dynamic_query_evaluation": 0.009198427200317383,
+                "result_merge": 0.000812530517578125,
+                "total": 30.960741996765137
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0034332275390625,
+                    "searches": 21.804097414016724,
+                    "web_formatting": 0.0037229061126708984,
+                    "total": 21.811253547668457
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.198883056640625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0019812583923339844,
+                        "building": 9.054346561431885,
+                        "builder_init": 0.02436542510986328,
+                        "microdata_adding": 8.999628067016602,
+                        "total": 9.09557580947876
+                    },
+                    "property_access_init": 0.045169830322265625,
+                    "properties_update": 0.0027441978454589844,
+                    "total": 9.14352035522461
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 21.811253547668457,
+                    "microdata_extraction": 0.0019812583923339844,
+                    "storing": 8.999628067016602,
+                    "total": 30.812862873077393
+                },
+                "microdata_query_evaluation": 0.008918285369873047,
+                "microdata_stats_computing": 1.430511474609375e-06
+            }
+        },
+        {
+            "query_id": 103,
+            "pattern_id": 19,
+            "en_query": "Give me the price of the books available for the first 10 books whose author is Lewis Carroll",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Lewis_Carroll> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N92f67763196f458f9f11dd5358d1fe9b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N86a24a8327aa48a8be2de713a45faf9b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "26.24"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N597cd37cd0a84bebb9cc615752f449e9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9417d60d0bae47078d2458737df1b92f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1184.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne5866d9c10904110853de1b51bd3798c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2ca52c2cc9cd4de5905c89b17d7cdc4e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3456.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8a2e8ad755894aec9111ecec9217b145"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N14ed04523f63464eb6736f8146537312"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "484"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/nursery-alice_lewis-carroll/827691/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1becca92e6404bc582e2ec1d61756e2c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4d3b287626844b389e0c20fabfe4bcfe"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.19"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N00726180147b46e3aa42259989cce292"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb5c30d04072a46598b669335636a3bd4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd9f6665d85654edf99d5af3a8dc08f4d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na7e94c78cf3d4ab2ae8c9e37b248c13c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.99"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 7
+            },
+            "evaluation_time": 9.381158828735352,
+            "processing_times": {
+                "query_decomposition": 0.09572672843933105,
+                "static_query_evakluation": 0.09286022186279297,
+                "web_data_retrieval": 30.82941699028015,
+                "dynamic_query_evaluation": 0.009186744689941406,
+                "result_merge": 0.0007541179656982422,
+                "total": 31.027944803237915
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003571033477783203,
+                    "searches": 21.804097890853882,
+                    "web_formatting": 0.004036426544189453,
+                    "total": 21.811705350875854
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0020284652709960938,
+                        "building": 9.07231616973877,
+                        "builder_init": 0.025439977645874023,
+                        "microdata_adding": 9.0156831741333,
+                        "total": 9.113725662231445
+                    },
+                    "property_access_init": 0.044805049896240234,
+                    "properties_update": 0.002569913864135742,
+                    "total": 9.161130666732788
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 21.811705350875854,
+                    "microdata_extraction": 0.0020284652709960938,
+                    "storing": 9.0156831741333,
+                    "total": 30.82941699028015
+                },
+                "microdata_query_evaluation": 0.008846282958984375,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 322,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of Alice's Adventures in Wonderland Retold in Words of One Syllable",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Alice's Adventures in Wonderland retold in words of one syllable\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N103e5533d1e6414093ba9ba91b019a5c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N222b4c4b42ee418a8f68c25658f634d8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "26.24"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N224b5087ccb64fdd93adcfcca1d672b0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N674425941d034db7803575901d3c0cbe"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1184.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne80b2a44af824ce9ae019d2ac51903bb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf558f01894cf4920a6c1164c74a7e6f1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3456.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5cdf3f46268e4e37a8acdfa7a9e496a2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na84b912834a245c0bd40c330390ac3d3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "484"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/nursery-alice_lewis-carroll/827691/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd8ab1d8773a84859b44763fdb922b9c7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndcde359a8fb744fdac0f7c5af3b0d813"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.19"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc44c499fed1c492db6792fa20c425e59"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb67a2fdb362c4a388170f7f7e42be5cd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncd607b5c12ee4bd5b8fbc6a14c441265"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N90b31a18c5b746edbd5ffab891acd865"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.99"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 7
+            },
+            "evaluation_time": 9.364603042602539,
+            "processing_times": {
+                "query_decomposition": 0.09411334991455078,
+                "static_query_evakluation": 0.11120271682739258,
+                "web_data_retrieval": 30.797493934631348,
+                "dynamic_query_evaluation": 0.008425235748291016,
+                "result_merge": 0.0008192062377929688,
+                "total": 31.012054443359375
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003834247589111328,
+                    "searches": 21.804097414016724,
+                    "web_formatting": 0.0032682418823242188,
+                    "total": 21.81119990348816
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.001999378204345703,
+                        "building": 9.038575172424316,
+                        "builder_init": 0.024275779724121094,
+                        "microdata_adding": 8.984294652938843,
+                        "total": 9.079652786254883
+                    },
+                    "property_access_init": 0.044829368591308594,
+                    "properties_update": 0.0024900436401367188,
+                    "total": 9.126997709274292
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 21.81119990348816,
+                    "microdata_extraction": 0.001999378204345703,
+                    "storing": 8.984294652938843,
+                    "total": 30.797493934631348
+                },
+                "microdata_query_evaluation": 0.008130311965942383,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 323,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of Alice's Adventures in Wonderland Retold in Words of One Syllable",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Alice's Adventures in Wonderland retold in words of one syllable\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3ab108072dc34b4ba3f059e97f7f40c6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne0efddf90148453d832b6f303898d6e2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "26.24"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5daa7529c63647a4907c67134dd9c52c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N59ace906a37d47919bba664e185c5b0a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1184.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne12e2b0b13b84d24b1abb16773f5200a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N073e695c37d14441829c82f27f8a1818"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3456.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncb5a8865d01c419f81262d71c51ae926"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc06b969c58a147f299edf880c9097d58"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "484"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/nursery-alice_lewis-carroll/827691/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndf4a80f21be3464a84e6b05bb821b2b8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb0be3c6d9bb6450e835a3fd4c299c815"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.19"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3384843b7d2a41349dab77a390bb3cb5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nff29befe4c4c49a9bfab97f8c03eac6a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N48a5dbd4a1164afc824c3b2829ecb503"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbb0570f5d6ed45beb7ef8742d702a34a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 7
+            },
+            "evaluation_time": 9.27037262916565,
+            "processing_times": {
+                "query_decomposition": 0.09668612480163574,
+                "static_query_evakluation": 0.09804773330688477,
+                "web_data_retrieval": 30.71273899078369,
+                "dynamic_query_evaluation": 0.008557796478271484,
+                "result_merge": 0.0009028911590576172,
+                "total": 30.91693353652954
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.00417327880859375,
+                    "searches": 21.804097175598145,
+                    "web_formatting": 0.0035076141357421875,
+                    "total": 21.81177806854248
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0020170211791992188,
+                        "building": 8.953687191009521,
+                        "builder_init": 0.02445197105407715,
+                        "microdata_adding": 8.898943901062012,
+                        "total": 8.996055364608765
+                    },
+                    "property_access_init": 0.044997453689575195,
+                    "properties_update": 0.002489328384399414,
+                    "total": 9.043567657470703
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 21.81177806854248,
+                    "microdata_extraction": 0.0020170211791992188,
+                    "storing": 8.898943901062012,
+                    "total": 30.71273899078369
+                },
+                "microdata_query_evaluation": 0.008264303207397461,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 324,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of Alice's Adventures in Wonderland Retold in Words of One Syllable",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Alice's Adventures in Wonderland retold in words of one syllable\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbbc667da9ffc43f998bc04ac6f8ae3b4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N85cc7798466643969bf557392224feab"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Tangled Tale: Carroll, Lewis: 9781716027949: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na578ade3048249f1a1e52ea2ba56c8ee"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N8ffdf073c69840edb18de961fa7790c5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Alice&apos;s Adventures in Wonderland : Carroll, Lewis, Bond, Anna: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N524e63407afd4057a63a6fad37d128c0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb17a77c65eb04865b7237bd208947638"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Alice in Wonderland: Retold in Words of One Syllable: Lewis Carroll  | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N05a06586db8f4fc7bfee905a1109eb8b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7338610fc8764912bb7afaccd1daa919"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy The Hunting of the Snark Book Online at Low Prices in India | The Hunting of the Snark Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nba2275b22a7e4760a8bdcc76e70e42a6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N45113a7961d24f01b42cc8c776842da5"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Nursery &quot;Alice&quot; : Carroll, Lewis, Thomson, Emily Gertrude, Tenniel, Sir John: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nee0d3d02faae451c9570661516404fc9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N57248dd1656e4504a246c328ab3cd78c"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Nursery Alice: With original illustrations: Carroll, Lewis: 9798417488450: Amazon.com: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 9.432929515838623,
+            "processing_times": {
+                "query_decomposition": 0.09904885292053223,
+                "static_query_evakluation": 0.09264445304870605,
+                "web_data_retrieval": 30.825919151306152,
+                "dynamic_query_evaluation": 0.008902788162231445,
+                "result_merge": 0.0007278919219970703,
+                "total": 31.02724313735962
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0036885738372802734,
+                    "searches": 21.804097890853882,
+                    "web_formatting": 0.003364086151123047,
+                    "total": 21.811150550842285
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0021414756774902344,
+                        "building": 9.112508535385132,
+                        "builder_init": 0.02899003028869629,
+                        "microdata_adding": 9.012627124786377,
+                        "total": 9.155778169631958
+                    },
+                    "property_access_init": 0.04477119445800781,
+                    "properties_update": 0.0025513172149658203,
+                    "total": 9.203125715255737
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 21.811150550842285,
+                    "microdata_extraction": 0.0021414756774902344,
+                    "storing": 9.012627124786377,
+                    "total": 30.825919151306152
+                },
+                "microdata_query_evaluation": 0.00863194465637207,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 325,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of Alice's Adventures in Wonderland Retold in Words of One Syllable",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Alice's Adventures in Wonderland retold in words of one syllable\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na6b430d507f545ffb2cbb186e0327fad"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd8cf3ed4a05a40979a19943cc2496648"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "26.24"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na604bd13273a4b02b38a1c416d1a3db3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5b40bda0bed94d7a86129ed046d5d26c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1184.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na7a71abb17cf4825adf1ce91be9e2ce9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9f55cea97442486591cb12ce5db59b6b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3456.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N679578b6579c4296936239d184c31f10"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N358eab28aff44ce8b92cb43cafc4da19"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "484"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/nursery-alice_lewis-carroll/827691/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N91f9c80fdf3f483ea90ee3383e0d7341"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5406ce5e20fd4535b7d155adb28c40e8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.19"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nd47f802c892a433893ac5fb5eca57b94"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N84bd5f66845840c2b83aed1b3d1f06f6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N15b202b6875f49d39899290bfb85dc70"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N01ac93717c8c4d68a5dd78f232a06d21"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.99"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 7
+            },
+            "evaluation_time": 9.23318099975586,
+            "processing_times": {
+                "query_decomposition": 0.10437417030334473,
+                "static_query_evakluation": 0.10232663154602051,
+                "web_data_retrieval": 30.662351608276367,
+                "dynamic_query_evaluation": 0.008544206619262695,
+                "result_merge": 0.0008232593536376953,
+                "total": 30.878419876098633
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0036382675170898438,
+                    "searches": 21.804096937179565,
+                    "web_formatting": 0.003256559371948242,
+                    "total": 21.810991764068604
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0020880699157714844,
+                        "building": 8.905443906784058,
+                        "builder_init": 0.02487325668334961,
+                        "microdata_adding": 8.849271774291992,
+                        "total": 8.947547435760498
+                    },
+                    "property_access_init": 0.045462608337402344,
+                    "properties_update": 0.0024535655975341797,
+                    "total": 8.995489120483398
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 21.810991764068604,
+                    "microdata_extraction": 0.0020880699157714844,
+                    "storing": 8.849271774291992,
+                    "total": 30.662351608276367
+                },
+                "microdata_query_evaluation": 0.00825643539428711,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 326,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of Sylvie and Bruno",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Sylvie and Bruno\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8bf20d44ec4a42269c44921ca3f24d90"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N7fdd4791cbf84d7d955551d322fd0386"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "26.24"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N421e70b71ca34c2cb8450868a20b70d8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N05dc67a67ae246cb9c724dbcaf0ddbc7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1184.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N4407c3e872bf46e6ace424147b290ea7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndec2d670ee18401c8493c59a3a88eccc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3456.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbd92360e263a413095aa0a90931578b5"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbe1c374c11ff40edb949cae8ad844b8b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "484"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/nursery-alice_lewis-carroll/827691/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N67b13b3247a044ccb9c912624861b63c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9f1deed2f9cc48b3ab3696a09b91ecae"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.19"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N99113c1b973f4caba8e3d619c8263fa1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N92b543ccae234c0f9a4866760e6f081a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.95"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N42fbfaee38704d8582848f1398f4e285"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N88feaab345fa4fb293445b63e3ab0283"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.99"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 7
+            },
+            "evaluation_time": 9.174615383148193,
+            "processing_times": {
+                "query_decomposition": 0.09035563468933105,
+                "static_query_evakluation": 0.10997247695922852,
+                "web_data_retrieval": 30.60847043991089,
+                "dynamic_query_evaluation": 0.00802469253540039,
+                "result_merge": 0.0008342266082763672,
+                "total": 30.817657470703125
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004182338714599609,
+                    "searches": 21.80409598350525,
+                    "web_formatting": 0.0013229846954345703,
+                    "total": 21.809601306915283
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-05,
+                    "graph_computing": {
+                        "extraction": 0.0020453929901123047,
+                        "building": 8.852131605148315,
+                        "builder_init": 0.02395343780517578,
+                        "microdata_adding": 8.796823740005493,
+                        "total": 8.895323514938354
+                    },
+                    "property_access_init": 0.04471182823181152,
+                    "properties_update": 0.0025827884674072266,
+                    "total": 8.9426748752594
+                },
+                "web_microdata_graph_update": 4.76837158203125e-07,
+                "web_data_retrieval": {
+                    "url_finding": 21.809601306915283,
+                    "microdata_extraction": 0.0020453929901123047,
+                    "storing": 8.796823740005493,
+                    "total": 30.60847043991089
+                },
+                "microdata_query_evaluation": 0.007756948471069336,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 327,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of Sylvie and Bruno",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Sylvie and Bruno\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N74af968c6989408290765ee1d4aef846"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nab5ec23c44e14a1aa4d254e2f9f6c69d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "26.24"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3a0ee18db3804ea495ba2f4a51416249"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na360c194fe3d46ab94014916177c21f9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "1184.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N388c65be1a594fe7aade0c57b60316f1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0d34fbf9e86647d7af9ec8535b0bf124"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3456.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb81e7a611a2441408ba36849a42fdc3d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd892a24fc2f5479eb713cb9162c76f7e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "484"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.thriftbooks.com/w/nursery-alice_lewis-carroll/827691/"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N367e190328fd43ab94364ae20e2ace0d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N93d8f22a238e4783a6269a6c51b4ed59"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "11.19"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N23e510e5c88a4273974c52e4cb67fcbc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc99d5dfa9d29454fb3358d337802ea0e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "9.95"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5eb2d93efeb842c587a27741088db8e7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nafea5d569c3041c5b0476f9738a4ac1c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.99"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 7
+            },
+            "evaluation_time": 9.225607633590698,
+            "processing_times": {
+                "query_decomposition": 0.09861469268798828,
+                "static_query_evakluation": 0.09735798835754395,
+                "web_data_retrieval": 30.662013292312622,
+                "dynamic_query_evaluation": 0.008867263793945312,
+                "result_merge": 0.0009052753448486328,
+                "total": 30.86775851249695
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003888368606567383,
+                    "searches": 21.804097652435303,
+                    "web_formatting": 0.0033600330352783203,
+                    "total": 21.81134605407715
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.002045869827270508,
+                        "building": 8.908167839050293,
+                        "builder_init": 0.025644540786743164,
+                        "microdata_adding": 8.848621368408203,
+                        "total": 8.950404405593872
+                    },
+                    "property_access_init": 0.044678449630737305,
+                    "properties_update": 0.002504587173461914,
+                    "total": 8.99761176109314
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 21.81134605407715,
+                    "microdata_extraction": 0.002045869827270508,
+                    "storing": 8.848621368408203,
+                    "total": 30.662013292312622
+                },
+                "microdata_query_evaluation": 0.00859689712524414,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 328,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of Sylvie and Bruno",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Sylvie and Bruno\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/A_Tangled_Tale"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Tangled-Tale-Lewis-Carroll/dp/1716027942"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9523d5faa2d446588fb3a3da04073ed1"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N73a42609dbef432e971c298508ee40bf"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "A Tangled Tale: Carroll, Lewis: 9781716027949: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Alices-Adventures-Wonderland-Lewis-Carroll/dp/0147515874"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nef889de9b3384680ad181a3b09320a45"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N51e58bd5bbc349b2bad86134da46e400"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Alice&apos;s Adventures in Wonderland : Carroll, Lewis, Bond, Anna: Amazon.in: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.rokomari.com/book/363410/alice-in-wonderland-retold-in-words-of-one-syllable"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndef99386d6194e84aab440de8a63102b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N555d6c9cad2449fe982ef6d3e983688b"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Alice in Wonderland: Retold in Words of One Syllable: Lewis Carroll  | Rokomari.com"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Hunting_of_the_Snark"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.in/Hunting-Snark-Lewis-Carroll/dp/9358940816"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7cb189f3792e46808ff78a2e6e1829eb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd7e045b50f97424cb36d6ce4cc1a70ab"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Buy The Hunting of the Snark Book Online at Low Prices in India | The Hunting of the Snark Reviews &amp; Ratings - Amazon.in"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Nursery-Alice-Lewis-Carroll/dp/1907960007"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfd36f82ce52c4344af7b697ee95eec13"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1741350c162e431aaa1d7ae7ac0108ce"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Nursery &quot;Alice&quot; : Carroll, Lewis, Thomson, Emily Gertrude, Tenniel, Sir John: Amazon.co.uk: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_Nursery_%22Alice%22"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Nursery-Alice-original-illustrations/dp/B09SBRGHM7"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9dd8ebdd1f554c369da93c0261a944f2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N392222441d524da6974e615e734e8055"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Nursery Alice: With original illustrations: Carroll, Lewis: 9798417488450: Amazon.com: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 7,
+                "number_of_web_results": 210,
+                "number_of_extracted_microdata": 56,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 9.434097528457642,
+            "processing_times": {
+                "query_decomposition": 0.10288667678833008,
+                "static_query_evakluation": 0.10260987281799316,
+                "web_data_retrieval": 30.862065076828003,
+                "dynamic_query_evaluation": 0.008628606796264648,
+                "result_merge": 0.0007643699645996094,
+                "total": 31.07695460319519
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0040285587310791016,
+                    "searches": 21.804097890853882,
+                    "web_formatting": 0.0033941268920898438,
+                    "total": 21.81152057647705
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.002039670944213867,
+                        "building": 9.103955030441284,
+                        "builder_init": 0.024555206298828125,
+                        "microdata_adding": 9.048504829406738,
+                        "total": 9.146350383758545
+                    },
+                    "property_access_init": 0.04754948616027832,
+                    "properties_update": 0.0025179386138916016,
+                    "total": 9.196443796157837
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 21.81152057647705,
+                    "microdata_extraction": 0.002039670944213867,
+                    "storing": 9.048504829406738,
+                    "total": 30.862065076828003
+                },
+                "microdata_query_evaluation": 0.00835561752319336,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        }
+    ]
+}

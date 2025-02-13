@@ -1,0 +1,1792 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 215.10936331748962
+    },
+    "queries": [
+        {
+            "query_id": 214,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of The Three Musketeers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Three Musketeers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N33de47183b174ddebe6538d89cb09957"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N321ba5b7c4534a458a44170209ed2107"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N946e7c39a19e41bfb844a471f7136151"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nad0239c6640446e99c8ecc67ff9cc0d9"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N227e9c9bf9db415c89b45a842483eb64"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N691b8f33b7324801a8cdfbd5b1eaad94"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 101,
+                "number_of_query_results": 3
+            },
+            "evaluation_time": 21.86446714401245,
+            "processing_times": {
+                "query_decomposition": 0.049677371978759766,
+                "static_query_evakluation": 0.11345720291137695,
+                "web_data_retrieval": 52.62055826187134,
+                "dynamic_query_evaluation": 0.009664773941040039,
+                "result_merge": 0.0007681846618652344,
+                "total": 52.79412579536438
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0018510818481445312,
+                    "searches": 31.188969373703003,
+                    "web_formatting": 0.002216815948486328,
+                    "total": 31.193037271499634
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.005379915237426758,
+                        "building": 21.51069736480713,
+                        "builder_init": 0.03838539123535156,
+                        "microdata_adding": 21.422141075134277,
+                        "total": 21.587058544158936
+                    },
+                    "property_access_init": 0.07543492317199707,
+                    "properties_update": 0.004238128662109375,
+                    "total": 21.666763305664062
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.193037271499634,
+                    "microdata_extraction": 0.005379915237426758,
+                    "storing": 21.422141075134277,
+                    "total": 52.62055826187134
+                },
+                "microdata_query_evaluation": 0.00927281379699707,
+                "microdata_stats_computing": 2.1457672119140625e-06
+            }
+        },
+        {
+            "query_id": 215,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of The Three Musketeers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Three Musketeers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nac82efa23ccf43dc8406314e0c1e0d3b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N938e4bbba0024861946c6b83885640a3"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N930f7895da484c479438354b59d28b85"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4f77541cf8c14dd9ad524b28d1b0e1b4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndcb38d9599754e0d9025036676f4eeaf"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N18048bc7b8964e7a93772b919afd2b0a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 101,
+                "number_of_query_results": 3
+            },
+            "evaluation_time": 22.966027975082397,
+            "processing_times": {
+                "query_decomposition": 0.04740023612976074,
+                "static_query_evakluation": 0.40335655212402344,
+                "web_data_retrieval": 53.39966440200806,
+                "dynamic_query_evaluation": 0.010475397109985352,
+                "result_merge": 0.0006287097930908203,
+                "total": 53.86152529716492
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004599094390869141,
+                    "searches": 31.18897032737732,
+                    "web_formatting": 0.002176523208618164,
+                    "total": 31.195745944976807
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.005156755447387695,
+                        "building": 22.282933473587036,
+                        "builder_init": 0.0364987850189209,
+                        "microdata_adding": 22.198761701583862,
+                        "total": 22.356422662734985
+                    },
+                    "property_access_init": 0.12072873115539551,
+                    "properties_update": 0.004125356674194336,
+                    "total": 22.481306314468384
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.195745944976807,
+                    "microdata_extraction": 0.005156755447387695,
+                    "storing": 22.198761701583862,
+                    "total": 53.39966440200806
+                },
+                "microdata_query_evaluation": 0.01010584831237793,
+                "microdata_stats_computing": 1.1920928955078125e-06
+            }
+        },
+        {
+            "query_id": 216,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of The Three Musketeers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Three Musketeers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1f055171da474ecba86636a79a40d73d"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd60197f4d40042f1b5bf8300a11a21d6"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Captain Pamphile | Dumas Alexandre | Good Condition"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N45309b0a03ce44bf853f9fefbe32af04"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N858791688b4a4fe9af2ed3868a801734"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Captain Pamphile | VGC"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N6157d90381e14c0eb43b0b83eec0643c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na158d1049a5646fbb2626e260bcc5754"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "La Dame de Monsoreau: Dumas, Alexandre, Garrisson, Janine: 9782070316366: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/The_New_Troy"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.eventticketscenter.com/the-fall-of-troy-new-york-06-15-2025/6927865/t"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "https://www.eventticketscenter.com/the-fall-of-troy-new-york-06-15-2025/6927865/t#musicEvent"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9108ef49ab054e9c9a1b5dd4e911e0f2"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Fall of Troy    in New York Tickets - 06/15/2025 7:00 PM"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 101,
+                "number_of_query_results": 4
+            },
+            "evaluation_time": 21.789305210113525,
+            "processing_times": {
+                "query_decomposition": 0.05200767517089844,
+                "static_query_evakluation": 0.11134648323059082,
+                "web_data_retrieval": 52.54075598716736,
+                "dynamic_query_evaluation": 0.009751319885253906,
+                "result_merge": 0.0006392002105712891,
+                "total": 52.71450066566467
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0038411617279052734,
+                    "searches": 31.1889705657959,
+                    "web_formatting": 0.005145072937011719,
+                    "total": 31.197956800460815
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.005706071853637695,
+                        "building": 21.431790113449097,
+                        "builder_init": 0.040277957916259766,
+                        "microdata_adding": 21.337093114852905,
+                        "total": 21.50581407546997
+                    },
+                    "property_access_init": 0.08067202568054199,
+                    "properties_update": 0.004240751266479492,
+                    "total": 21.590758562088013
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.197956800460815,
+                    "microdata_extraction": 0.005706071853637695,
+                    "storing": 21.337093114852905,
+                    "total": 52.54075598716736
+                },
+                "microdata_query_evaluation": 0.009371280670166016,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 217,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of The Three Musketeers",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Three Musketeers\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nebaa4818bcc8461b9ad23dcf0b9976bc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5f6dde46bc7942a8b4829e420e18695c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N80a8cf02062c4754a16c67bdf6202b08"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N908cfcd809c84b17a474a18d4ea58d07"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3bee179599484326b4e1107ff08b519b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndd48e2424f4c440db97ef23933ddc32a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 101,
+                "number_of_query_results": 3
+            },
+            "evaluation_time": 19.36093807220459,
+            "processing_times": {
+                "query_decomposition": 0.12616705894470215,
+                "static_query_evakluation": 0.09999275207519531,
+                "web_data_retrieval": 50.04894137382507,
+                "dynamic_query_evaluation": 0.011182308197021484,
+                "result_merge": 0.0005748271942138672,
+                "total": 50.286858320236206
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004693508148193359,
+                    "searches": 31.188971757888794,
+                    "web_formatting": 0.004774808883666992,
+                    "total": 31.198440074920654
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.00539088249206543,
+                        "building": 18.935932874679565,
+                        "builder_init": 0.038057565689086914,
+                        "microdata_adding": 18.845110416412354,
+                        "total": 19.009480237960815
+                    },
+                    "property_access_init": 0.07696771621704102,
+                    "properties_update": 0.008845329284667969,
+                    "total": 19.095332384109497
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 31.198440074920654,
+                    "microdata_extraction": 0.00539088249206543,
+                    "storing": 18.845110416412354,
+                    "total": 50.04894137382507
+                },
+                "microdata_query_evaluation": 0.01045536994934082,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 218,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of La Dame de Monsoreau",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"La Dame de Monsoreau\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb327978f18374f97bf6b4842d48bcb2c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb3c5b1d5800c4314842254a8ecbf2a4a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc745fd04737e439aa8414bacdb6613f8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6010b2d8de2948e59fd4321f9133b74a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9412c4e1b0b1414686595b4b4367f5a8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neb2950fe072b42f7b4e40db1e2dc5d3f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N60dc33adc6e342d98aae9d0c09649928"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6570ba80164d40aa86a6265e3aefa828"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9412c4e1b0b1414686595b4b4367f5a8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Neb2950fe072b42f7b4e40db1e2dc5d3f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N60dc33adc6e342d98aae9d0c09649928"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6570ba80164d40aa86a6265e3aefa828"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 106,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 21.4130859375,
+            "processing_times": {
+                "query_decomposition": 0.05210089683532715,
+                "static_query_evakluation": 0.11546516418457031,
+                "web_data_retrieval": 51.77077627182007,
+                "dynamic_query_evaluation": 0.008634090423583984,
+                "result_merge": 0.0007584095001220703,
+                "total": 51.94773483276367
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0033960342407226562,
+                    "searches": 30.75915813446045,
+                    "web_formatting": 0.004363298416137695,
+                    "total": 30.76691746711731
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004868268966674805,
+                        "building": 21.087860822677612,
+                        "builder_init": 0.039411067962646484,
+                        "microdata_adding": 20.998990535736084,
+                        "total": 21.142343282699585
+                    },
+                    "property_access_init": 0.06674838066101074,
+                    "properties_update": 0.003554105758666992,
+                    "total": 21.212679862976074
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 30.76691746711731,
+                    "microdata_extraction": 0.004868268966674805,
+                    "storing": 20.998990535736084,
+                    "total": 51.77077627182007
+                },
+                "microdata_query_evaluation": 0.00814199447631836,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 219,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of La Dame de Monsoreau",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"La Dame de Monsoreau\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N46d90910f9f2473ebf14ab782cdd565f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb764945d681c4e688744c090001d395c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nc7291b600a3e420ebda02cd7a9528a50"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N68fdb81430994ab7811655b16d9eed09"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndd87c349db244d7f8808f88d8a8d98ea"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb5ac339ba7f3494a89dc633dbf321326"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Necb5892f09b34e6d8e3e4df2e2ecbead"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5061dc2d118c4982805a482429d6abf5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndd87c349db244d7f8808f88d8a8d98ea"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb5ac339ba7f3494a89dc633dbf321326"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Necb5892f09b34e6d8e3e4df2e2ecbead"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5061dc2d118c4982805a482429d6abf5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 106,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 20.82340908050537,
+            "processing_times": {
+                "query_decomposition": 0.04746127128601074,
+                "static_query_evakluation": 0.11529159545898438,
+                "web_data_retrieval": 51.14695739746094,
+                "dynamic_query_evaluation": 0.010236978530883789,
+                "result_merge": 0.0009064674377441406,
+                "total": 51.32085371017456
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004053592681884766,
+                    "searches": 30.75915837287903,
+                    "web_formatting": 0.0039196014404296875,
+                    "total": 30.767131567001343
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.00489497184753418,
+                        "building": 20.46222162246704,
+                        "builder_init": 0.03864336013793945,
+                        "microdata_adding": 20.37493085861206,
+                        "total": 20.517295122146606
+                    },
+                    "property_access_init": 0.10506463050842285,
+                    "properties_update": 0.0036563873291015625,
+                    "total": 20.62604594230652
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 30.767131567001343,
+                    "microdata_extraction": 0.00489497184753418,
+                    "storing": 20.37493085861206,
+                    "total": 51.14695739746094
+                },
+                "microdata_query_evaluation": 0.00985574722290039,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 220,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of La Dame de Monsoreau",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"La Dame de Monsoreau\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N16d41e1975c3436b8b831170f2f3fa84"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nb073677d4fb04d38a714a12868095d77"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "The Captain Pamphile | Dumas Alexandre | Good Condition"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncbb8f815ecb440a9a0c37e2b5d2c8ba3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N4824331834b24474abb339978fd726d4"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Captain Pamphile | VGC"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7a2c9af1350a4d029d4e4facf981566b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nac0ed20f55a5410f95d78c5e7ee0b83a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "La Dame de Monsoreau: Dumas, Alexandre, Garrisson, Janine: 9782070316366: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne55e56cca0c947da9f30d1335e99bd83"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf4e807f9bda84e96a333c02aeaccfb8f"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "La Dame de Monsoreau: Dumas, Alexandre, Garrisson, Janine: 9782070316366: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7a2c9af1350a4d029d4e4facf981566b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nac0ed20f55a5410f95d78c5e7ee0b83a"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "La Dame de Monsoreau: Dumas, Alexandre, Garrisson, Janine: 9782070316366: Amazon.com: Books"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne55e56cca0c947da9f30d1335e99bd83"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf4e807f9bda84e96a333c02aeaccfb8f"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "La Dame de Monsoreau: Dumas, Alexandre, Garrisson, Janine: 9782070316366: Amazon.com: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 106,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 21.4350426197052,
+            "processing_times": {
+                "query_decomposition": 0.0529332160949707,
+                "static_query_evakluation": 0.10493803024291992,
+                "web_data_retrieval": 51.75612449645996,
+                "dynamic_query_evaluation": 0.061232805252075195,
+                "result_merge": 0.0007753372192382812,
+                "total": 51.976003885269165
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0036573410034179688,
+                    "searches": 30.759156942367554,
+                    "web_formatting": 0.004121303558349609,
+                    "total": 30.76693558692932
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0048520565032958984,
+                        "building": 21.070637941360474,
+                        "builder_init": 0.03860902786254883,
+                        "microdata_adding": 20.984336853027344,
+                        "total": 21.12442183494568
+                    },
+                    "property_access_init": 0.05877375602722168,
+                    "properties_update": 0.003535747528076172,
+                    "total": 21.186757564544678
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 30.76693558692932,
+                    "microdata_extraction": 0.0048520565032958984,
+                    "storing": 20.984336853027344,
+                    "total": 51.75612449645996
+                },
+                "microdata_query_evaluation": 0.06085920333862305,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 221,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of La Dame de Monsoreau",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"La Dame de Monsoreau\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N14300b99321c4fcd8bba81bcf2b42307"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N97548d3f7dfc4975a61da1ca34413148"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8adc6527e1b64896a5f9c2965d777ec0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na186eb5f4e074ba09523f83472c4a8f0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N386c719a8e9f4473b2c957fc926999fb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na103ff6ee4094491bea8d8bc9b68b209"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5564944172dc426daea59e8dde20b85a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9301c74bcfa64a31828d96d0e4165eba"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N386c719a8e9f4473b2c957fc926999fb"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na103ff6ee4094491bea8d8bc9b68b209"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N5564944172dc426daea59e8dde20b85a"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9301c74bcfa64a31828d96d0e4165eba"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 106,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 21.03809666633606,
+            "processing_times": {
+                "query_decomposition": 0.054537296295166016,
+                "static_query_evakluation": 0.0920708179473877,
+                "web_data_retrieval": 51.42445087432861,
+                "dynamic_query_evaluation": 0.00990438461303711,
+                "result_merge": 0.0007531642913818359,
+                "total": 51.581716537475586
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0030341148376464844,
+                    "searches": 30.75915837287903,
+                    "web_formatting": 0.0038399696350097656,
+                    "total": 30.766032457351685
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.004931211471557617,
+                        "building": 20.740837812423706,
+                        "builder_init": 0.038846731185913086,
+                        "microdata_adding": 20.65348720550537,
+                        "total": 20.795497179031372
+                    },
+                    "property_access_init": 0.058886051177978516,
+                    "properties_update": 0.003420114517211914,
+                    "total": 20.857830286026
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 30.766032457351685,
+                    "microdata_extraction": 0.004931211471557617,
+                    "storing": 20.65348720550537,
+                    "total": 51.42445087432861
+                },
+                "microdata_query_evaluation": 0.009534597396850586,
+                "microdata_stats_computing": 1.1920928955078125e-06
+            }
+        },
+        {
+            "query_id": 222,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of La Reine Margot (novel)",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"La Reine Margot\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3d253005bdc04c34bd59f02e0e5f6aae"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N07c25fbd808646f89f8687485772e1f5"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N18431d3da91d4655b1a7c1ddfb1401fe"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc5b3ce80d77a4bd1892c2c82c6bd3a8a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N54004143d2894daabd226c76ae05d650"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N62033912ce6e4c9fb796d2bd2b4f898f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N86b8b09a13cf47838da2b1b1f2a2ac69"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd36a00cdd3d5483997cdd00c4f0e3296"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N54004143d2894daabd226c76ae05d650"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N62033912ce6e4c9fb796d2bd2b4f898f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N86b8b09a13cf47838da2b1b1f2a2ac69"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nd36a00cdd3d5483997cdd00c4f0e3296"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 106,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 22.52377939224243,
+            "processing_times": {
+                "query_decomposition": 0.10365605354309082,
+                "static_query_evakluation": 0.11139297485351562,
+                "web_data_retrieval": 52.78261208534241,
+                "dynamic_query_evaluation": 0.06140470504760742,
+                "result_merge": 0.0008738040924072266,
+                "total": 53.05993962287903
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.008651256561279297,
+                    "searches": 30.759156465530396,
+                    "web_formatting": 0.004003286361694336,
+                    "total": 30.77181100845337
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.9604644775390625e-06,
+                    "graph_computing": {
+                        "extraction": 0.004784822463989258,
+                        "building": 22.092098236083984,
+                        "builder_init": 0.03816580772399902,
+                        "microdata_adding": 22.00601625442505,
+                        "total": 22.14593744277954
+                    },
+                    "property_access_init": 0.0582427978515625,
+                    "properties_update": 0.0033593177795410156,
+                    "total": 22.207569122314453
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 30.77181100845337,
+                    "microdata_extraction": 0.004784822463989258,
+                    "storing": 22.00601625442505,
+                    "total": 52.78261208534241
+                },
+                "microdata_query_evaluation": 0.06102895736694336,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 223,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of La Reine Margot (novel)",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"La Reine Margot\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/405257291702"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N368993b781274151a2842beff0244f2f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nccecce93994048a2baf4c0a8adb0da47"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.34"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Captain_Pamphile"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/404828664158"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N26259a0900c84ded892ea525506724a9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6b5579e7ab6249cca11ea1b912eded68"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "4.1"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N82b3b343861d4d009593f35738abe81f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na86f4882a74e4a61a1abc23f29eb8fb1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N19e98a6e59f346ce9987f18165a24051"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5eb65f7177e3446b97e247685d61af40"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N82b3b343861d4d009593f35738abe81f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Na86f4882a74e4a61a1abc23f29eb8fb1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_Dame_de_Monsoreau"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.com/Dame-Monsoreau-Folio-Gallimard-French/dp/207031636X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N19e98a6e59f346ce9987f18165a24051"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5eb65f7177e3446b97e247685d61af40"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "28.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 106,
+                "number_of_query_results": 6
+            },
+            "evaluation_time": 21.872053623199463,
+            "processing_times": {
+                "query_decomposition": 0.046427011489868164,
+                "static_query_evakluation": 0.09149599075317383,
+                "web_data_retrieval": 52.251250982284546,
+                "dynamic_query_evaluation": 0.009892940521240234,
+                "result_merge": 0.0009453296661376953,
+                "total": 52.400012254714966
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003765106201171875,
+                    "searches": 30.75915789604187,
+                    "web_formatting": 0.00413823127746582,
+                    "total": 30.767061233520508
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0049626827239990234,
+                        "building": 21.568538188934326,
+                        "builder_init": 0.03984403610229492,
+                        "microdata_adding": 21.47922706604004,
+                        "total": 21.63302183151245
+                    },
+                    "property_access_init": 0.06093549728393555,
+                    "properties_update": 0.00365447998046875,
+                    "total": 21.697641372680664
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 30.767061233520508,
+                    "microdata_extraction": 0.0049626827239990234,
+                    "storing": 21.47922706604004,
+                    "total": 52.251250982284546
+                },
+                "microdata_query_evaluation": 0.009528398513793945,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        }
+    ]
+}

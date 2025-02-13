@@ -1,0 +1,101 @@
+{
+    "total_queries": 249,
+    "average_per_query": {
+        "average_books_from_kg_per_query": 1.0,
+        "average_webs_per_query": 30.0,
+        "average_microdatas_per_query": 9.36,
+        "average_offers_per_query": 0.83,
+        "average_prices_per_query": 0.41,
+        "average_availabilities_per_query": 0.4,
+        "average_publishers_per_query": 0.02
+    },
+    "total_elements_across_queries": {
+        "number_of_static_results": 50,
+        "number_of_web_results": 101,
+        "number_of_extracted_microdata": 101,
+        "null": 206
+    },
+    "coverage_stats": {
+        "books_from_kg": {
+            "queries_with_feature": 249,
+            "percentage_queries_with_feature": 100.0
+        },
+        "webs": {
+            "queries_with_feature": 249,
+            "percentage_queries_with_feature": 100.0
+        },
+        "microdatas": {
+            "queries_with_feature": 249,
+            "percentage_queries_with_feature": 100.0
+        },
+        "offers": {
+            "queries_with_feature": 249,
+            "percentage_queries_with_feature": 100.0
+        },
+        "prices": {
+            "queries_with_feature": 83,
+            "percentage_queries_with_feature": 33.33
+        },
+        "availabilities": {
+            "queries_with_feature": 83,
+            "percentage_queries_with_feature": 33.33
+        },
+        "publishers": {
+            "queries_with_feature": 83,
+            "percentage_queries_with_feature": 33.33
+        }
+    },
+    "success_stats": {
+        "books_from_kg": {
+            "queries_with_results": 249,
+            "percentage_queries_with_results": 100.0
+        },
+        "webs": {
+            "queries_with_results": 249,
+            "percentage_queries_with_results": 100.0
+        },
+        "microdatas": {
+            "queries_with_results": 246,
+            "percentage_queries_with_results": 98.8
+        },
+        "offers": {
+            "queries_with_results": 104,
+            "percentage_queries_with_results": 41.77
+        },
+        "prices": {
+            "queries_with_results": 49,
+            "percentage_queries_with_results": 59.04
+        },
+        "availabilities": {
+            "queries_with_results": 50,
+            "percentage_queries_with_results": 60.24
+        },
+        "publishers": {
+            "queries_with_results": 5,
+            "percentage_queries_with_results": 6.02
+        }
+    },
+    "average_results_per_successful_query": {
+        "books_from_kg": {
+            "average_results_per_successful_query": 1.0
+        },
+        "webs": {
+            "average_results_per_successful_query": 30.0
+        },
+        "microdatas": {
+            "average_results_per_successful_query": 9.48
+        },
+        "offers": {
+            "average_results_per_successful_query": 1.98
+        },
+        "prices": {
+            "average_results_per_successful_query": 2.08
+        },
+        "availabilities": {
+            "average_results_per_successful_query": 1.98
+        },
+        "publishers": {
+            "average_results_per_successful_query": 1.0
+        }
+    }
+}

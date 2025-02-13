@@ -1,0 +1,835 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 29.211718797683716
+    },
+    "queries": [
+        {
+            "query_id": 346,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of Night Flight (novel)",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Night Flight\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8f14e9be100d4ac89dd8e79c944152a6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N606e9bdc741f456597f5eb2b8d240ce8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.9365041255950928,
+            "processing_times": {
+                "query_decomposition": 0.044980764389038086,
+                "static_query_evakluation": 0.10605287551879883,
+                "web_data_retrieval": 12.286725759506226,
+                "dynamic_query_evaluation": 0.006211519241333008,
+                "result_merge": 0.0003726482391357422,
+                "total": 12.444343566894531
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0020377635955810547,
+                    "searches": 9.571840524673462,
+                    "web_formatting": 0.0010457038879394531,
+                    "total": 9.574923992156982
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.001005411148071289,
+                        "building": 2.731842041015625,
+                        "builder_init": 0.010806560516357422,
+                        "microdata_adding": 2.710796356201172,
+                        "total": 2.745783567428589
+                    },
+                    "property_access_init": 0.013019800186157227,
+                    "properties_update": 0.0006825923919677734,
+                    "total": 2.7595114707946777
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.574923992156982,
+                    "microdata_extraction": 0.001005411148071289,
+                    "storing": 2.710796356201172,
+                    "total": 12.286725759506226
+                },
+                "microdata_query_evaluation": 0.006074428558349609,
+                "microdata_stats_computing": 4.76837158203125e-06
+            }
+        },
+        {
+            "query_id": 347,
+            "pattern_id": 26,
+            "en_query": "Give me the publisher of every book written by the author of Night Flight (novel)",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Night Flight\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 2.879498243331909,
+            "processing_times": {
+                "query_decomposition": 0.0957648754119873,
+                "static_query_evakluation": 0.0925445556640625,
+                "web_data_retrieval": 12.191301822662354,
+                "dynamic_query_evaluation": 0.006366729736328125,
+                "result_merge": 0.00032711029052734375,
+                "total": 12.386305093765259
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.002372264862060547,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.0009179115295410156,
+                    "total": 9.575130462646484
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0010521411895751953,
+                        "building": 2.6366615295410156,
+                        "builder_init": 0.011217594146728516,
+                        "microdata_adding": 2.615119218826294,
+                        "total": 2.650275468826294
+                    },
+                    "property_access_init": 0.013055801391601562,
+                    "properties_update": 0.0007090568542480469,
+                    "total": 2.6640682220458984
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.575130462646484,
+                    "microdata_extraction": 0.0010521411895751953,
+                    "storing": 2.615119218826294,
+                    "total": 12.191301822662354
+                },
+                "microdata_query_evaluation": 0.006228208541870117,
+                "microdata_stats_computing": 1.1920928955078125e-06
+            }
+        },
+        {
+            "query_id": 348,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of Night Flight (novel)",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Night Flight\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf4f6d6837ec94f15af0b0ea0a545f005"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N744313935b3442549f5b1fb0ab01ab92"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.8665995597839355,
+            "processing_times": {
+                "query_decomposition": 0.04904007911682129,
+                "static_query_evakluation": 0.09783792495727539,
+                "web_data_retrieval": 12.213015079498291,
+                "dynamic_query_evaluation": 0.006914854049682617,
+                "result_merge": 0.0004019737243652344,
+                "total": 12.367209911346436
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0022389888763427734,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.0012717247009277344,
+                    "total": 9.575350999832153
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.291534423828125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009760856628417969,
+                        "building": 2.660435199737549,
+                        "builder_init": 0.010625362396240234,
+                        "microdata_adding": 2.636687994003296,
+                        "total": 2.6740169525146484
+                    },
+                    "property_access_init": 0.013010501861572266,
+                    "properties_update": 0.0007076263427734375,
+                    "total": 2.6877596378326416
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.575350999832153,
+                    "microdata_extraction": 0.0009760856628417969,
+                    "storing": 2.636687994003296,
+                    "total": 12.213015079498291
+                },
+                "microdata_query_evaluation": 0.006788015365600586,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 349,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of Night Flight (novel)",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Night Flight\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ndb07a987bc5d4403bec407994d0702b9"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ne3ceeab82b1d4e61a6df7485516192f6"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Night Flight to Paris (Kate Rees Wwii, 2): Amazon.co.uk: Black, Cara: 9781641293556: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.929847240447998,
+            "processing_times": {
+                "query_decomposition": 0.10165715217590332,
+                "static_query_evakluation": 0.10352063179016113,
+                "web_data_retrieval": 12.222480058670044,
+                "dynamic_query_evaluation": 0.006790637969970703,
+                "result_merge": 0.00037026405334472656,
+                "total": 12.434818744659424
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0029299259185791016,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.0014696121215820312,
+                    "total": 9.576239824295044
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.245208740234375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0010476112365722656,
+                        "building": 2.6675548553466797,
+                        "builder_init": 0.011623859405517578,
+                        "microdata_adding": 2.6451926231384277,
+                        "total": 2.683833360671997
+                    },
+                    "property_access_init": 0.012647867202758789,
+                    "properties_update": 0.0006821155548095703,
+                    "total": 2.697188138961792
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576239824295044,
+                    "microdata_extraction": 0.0010476112365722656,
+                    "storing": 2.6451926231384277,
+                    "total": 12.222480058670044
+                },
+                "microdata_query_evaluation": 0.0066623687744140625,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 350,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of Night Flight (novel)",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Night Flight\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Neef9552fff8b4842a02dd43739b33c22"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5e170de9dd004f60999e328da1e8718a"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.949279308319092,
+            "processing_times": {
+                "query_decomposition": 0.05322718620300293,
+                "static_query_evakluation": 0.10197973251342773,
+                "web_data_retrieval": 12.288029909133911,
+                "dynamic_query_evaluation": 0.006963253021240234,
+                "result_merge": 0.0003795623779296875,
+                "total": 12.450579643249512
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0020225048065185547,
+                    "searches": 9.571839809417725,
+                    "web_formatting": 0.0011076927185058594,
+                    "total": 9.574970006942749
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.5299530029296875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0010123252868652344,
+                        "building": 2.733103036880493,
+                        "builder_init": 0.01073765754699707,
+                        "microdata_adding": 2.712047576904297,
+                        "total": 2.746375322341919
+                    },
+                    "property_access_init": 0.012905120849609375,
+                    "properties_update": 0.0006844997406005859,
+                    "total": 2.759989023208618
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.574970006942749,
+                    "microdata_extraction": 0.0010123252868652344,
+                    "storing": 2.712047576904297,
+                    "total": 12.288029909133911
+                },
+                "microdata_query_evaluation": 0.006834506988525391,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 351,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of The Little Prince",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N235f082633d04b069bca1d25d0b384de"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc837bd82789b44f8b3367447d31ec941"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.8450992107391357,
+            "processing_times": {
+                "query_decomposition": 0.10264205932617188,
+                "static_query_evakluation": 0.10644316673278809,
+                "web_data_retrieval": 12.137240171432495,
+                "dynamic_query_evaluation": 0.006961822509765625,
+                "result_merge": 0.00036978721618652344,
+                "total": 12.353657007217407
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0010485649108886719,
+                    "searches": 9.571839570999146,
+                    "web_formatting": 0.0005626678466796875,
+                    "total": 9.573450803756714
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 2.86102294921875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0010449886322021484,
+                        "building": 2.584259271621704,
+                        "builder_init": 0.0108489990234375,
+                        "microdata_adding": 2.562744379043579,
+                        "total": 2.59769344329834
+                    },
+                    "property_access_init": 0.012686014175415039,
+                    "properties_update": 0.0007233619689941406,
+                    "total": 2.61112642288208
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.573450803756714,
+                    "microdata_extraction": 0.0010449886322021484,
+                    "storing": 2.562744379043579,
+                    "total": 12.137240171432495
+                },
+                "microdata_query_evaluation": 0.006827592849731445,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 352,
+            "pattern_id": 26,
+            "en_query": "Give me the publisher of every book written by the author of The Little Prince",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 2.882617712020874,
+            "processing_times": {
+                "query_decomposition": 0.041184425354003906,
+                "static_query_evakluation": 0.0941002368927002,
+                "web_data_retrieval": 12.248104572296143,
+                "dynamic_query_evaluation": 0.0060307979583740234,
+                "result_merge": 0.0002970695495605469,
+                "total": 12.389717102050781
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0034308433532714844,
+                    "searches": 9.57184100151062,
+                    "web_formatting": 0.0014989376068115234,
+                    "total": 9.576770782470703
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.9141387939453125e-06,
+                    "graph_computing": {
+                        "extraction": 0.001039743423461914,
+                        "building": 2.693427801132202,
+                        "builder_init": 0.012517929077148438,
+                        "microdata_adding": 2.6702940464019775,
+                        "total": 2.7066245079040527
+                    },
+                    "property_access_init": 0.012729167938232422,
+                    "properties_update": 0.0006945133209228516,
+                    "total": 2.72007417678833
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576770782470703,
+                    "microdata_extraction": 0.001039743423461914,
+                    "storing": 2.6702940464019775,
+                    "total": 12.248104572296143
+                },
+                "microdata_query_evaluation": 0.005903482437133789,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 353,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of The Little Prince",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N10bd5539d9574bcbb68cdece388750ab"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N358e15155884403f99881e308188d86e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.958440065383911,
+            "processing_times": {
+                "query_decomposition": 0.10015439987182617,
+                "static_query_evakluation": 0.10171651840209961,
+                "web_data_retrieval": 12.24918246269226,
+                "dynamic_query_evaluation": 0.007900714874267578,
+                "result_merge": 0.0004029273986816406,
+                "total": 12.459357023239136
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0034847259521484375,
+                    "searches": 9.571840524673462,
+                    "web_formatting": 0.0010833740234375,
+                    "total": 9.576408624649048
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009686946868896484,
+                        "building": 2.6925442218780518,
+                        "builder_init": 0.010689258575439453,
+                        "microdata_adding": 2.6718051433563232,
+                        "total": 2.7060279846191406
+                    },
+                    "property_access_init": 0.012706995010375977,
+                    "properties_update": 0.0007116794586181641,
+                    "total": 2.7194716930389404
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 9.576408624649048,
+                    "microdata_extraction": 0.0009686946868896484,
+                    "storing": 2.6718051433563232,
+                    "total": 12.24918246269226
+                },
+                "microdata_query_evaluation": 0.007768869400024414,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 354,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of The Little Prince",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N75d7285ba06e4e3a9d08f31cbaac90be"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc7a47fdc13b54e8482d2a4de8a7d40cd"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Night Flight to Paris (Kate Rees Wwii, 2): Amazon.co.uk: Black, Cara: 9781641293556: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.937143325805664,
+            "processing_times": {
+                "query_decomposition": 0.10242342948913574,
+                "static_query_evakluation": 0.10061407089233398,
+                "web_data_retrieval": 12.234239339828491,
+                "dynamic_query_evaluation": 0.008052825927734375,
+                "result_merge": 0.0003745555877685547,
+                "total": 12.445704221725464
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0038449764251708984,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.0012445449829101562,
+                    "total": 9.576929807662964
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.245208740234375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009648799896240234,
+                        "building": 2.6773173809051514,
+                        "builder_init": 0.010605096817016602,
+                        "microdata_adding": 2.6563446521759033,
+                        "total": 2.6905720233917236
+                    },
+                    "property_access_init": 0.012929677963256836,
+                    "properties_update": 0.0008306503295898438,
+                    "total": 2.704357147216797
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576929807662964,
+                    "microdata_extraction": 0.0009648799896240234,
+                    "storing": 2.6563446521759033,
+                    "total": 12.234239339828491
+                },
+                "microdata_query_evaluation": 0.007920026779174805,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 355,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of The Little Prince",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nad0b693d957446fb94be3c08e558d73f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nea32bd5dc7d44e9fbc0ea30b9f8622af"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 3.007782459259033,
+            "processing_times": {
+                "query_decomposition": 0.052690744400024414,
+                "static_query_evakluation": 0.10509371757507324,
+                "web_data_retrieval": 12.30401062965393,
+                "dynamic_query_evaluation": 0.00780940055847168,
+                "result_merge": 0.0003662109375,
+                "total": 12.469970703125
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0038917064666748047,
+                    "searches": 9.571840524673462,
+                    "web_formatting": 0.0012469291687011719,
+                    "total": 9.576979160308838
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.245208740234375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0010793209075927734,
+                        "building": 2.7877538204193115,
+                        "builder_init": 0.051020145416259766,
+                        "microdata_adding": 2.7259521484375,
+                        "total": 2.801560163497925
+                    },
+                    "property_access_init": 0.013097524642944336,
+                    "properties_update": 0.0006835460662841797,
+                    "total": 2.815368175506592
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576979160308838,
+                    "microdata_extraction": 0.0010793209075927734,
+                    "storing": 2.7259521484375,
+                    "total": 12.30401062965393
+                },
+                "microdata_query_evaluation": 0.007675886154174805,
+                "microdata_stats_computing": 9.5367431640625e-07
+            }
+        }
+    ]
+}

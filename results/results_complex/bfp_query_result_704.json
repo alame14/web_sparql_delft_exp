@@ -1,0 +1,1351 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 8,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 84.44202518463135
+    },
+    "queries": [
+        {
+            "query_id": 50,
+            "pattern_id": 6,
+            "en_query": "Give me the price of the book whose title is Les Mis\u00e9rables and whose author is Victor Hugo",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?book foaf:name \"Les Mis\u00e9rables\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 8,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 1.7829034328460693,
+            "processing_times": {
+                "query_decomposition": 0.10254526138305664,
+                "static_query_evakluation": 0.10889673233032227,
+                "web_data_retrieval": 4.717276096343994,
+                "dynamic_query_evaluation": 0.0062482357025146484,
+                "result_merge": 0.0002751350402832031,
+                "total": 4.935241460800171
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.005030632019042969,
+                    "searches": 3.1915249824523926,
+                    "web_formatting": 0.00138092041015625,
+                    "total": 3.197936534881592
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 7.867813110351562e-06,
+                    "graph_computing": {
+                        "extraction": 0.0008733272552490234,
+                        "building": 1.5311949253082275,
+                        "builder_init": 0.0064885616302490234,
+                        "microdata_adding": 1.5184662342071533,
+                        "total": 1.5383596420288086
+                    },
+                    "property_access_init": 0.00417327880859375,
+                    "properties_update": 0.00023174285888671875,
+                    "total": 1.5427966117858887
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.197936534881592,
+                    "microdata_extraction": 0.0008733272552490234,
+                    "storing": 1.5184662342071533,
+                    "total": 4.717276096343994
+                },
+                "microdata_query_evaluation": 0.006188154220581055,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 51,
+            "pattern_id": 8,
+            "en_query": "Give me the price and availability of the book whose title is Les Mis\u00e9rables and whose author is Victor Hugo",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?book foaf:name \"Les Mis\u00e9rables\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 8,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 1.7801337242126465,
+            "processing_times": {
+                "query_decomposition": 0.09514522552490234,
+                "static_query_evakluation": 0.09568643569946289,
+                "web_data_retrieval": 4.735612869262695,
+                "dynamic_query_evaluation": 0.0068204402923583984,
+                "result_merge": 0.0003979206085205078,
+                "total": 4.9336628913879395
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0034089088439941406,
+                    "searches": 3.1915252208709717,
+                    "web_formatting": 0.0005481243133544922,
+                    "total": 3.1954822540283203
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.4836273193359375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009255409240722656,
+                        "building": 1.552412986755371,
+                        "builder_init": 0.007051944732666016,
+                        "microdata_adding": 1.5392050743103027,
+                        "total": 1.5578083992004395
+                    },
+                    "property_access_init": 0.004029750823974609,
+                    "properties_update": 0.0002238750457763672,
+                    "total": 1.5620899200439453
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.1954822540283203,
+                    "microdata_extraction": 0.0009255409240722656,
+                    "storing": 1.5392050743103027,
+                    "total": 4.735612869262695
+                },
+                "microdata_query_evaluation": 0.006762981414794922,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 52,
+            "pattern_id": 9,
+            "en_query": "Give me the books available for the book whose title is Les Mis\u00e9rables and whose author is Victor Hugo",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?book foaf:name \"Les Mis\u00e9rables\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 8,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 1.813734769821167,
+            "processing_times": {
+                "query_decomposition": 0.10009074211120605,
+                "static_query_evakluation": 0.1017909049987793,
+                "web_data_retrieval": 4.76119065284729,
+                "dynamic_query_evaluation": 0.0070955753326416016,
+                "result_merge": 0.00028252601623535156,
+                "total": 4.970450401306152
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0030069351196289062,
+                    "searches": 3.1915247440338135,
+                    "web_formatting": 0.0004000663757324219,
+                    "total": 3.194931745529175
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.0531158447265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.000751495361328125,
+                        "building": 1.575622797012329,
+                        "builder_init": 0.005370616912841797,
+                        "microdata_adding": 1.565507411956787,
+                        "total": 1.5807054042816162
+                    },
+                    "property_access_init": 0.0041446685791015625,
+                    "properties_update": 0.00022172927856445312,
+                    "total": 1.5850985050201416
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.194931745529175,
+                    "microdata_extraction": 0.000751495361328125,
+                    "storing": 1.565507411956787,
+                    "total": 4.76119065284729
+                },
+                "microdata_query_evaluation": 0.007036924362182617,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 53,
+            "pattern_id": 10,
+            "en_query": "Give me the price of the books available for the book whose title is Les Mis\u00e9rables and whose author is Victor Hugo",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?book foaf:name \"Les Mis\u00e9rables\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 8,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 1.7815780639648438,
+            "processing_times": {
+                "query_decomposition": 0.10443830490112305,
+                "static_query_evakluation": 0.09203219413757324,
+                "web_data_retrieval": 4.732735872268677,
+                "dynamic_query_evaluation": 0.00725865364074707,
+                "result_merge": 0.0002675056457519531,
+                "total": 4.936732530593872
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.00836181640625,
+                    "searches": 3.1915247440338135,
+                    "web_formatting": 0.0005340576171875,
+                    "total": 3.200420618057251
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 1.239776611328125e-05,
+                    "graph_computing": {
+                        "extraction": 0.0007190704345703125,
+                        "building": 1.5414314270019531,
+                        "builder_init": 0.0053577423095703125,
+                        "microdata_adding": 1.5315961837768555,
+                        "total": 1.546677827835083
+                    },
+                    "property_access_init": 0.004149436950683594,
+                    "properties_update": 0.0002231597900390625,
+                    "total": 1.551086187362671
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.200420618057251,
+                    "microdata_extraction": 0.0007190704345703125,
+                    "storing": 1.5315961837768555,
+                    "total": 4.732735872268677
+                },
+                "microdata_query_evaluation": 0.007198333740234375,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 88,
+            "pattern_id": 15,
+            "en_query": "Give me the price of the first 10 books whose author is Victor Hugo",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf628c5d8c023451ea0fcdb4be9284603"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6fd0f6eee5a24273b1d90aa43df480d2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "45.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf628c5d8c023451ea0fcdb4be9284603"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6723d68313b847f598e1ba9d4a043b52"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "78.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/forever-eye-mask"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N70687b7595e34f7b8870f501481b1269"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0b94a5cc8c454d869267422453c3fd32"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "25.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_L\u00e9gende_des_si\u00e8cles"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://onlineonly.christies.com/s/livres-rares-et-manuscrits/hugo-victor-1802-1885-84/188667"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N682888389d464dea8817a028b51811a6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf80aa89a0e0d4edb9ed68b9ae9bad138"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "800.00"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/1979465207"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N87c47a4594bb448cae7eb847ce74c2db"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nabffb49795e54c0cae744dd1b9551cfc"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.21"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/198145165X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Neee61a0a5a154b5e85b80f61af6bfea4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9f0352772e8f4cefa360d2ef12db6501"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.97"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/Feuilles-dautomne-Victor-Hugo/dp/B09PHH8GW1"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9fa161707d2446a3bd0e4b98de99a091"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nde245915a0614958b606b20422983def"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.9"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/146169285364"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfb4ea894a26643429f8a90a2a23a36ae"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ncfc1c2e9fc9345999054654494659d5d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.find-more-books.com/book/isbn/9781017766431.html"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Neca8c71353ff4d1393dc3d7a5c8765a3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N520223338f414950953151640dd6c35f"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "27.14"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 99,
+                "number_of_query_results": 9
+            },
+            "evaluation_time": 19.071982622146606,
+            "processing_times": {
+                "query_decomposition": 0.08672857284545898,
+                "static_query_evakluation": 0.11001086235046387,
+                "web_data_retrieval": 50.11325144767761,
+                "dynamic_query_evaluation": 0.009104728698730469,
+                "result_merge": 0.0009686946868896484,
+                "total": 50.320064306259155
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.00413203239440918,
+                    "searches": 31.463085174560547,
+                    "web_formatting": 0.006525278091430664,
+                    "total": 31.473742485046387
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.7220458984375e-06,
+                    "graph_computing": {
+                        "extraction": 0.004126310348510742,
+                        "building": 18.722695350646973,
+                        "builder_init": 0.03996467590332031,
+                        "microdata_adding": 18.635382652282715,
+                        "total": 18.779375314712524
+                    },
+                    "property_access_init": 0.055091142654418945,
+                    "properties_update": 0.00311279296875,
+                    "total": 18.837608814239502
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.473742485046387,
+                    "microdata_extraction": 0.004126310348510742,
+                    "storing": 18.635382652282715,
+                    "total": 50.11325144767761
+                },
+                "microdata_query_evaluation": 0.00868535041809082,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 89,
+            "pattern_id": 17,
+            "en_query": "Give me the price and availability of the first 10 books whose author is Victor Hugo",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne8a5933150e34f698b7eab0a6e5d8d01"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N93eab6220c244bb38f2be3f0cf8c113e"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "78.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne8a5933150e34f698b7eab0a6e5d8d01"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N1fd80f53d95843099cf5babb4c2be791"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "45.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/forever-eye-mask"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne313f45425094b1c9605584ab6203a6b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N5b0fc89b2f8f435786c1066263f98b39"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "25.0"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "http://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_L\u00e9gende_des_si\u00e8cles"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://onlineonly.christies.com/s/livres-rares-et-manuscrits/hugo-victor-1802-1885-84/188667"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N9d872095b86d4140b7ac46f5763de0ab"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N507b557129d4408a9acfb480379ce6eb"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "800.00"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "SoldOut"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/1979465207"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncd0f8501ab93423c891d1607658d3acc"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N00625f973c1e43569c9871114ca2a3f0"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.21"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/198145165X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N1c37ad43375247cebdcb29dafd70c3d4"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6e90e3aba1504ce99651729e1bb50fe4"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.97"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/Feuilles-dautomne-Victor-Hugo/dp/B09PHH8GW1"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne107b3a3ffc94d078fd69e6e929a8370"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nec374e64f7cc48a8bff37b9c2b193248"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.9"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/146169285364"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N2d5678b2678b4ad2b36322bb0e0b0685"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nbbdf8806280d4cc1b41a918947b48ad6"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3.26"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.find-more-books.com/book/isbn/9781017766431.html"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N232c266b884c4cd08f877f4968442ad7"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N021449268d2848eb88628aa320b16ea1"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "27.14"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/InStock"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 99,
+                "number_of_query_results": 9
+            },
+            "evaluation_time": 19.862833499908447,
+            "processing_times": {
+                "query_decomposition": 0.10166478157043457,
+                "static_query_evakluation": 0.10142230987548828,
+                "web_data_retrieval": 50.897963523864746,
+                "dynamic_query_evaluation": 0.01000356674194336,
+                "result_merge": 0.001149892807006836,
+                "total": 51.11220407485962
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004147529602050781,
+                    "searches": 31.46308422088623,
+                    "web_formatting": 0.0053980350494384766,
+                    "total": 31.47262978553772
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.003949165344238281,
+                        "building": 19.503023624420166,
+                        "builder_init": 0.03712892532348633,
+                        "microdata_adding": 19.421384572982788,
+                        "total": 19.56067132949829
+                    },
+                    "property_access_init": 0.05524182319641113,
+                    "properties_update": 0.0034170150756835938,
+                    "total": 19.619360208511353
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.47262978553772,
+                    "microdata_extraction": 0.003949165344238281,
+                    "storing": 19.421384572982788,
+                    "total": 50.897963523864746
+                },
+                "microdata_query_evaluation": 0.009626626968383789,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 90,
+            "pattern_id": 18,
+            "en_query": "Give me the books available for the first 10 books whose author is Victor Hugo",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb4c81d89e8dd4a008666eb69cf95e119"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Ndb52103bf93c49d7b973cccd91265466"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Instant Angel Moisturizer"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb4c81d89e8dd4a008666eb69cf95e119"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N37bf4f6fe6914b6e8fcc3faedd1aaffc"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Instant Angel Moisturizer"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/forever-eye-mask"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3c0b72fdf4e0476fb69f360641f0c124"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N56edcfaac1694965999feaf34d64fffe"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Forever Eye Mask"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_L\u00e9gende_des_si\u00e8cles"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://onlineonly.christies.com/s/livres-rares-et-manuscrits/hugo-victor-1802-1885-84/188667"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nebd46df4908644389f8b0371206bb723"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nc4167740e5294805b0e297ce68764400"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "HUGO, Victor (1802-1885)"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/1979465207"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbc49dd37f1f94173a9be727a5c9fcb18"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0b5d9cc2e2b3446ba65886731fd92a69"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Amazon.fr - Les feuilles d&apos;automne - Hugo, Victor - Livres"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/198145165X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na4c1f37d0f6c4ed4af8ecb2d6bd42076"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf37111371cbe416f825bde6ebe6e6b83"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Amazon.fr - Les feuilles d&apos;automne - Hugo, Victor - Livres"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/Feuilles-dautomne-Victor-Hugo/dp/B09PHH8GW1"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N03a62fc72ab64c2f8c3fd5868e8e5323"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N741c81dc70e6471ba4dadd869d092eb9"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Amazon.fr - Les Feuilles d&rsquo;automne: Victor Hugo - Hugo, Victor - Livres"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/146169285364"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ncb1278de83ac4765b18acbcf9e354a8c"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9068f8bf870c4c01901d3b1e919470d2"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Odes and ballads les orientales Victor Hugo good condition"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.find-more-books.com/book/isbn/9781017766431.html"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N169ea7962c914937845b2cf44a8d12e6"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nece7938ab12a49c68445b8bc689dc109"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Odes Et Ballades; Les Orientales"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 99,
+                "number_of_query_results": 9
+            },
+            "evaluation_time": 19.277463674545288,
+            "processing_times": {
+                "query_decomposition": 0.10038208961486816,
+                "static_query_evakluation": 0.10245943069458008,
+                "web_data_retrieval": 50.31584548950195,
+                "dynamic_query_evaluation": 0.009907007217407227,
+                "result_merge": 0.0009872913360595703,
+                "total": 50.52958130836487
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0042994022369384766,
+                    "searches": 31.46308422088623,
+                    "web_formatting": 0.0046825408935546875,
+                    "total": 31.472066164016724
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.814697265625e-06,
+                    "graph_computing": {
+                        "extraction": 0.00394892692565918,
+                        "building": 18.92127227783203,
+                        "builder_init": 0.037071943283081055,
+                        "microdata_adding": 18.83983039855957,
+                        "total": 18.979312658309937
+                    },
+                    "property_access_init": 0.05484938621520996,
+                    "properties_update": 0.0031638145446777344,
+                    "total": 19.037353992462158
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.472066164016724,
+                    "microdata_extraction": 0.00394892692565918,
+                    "storing": 18.83983039855957,
+                    "total": 50.31584548950195
+                },
+                "microdata_query_evaluation": 0.00951242446899414,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 91,
+            "pattern_id": 19,
+            "en_query": "Give me the price of the books available for the first 10 books whose author is Victor Hugo",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Victor_Hugo> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne6548e3ca070491db2ab72801939b81e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nf52d2afeee8b42c99467a3f9fd0e6123"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "45.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/instant-angel"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Ne6548e3ca070491db2ab72801939b81e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0bba52bd6f1b4911bb0067f11fd207bd"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "78.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Dieu"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.dieuxskin.com/products/forever-eye-mask"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Na5004842c4784e259e1aa364775a2d03"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N57681b52aba444b1985b4e258c3cac96"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "25.0"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/La_L\u00e9gende_des_si\u00e8cles"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://onlineonly.christies.com/s/livres-rares-et-manuscrits/hugo-victor-1802-1885-84/188667"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N740dff9222a44de2ab7964d5bcc6a028"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N9be61cd5caa84c4fa6a4bc550b38b2a2"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "800.00"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/1979465207"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N50730ffd54a94ba9999eaefbbfcf01e8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N42a284edb9124420b9494e16de40d338"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "6.21"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/feuilles-dautomne-Victor-Hugo/dp/198145165X"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nfbe8f1a0f28242e0a528e1ff2d9c6aec"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N056433a6b4d743a1bd68b2b20eecf12d"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "8.97"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Les_Feuilles_d'automne"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.fr/Feuilles-dautomne-Victor-Hugo/dp/B09PHH8GW1"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nbf9d3404a3a444dfb74d1011206c3065"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N37b7f17f2af646a9847161d5ead24001"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "14.9"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.ebay.com/itm/146169285364"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N8deb6a9f50c040a481379fa4175dac60"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6a43dd35154b4f5691c8652fce188be7"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "3.26"
+                        }
+                    },
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Odes_et_Ballades"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.find-more-books.com/book/isbn/9781017766431.html"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0bf8677e3abe4b2b8c1da38fd3a030e2"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N6368075801af44a692ba53a358bb6031"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "27.14"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 10,
+                "number_of_web_results": 300,
+                "number_of_extracted_microdata": 99,
+                "number_of_query_results": 9
+            },
+            "evaluation_time": 19.05576777458191,
+            "processing_times": {
+                "query_decomposition": 0.10604000091552734,
+                "static_query_evakluation": 0.09703946113586426,
+                "web_data_retrieval": 50.001649618148804,
+                "dynamic_query_evaluation": 0.05713486671447754,
+                "result_merge": 0.0009660720825195312,
+                "total": 50.26283001899719
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003771066665649414,
+                    "searches": 31.46308398246765,
+                    "web_formatting": 0.002667665481567383,
+                    "total": 31.469522714614868
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 2.384185791015625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0037813186645507812,
+                        "building": 18.647003173828125,
+                        "builder_init": 0.03578925132751465,
+                        "microdata_adding": 18.528345584869385,
+                        "total": 18.704604148864746
+                    },
+                    "property_access_init": 0.05834674835205078,
+                    "properties_update": 0.003126382827758789,
+                    "total": 18.766101121902466
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 31.469522714614868,
+                    "microdata_extraction": 0.0037813186645507812,
+                    "storing": 18.528345584869385,
+                    "total": 50.001649618148804
+                },
+                "microdata_query_evaluation": 0.0567469596862793,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        }
+    ]
+}

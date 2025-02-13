@@ -1,0 +1,332 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 5,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 3.6013410091400146
+    },
+    "queries": [
+        {
+            "query_id": 70,
+            "pattern_id": 6,
+            "en_query": "Give me the price of the book whose title is The Little Prince and whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?book foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 4,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 0.6615335941314697,
+            "processing_times": {
+                "query_decomposition": 0.04102730751037598,
+                "static_query_evakluation": 0.10359644889831543,
+                "web_data_retrieval": 3.531860113143921,
+                "dynamic_query_evaluation": 0.0063779354095458984,
+                "result_merge": 0.00026702880859375,
+                "total": 3.683128833770752
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0010268688201904297,
+                    "searches": 3.053081750869751,
+                    "web_formatting": 0.0001800060272216797,
+                    "total": 3.054288625717163
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 2.384185791015625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0005927085876464844,
+                        "building": 0.4835631847381592,
+                        "builder_init": 0.003314495086669922,
+                        "microdata_adding": 0.47697877883911133,
+                        "total": 0.48842716217041016
+                    },
+                    "property_access_init": 0.004424571990966797,
+                    "properties_update": 0.00023126602172851562,
+                    "total": 0.4931051731109619
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.054288625717163,
+                    "microdata_extraction": 0.0005927085876464844,
+                    "storing": 0.47697877883911133,
+                    "total": 3.531860113143921
+                },
+                "microdata_query_evaluation": 0.006325721740722656,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 71,
+            "pattern_id": 7,
+            "en_query": "Give me the publisher of the book whose title is The Little Prince and whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?book foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 4,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 0.7207541465759277,
+            "processing_times": {
+                "query_decomposition": 0.03837394714355469,
+                "static_query_evakluation": 0.09253644943237305,
+                "web_data_retrieval": 3.5480144023895264,
+                "dynamic_query_evaluation": 0.005845785140991211,
+                "result_merge": 0.00027108192443847656,
+                "total": 3.685041666030884
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0038361549377441406,
+                    "searches": 3.053082227706909,
+                    "web_formatting": 0.0005152225494384766,
+                    "total": 3.057433605194092
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.9604644775390625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0006322860717773438,
+                        "building": 0.4979207515716553,
+                        "builder_init": 0.004049539566040039,
+                        "microdata_adding": 0.4899485111236572,
+                        "total": 0.5029871463775635
+                    },
+                    "property_access_init": 0.004454612731933594,
+                    "properties_update": 0.0002281665802001953,
+                    "total": 0.507697343826294
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.057433605194092,
+                    "microdata_extraction": 0.0006322860717773438,
+                    "storing": 0.4899485111236572,
+                    "total": 3.5480144023895264
+                },
+                "microdata_query_evaluation": 0.00578761100769043,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 72,
+            "pattern_id": 8,
+            "en_query": "Give me the price and availability of the book whose title is The Little Prince and whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?book foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 4,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 0.7405972480773926,
+            "processing_times": {
+                "query_decomposition": 0.04427146911621094,
+                "static_query_evakluation": 0.09076762199401855,
+                "web_data_retrieval": 3.618084192276001,
+                "dynamic_query_evaluation": 0.007145404815673828,
+                "result_merge": 0.0002739429473876953,
+                "total": 3.760542631149292
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.001750946044921875,
+                    "searches": 3.053081750869751,
+                    "web_formatting": 0.00030994415283203125,
+                    "total": 3.055142641067505
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 3.0994415283203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.000705718994140625,
+                        "building": 0.5700206756591797,
+                        "builder_init": 0.004008054733276367,
+                        "microdata_adding": 0.5622358322143555,
+                        "total": 0.5751948356628418
+                    },
+                    "property_access_init": 0.004403352737426758,
+                    "properties_update": 0.00024080276489257812,
+                    "total": 0.5798635482788086
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 3.055142641067505,
+                    "microdata_extraction": 0.000705718994140625,
+                    "storing": 0.5622358322143555,
+                    "total": 3.618084192276001
+                },
+                "microdata_query_evaluation": 0.007086753845214844,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 73,
+            "pattern_id": 9,
+            "en_query": "Give me the books available for the book whose title is The Little Prince and whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?book foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 4,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 0.7280077934265137,
+            "processing_times": {
+                "query_decomposition": 0.05376076698303223,
+                "static_query_evakluation": 0.0933845043182373,
+                "web_data_retrieval": 3.5927786827087402,
+                "dynamic_query_evaluation": 0.006506204605102539,
+                "result_merge": 0.00026297569274902344,
+                "total": 3.7466931343078613
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0036106109619140625,
+                    "searches": 3.05308198928833,
+                    "web_formatting": 0.0005514621734619141,
+                    "total": 3.057244062423706
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.4373016357421875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0007262229919433594,
+                        "building": 0.544022798538208,
+                        "builder_init": 0.004483222961425781,
+                        "microdata_adding": 0.5348083972930908,
+                        "total": 0.5491535663604736
+                    },
+                    "property_access_init": 0.004305362701416016,
+                    "properties_update": 0.00022077560424804688,
+                    "total": 0.5537075996398926
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.057244062423706,
+                    "microdata_extraction": 0.0007262229919433594,
+                    "storing": 0.5348083972930908,
+                    "total": 3.5927786827087402
+                },
+                "microdata_query_evaluation": 0.006456136703491211,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 74,
+            "pattern_id": 10,
+            "en_query": "Give me the price of the books available for the book whose title is The Little Prince and whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?book foaf:name \"The Little Prince\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 4,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 0.7405626773834229,
+            "processing_times": {
+                "query_decomposition": 0.04783892631530762,
+                "static_query_evakluation": 0.09256625175476074,
+                "web_data_retrieval": 3.6140735149383545,
+                "dynamic_query_evaluation": 0.007405996322631836,
+                "result_merge": 0.0002791881561279297,
+                "total": 3.7621638774871826
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003278017044067383,
+                    "searches": 3.05308198928833,
+                    "web_formatting": 0.0045375823974609375,
+                    "total": 3.0608975887298584
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0005817413330078125,
+                        "building": 0.559910774230957,
+                        "builder_init": 0.0037338733673095703,
+                        "microdata_adding": 0.5525941848754883,
+                        "total": 0.5648274421691895
+                    },
+                    "property_access_init": 0.004372119903564453,
+                    "properties_update": 0.00022459030151367188,
+                    "total": 0.5694501399993896
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 3.0608975887298584,
+                    "microdata_extraction": 0.0005817413330078125,
+                    "storing": 0.5525941848754883,
+                    "total": 3.6140735149383545
+                },
+                "microdata_query_evaluation": 0.007344961166381836,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        }
+    ]
+}

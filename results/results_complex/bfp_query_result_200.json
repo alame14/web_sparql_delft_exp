@@ -1,0 +1,835 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10,
+        "process_config": {
+            "web_service": "WebService.BFP_SWSS",
+            "web_extractor": "WebExtractor.BFP_CWTME",
+            "exec_mode": "cold",
+            "WEB_QUERY_MAX": null
+        },
+        "processing_total_time": 29.63161587715149
+    },
+    "queries": [
+        {
+            "query_id": 104,
+            "pattern_id": 15,
+            "en_query": "Give me the price of the first 10 books whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N074ae8ccf07d4100bea30cd55dfc0db0"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N3613c7174a5a421eb5cf1ad7c1e1cf4c"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.907364845275879,
+            "processing_times": {
+                "query_decomposition": 0.041436195373535156,
+                "static_query_evakluation": 0.12208390235900879,
+                "web_data_retrieval": 12.2371985912323,
+                "dynamic_query_evaluation": 0.006205558776855469,
+                "result_merge": 0.0004124641418457031,
+                "total": 12.407336711883545
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0032911300659179688,
+                    "searches": 9.571840524673462,
+                    "web_formatting": 0.0015938282012939453,
+                    "total": 9.576725482940674
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 8.106231689453125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0011620521545410156,
+                        "building": 2.681088447570801,
+                        "builder_init": 0.011212587356567383,
+                        "microdata_adding": 2.659311056137085,
+                        "total": 2.6946756839752197
+                    },
+                    "property_access_init": 0.012846946716308594,
+                    "properties_update": 0.0007100105285644531,
+                    "total": 2.7082645893096924
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576725482940674,
+                    "microdata_extraction": 0.0011620521545410156,
+                    "storing": 2.659311056137085,
+                    "total": 12.2371985912323
+                },
+                "microdata_query_evaluation": 0.006062030792236328,
+                "microdata_stats_computing": 1.9073486328125e-06
+            }
+        },
+        {
+            "query_id": 105,
+            "pattern_id": 16,
+            "en_query": "Give me the publisher of the first 10 books whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 2.902027130126953,
+            "processing_times": {
+                "query_decomposition": 0.08704519271850586,
+                "static_query_evakluation": 0.10219860076904297,
+                "web_data_retrieval": 12.200315713882446,
+                "dynamic_query_evaluation": 0.0069446563720703125,
+                "result_merge": 0.0003116130828857422,
+                "total": 12.396815776824951
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.004856586456298828,
+                    "searches": 9.571840763092041,
+                    "web_formatting": 0.001556396484375,
+                    "total": 9.578253746032715
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 1.049041748046875e-05,
+                    "graph_computing": {
+                        "extraction": 0.0010073184967041016,
+                        "building": 2.6424927711486816,
+                        "builder_init": 0.010894775390625,
+                        "microdata_adding": 2.6210546493530273,
+                        "total": 2.6676595211029053
+                    },
+                    "property_access_init": 0.012940168380737305,
+                    "properties_update": 0.0006816387176513672,
+                    "total": 2.681318998336792
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.578253746032715,
+                    "microdata_extraction": 0.0010073184967041016,
+                    "storing": 2.6210546493530273,
+                    "total": 12.200315713882446
+                },
+                "microdata_query_evaluation": 0.006796836853027344,
+                "microdata_stats_computing": 1.1920928955078125e-06
+            }
+        },
+        {
+            "query_id": 106,
+            "pattern_id": 17,
+            "en_query": "Give me the price and availability of the first 10 books whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N30133a15f0044e1895dce6e34f55b88f"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N32ed651d418b4abdad7756f0cfa84209"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.930053949356079,
+            "processing_times": {
+                "query_decomposition": 0.03879833221435547,
+                "static_query_evakluation": 0.09444141387939453,
+                "web_data_retrieval": 12.290904760360718,
+                "dynamic_query_evaluation": 0.006815671920776367,
+                "result_merge": 0.00038313865661621094,
+                "total": 12.43134331703186
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0030584335327148438,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.0017001628875732422,
+                    "total": 9.576598882675171
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.7220458984375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009708404541015625,
+                        "building": 2.7346699237823486,
+                        "builder_init": 0.010725975036621094,
+                        "microdata_adding": 2.7133350372314453,
+                        "total": 2.748368501663208
+                    },
+                    "property_access_init": 0.01298832893371582,
+                    "properties_update": 0.0006659030914306641,
+                    "total": 2.7620463371276855
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 9.576598882675171,
+                    "microdata_extraction": 0.0009708404541015625,
+                    "storing": 2.7133350372314453,
+                    "total": 12.290904760360718
+                },
+                "microdata_query_evaluation": 0.00669097900390625,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 107,
+            "pattern_id": 18,
+            "en_query": "Give me the books available for the first 10 books whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N0736d5223d2a42d2b550537aff84f3af"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nda4ab5ccb7e34aae98a671000bc58763"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Night Flight to Paris (Kate Rees Wwii, 2): Amazon.co.uk: Black, Cara: 9781641293556: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.9027180671691895,
+            "processing_times": {
+                "query_decomposition": 0.11296606063842773,
+                "static_query_evakluation": 0.10826778411865234,
+                "web_data_retrieval": 12.180482625961304,
+                "dynamic_query_evaluation": 0.0081634521484375,
+                "result_merge": 0.0003936290740966797,
+                "total": 12.410273551940918
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003078937530517578,
+                    "searches": 9.571840524673462,
+                    "web_formatting": 0.001058340072631836,
+                    "total": 9.575977802276611
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 4.76837158203125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0010352134704589844,
+                        "building": 2.6245198249816895,
+                        "builder_init": 0.010859966278076172,
+                        "microdata_adding": 2.6034696102142334,
+                        "total": 2.638895034790039
+                    },
+                    "property_access_init": 0.013224124908447266,
+                    "properties_update": 0.0007281303405761719,
+                    "total": 2.652876138687134
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.575977802276611,
+                    "microdata_extraction": 0.0010352134704589844,
+                    "storing": 2.6034696102142334,
+                    "total": 12.180482625961304
+                },
+                "microdata_query_evaluation": 0.008024930953979492,
+                "microdata_stats_computing": 7.152557373046875e-07
+            }
+        },
+        {
+            "query_id": 108,
+            "pattern_id": 19,
+            "en_query": "Give me the price of the books available for the first 10 books whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N7c6c18fa2d104fa785d75c9f0249786e"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "Nccd28dc363164cc2aff621378ab8eb48"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.9750828742980957,
+            "processing_times": {
+                "query_decomposition": 0.11370396614074707,
+                "static_query_evakluation": 0.09318017959594727,
+                "web_data_retrieval": 12.268753290176392,
+                "dynamic_query_evaluation": 0.0070040225982666016,
+                "result_merge": 0.00036406517028808594,
+                "total": 12.48300552368164
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0025811195373535156,
+                    "searches": 9.571840524673462,
+                    "web_formatting": 0.0012226104736328125,
+                    "total": 9.575644254684448
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.245208740234375e-06,
+                    "graph_computing": {
+                        "extraction": 0.001039266586303711,
+                        "building": 2.713618755340576,
+                        "builder_init": 0.010656595230102539,
+                        "microdata_adding": 2.6920697689056396,
+                        "total": 2.7270922660827637
+                    },
+                    "property_access_init": 0.013210535049438477,
+                    "properties_update": 0.0007011890411376953,
+                    "total": 2.7410330772399902
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.575644254684448,
+                    "microdata_extraction": 0.001039266586303711,
+                    "storing": 2.6920697689056396,
+                    "total": 12.268753290176392
+                },
+                "microdata_query_evaluation": 0.006865024566650391,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 123,
+            "pattern_id": 20,
+            "en_query": "Give me the price of the last book whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N709e8adf3eb748d9904644223ad4ce5b"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N2ed3b1a6d3914041a822ff818921876b"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.884918451309204,
+            "processing_times": {
+                "query_decomposition": 0.037368059158325195,
+                "static_query_evakluation": 0.10372781753540039,
+                "web_data_retrieval": 12.243985414505005,
+                "dynamic_query_evaluation": 0.006209135055541992,
+                "result_merge": 0.0003590583801269531,
+                "total": 12.3916494846344
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.008388996124267578,
+                    "searches": 9.571839809417725,
+                    "web_formatting": 0.0011701583862304688,
+                    "total": 9.581398963928223
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 6.4373016357421875e-06,
+                    "graph_computing": {
+                        "extraction": 0.0010547637939453125,
+                        "building": 2.6833438873291016,
+                        "builder_init": 0.011344671249389648,
+                        "microdata_adding": 2.661531686782837,
+                        "total": 2.6978185176849365
+                    },
+                    "property_access_init": 0.013046741485595703,
+                    "properties_update": 0.0007202625274658203,
+                    "total": 2.7116146087646484
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 9.581398963928223,
+                    "microdata_extraction": 0.0010547637939453125,
+                    "storing": 2.661531686782837,
+                    "total": 12.243985414505005
+                },
+                "microdata_query_evaluation": 0.006077766418457031,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 124,
+            "pattern_id": 21,
+            "en_query": "Give me the publisher of the last book whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "publisher"
+                ],
+                "rows": []
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 0
+            },
+            "evaluation_time": 2.968780040740967,
+            "processing_times": {
+                "query_decomposition": 0.08880114555358887,
+                "static_query_evakluation": 0.10544729232788086,
+                "web_data_retrieval": 12.274024248123169,
+                "dynamic_query_evaluation": 0.006711483001708984,
+                "result_merge": 0.0002815723419189453,
+                "total": 12.475265741348267
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.002846240997314453,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.00133514404296875,
+                    "total": 9.576021671295166
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.9604644775390625e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009834766387939453,
+                        "building": 2.7180063724517822,
+                        "builder_init": 0.010616302490234375,
+                        "microdata_adding": 2.697019100189209,
+                        "total": 2.7315683364868164
+                    },
+                    "property_access_init": 0.012892961502075195,
+                    "properties_update": 0.0007104873657226562,
+                    "total": 2.7452003955841064
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576021671295166,
+                    "microdata_extraction": 0.0009834766387939453,
+                    "storing": 2.697019100189209,
+                    "total": 12.274024248123169
+                },
+                "microdata_query_evaluation": 0.0065631866455078125,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 125,
+            "pattern_id": 22,
+            "en_query": "Give me the price and availability of the last book whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price",
+                    "availability"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nf2cad2379359479c9237f90c3cd853a8"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N183bbd4bab524f0aafc3ba48e0a97286"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        },
+                        "availability": {
+                            "type": "uri",
+                            "value": "https://schema.org/LimitedAvailability"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 3.1526434421539307,
+            "processing_times": {
+                "query_decomposition": 0.0421755313873291,
+                "static_query_evakluation": 0.10180377960205078,
+                "web_data_retrieval": 12.458091020584106,
+                "dynamic_query_evaluation": 0.0076694488525390625,
+                "result_merge": 0.0003726482391357422,
+                "total": 12.610112428665161
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0032939910888671875,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.0010609626770019531,
+                    "total": 9.576195240020752
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.000995635986328125,
+                        "building": 2.9526498317718506,
+                        "builder_init": 0.01123046875,
+                        "microdata_adding": 2.8809001445770264,
+                        "total": 2.9664199352264404
+                    },
+                    "property_access_init": 0.01275491714477539,
+                    "properties_update": 0.0006866455078125,
+                    "total": 2.9798848628997803
+                },
+                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_data_retrieval": {
+                    "url_finding": 9.576195240020752,
+                    "microdata_extraction": 0.000995635986328125,
+                    "storing": 2.8809001445770264,
+                    "total": 12.458091020584106
+                },
+                "microdata_query_evaluation": 0.007543325424194336,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 126,
+            "pattern_id": 23,
+            "en_query": "Give me the books available for the last book whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "bookName"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "N3c8a1339459c41cdbda7e3f5120f9ee3"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N51a7d82a53834bcf9589075e850d84a1"
+                        },
+                        "bookName": {
+                            "type": "uri",
+                            "value": "Night Flight to Paris (Kate Rees Wwii, 2): Amazon.co.uk: Black, Cara: 9781641293556: Books"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 3.0435309410095215,
+            "processing_times": {
+                "query_decomposition": 0.044721126556396484,
+                "static_query_evakluation": 0.1038827896118164,
+                "web_data_retrieval": 12.394973278045654,
+                "dynamic_query_evaluation": 0.007280111312866211,
+                "result_merge": 0.00045800209045410156,
+                "total": 12.551315307617188
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.0032472610473632812,
+                    "searches": 9.571840763092041,
+                    "web_formatting": 0.0011119842529296875,
+                    "total": 9.576200008392334
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.0067901611328125e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009860992431640625,
+                        "building": 2.838562488555908,
+                        "builder_init": 0.010568618774414062,
+                        "microdata_adding": 2.8177871704101562,
+                        "total": 2.852971076965332
+                    },
+                    "property_access_init": 0.012856006622314453,
+                    "properties_update": 0.00072479248046875,
+                    "total": 2.866576910018921
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576200008392334,
+                    "microdata_extraction": 0.0009860992431640625,
+                    "storing": 2.8177871704101562,
+                    "total": 12.394973278045654
+                },
+                "microdata_query_evaluation": 0.0071489810943603516,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        },
+        {
+            "query_id": 127,
+            "pattern_id": 24,
+            "en_query": "Give me the price of the books available for the last book whose author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "obtained_data_query_result": {
+                "columns": [
+                    "book",
+                    "web",
+                    "microdata",
+                    "offer",
+                    "price"
+                ],
+                "rows": [
+                    {
+                        "book": {
+                            "type": "uri",
+                            "value": "http://dbpedia.org/resource/Night_Flight_(novel)"
+                        },
+                        "web": {
+                            "type": "uri",
+                            "value": "https://www.amazon.co.uk/Night-Flight-Paris-Black/dp/1641293551"
+                        },
+                        "microdata": {
+                            "type": "uri",
+                            "value": "Nb7c284e7ded34181aed1466f97d12583"
+                        },
+                        "offer": {
+                            "type": "uri",
+                            "value": "N0cb7772548f24059a6b24f74cdc3f3b8"
+                        },
+                        "price": {
+                            "type": "uri",
+                            "value": "18.82"
+                        }
+                    }
+                ]
+            },
+            "execution_mode": "cold",
+            "result_stats": {
+                "number_of_static_results": 3,
+                "number_of_web_results": 90,
+                "number_of_extracted_microdata": 16,
+                "number_of_query_results": 1
+            },
+            "evaluation_time": 2.9467597007751465,
+            "processing_times": {
+                "query_decomposition": 0.09615421295166016,
+                "static_query_evakluation": 0.09256553649902344,
+                "web_data_retrieval": 12.252094507217407,
+                "dynamic_query_evaluation": 0.008132457733154297,
+                "result_merge": 0.0004897117614746094,
+                "total": 12.44943642616272
+            },
+            "deep_times": {
+                "web_query_evaluation": {
+                    "init": 0.003144979476928711,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.001500844955444336,
+                    "total": 9.576486110687256
+                },
+                "web_microdata_graph_generation": {
+                    "updater_init": 5.7220458984375e-06,
+                    "graph_computing": {
+                        "extraction": 0.0009980201721191406,
+                        "building": 2.699704170227051,
+                        "builder_init": 0.014439821243286133,
+                        "microdata_adding": 2.6746103763580322,
+                        "total": 2.7137722969055176
+                    },
+                    "property_access_init": 0.013053178787231445,
+                    "properties_update": 0.0007169246673583984,
+                    "total": 2.727571964263916
+                },
+                "web_microdata_graph_update": 0.0,
+                "web_data_retrieval": {
+                    "url_finding": 9.576486110687256,
+                    "microdata_extraction": 0.0009980201721191406,
+                    "storing": 2.6746103763580322,
+                    "total": 12.252094507217407
+                },
+                "microdata_query_evaluation": 0.007992267608642578,
+                "microdata_stats_computing": 4.76837158203125e-07
+            }
+        }
+    ]
+}
