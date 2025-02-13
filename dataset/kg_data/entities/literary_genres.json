@@ -1,0 +1,661 @@
+{
+    "head": {
+        "description": "This file contains literary_genres entities extracted and verified from the input data.",
+        "total_entities": 152,
+        "valid_entities": 88,
+        "extraction_error_number": 64,
+        "extraction_error_percentage": 42,
+        "entity_type": "literary_genres"
+    },
+    "entities": [
+        {
+            "id": "Fantasy",
+            "nl_value": "Fantasy",
+            "rdfs_label": "Fantasy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fantasy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Children's_literature",
+            "nl_value": "Children's literature",
+            "rdfs_label": "Children's literature",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Children's_literature",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Science_fiction",
+            "nl_value": "Science fiction",
+            "rdfs_label": "Science fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Science_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Alternate_history",
+            "nl_value": "Alternate history",
+            "rdfs_label": "Alternate history",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Alternate_history",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Comic_Fantasy",
+            "nl_value": "Comic Fantasy",
+            "rdfs_label": "Comic Fantasy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Comic_Fantasy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Horror_fiction",
+            "nl_value": "Horror fiction",
+            "rdfs_label": "Horror fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Horror_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Fantasy_fiction",
+            "nl_value": "Fantasy fiction",
+            "rdfs_label": "Fantasy fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fantasy_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Comedy_novel",
+            "nl_value": "Comedy novel",
+            "rdfs_label": "Comedy novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Comedy_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Science_fiction_comedy",
+            "nl_value": "Science fiction comedy",
+            "rdfs_label": "Science fiction comedy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Science_fiction_comedy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Cohen_the_Barbarian",
+            "nl_value": "Cohen the Barbarian",
+            "rdfs_label": "Cohen the Barbarian",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Cohen_the_Barbarian",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Romanticism",
+            "nl_value": "Romanticism",
+            "rdfs_label": "Romanticism",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Romanticism",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Tragedy",
+            "nl_value": "Tragedy",
+            "rdfs_label": "Tragedy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Tragedy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Novel",
+            "nl_value": "Novel",
+            "rdfs_label": "Novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Gothic_fiction",
+            "nl_value": "Gothic fiction",
+            "rdfs_label": "Gothic fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Gothic_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Swashbuckler",
+            "nl_value": "Swashbuckler",
+            "rdfs_label": "المتعنترون",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Swashbuckler",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Adventure_novel",
+            "nl_value": "Adventure novel",
+            "rdfs_label": "رواية مغامرة",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Adventure_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Historical_novel",
+            "nl_value": "Historical novel",
+            "rdfs_label": "Historical novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Historical_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Romanticism",
+            "nl_value": "Romanticism",
+            "rdfs_label": "Romanticism",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Romanticism",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Historical",
+            "nl_value": "Historical",
+            "rdfs_label": "Historical",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Historical",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Adventure_fiction",
+            "nl_value": "Adventure fiction",
+            "rdfs_label": "Adventure fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Adventure_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Science_fiction",
+            "nl_value": "Science fiction",
+            "rdfs_label": "Science fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Science_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Adventure_fiction",
+            "nl_value": "Adventure fiction",
+            "rdfs_label": "Adventure fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Adventure_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Thriller_(genre)",
+            "nl_value": "Thriller (genre)",
+            "rdfs_label": "إثارة (نوع فني)",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Thriller_(genre)",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Psychological_thriller",
+            "nl_value": "Psychological thriller",
+            "rdfs_label": "Psychological thriller",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Psychological_thriller",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "High_fantasy",
+            "nl_value": "High fantasy",
+            "rdfs_label": "High fantasy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/High_fantasy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Adventure_novel",
+            "nl_value": "Adventure novel",
+            "rdfs_label": "رواية مغامرة",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Adventure_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Literature",
+            "nl_value": "Literature",
+            "rdfs_label": "Literature",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Literature",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Essay",
+            "nl_value": "Essay",
+            "rdfs_label": "Essay",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Essay",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Fantasy",
+            "nl_value": "Fantasy",
+            "rdfs_label": "Fantasy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fantasy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Children's_literature",
+            "nl_value": "Children's literature",
+            "rdfs_label": "Children's literature",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Children's_literature",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Fantasy_fiction",
+            "nl_value": "Fantasy fiction",
+            "rdfs_label": "Fantasy fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fantasy_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Mythopoeia",
+            "nl_value": "Mythopoeia",
+            "rdfs_label": "Mythopoeia",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mythopoeia",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Tragedy",
+            "nl_value": "Tragedy",
+            "rdfs_label": "Tragedy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Tragedy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Epic_fantasy",
+            "nl_value": "Epic fantasy",
+            "rdfs_label": "Epic fantasy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Epic_fantasy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Fantasy_novel",
+            "nl_value": "Fantasy novel",
+            "rdfs_label": "Fantasy novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fantasy_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Fantasy",
+            "nl_value": "Fantasy",
+            "rdfs_label": "Fantasy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fantasy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Children's_fiction",
+            "nl_value": "Children's fiction",
+            "rdfs_label": "Children's fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Children's_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Literary_nonsense",
+            "nl_value": "Literary nonsense",
+            "rdfs_label": "هراء أدبي",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Literary_nonsense",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Nonsense_poetry",
+            "nl_value": "Nonsense poetry",
+            "rdfs_label": "Nonsense poetry",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Nonsense_poetry",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Fiction",
+            "nl_value": "Fiction",
+            "rdfs_label": "Fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Novel",
+            "nl_value": "Novel",
+            "rdfs_label": "Novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Historical_novel",
+            "nl_value": "Historical novel",
+            "rdfs_label": "Historical novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Historical_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Science_fiction",
+            "nl_value": "Science fiction",
+            "rdfs_label": "Science fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Science_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Mystery_novel",
+            "nl_value": "Mystery novel",
+            "rdfs_label": "Mystery novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mystery_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Short_story",
+            "nl_value": "Short story",
+            "rdfs_label": "Short story",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Short_story",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Detective_fiction",
+            "nl_value": "Detective fiction",
+            "rdfs_label": "Detective fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Detective_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Gothic_fiction",
+            "nl_value": "Gothic fiction",
+            "rdfs_label": "Gothic fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Gothic_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Detective_novel",
+            "nl_value": "Detective novel",
+            "rdfs_label": "Detective novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Detective_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Lost_World_(genre)",
+            "nl_value": "Lost World (genre)",
+            "rdfs_label": "Lost World (genre)",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Lost_World_(genre)",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Fantasy",
+            "nl_value": "Fantasy",
+            "rdfs_label": "Fantasy",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Fantasy",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Narrative",
+            "nl_value": "Narrative",
+            "rdfs_label": "Narrative",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Narrative",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Crime_novel",
+            "nl_value": "Crime novel",
+            "rdfs_label": "Crime novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Crime_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Crime_fiction",
+            "nl_value": "Crime fiction",
+            "rdfs_label": "Crime fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Crime_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Detective_novel",
+            "nl_value": "Detective novel",
+            "rdfs_label": "Detective novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Detective_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Mystery_fiction",
+            "nl_value": "Mystery fiction",
+            "rdfs_label": "Mystery fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mystery_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Historical_novel",
+            "nl_value": "Historical novel",
+            "rdfs_label": "Historical novel",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Historical_novel",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Speculative_fiction",
+            "nl_value": "Speculative fiction",
+            "rdfs_label": "Speculative fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Speculative_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Secret_history",
+            "nl_value": "Secret history",
+            "rdfs_label": "Histoire secrète",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Secret_history",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Historical_mystery",
+            "nl_value": "Historical mystery",
+            "rdfs_label": "Historical mystery",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Historical_mystery",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        }
+    ]
+}

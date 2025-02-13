@@ -1,0 +1,480 @@
+{
+    "head": {
+        "description": "This file contains a list of authors with data from the DBPedia knowledge base.",
+        "total_data": 10
+    },
+    "data": [
+        {
+            "author": "Terry_Pratchett",
+            "books": [
+                "Carpe_Jugulum",
+                "Pyramids_(novel)",
+                "Only_You_Can_Save_Mankind",
+                "Hogfather",
+                "Unseen_Academicals",
+                "The_Long_Utopia",
+                "Maskerade",
+                "Men_at_Arms",
+                "Nation_(novel)",
+                "The_Carpet_People"
+            ],
+            "publication_years": [
+                1989,
+                2008,
+                1987,
+                2004,
+                1987,
+                2015,
+                1992,
+                1995,
+                2012,
+                2014
+            ],
+            "literary_genres": [
+                "Fantasy",
+                "Children's_literature",
+                "Science_fiction",
+                "Alternate_history",
+                "Comic_Fantasy",
+                "Horror_fiction",
+                "Fantasy_fiction",
+                "Comedy_novel",
+                "Science_fiction_comedy",
+                "Cohen_the_Barbarian"
+            ],
+            "characters": [
+                "Moist_von_Lipwig",
+                "Death_(Discworld)",
+                "Granny_Weatherwax",
+                "Conan_the_Barbarian",
+                "Lucifer_(DC_Comics)",
+                "Frankenstein's_monster",
+                "Tiffany_Aching",
+                "Johnny_Maxwell",
+                "Rincewind",
+                "Susan_Sto_Helit"
+            ],
+            "subjects": [
+                "Category:British_comedy_novels",
+                "Category:Vampire_novels",
+                "Category:1998_British_novels",
+                "Category:1998_fantasy_novels",
+                "Category:Discworld_books",
+                "Category:Victor_Gollancz_Ltd_books",
+                "Category:1989_fantasy_novels",
+                "Category:1989_British_novels",
+                "Category:Ancient_Egypt_in_fiction",
+                "Category:Fictional_video_games"
+            ]
+        },
+        {
+            "author": "Victor_Hugo",
+            "books": [
+                "Demain_d\u00e8s_l'aube",
+                "Odes_et_Ballades",
+                "The_Last_Day_of_a_Condemned_Man",
+                "Les_Mis\u00e9rables",
+                "Les_Feuilles_d'automne",
+                "Les_Rayons_et_les_Ombres",
+                "Actes_et_Paroles",
+                "Ninety-Three",
+                "Toilers_of_the_Sea",
+                "The_Man_Who_Laughs"
+            ],
+            "publication_years": [],
+            "literary_genres": [
+                "Romanticism",
+                "Tragedy",
+                "Novel",
+                "Gothic_fiction"
+            ],
+            "characters": [
+                "Enjolras",
+                "Patron-Minette",
+                "Esmeralda_(The_Hunchback_of_Notre-Dame)",
+                "Gavroche",
+                "Clopin_Trouillefou",
+                "Cosette",
+                "Th\u00e9nardiers",
+                "\u00c9ponine",
+                "Lernaean_Hydra",
+                "Marius_Pontmercy"
+            ],
+            "subjects": [
+                "Category:1828_poems",
+                "Category:Poetry_by_Victor_Hugo",
+                "Category:Works_originally_published_in_Journal_des_d\u00e9bats",
+                "Category:1859_poems",
+                "Category:1877_poems",
+                "Category:1883_poems",
+                "Category:French_poems",
+                "Category:1829_French_novels",
+                "Category:Novels_by_Victor_Hugo",
+                "Category:1862_French_novels"
+            ]
+        },
+        {
+            "author": "Alexandre_Dumas",
+            "books": [
+                "The_Three_Musketeers",
+                "La_Dame_de_Monsoreau",
+                "La_Reine_Margot_(novel)",
+                "La_Sanfelice",
+                "Twenty_Years_After",
+                "Captain_Pamphile",
+                "The_Count_of_Monte_Cristo",
+                "The_Queen's_Necklace",
+                "The_New_Troy",
+                "The_Forty-Five_Guardsmen"
+            ],
+            "publication_years": [],
+            "literary_genres": [
+                "Swashbuckler",
+                "Adventure_novel",
+                "Historical_novel",
+                "Romanticism",
+                "Historical",
+                "Adventure_fiction"
+            ],
+            "characters": [
+                "Milady_de_Winter",
+                "Comte_de_Rochefort",
+                "Aramis",
+                "Porthos",
+                "Barbie",
+                "Edmond_Dant\u00e8s",
+                "Quasimodo",
+                "Athos_(character)",
+                "Mr._Magoo"
+            ],
+            "subjects": [
+                "Category:1844_French_novels",
+                "Category:French_historical_novels",
+                "Category:Novels_first_published_in_serial_form",
+                "Category:The_Three_Musketeers",
+                "Category:French_novels_adapted_into_plays",
+                "Category:French_novels_adapted_into_television_shows",
+                "Category:1844_in_France",
+                "Category:Novels_set_in_the_1620s",
+                "Category:French_novels_adapted_into_films",
+                "Category:Cultural_depictions_of_Cardinal_Richelieu"
+            ]
+        },
+        {
+            "author": "Frank_Herbert",
+            "books": [
+                "Destination:_Void",
+                "Dune_Messiah",
+                "Children_of_Dune",
+                "The_Green_Brain",
+                "The_Priests_of_Psi",
+                "Whipping_Star",
+                "Hellstrom's_Hive",
+                "Dune_(novel)",
+                "Angels'_Fall",
+                "Direct_Descent"
+            ],
+            "publication_years": [],
+            "literary_genres": [
+                "Science_fiction",
+                "Adventure_fiction",
+                "Thriller_(genre)",
+                "Psychological_thriller"
+            ],
+            "characters": [
+                "Alia_Atreides",
+                "Vladimir_Harkonnen",
+                "Duncan_Idaho",
+                "Princess_Irulan",
+                "Murbella",
+                "Lady_Jessica",
+                "Leto_II_Atreides",
+                "Paul_Atreides",
+                "Superhero",
+                "Thufir_Hawat"
+            ],
+            "subjects": [
+                "Category:Destination:_Void_universe",
+                "Category:American_science_fiction_novels",
+                "Category:Works_originally_published_in_Galaxy_Science_Fiction",
+                "Category:Brainships",
+                "Category:Novels_about_cloning",
+                "Category:Books_with_cover_art_by_Richard_M._Powers",
+                "Category:Novels_about_artificial_intelligence",
+                "Category:1965_American_novels",
+                "Category:Berkley_Books_books",
+                "Category:Fiction_set_around_Tau_Ceti"
+            ]
+        },
+        {
+            "author": "J._R._R._Tolkien",
+            "books": [
+                "Morgoth's_Ring",
+                "On_Fairy-Stories",
+                "The_War_of_the_Jewels",
+                "The_Lost_Road_and_Other_Writings",
+                "The_Lord_of_the_Rings",
+                "Beowulf_and_the_Critics",
+                "Beren_and_L\u00fathien",
+                "The_Two_Towers",
+                "The_Monsters_and_the_Critics,_and_Other_Essays",
+                "Farmer_Giles_of_Ham"
+            ],
+            "publication_years": [
+                1947,
+                1954,
+                1955,
+                2009,
+                2013
+            ],
+            "literary_genres": [
+                "High_fantasy",
+                "Adventure_novel",
+                "Literature",
+                "Essay",
+                "Fantasy",
+                "Children's_literature",
+                "Fantasy_fiction",
+                "Mythopoeia",
+                "Tragedy",
+                "Epic_fantasy"
+            ],
+            "characters": [
+                "Elendil",
+                "Morgoth",
+                "Beleg",
+                "Aragorn",
+                "Huorn",
+                "Peregrin_Took",
+                "Peter_Pan",
+                "Vala_(Middle-earth)",
+                "Elrond",
+                "\u00c6lfwine_(Tolkien)"
+            ],
+            "subjects": [
+                "Category:The_History_of_Middle-earth",
+                "Category:1993_books",
+                "Category:Middle-earth_books",
+                "Category:Works_about_fairy_tales",
+                "Category:1939_essays",
+                "Category:Essays_by_J._R._R._Tolkien",
+                "Category:Essays_in_literary_criticism",
+                "Category:1994_books",
+                "Category:Fantasy_books_by_series",
+                "Category:1987_books"
+            ]
+        },
+        {
+            "author": "Lewis_Carroll",
+            "books": [
+                "Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable",
+                "Sylvie_and_Bruno",
+                "Through_the_Looking-Glass",
+                "Alice's_Adventures_in_Wonderland",
+                "The_Hunting_of_the_Snark",
+                "A_Tangled_Tale",
+                "The_Nursery_%22Alice%22"
+            ],
+            "publication_years": [
+                1889,
+                1893
+            ],
+            "literary_genres": [
+                "Fantasy_novel",
+                "Fantasy",
+                "Children's_fiction",
+                "Literary_nonsense",
+                "Nonsense_poetry"
+            ],
+            "characters": [
+                "Queen_of_Hearts_(Alice's_Adventures_in_Wonderland)",
+                "Mickey_Mouse",
+                "Mock_Turtle",
+                "Mouse_(Alice's_Adventures_in_Wonderland)",
+                "The_Dormouse",
+                "Alice_(Alice's_Adventures_in_Wonderland)",
+                "Donald_Duck",
+                "Pat_(Alice's_Adventures_in_Wonderland)",
+                "Dodo_(Alice's_Adventures_in_Wonderland)",
+                "Duchess_(Alice's_Adventures_in_Wonderland)"
+            ],
+            "subjects": [
+                "Category:Constrained_writing",
+                "Category:Children's_fantasy_novels",
+                "Category:1905_fantasy_novels",
+                "Category:1905_American_novels",
+                "Category:1905_children's_books",
+                "Category:Books_based_on_Alice_in_Wonderland",
+                "Category:1889_British_novels",
+                "Category:Novels_about_hyperreality",
+                "Category:1880s_children's_books",
+                "Category:1889_fantasy_novels"
+            ]
+        },
+        {
+            "author": "Antoine_de_Saint-Exup\u00e9ry",
+            "books": [
+                "Night_Flight_(novel)",
+                "The_Little_Prince",
+                "Courrier_sud_(novel)"
+            ],
+            "publication_years": [],
+            "literary_genres": [
+                "Fiction",
+                "Novel"
+            ],
+            "characters": [
+                "Raggedy_Ann"
+            ],
+            "subjects": [
+                "Category:Aviation_novels",
+                "Category:French_novels_adapted_into_films",
+                "Category:1931_French_novels",
+                "Category:Novels_adapted_into_operas",
+                "Category:Works_by_Antoine_de_Saint-Exup\u00e9ry",
+                "Category:Novels_set_in_Argentina",
+                "Category:French_children's_novels",
+                "Category:Fiction_with_unreliable_narrators",
+                "Category:French_culture",
+                "Category:Novels_about_royalty"
+            ]
+        },
+        {
+            "author": "Arthur_Conan_Doyle",
+            "books": [
+                "Micah_Clarke",
+                "The_Land_of_Mist",
+                "The_Stark_Munro_Letters",
+                "The_Sign_of_the_Four",
+                "Sir_Nigel",
+                "How_It_Happened",
+                "The_Hound_of_the_Baskervilles",
+                "His_Last_Bow",
+                "The_New_Annotated_Sherlock_Holmes",
+                "A_Study_in_Scarlet"
+            ],
+            "publication_years": [
+                1892
+            ],
+            "literary_genres": [
+                "Historical_novel",
+                "Science_fiction",
+                "Mystery_novel",
+                "Short_story",
+                "Detective_fiction",
+                "Gothic_fiction",
+                "Detective_novel",
+                "Lost_World_(genre)",
+                "Fantasy",
+                "Narrative"
+            ],
+            "characters": [
+                "Mickey_Mouse",
+                "Professor_Moriarty",
+                "Inspector_Lestrade",
+                "William_of_Baskerville",
+                "Irene_Adler",
+                "Dr._Watson",
+                "Baker_Street_Irregulars",
+                "Professor_Challenger",
+                "Lord_John_Roxton",
+                "Sherlock_Holmes"
+            ],
+            "subjects": [
+                "Category:1889_British_novels",
+                "Category:Monmouth_Rebellion_in_fiction",
+                "Category:Novels_set_in_the_1680s",
+                "Category:Fiction_set_in_1685",
+                "Category:British_historical_novels",
+                "Category:Novels_by_Arthur_Conan_Doyle",
+                "Category:Hutchinson_(publisher)_books",
+                "Category:1926_science_fiction_novels",
+                "Category:Professor_Challenger_novels",
+                "Category:British_science_fiction_novels"
+            ]
+        },
+        {
+            "author": "Maurice_Leblanc",
+            "books": [
+                "Ars\u00e8ne_Lupin,_Gentleman_Burglar",
+                "Ars\u00e8ne_Lupin_versus_Herlock_Sholmes",
+                "The_Island_of_Thirty_Coffins",
+                "The_Hollow_Needle"
+            ],
+            "publication_years": [],
+            "literary_genres": [
+                "Crime_novel",
+                "Crime_fiction",
+                "Detective_novel"
+            ],
+            "characters": [
+                "Gentleman_thief",
+                "Josephine_Balsamo",
+                "Herlock_Sholmes_(Ace_Attorney)",
+                "Ars\u00e8ne_Lupin",
+                "Sherlock_Holmes"
+            ],
+            "subjects": [
+                "Category:1907_short_story_collections",
+                "Category:Ars\u00e8ne_Lupin_novels",
+                "Category:French_short_story_collections",
+                "Category:Works_originally_published_in_Je_sais_tout",
+                "Category:1908_French_novels",
+                "Category:Crossover_novels",
+                "Category:1919_French_novels",
+                "Category:Novels_set_on_fictional_islands",
+                "Category:French_crime_novels",
+                "Category:Novels_first_published_in_serial_form"
+            ]
+        },
+        {
+            "author": "Umberto_Eco",
+            "books": [
+                "Belief_or_Nonbelief%3F",
+                "Numero_Zero",
+                "The_Island_of_the_Day_Before",
+                "The_Mysterious_Flame_of_Queen_Loana",
+                "Baudolino",
+                "Foucault's_Pendulum",
+                "The_Name_of_the_Rose",
+                "The_Prague_Cemetery",
+                "Six_Walks_in_the_Fictional_Woods"
+            ],
+            "publication_years": [
+                2000,
+                2015,
+                2002,
+                2011
+            ],
+            "literary_genres": [
+                "Mystery_fiction",
+                "Historical_novel",
+                "Speculative_fiction",
+                "Secret_history",
+                "Historical_mystery"
+            ],
+            "characters": [
+                "Monopod_(creature)",
+                "William_of_Baskerville",
+                "Cthulhu",
+                "Father_Brown",
+                "Manticore",
+                "Sherlock_Holmes",
+                "Unicorn",
+                "Flash_Gordon"
+            ],
+            "subjects": [
+                "Category:Arcade_Publishing_books",
+                "Category:1996_non-fiction_books",
+                "Category:Books_about_religion",
+                "Category:Bompiani_books",
+                "Category:Italian_satirical_novels",
+                "Category:Novels_by_Umberto_Eco",
+                "Category:2015_Italian_novels",
+                "Category:Novels_set_in_Milan",
+                "Category:Metafictional_novels",
+                "Category:Italian_alternate_history_novels"
+            ]
+        }
+    ]
+}

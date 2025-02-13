@@ -1,0 +1,1112 @@
+{
+    "head": {
+        "description": "This file contains subjects entities extracted and verified from the input data.",
+        "total_entities": 335,
+        "valid_entities": 147,
+        "extraction_error_number": 188,
+        "extraction_error_percentage": 56,
+        "entity_type": "subjects"
+    },
+    "entities": [
+        {
+            "id": "Category:British_comedy_novels",
+            "nl_value": "British comedy novels",
+            "rdfs_label": "British comedy novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:British_comedy_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Vampire_novels",
+            "nl_value": "Vampire novels",
+            "rdfs_label": "Vampire novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Vampire_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1998_British_novels",
+            "nl_value": "1998 British novels",
+            "rdfs_label": "1998 British novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1998_British_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1998_fantasy_novels",
+            "nl_value": "1998 fantasy novels",
+            "rdfs_label": "1998 fantasy novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1998_fantasy_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Discworld_books",
+            "nl_value": "Discworld books",
+            "rdfs_label": "Discworld books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Discworld_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Victor_Gollancz_Ltd_books",
+            "nl_value": "Victor Gollancz Ltd books",
+            "rdfs_label": "Victor Gollancz Ltd books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Victor_Gollancz_Ltd_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1989_fantasy_novels",
+            "nl_value": "1989 fantasy novels",
+            "rdfs_label": "1989 fantasy novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1989_fantasy_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1989_British_novels",
+            "nl_value": "1989 British novels",
+            "rdfs_label": "1989 British novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1989_British_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Ancient_Egypt_in_fiction",
+            "nl_value": "Ancient Egypt in fiction",
+            "rdfs_label": "Ancient Egypt in fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Ancient_Egypt_in_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Fictional_video_games",
+            "nl_value": "Fictional video games",
+            "rdfs_label": "Fictional video games",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Fictional_video_games",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1828_poems",
+            "nl_value": "1828 poems",
+            "rdfs_label": "1828 poems",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1828_poems",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Poetry_by_Victor_Hugo",
+            "nl_value": "Poetry by Victor Hugo",
+            "rdfs_label": "Poetry by Victor Hugo",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Poetry_by_Victor_Hugo",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Works_originally_published_in_Journal_des_débats",
+            "nl_value": "Works originally published in Journal des débats",
+            "rdfs_label": "Works originally published in Journal des débats",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Works_originally_published_in_Journal_des_débats",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1859_poems",
+            "nl_value": "1859 poems",
+            "rdfs_label": "1859 poems",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1859_poems",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1877_poems",
+            "nl_value": "1877 poems",
+            "rdfs_label": "1877 poems",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1877_poems",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1883_poems",
+            "nl_value": "1883 poems",
+            "rdfs_label": "1883 poems",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1883_poems",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_poems",
+            "nl_value": "French poems",
+            "rdfs_label": "French poems",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_poems",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1829_French_novels",
+            "nl_value": "1829 French novels",
+            "rdfs_label": "1829 French novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1829_French_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_by_Victor_Hugo",
+            "nl_value": "Novels by Victor Hugo",
+            "rdfs_label": "Novels by Victor Hugo",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_by_Victor_Hugo",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1862_French_novels",
+            "nl_value": "1862 French novels",
+            "rdfs_label": "1862 French novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1862_French_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1844_French_novels",
+            "nl_value": "1844 French novels",
+            "rdfs_label": "1844 French novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1844_French_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_historical_novels",
+            "nl_value": "French historical novels",
+            "rdfs_label": "French historical novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_historical_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_first_published_in_serial_form",
+            "nl_value": "Novels first published in serial form",
+            "rdfs_label": "Novels first published in serial form",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_first_published_in_serial_form",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:The_Three_Musketeers",
+            "nl_value": "The Three Musketeers",
+            "rdfs_label": "The Three Musketeers",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:The_Three_Musketeers",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_novels_adapted_into_plays",
+            "nl_value": "French novels adapted into plays",
+            "rdfs_label": "French novels adapted into plays",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_novels_adapted_into_plays",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_novels_adapted_into_television_shows",
+            "nl_value": "French novels adapted into television shows",
+            "rdfs_label": "French novels adapted into television shows",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_novels_adapted_into_television_shows",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1844_in_France",
+            "nl_value": "1844 in France",
+            "rdfs_label": "1844 in France",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1844_in_France",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_set_in_the_1620s",
+            "nl_value": "Novels set in the 1620s",
+            "rdfs_label": "Novels set in the 1620s",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_set_in_the_1620s",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_novels_adapted_into_films",
+            "nl_value": "French novels adapted into films",
+            "rdfs_label": "French novels adapted into films",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_novels_adapted_into_films",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Cultural_depictions_of_Cardinal_Richelieu",
+            "nl_value": "Cultural depictions of Cardinal Richelieu",
+            "rdfs_label": "Cultural depictions of Cardinal Richelieu",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Cultural_depictions_of_Cardinal_Richelieu",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Destination:_Void_universe",
+            "nl_value": "Destination: Void universe",
+            "rdfs_label": "Destination: Void universe",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Destination:_Void_universe",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:American_science_fiction_novels",
+            "nl_value": "American science fiction novels",
+            "rdfs_label": "American science fiction novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:American_science_fiction_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Works_originally_published_in_Galaxy_Science_Fiction",
+            "nl_value": "Works originally published in Galaxy Science Fiction",
+            "rdfs_label": "Works originally published in Galaxy Science Fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Works_originally_published_in_Galaxy_Science_Fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Brainships",
+            "nl_value": "Brainships",
+            "rdfs_label": "Brainships",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Brainships",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_about_cloning",
+            "nl_value": "Novels about cloning",
+            "rdfs_label": "Novels about cloning",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_about_cloning",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Books_with_cover_art_by_Richard_M._Powers",
+            "nl_value": "Books with cover art by Richard M. Powers",
+            "rdfs_label": "Books with cover art by Richard M. Powers",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Books_with_cover_art_by_Richard_M._Powers",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_about_artificial_intelligence",
+            "nl_value": "Novels about artificial intelligence",
+            "rdfs_label": "Novels about artificial intelligence",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_about_artificial_intelligence",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1965_American_novels",
+            "nl_value": "1965 American novels",
+            "rdfs_label": "1965 American novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1965_American_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Berkley_Books_books",
+            "nl_value": "Berkley Books books",
+            "rdfs_label": "Berkley Books books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Berkley_Books_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Fiction_set_around_Tau_Ceti",
+            "nl_value": "Fiction set around Tau Ceti",
+            "rdfs_label": "Fiction set around Tau Ceti",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Fiction_set_around_Tau_Ceti",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:The_History_of_Middle-earth",
+            "nl_value": "The History of Middle-earth",
+            "rdfs_label": "The History of Middle-earth",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:The_History_of_Middle-earth",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1993_books",
+            "nl_value": "1993 books",
+            "rdfs_label": "1993 books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1993_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Middle-earth_books",
+            "nl_value": "Middle-earth books",
+            "rdfs_label": "Middle-earth books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Middle-earth_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Works_about_fairy_tales",
+            "nl_value": "Works about fairy tales",
+            "rdfs_label": "Works about fairy tales",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Works_about_fairy_tales",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1939_essays",
+            "nl_value": "1939 essays",
+            "rdfs_label": "1939 essays",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1939_essays",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Essays_by_J._R._R._Tolkien",
+            "nl_value": "Essays by J. R. R. Tolkien",
+            "rdfs_label": "Essays by J. R. R. Tolkien",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Essays_by_J._R._R._Tolkien",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Essays_in_literary_criticism",
+            "nl_value": "Essays in literary criticism",
+            "rdfs_label": "Essays in literary criticism",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Essays_in_literary_criticism",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1994_books",
+            "nl_value": "1994 books",
+            "rdfs_label": "1994 books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1994_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Fantasy_books_by_series",
+            "nl_value": "Fantasy books by series",
+            "rdfs_label": "Fantasy books by series",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Fantasy_books_by_series",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1987_books",
+            "nl_value": "1987 books",
+            "rdfs_label": "1987 books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1987_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Constrained_writing",
+            "nl_value": "Constrained writing",
+            "rdfs_label": "Constrained writing",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Constrained_writing",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Children's_fantasy_novels",
+            "nl_value": "Children's fantasy novels",
+            "rdfs_label": "Children's fantasy novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Children's_fantasy_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1905_fantasy_novels",
+            "nl_value": "1905 fantasy novels",
+            "rdfs_label": "1905 fantasy novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1905_fantasy_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1905_American_novels",
+            "nl_value": "1905 American novels",
+            "rdfs_label": "1905 American novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1905_American_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1905_children's_books",
+            "nl_value": "1905 children's books",
+            "rdfs_label": "1905 children's books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1905_children's_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Books_based_on_Alice_in_Wonderland",
+            "nl_value": "Books based on Alice in Wonderland",
+            "rdfs_label": "Books based on Alice in Wonderland",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Books_based_on_Alice_in_Wonderland",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1889_British_novels",
+            "nl_value": "1889 British novels",
+            "rdfs_label": "1889 British novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1889_British_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_about_hyperreality",
+            "nl_value": "Novels about hyperreality",
+            "rdfs_label": "Novels about hyperreality",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_about_hyperreality",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1880s_children's_books",
+            "nl_value": "1880s children's books",
+            "rdfs_label": "1880s children's books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1880s_children's_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1889_fantasy_novels",
+            "nl_value": "1889 fantasy novels",
+            "rdfs_label": "1889 fantasy novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1889_fantasy_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Aviation_novels",
+            "nl_value": "Aviation novels",
+            "rdfs_label": "Aviation novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Aviation_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_novels_adapted_into_films",
+            "nl_value": "French novels adapted into films",
+            "rdfs_label": "French novels adapted into films",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_novels_adapted_into_films",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1931_French_novels",
+            "nl_value": "1931 French novels",
+            "rdfs_label": "1931 French novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1931_French_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_adapted_into_operas",
+            "nl_value": "Novels adapted into operas",
+            "rdfs_label": "Novels adapted into operas",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_adapted_into_operas",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Works_by_Antoine_de_Saint-Exupéry",
+            "nl_value": "Works by Antoine de Saint-Exupéry",
+            "rdfs_label": "Works by Antoine de Saint-Exupéry",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Works_by_Antoine_de_Saint-Exupéry",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_set_in_Argentina",
+            "nl_value": "Novels set in Argentina",
+            "rdfs_label": "Novels set in Argentina",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_set_in_Argentina",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_children's_novels",
+            "nl_value": "French children's novels",
+            "rdfs_label": "French children's novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_children's_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Fiction_with_unreliable_narrators",
+            "nl_value": "Fiction with unreliable narrators",
+            "rdfs_label": "Fiction with unreliable narrators",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Fiction_with_unreliable_narrators",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_culture",
+            "nl_value": "French culture",
+            "rdfs_label": "French culture",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_culture",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_about_royalty",
+            "nl_value": "Novels about royalty",
+            "rdfs_label": "Novels about royalty",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_about_royalty",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1889_British_novels",
+            "nl_value": "1889 British novels",
+            "rdfs_label": "1889 British novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1889_British_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Monmouth_Rebellion_in_fiction",
+            "nl_value": "Monmouth Rebellion in fiction",
+            "rdfs_label": "Monmouth Rebellion in fiction",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Monmouth_Rebellion_in_fiction",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_set_in_the_1680s",
+            "nl_value": "Novels set in the 1680s",
+            "rdfs_label": "Novels set in the 1680s",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_set_in_the_1680s",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Fiction_set_in_1685",
+            "nl_value": "Fiction set in 1685",
+            "rdfs_label": "Fiction set in 1685",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Fiction_set_in_1685",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:British_historical_novels",
+            "nl_value": "British historical novels",
+            "rdfs_label": "British historical novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:British_historical_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_by_Arthur_Conan_Doyle",
+            "nl_value": "Novels by Arthur Conan Doyle",
+            "rdfs_label": "Novels by Arthur Conan Doyle",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_by_Arthur_Conan_Doyle",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Hutchinson_(publisher)_books",
+            "nl_value": "Hutchinson (publisher) books",
+            "rdfs_label": "Hutchinson (publisher) books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Hutchinson_(publisher)_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1926_science_fiction_novels",
+            "nl_value": "1926 science fiction novels",
+            "rdfs_label": "1926 science fiction novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1926_science_fiction_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Professor_Challenger_novels",
+            "nl_value": "Professor Challenger novels",
+            "rdfs_label": "Professor Challenger novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Professor_Challenger_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:British_science_fiction_novels",
+            "nl_value": "British science fiction novels",
+            "rdfs_label": "British science fiction novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:British_science_fiction_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1907_short_story_collections",
+            "nl_value": "1907 short story collections",
+            "rdfs_label": "1907 short story collections",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1907_short_story_collections",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Arsène_Lupin_novels",
+            "nl_value": "Arsène Lupin novels",
+            "rdfs_label": "Arsène Lupin novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Arsène_Lupin_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_short_story_collections",
+            "nl_value": "French short story collections",
+            "rdfs_label": "French short story collections",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_short_story_collections",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Works_originally_published_in_Je_sais_tout",
+            "nl_value": "Works originally published in Je sais tout",
+            "rdfs_label": "Works originally published in Je sais tout",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Works_originally_published_in_Je_sais_tout",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1908_French_novels",
+            "nl_value": "1908 French novels",
+            "rdfs_label": "1908 French novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1908_French_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Crossover_novels",
+            "nl_value": "Crossover novels",
+            "rdfs_label": "Crossover novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Crossover_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1919_French_novels",
+            "nl_value": "1919 French novels",
+            "rdfs_label": "1919 French novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1919_French_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_set_on_fictional_islands",
+            "nl_value": "Novels set on fictional islands",
+            "rdfs_label": "Novels set on fictional islands",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_set_on_fictional_islands",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:French_crime_novels",
+            "nl_value": "French crime novels",
+            "rdfs_label": "French crime novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:French_crime_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_first_published_in_serial_form",
+            "nl_value": "Novels first published in serial form",
+            "rdfs_label": "Novels first published in serial form",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_first_published_in_serial_form",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Arcade_Publishing_books",
+            "nl_value": "Arcade Publishing books",
+            "rdfs_label": "Arcade Publishing books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Arcade_Publishing_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:1996_non-fiction_books",
+            "nl_value": "1996 non-fiction books",
+            "rdfs_label": "1996 non-fiction books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:1996_non-fiction_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Books_about_religion",
+            "nl_value": "Books about religion",
+            "rdfs_label": "Books about religion",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Books_about_religion",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Bompiani_books",
+            "nl_value": "Bompiani books",
+            "rdfs_label": "Bompiani books",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Bompiani_books",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Italian_satirical_novels",
+            "nl_value": "Italian satirical novels",
+            "rdfs_label": "Italian satirical novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Italian_satirical_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_by_Umberto_Eco",
+            "nl_value": "Novels by Umberto Eco",
+            "rdfs_label": "Novels by Umberto Eco",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_by_Umberto_Eco",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:2015_Italian_novels",
+            "nl_value": "2015 Italian novels",
+            "rdfs_label": "2015 Italian novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:2015_Italian_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Novels_set_in_Milan",
+            "nl_value": "Novels set in Milan",
+            "rdfs_label": "Novels set in Milan",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Novels_set_in_Milan",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Metafictional_novels",
+            "nl_value": "Metafictional novels",
+            "rdfs_label": "Metafictional novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Metafictional_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Category:Italian_alternate_history_novels",
+            "nl_value": "Italian alternate history novels",
+            "rdfs_label": "Italian alternate history novels",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Category:Italian_alternate_history_novels",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        }
+    ]
+}

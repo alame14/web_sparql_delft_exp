@@ -1,0 +1,1102 @@
+{
+    "head": {
+        "description": "This file contains characters entities extracted and verified from the input data.",
+        "total_entities": 235,
+        "valid_entities": 147,
+        "extraction_error_number": 88,
+        "extraction_error_percentage": 37,
+        "entity_type": "characters"
+    },
+    "entities": [
+        {
+            "id": "Moist_von_Lipwig",
+            "nl_value": "Moist von Lipwig",
+            "rdfs_label": "Vlahoš von Rosret",
+            "foaf_name": "Moist von Lipwig",
+            "dbpedia_uri": "http://dbpedia.org/resource/Moist_von_Lipwig",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Moist von Lipwig",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Death_(Discworld)",
+            "nl_value": "Death (Discworld)",
+            "rdfs_label": "Smrť",
+            "foaf_name": "Death",
+            "dbpedia_uri": "http://dbpedia.org/resource/Death_(Discworld)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Death",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Granny_Weatherwax",
+            "nl_value": "Granny Weatherwax",
+            "rdfs_label": "Bábi Zlopočasná",
+            "foaf_name": "Esmerelda Weatherwax",
+            "dbpedia_uri": "http://dbpedia.org/resource/Granny_Weatherwax",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Esmerelda Weatherwax",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Conan_the_Barbarian",
+            "nl_value": "Conan the Barbarian",
+            "rdfs_label": "Conan the Barbarian",
+            "foaf_name": "Conan the Barbarian",
+            "dbpedia_uri": "http://dbpedia.org/resource/Conan_the_Barbarian",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Conan the Barbarian",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Lucifer_(DC_Comics)",
+            "nl_value": "Lucifer (DC Comics)",
+            "rdfs_label": "لوسيفر (دي سي كومكس)",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Lucifer_(DC_Comics)",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Frankenstein's_monster",
+            "nl_value": "Frankenstein's monster",
+            "rdfs_label": "وحش فرانكنشتاين",
+            "foaf_name": "Frankenstein's monster",
+            "dbpedia_uri": "http://dbpedia.org/resource/Frankenstein's_monster",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Frankenstein's monster",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Tiffany_Aching",
+            "nl_value": "Tiffany Aching",
+            "rdfs_label": "Tonička Bolavá",
+            "foaf_name": "Tiffany Aching",
+            "dbpedia_uri": "http://dbpedia.org/resource/Tiffany_Aching",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Tiffany Aching",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Johnny_Maxwell",
+            "nl_value": "Johnny Maxwell",
+            "rdfs_label": "Johnny Maxwell",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Johnny_Maxwell",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Rincewind",
+            "nl_value": "Rincewind",
+            "rdfs_label": "Mrakoplaš",
+            "foaf_name": "Rincewind",
+            "dbpedia_uri": "http://dbpedia.org/resource/Rincewind",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Rincewind",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Susan_Sto_Helit",
+            "nl_value": "Susan Sto Helit",
+            "rdfs_label": "Susan Sto Helit",
+            "foaf_name": "Susan Sto Helit",
+            "dbpedia_uri": "http://dbpedia.org/resource/Susan_Sto_Helit",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Susan Sto Helit",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Enjolras",
+            "nl_value": "Enjolras",
+            "rdfs_label": "آنجولراس",
+            "foaf_name": "Enjolras",
+            "dbpedia_uri": "http://dbpedia.org/resource/Enjolras",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Enjolras",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Patron-Minette",
+            "nl_value": "Patron-Minette",
+            "rdfs_label": "باترون منت",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Patron-Minette",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Esmeralda_(The_Hunchback_of_Notre-Dame)",
+            "nl_value": "Esmeralda (The Hunchback of Notre-Dame)",
+            "rdfs_label": "Εσμεράλδα",
+            "foaf_name": "Esmeralda",
+            "dbpedia_uri": "http://dbpedia.org/resource/Esmeralda_(The_Hunchback_of_Notre-Dame)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Esmeralda",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Gavroche",
+            "nl_value": "Gavroche",
+            "rdfs_label": "غافروش",
+            "foaf_name": "Gavroche",
+            "dbpedia_uri": "http://dbpedia.org/resource/Gavroche",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Gavroche",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Clopin_Trouillefou",
+            "nl_value": "Clopin Trouillefou",
+            "rdfs_label": "Clopin Trouillefou",
+            "foaf_name": "Clopin Trouillefou",
+            "dbpedia_uri": "http://dbpedia.org/resource/Clopin_Trouillefou",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Clopin Trouillefou",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Cosette",
+            "nl_value": "Cosette",
+            "rdfs_label": "Cosette",
+            "foaf_name": "Cosette Pontmercy",
+            "dbpedia_uri": "http://dbpedia.org/resource/Cosette",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Cosette Pontmercy",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Thénardiers",
+            "nl_value": "Thénardiers",
+            "rdfs_label": "التيناردييه",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Thénardiers",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Éponine",
+            "nl_value": "Éponine",
+            "rdfs_label": "إبونين",
+            "foaf_name": "Éponine",
+            "dbpedia_uri": "http://dbpedia.org/resource/Éponine",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Éponine",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Lernaean_Hydra",
+            "nl_value": "Lernaean Hydra",
+            "rdfs_label": "عدار",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Lernaean_Hydra",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Marius_Pontmercy",
+            "nl_value": "Marius Pontmercy",
+            "rdfs_label": "ماريوس بونتمرسي",
+            "foaf_name": "Marius Pontmercy",
+            "dbpedia_uri": "http://dbpedia.org/resource/Marius_Pontmercy",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Marius Pontmercy",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Milady_de_Winter",
+            "nl_value": "Milady de Winter",
+            "rdfs_label": "Milady de Winter",
+            "foaf_name": "Milady Laurence de Winter",
+            "dbpedia_uri": "http://dbpedia.org/resource/Milady_de_Winter",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Milady Laurence de Winter",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Comte_de_Rochefort",
+            "nl_value": "Comte de Rochefort",
+            "rdfs_label": "Comte de Rochefort",
+            "foaf_name": "Comte de Rochefort",
+            "dbpedia_uri": "http://dbpedia.org/resource/Comte_de_Rochefort",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Comte de Rochefort",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Aramis",
+            "nl_value": "Aramis",
+            "rdfs_label": "Aramis",
+            "foaf_name": "Aramis",
+            "dbpedia_uri": "http://dbpedia.org/resource/Aramis",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Aramis",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Porthos",
+            "nl_value": "Porthos",
+            "rdfs_label": "Porthos",
+            "foaf_name": "Porthos",
+            "dbpedia_uri": "http://dbpedia.org/resource/Porthos",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Porthos",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Barbie",
+            "nl_value": "Barbie",
+            "rdfs_label": "Barbie",
+            "foaf_name": "Barbie",
+            "dbpedia_uri": "http://dbpedia.org/resource/Barbie",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Barbie",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Edmond_Dantès",
+            "nl_value": "Edmond Dantès",
+            "rdfs_label": "إدموند دانتيس",
+            "foaf_name": "Edmond Dantès",
+            "dbpedia_uri": "http://dbpedia.org/resource/Edmond_Dantès",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Edmond Dantès",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Quasimodo",
+            "nl_value": "Quasimodo",
+            "rdfs_label": "Quasimodo",
+            "foaf_name": "Quasimodo",
+            "dbpedia_uri": "http://dbpedia.org/resource/Quasimodo",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Quasimodo",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Athos_(character)",
+            "nl_value": "Athos (character)",
+            "rdfs_label": "Athos (personatge de ficció)",
+            "foaf_name": "Athos",
+            "dbpedia_uri": "http://dbpedia.org/resource/Athos_(character)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Athos",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Mr._Magoo",
+            "nl_value": "Mr. Magoo",
+            "rdfs_label": "Mr. Magoo",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mr._Magoo",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Alia_Atreides",
+            "nl_value": "Alia Atreides",
+            "rdfs_label": "Alia Atreides",
+            "foaf_name": "Alia Atreides",
+            "dbpedia_uri": "http://dbpedia.org/resource/Alia_Atreides",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Alia Atreides",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Vladimir_Harkonnen",
+            "nl_value": "Vladimir Harkonnen",
+            "rdfs_label": "Vladimir Harkonnen",
+            "foaf_name": "Baron Vladimir Harkonnen",
+            "dbpedia_uri": "http://dbpedia.org/resource/Vladimir_Harkonnen",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Baron Vladimir Harkonnen",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Duncan_Idaho",
+            "nl_value": "Duncan Idaho",
+            "rdfs_label": "Duncan Idaho",
+            "foaf_name": "Duncan Idaho",
+            "dbpedia_uri": "http://dbpedia.org/resource/Duncan_Idaho",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Duncan Idaho",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Princess_Irulan",
+            "nl_value": "Princess Irulan",
+            "rdfs_label": "Irulan Corrino",
+            "foaf_name": "Princess Irulan",
+            "dbpedia_uri": "http://dbpedia.org/resource/Princess_Irulan",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Princess Irulan",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Murbella",
+            "nl_value": "Murbella",
+            "rdfs_label": "Murbella",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Murbella",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Lady_Jessica",
+            "nl_value": "Lady Jessica",
+            "rdfs_label": "Lady Jessica",
+            "foaf_name": "Lady Jessica",
+            "dbpedia_uri": "http://dbpedia.org/resource/Lady_Jessica",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Lady Jessica",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Leto_II_Atreides",
+            "nl_value": "Leto II Atreides",
+            "rdfs_label": "Leto II Atreides",
+            "foaf_name": "Leto II Atreides",
+            "dbpedia_uri": "http://dbpedia.org/resource/Leto_II_Atreides",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Leto II Atreides",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Paul_Atreides",
+            "nl_value": "Paul Atreides",
+            "rdfs_label": "Paul Atreides",
+            "foaf_name": "Paul Atreides",
+            "dbpedia_uri": "http://dbpedia.org/resource/Paul_Atreides",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Paul Atreides",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Superhero",
+            "nl_value": "Superhero",
+            "rdfs_label": "Superhero",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Superhero",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Thufir_Hawat",
+            "nl_value": "Thufir Hawat",
+            "rdfs_label": "Thufir Hawat",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Thufir_Hawat",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Elendil",
+            "nl_value": "Elendil",
+            "rdfs_label": "Eléndil",
+            "foaf_name": "Elendil",
+            "dbpedia_uri": "http://dbpedia.org/resource/Elendil",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Elendil",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Morgoth",
+            "nl_value": "Morgoth",
+            "rdfs_label": "Mórgoth",
+            "foaf_name": "Morgoth",
+            "dbpedia_uri": "http://dbpedia.org/resource/Morgoth",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Morgoth",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Beleg",
+            "nl_value": "Beleg",
+            "rdfs_label": "Beleg",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Beleg",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Aragorn",
+            "nl_value": "Aragorn",
+            "rdfs_label": "Aragorn",
+            "foaf_name": "Aragorn",
+            "dbpedia_uri": "http://dbpedia.org/resource/Aragorn",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Aragorn",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Huorn",
+            "nl_value": "Huorn",
+            "rdfs_label": "Ucornos",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Huorn",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Peregrin_Took",
+            "nl_value": "Peregrin Took",
+            "rdfs_label": "Peregrin Took",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Peregrin_Took",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Peter_Pan",
+            "nl_value": "Peter Pan",
+            "rdfs_label": "Peter Pan",
+            "foaf_name": "Peter Pan",
+            "dbpedia_uri": "http://dbpedia.org/resource/Peter_Pan",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Peter Pan",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Vala_(Middle-earth)",
+            "nl_value": "Vala (Middle-earth)",
+            "rdfs_label": "Vala (Middle-earth)",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Vala_(Middle-earth)",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Elrond",
+            "nl_value": "Elrond",
+            "rdfs_label": "Élrond",
+            "foaf_name": "Elrond",
+            "dbpedia_uri": "http://dbpedia.org/resource/Elrond",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Elrond",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Ælfwine_(Tolkien)",
+            "nl_value": "Ælfwine (Tolkien)",
+            "rdfs_label": "Ælfwine aus England",
+            "foaf_name": "Ælfwine",
+            "dbpedia_uri": "http://dbpedia.org/resource/Ælfwine_(Tolkien)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Ælfwine",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Queen_of_Hearts_(Alice's_Adventures_in_Wonderland)",
+            "nl_value": "Queen of Hearts (Alice's Adventures in Wonderland)",
+            "rdfs_label": "ملكة القلوب",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Queen_of_Hearts_(Alice's_Adventures_in_Wonderland)",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Mickey_Mouse",
+            "nl_value": "Mickey Mouse",
+            "rdfs_label": "Mickey Mouse",
+            "foaf_name": "Mickey Mouse",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mickey_Mouse",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Mickey Mouse",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Mock_Turtle",
+            "nl_value": "Mock Turtle",
+            "rdfs_label": "Paželv",
+            "foaf_name": "Mock Turtle",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mock_Turtle",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Mock Turtle",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Mouse_(Alice's_Adventures_in_Wonderland)",
+            "nl_value": "Mouse (Alice's Adventures in Wonderland)",
+            "rdfs_label": "Mouse (Alice's Adventures in Wonderland)",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mouse_(Alice's_Adventures_in_Wonderland)",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "The_Dormouse",
+            "nl_value": "The Dormouse",
+            "rdfs_label": "Ghiro (personaggio)",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Dormouse",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Alice_(Alice's_Adventures_in_Wonderland)",
+            "nl_value": "Alice (Alice's Adventures in Wonderland)",
+            "rdfs_label": "أليس (شخصية)",
+            "foaf_name": "Alice",
+            "dbpedia_uri": "http://dbpedia.org/resource/Alice_(Alice's_Adventures_in_Wonderland)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Alice",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Donald_Duck",
+            "nl_value": "Donald Duck",
+            "rdfs_label": "Donald Duck",
+            "foaf_name": "Donald Duck",
+            "dbpedia_uri": "http://dbpedia.org/resource/Donald_Duck",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Donald Duck",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Pat_(Alice's_Adventures_in_Wonderland)",
+            "nl_value": "Pat (Alice's Adventures in Wonderland)",
+            "rdfs_label": "Pat (Alice's Adventures in Wonderland)",
+            "foaf_name": "Pat",
+            "dbpedia_uri": "http://dbpedia.org/resource/Pat_(Alice's_Adventures_in_Wonderland)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Pat",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Dodo_(Alice's_Adventures_in_Wonderland)",
+            "nl_value": "Dodo (Alice's Adventures in Wonderland)",
+            "rdfs_label": "Dodo (Alice's Adventures in Wonderland)",
+            "foaf_name": "Dodo",
+            "dbpedia_uri": "http://dbpedia.org/resource/Dodo_(Alice's_Adventures_in_Wonderland)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Dodo",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Duchess_(Alice's_Adventures_in_Wonderland)",
+            "nl_value": "Duchess (Alice's Adventures in Wonderland)",
+            "rdfs_label": "Duquesa (Alicia en el país de las maravillas)",
+            "foaf_name": "Duchess",
+            "dbpedia_uri": "http://dbpedia.org/resource/Duchess_(Alice's_Adventures_in_Wonderland)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Duchess",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Raggedy_Ann",
+            "nl_value": "Raggedy Ann",
+            "rdfs_label": "Raggedy Ann",
+            "foaf_name": "Raggedy Ann",
+            "dbpedia_uri": "http://dbpedia.org/resource/Raggedy_Ann",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Raggedy Ann",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Mickey_Mouse",
+            "nl_value": "Mickey Mouse",
+            "rdfs_label": "Mickey Mouse",
+            "foaf_name": "Mickey Mouse",
+            "dbpedia_uri": "http://dbpedia.org/resource/Mickey_Mouse",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Mickey Mouse",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Professor_Moriarty",
+            "nl_value": "Professor Moriarty",
+            "rdfs_label": "جيمس موريارتي",
+            "foaf_name": "Professor Moriarty",
+            "dbpedia_uri": "http://dbpedia.org/resource/Professor_Moriarty",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Professor Moriarty",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Inspector_Lestrade",
+            "nl_value": "Inspector Lestrade",
+            "rdfs_label": "Inspector Lestrade",
+            "foaf_name": "Inspector Lestrade",
+            "dbpedia_uri": "http://dbpedia.org/resource/Inspector_Lestrade",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Inspector Lestrade",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "William_of_Baskerville",
+            "nl_value": "William of Baskerville",
+            "rdfs_label": "Guillermo de Baskerville",
+            "foaf_name": "William of Baskerville",
+            "dbpedia_uri": "http://dbpedia.org/resource/William_of_Baskerville",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "William of Baskerville",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Irene_Adler",
+            "nl_value": "Irene Adler",
+            "rdfs_label": "Irene Adler",
+            "foaf_name": "Irene Adler",
+            "dbpedia_uri": "http://dbpedia.org/resource/Irene_Adler",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Irene Adler",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Dr._Watson",
+            "nl_value": "Dr. Watson",
+            "rdfs_label": "دكتور واطسون",
+            "foaf_name": "Dr. Watson",
+            "dbpedia_uri": "http://dbpedia.org/resource/Dr._Watson",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Dr. Watson",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Baker_Street_Irregulars",
+            "nl_value": "Baker Street Irregulars",
+            "rdfs_label": "Irregulars de Baker Street",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Baker_Street_Irregulars",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Professor_Challenger",
+            "nl_value": "Professor Challenger",
+            "rdfs_label": "Professor Challenger",
+            "foaf_name": "Professor Doctor Challenger",
+            "dbpedia_uri": "http://dbpedia.org/resource/Professor_Challenger",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Professor Doctor Challenger",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Lord_John_Roxton",
+            "nl_value": "Lord John Roxton",
+            "rdfs_label": "Lord John Roxton",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Lord_John_Roxton",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Sherlock_Holmes",
+            "nl_value": "Sherlock Holmes",
+            "rdfs_label": "Sherlock Holmes",
+            "foaf_name": "Sherlock Holmes",
+            "dbpedia_uri": "http://dbpedia.org/resource/Sherlock_Holmes",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Sherlock Holmes",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Gentleman_thief",
+            "nl_value": "Gentleman thief",
+            "rdfs_label": "Gentleman thief",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Gentleman_thief",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Josephine_Balsamo",
+            "nl_value": "Josephine Balsamo",
+            "rdfs_label": "Josephine Balsamo",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Josephine_Balsamo",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Herlock_Sholmes_(Ace_Attorney)",
+            "nl_value": "Herlock Sholmes (Ace Attorney)",
+            "rdfs_label": "Herlock Sholmes (Ace Attorney)",
+            "foaf_name": "Herlock Sholmes",
+            "dbpedia_uri": "http://dbpedia.org/resource/Herlock_Sholmes_(Ace_Attorney)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Herlock Sholmes",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Arsène_Lupin",
+            "nl_value": "Arsène Lupin",
+            "rdfs_label": "Arsène Lupin",
+            "foaf_name": "Arsène Lupin",
+            "dbpedia_uri": "http://dbpedia.org/resource/Arsène_Lupin",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Arsène Lupin",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Sherlock_Holmes",
+            "nl_value": "Sherlock Holmes",
+            "rdfs_label": "Sherlock Holmes",
+            "foaf_name": "Sherlock Holmes",
+            "dbpedia_uri": "http://dbpedia.org/resource/Sherlock_Holmes",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Sherlock Holmes",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Monopod_(creature)",
+            "nl_value": "Monopod (creature)",
+            "rdfs_label": "النسناس (أسطورة)",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Monopod_(creature)",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "William_of_Baskerville",
+            "nl_value": "William of Baskerville",
+            "rdfs_label": "Guillermo de Baskerville",
+            "foaf_name": "William of Baskerville",
+            "dbpedia_uri": "http://dbpedia.org/resource/William_of_Baskerville",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "William of Baskerville",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Cthulhu",
+            "nl_value": "Cthulhu",
+            "rdfs_label": "Cthulhu",
+            "foaf_name": "Cthulhu",
+            "dbpedia_uri": "http://dbpedia.org/resource/Cthulhu",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Cthulhu",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Father_Brown",
+            "nl_value": "Father Brown",
+            "rdfs_label": "الأب براون",
+            "foaf_name": "Father Brown",
+            "dbpedia_uri": "http://dbpedia.org/resource/Father_Brown",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Father Brown",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Manticore",
+            "nl_value": "Manticore",
+            "rdfs_label": "Manticore",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Manticore",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Sherlock_Holmes",
+            "nl_value": "Sherlock Holmes",
+            "rdfs_label": "Sherlock Holmes",
+            "foaf_name": "Sherlock Holmes",
+            "dbpedia_uri": "http://dbpedia.org/resource/Sherlock_Holmes",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Sherlock Holmes",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Unicorn",
+            "nl_value": "Unicorn",
+            "rdfs_label": "Unicorn",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Unicorn",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Flash_Gordon",
+            "nl_value": "Flash Gordon",
+            "rdfs_label": "Flash Gordon",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Flash_Gordon",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        }
+    ]
+}

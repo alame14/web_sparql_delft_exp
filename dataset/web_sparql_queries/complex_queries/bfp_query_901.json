@@ -1,0 +1,74 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query queries for querying a hybrid data sources.",
+        "data_source": [
+            "web_microdata_graph",
+            "dbpedia"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_queries": 10
+    },
+    "queries": [
+        {
+            "query_id": 264,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of Children of Dune",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Children of Dune\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 265,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of Children of Dune",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"Children of Dune\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 266,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of The Green Brain",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Green Brain\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 267,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of The Green Brain",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Green Brain\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 268,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of The Green Brain",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Green Brain\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 269,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of The Green Brain",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Green Brain\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 270,
+            "pattern_id": 25,
+            "en_query": "Give me the price of every book written by the author of The Priests of Psi",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Priests of Psi\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 271,
+            "pattern_id": 27,
+            "en_query": "Give me the price and availability of every book written by the author of The Priests of Psi",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Priests of Psi\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 272,
+            "pattern_id": 28,
+            "en_query": "Give me the books available for every book written by the author of The Priests of Psi",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Priests of Psi\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "query_id": 273,
+            "pattern_id": 29,
+            "en_query": "Give me the price of the books available for every book written by the author of The Priests of Psi",
+            "hybrid_query": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author ?author .\n?book_1 a dbo:Book .\n?book_1 dbo:author ?author .\n?book_1 foaf:name \"The Priests of Psi\"@en .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        }
+    ]
+}

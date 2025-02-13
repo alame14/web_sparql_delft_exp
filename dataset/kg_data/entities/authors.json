@@ -1,0 +1,146 @@
+{
+    "head": {
+        "description": "This file contains authors entities extracted and verified from the input data.",
+        "total_entities": 10,
+        "valid_entities": 8,
+        "extraction_error_number": 2,
+        "extraction_error_percentage": 20,
+        "entity_type": "authors"
+    },
+    "entities": [
+        {
+            "id": "Terry_Pratchett",
+            "nl_value": "Terry Pratchett",
+            "rdfs_label": "Terry Pratchett",
+            "foaf_name": "Terry Pratchett",
+            "dbpedia_uri": "http://dbpedia.org/resource/Terry_Pratchett",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Terry Pratchett",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Victor_Hugo",
+            "nl_value": "Victor Hugo",
+            "rdfs_label": "Victor Hugo",
+            "foaf_name": "Victor Hugo",
+            "dbpedia_uri": "http://dbpedia.org/resource/Victor_Hugo",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Victor Hugo",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Alexandre_Dumas",
+            "nl_value": "Alexandre Dumas",
+            "rdfs_label": "Alexandre Dumas",
+            "foaf_name": "Alexandre Dumas",
+            "dbpedia_uri": "http://dbpedia.org/resource/Alexandre_Dumas",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Alexandre Dumas",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Frank_Herbert",
+            "nl_value": "Frank Herbert",
+            "rdfs_label": "Frank Herbert",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Frank_Herbert",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "J._R._R._Tolkien",
+            "nl_value": "J. R. R. Tolkien",
+            "rdfs_label": "J. R. R. Tolkien",
+            "foaf_name": "J. R. R. Tolkien",
+            "dbpedia_uri": "http://dbpedia.org/resource/J._R._R._Tolkien",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "J. R. R. Tolkien",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Lewis_Carroll",
+            "nl_value": "Lewis Carroll",
+            "rdfs_label": "Lewis Carroll",
+            "foaf_name": "Lewis Carroll",
+            "dbpedia_uri": "http://dbpedia.org/resource/Lewis_Carroll",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Lewis Carroll",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Antoine_de_Saint-Exupéry",
+            "nl_value": "Antoine de Saint-Exupéry",
+            "rdfs_label": "Antoine de Saint-Exupéry",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Antoine_de_Saint-Exupéry",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": []
+        },
+        {
+            "id": "Arthur_Conan_Doyle",
+            "nl_value": "Arthur Conan Doyle",
+            "rdfs_label": "Arthur Conan Doyle",
+            "foaf_name": "Arthur Conan Doyle",
+            "dbpedia_uri": "http://dbpedia.org/resource/Arthur_Conan_Doyle",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Arthur Conan Doyle",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Maurice_Leblanc",
+            "nl_value": "Maurice Leblanc",
+            "rdfs_label": "Maurice Leblanc",
+            "foaf_name": "Maurice Leblanc",
+            "dbpedia_uri": "http://dbpedia.org/resource/Maurice_Leblanc",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Maurice Leblanc",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Umberto_Eco",
+            "nl_value": "Umberto Eco",
+            "rdfs_label": "أومبرتو إكو",
+            "foaf_name": "Umberto Eco",
+            "dbpedia_uri": "http://dbpedia.org/resource/Umberto_Eco",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Umberto Eco",
+                    "lang": "en"
+                }
+            ]
+        }
+    ]
+}

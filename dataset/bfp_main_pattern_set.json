@@ -1,0 +1,159 @@
+{
+    "head": {
+        "description": "This file contains natural language, web and SPARQL query patterns for querying a hybrid data sources.",
+        "data_source": [
+            "dbpedia",
+            "web_microdata_graph"
+        ],
+        "pivot_variable": "book",
+        "web_keyword": "purchase",
+        "total_patterns": 136
+    },
+    "patterns": [
+        {
+            "pattern_id": 1,
+            "en_query_pattern": "Give me websites about every book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?webAbout\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?webAbout md:containsThing ?book .\n        ?webAbout md:containsWord \"purchase\" .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 2,
+            "en_query_pattern": "Give me the availability of every book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 3,
+            "en_query_pattern": "Give me the description of every book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?description\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:description ?description .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 4,
+            "en_query_pattern": "Give me the price and availability of every book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:price ?price .\n  ?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 5,
+            "en_query_pattern": "Give me the books available for every book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:availability ?availability .\n        VALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n}\n        ?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 6,
+            "en_query_pattern": "Give me the price of the books available for every book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?bookName ?price\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n  ?offer schema:availability ?availability .\n        VALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n}\n        ?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 7,
+            "en_query_pattern": "Give me the price of the book whose title is [book] and whose author is [author]",
+            "hybrid_query_pattern": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book foaf:name [book] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 8,
+            "en_query_pattern": "Give me the publisher of the book whose title is [book] and whose author is [author]",
+            "hybrid_query_pattern": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book foaf:name [book] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 9,
+            "en_query_pattern": "Give me the description of the book whose title is [book] and whose author is [author]",
+            "hybrid_query_pattern": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?description\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book foaf:name [book] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:description ?description .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 10,
+            "en_query_pattern": "Give me the price and availability of the book whose title is [book] and whose author is [author]",
+            "hybrid_query_pattern": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book foaf:name [book] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:price ?price .\n  ?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 11,
+            "en_query_pattern": "Give me the books available for the book whose title is [book] and whose author is [author]",
+            "hybrid_query_pattern": "PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX dbr: <http://dbpedia.org/resource/>\nPREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book foaf:name [book] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:availability ?availability .\n        VALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n}\n        ?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 12,
+            "en_query_pattern": "Give me the availability of the first book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 13,
+            "en_query_pattern": "Give me the publisher of the first book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 14,
+            "en_query_pattern": "Give me the description of the first book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?description\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:description ?description .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 15,
+            "en_query_pattern": "Give me the price and availability of the first book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:price ?price .\n  ?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 16,
+            "en_query_pattern": "Give me the price of the books available for the first book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?bookName ?price\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n  ?offer schema:availability ?availability .\n        VALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n}\n        ?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 17,
+            "en_query_pattern": "Give me the price of the first 10 books whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 18,
+            "en_query_pattern": "Give me the availability of the first 10 books whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 19,
+            "en_query_pattern": "Give me the publisher of the first 10 books whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 20,
+            "en_query_pattern": "Give me the description of the first 10 books whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?description\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:description ?description .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 21,
+            "en_query_pattern": "Give me the books available for the first 10 books whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:availability ?availability .\n        VALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n}\n        ?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 22,
+            "en_query_pattern": "Give me websites about the last book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?webAbout\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?webAbout md:containsThing ?book .\n        ?webAbout md:containsWord \"purchase\" .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 23,
+            "en_query_pattern": "Give me the price of the last book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 24,
+            "en_query_pattern": "Give me the availability of the last book whose author is [author]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 25,
+            "en_query_pattern": "Give me the books available for every book whose author is [author] and published between [year1] and [year2]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book dbo:year ?year .\n        FILTER(?year >= [year1] && ?year <= [year2]) .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:availability ?availability .\n        VALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n}\n        ?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 26,
+            "en_query_pattern": "Give me websites about every book whose author is [author] and whose literary genre is [genre]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?webAbout\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book dbo:genre [genre] .\n?webAbout md:containsThing ?book .\n        ?webAbout md:containsWord \"purchase\" .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 27,
+            "en_query_pattern": "Give me the availability of every book whose author is [author] and whose literary genre is [genre]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?availability\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book dbo:genre [genre] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 28,
+            "en_query_pattern": "Give me the publisher of every book whose author is [author] and whose literary genre is [genre]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book dbo:genre [genre] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        },
+        {
+            "pattern_id": 29,
+            "en_query_pattern": "Give me the description of every book whose author is [author] and whose literary genre is [genre]",
+            "hybrid_query_pattern": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?offer ?description\n\nWHERE {\n\n?book a dbo:Book .\n        ?book dbo:author [author] .\n        ?book dbo:genre [genre] .\n?web md:containsThing ?book .\n        ?web md:containsWord \"purchase\" .\n        ?web md:hasMicrodata ?microdata .\n        ?microdata schema:offers ?offer .\n        ?offer schema:description ?description .\n\n}\nORDER BY ASC(?book)\nLIMIT 10"
+        }
+    ]
+}

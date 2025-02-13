@@ -1,0 +1,1300 @@
+{
+    "head": {
+        "description": "This file contains books entities extracted and verified from the input data.",
+        "total_entities": 93,
+        "valid_entities": 88,
+        "extraction_error_number": 5,
+        "extraction_error_percentage": 5,
+        "entity_type": "books"
+    },
+    "entities": [
+        {
+            "id": "Carpe_Jugulum",
+            "nl_value": "Carpe Jugulum",
+            "rdfs_label": "Carpe Jugulum",
+            "foaf_name": "Carpe Jugulum",
+            "dbpedia_uri": "http://dbpedia.org/resource/Carpe_Jugulum",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Carpe Jugulum",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Pyramids_(novel)",
+            "nl_value": "Pyramids (novel)",
+            "rdfs_label": "Pyramidy (Terry Pratchett)",
+            "foaf_name": "Pyramids",
+            "dbpedia_uri": "http://dbpedia.org/resource/Pyramids_(novel)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Pyramids",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Only_You_Can_Save_Mankind",
+            "nl_value": "Only You Can Save Mankind",
+            "rdfs_label": "Le Sauveur de l'humanité",
+            "foaf_name": "Only You Can Save Mankind",
+            "dbpedia_uri": "http://dbpedia.org/resource/Only_You_Can_Save_Mankind",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Only You Can Save Mankind",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Hogfather",
+            "nl_value": "Hogfather",
+            "rdfs_label": "Otec prasátek",
+            "foaf_name": "Hogfather",
+            "dbpedia_uri": "http://dbpedia.org/resource/Hogfather",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Hogfather",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Unseen_Academicals",
+            "nl_value": "Unseen Academicals",
+            "rdfs_label": "Nevídaní akademikové",
+            "foaf_name": "Unseen Academicals",
+            "dbpedia_uri": "http://dbpedia.org/resource/Unseen_Academicals",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Unseen Academicals",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Long_Utopia",
+            "nl_value": "The Long Utopia",
+            "rdfs_label": "The Long Utopia",
+            "foaf_name": "The Long Utopia",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Long_Utopia",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Long Utopia",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Maskerade",
+            "nl_value": "Maskerade",
+            "rdfs_label": "Maskerade",
+            "foaf_name": "Maskerade",
+            "dbpedia_uri": "http://dbpedia.org/resource/Maskerade",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Maskerade",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Men_at_Arms",
+            "nl_value": "Men at Arms",
+            "rdfs_label": "Muži ve zbrani",
+            "foaf_name": "Men at Arms",
+            "dbpedia_uri": "http://dbpedia.org/resource/Men_at_Arms",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Men at Arms",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Nation_(novel)",
+            "nl_value": "Nation (novel)",
+            "rdfs_label": "Nation (roman)",
+            "foaf_name": "Nation",
+            "dbpedia_uri": "http://dbpedia.org/resource/Nation_(novel)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Nation",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Carpet_People",
+            "nl_value": "The Carpet People",
+            "rdfs_label": "Kobercové",
+            "foaf_name": "The Carpet People",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Carpet_People",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Carpet People",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Demain_dès_l'aube",
+            "nl_value": "Demain dès l'aube",
+            "rdfs_label": "غدا، عند الفجر...",
+            "foaf_name": "Demain dès l'aube",
+            "dbpedia_uri": "http://dbpedia.org/resource/Demain_dès_l'aube",
+            "extraction_errors": [
+                "foaf:name not found"
+            ],
+            "foaf_name_list": [
+                {
+                    "value": "Demain dès l'aube",
+                    "lang": "fr"
+                }
+            ]
+        },
+        {
+            "id": "Odes_et_Ballades",
+            "nl_value": "Odes et Ballades",
+            "rdfs_label": "Odes et Ballades",
+            "foaf_name": "Odes et Ballades",
+            "dbpedia_uri": "http://dbpedia.org/resource/Odes_et_Ballades",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Odes et Ballades",
+                    "lang": "fr"
+                },
+                {
+                    "value": "Odes and Ballads",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Last_Day_of_a_Condemned_Man",
+            "nl_value": "The Last Day of a Condemned Man",
+            "rdfs_label": "آخر يوم لمحكوم عليه بالإعدام",
+            "foaf_name": "The Last Day of a Condemned Man",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Last_Day_of_a_Condemned_Man",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Last Day of a Condemned Man",
+                    "lang": "en"
+                },
+                {
+                    "value": "Le Dernier Jour d'un Condamné",
+                    "lang": "fr"
+                }
+            ]
+        },
+        {
+            "id": "Les_Misérables",
+            "nl_value": "Les Misérables",
+            "rdfs_label": "Les Misérables",
+            "foaf_name": "Les Misérables",
+            "dbpedia_uri": "http://dbpedia.org/resource/Les_Misérables",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Les Misérables",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Les_Feuilles_d'automne",
+            "nl_value": "Les Feuilles d'automne",
+            "rdfs_label": "Les Feuilles d'automne",
+            "foaf_name": "Les Feuilles d'automne",
+            "dbpedia_uri": "http://dbpedia.org/resource/Les_Feuilles_d'automne",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Les Feuilles d'automne",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Les_Rayons_et_les_Ombres",
+            "nl_value": "Les Rayons et les Ombres",
+            "rdfs_label": "Les Rayons et les Ombres",
+            "foaf_name": "Beams and Shadows",
+            "dbpedia_uri": "http://dbpedia.org/resource/Les_Rayons_et_les_Ombres",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Beams and Shadows",
+                    "lang": "en"
+                },
+                {
+                    "value": "Les rayons et les ombres",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Actes_et_Paroles",
+            "nl_value": "Actes et Paroles",
+            "rdfs_label": "Actes et Paroles",
+            "foaf_name": "Actes et Paroles",
+            "dbpedia_uri": "http://dbpedia.org/resource/Actes_et_Paroles",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Actes et Paroles",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Ninety-Three",
+            "nl_value": "Ninety-Three",
+            "rdfs_label": "ثلاثة وتسعون",
+            "foaf_name": "Ninety-Three",
+            "dbpedia_uri": "http://dbpedia.org/resource/Ninety-Three",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Ninety-Three",
+                    "lang": "en"
+                },
+                {
+                    "value": "Quatrevingt-treize",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Toilers_of_the_Sea",
+            "nl_value": "Toilers of the Sea",
+            "rdfs_label": "عمال البحر",
+            "foaf_name": "Les Travailleurs de la mer",
+            "dbpedia_uri": "http://dbpedia.org/resource/Toilers_of_the_Sea",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Les Travailleurs de la mer",
+                    "lang": "en"
+                },
+                {
+                    "value": "Toilers of the Sea",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Man_Who_Laughs",
+            "nl_value": "The Man Who Laughs",
+            "rdfs_label": "The Man Who Laughs",
+            "foaf_name": "The Man Who Laughs",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Man_Who_Laughs",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Man Who Laughs",
+                    "lang": "en"
+                },
+                {
+                    "value": "L'Homme qui rit",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Three_Musketeers",
+            "nl_value": "The Three Musketeers",
+            "rdfs_label": "The Three Musketeers",
+            "foaf_name": "The Three Musketeers",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Three_Musketeers",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Three Musketeers",
+                    "lang": "en"
+                },
+                {
+                    "value": "Les Trois Mousquetaires",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "La_Dame_de_Monsoreau",
+            "nl_value": "La Dame de Monsoreau",
+            "rdfs_label": "La Dame de Monsoreau",
+            "foaf_name": "La Dame de Monsoreau",
+            "dbpedia_uri": "http://dbpedia.org/resource/La_Dame_de_Monsoreau",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "La Dame de Monsoreau",
+                    "lang": "en"
+                },
+                {
+                    "value": "La Dame de Montsoreau",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "La_Reine_Margot_(novel)",
+            "nl_value": "La Reine Margot (novel)",
+            "rdfs_label": "Královna Margot (román)",
+            "foaf_name": "La Reine Margot",
+            "dbpedia_uri": "http://dbpedia.org/resource/La_Reine_Margot_(novel)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "La Reine Margot",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "La_Sanfelice",
+            "nl_value": "La Sanfelice",
+            "rdfs_label": "La Sanfelice",
+            "foaf_name": "La Sanfelice",
+            "dbpedia_uri": "http://dbpedia.org/resource/La_Sanfelice",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "La Sanfelice",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Twenty_Years_After",
+            "nl_value": "Twenty Years After",
+            "rdfs_label": "Twenty Years After",
+            "foaf_name": "Twenty Years After",
+            "dbpedia_uri": "http://dbpedia.org/resource/Twenty_Years_After",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Twenty Years After",
+                    "lang": "en"
+                },
+                {
+                    "value": "Vingt ans après",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Captain_Pamphile",
+            "nl_value": "Captain Pamphile",
+            "rdfs_label": "Captain Pamphile",
+            "foaf_name": "Captain Pamphile",
+            "dbpedia_uri": "http://dbpedia.org/resource/Captain_Pamphile",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Captain Pamphile",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Count_of_Monte_Cristo",
+            "nl_value": "The Count of Monte Cristo",
+            "rdfs_label": "The Count of Monte Cristo",
+            "foaf_name": "The Count of Monte Cristo",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Count_of_Monte_Cristo",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Count of Monte Cristo",
+                    "lang": "en"
+                },
+                {
+                    "value": "Monte-Cristo",
+                    "lang": "en"
+                },
+                {
+                    "value": "Le Comte de",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Queen's_Necklace",
+            "nl_value": "The Queen's Necklace",
+            "rdfs_label": "Královnin náhrdelník",
+            "foaf_name": "The Queen's Necklace",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Queen's_Necklace",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Queen's Necklace",
+                    "lang": "en"
+                },
+                {
+                    "value": "Le Collier de la reine",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_New_Troy",
+            "nl_value": "The New Troy",
+            "rdfs_label": "Montevideo o la Nueva Troya",
+            "foaf_name": "Montevideo, or the new Troy",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_New_Troy",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Montevideo, or the new Troy",
+                    "lang": "en"
+                },
+                {
+                    "value": "Montevideo, ou une nouvelle Troie",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Forty-Five_Guardsmen",
+            "nl_value": "The Forty-Five Guardsmen",
+            "rdfs_label": "Králův šašek",
+            "foaf_name": "Les Quarante-cinq",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Forty-Five_Guardsmen",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Les Quarante-cinq",
+                    "lang": "en"
+                },
+                {
+                    "value": "The Forty-Five Guardsmen",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Destination:_Void",
+            "nl_value": "Destination: Void",
+            "rdfs_label": "الوجهة:فراغ",
+            "foaf_name": "Destination: Void",
+            "dbpedia_uri": "http://dbpedia.org/resource/Destination:_Void",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Destination: Void",
+                    "lang": "en"
+                },
+                {
+                    "value": "Do I Wake or Dream?",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Dune_Messiah",
+            "nl_value": "Dune Messiah",
+            "rdfs_label": "El messies de Dune",
+            "foaf_name": "Dune Messiah",
+            "dbpedia_uri": "http://dbpedia.org/resource/Dune_Messiah",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Dune Messiah",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Children_of_Dune",
+            "nl_value": "Children of Dune",
+            "rdfs_label": "Children of Dune",
+            "foaf_name": "Children of Dune",
+            "dbpedia_uri": "http://dbpedia.org/resource/Children_of_Dune",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Children of Dune",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Green_Brain",
+            "nl_value": "The Green Brain",
+            "rdfs_label": "Le Cerveau vert",
+            "foaf_name": "The Green Brain",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Green_Brain",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Green Brain",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Priests_of_Psi",
+            "nl_value": "The Priests of Psi",
+            "rdfs_label": "The Priests of Psi",
+            "foaf_name": "The Priests of Psi",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Priests_of_Psi",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Priests of Psi",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Whipping_Star",
+            "nl_value": "Whipping Star",
+            "rdfs_label": "Estrella flagelada",
+            "foaf_name": "Whipping Star",
+            "dbpedia_uri": "http://dbpedia.org/resource/Whipping_Star",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Whipping Star",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Hellstrom's_Hive",
+            "nl_value": "Hellstrom's Hive",
+            "rdfs_label": "Hellstrom's Hive",
+            "foaf_name": "Hellstrom's Hive",
+            "dbpedia_uri": "http://dbpedia.org/resource/Hellstrom's_Hive",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Hellstrom's Hive",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Dune_(novel)",
+            "nl_value": "Dune (novel)",
+            "rdfs_label": "كثيب (رواية)",
+            "foaf_name": "Dune",
+            "dbpedia_uri": "http://dbpedia.org/resource/Dune_(novel)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Dune",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Angels'_Fall",
+            "nl_value": "Angels' Fall",
+            "rdfs_label": "Angels' Fall",
+            "foaf_name": "Angels' Fall",
+            "dbpedia_uri": "http://dbpedia.org/resource/Angels'_Fall",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Angels' Fall",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Direct_Descent",
+            "nl_value": "Direct Descent",
+            "rdfs_label": "Direct Descent",
+            "foaf_name": "Direct Descent",
+            "dbpedia_uri": "http://dbpedia.org/resource/Direct_Descent",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Direct Descent",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Morgoth's_Ring",
+            "nl_value": "Morgoth's Ring",
+            "rdfs_label": "El anillo de Morgoth",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/Morgoth's_Ring",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "",
+                    "lang": "en"
+                },
+                {
+                    "value": "Morgoth's Ring",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "On_Fairy-Stories",
+            "nl_value": "On Fairy-Stories",
+            "rdfs_label": "On Fairy-Stories",
+            "foaf_name": "On Fairy-Stories",
+            "dbpedia_uri": "http://dbpedia.org/resource/On_Fairy-Stories",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "On Fairy-Stories",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_War_of_the_Jewels",
+            "nl_value": "The War of the Jewels",
+            "rdfs_label": "حرب الجواهر",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_War_of_the_Jewels",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "",
+                    "lang": "en"
+                },
+                {
+                    "value": "The War of the Jewels",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Lost_Road_and_Other_Writings",
+            "nl_value": "The Lost Road and Other Writings",
+            "rdfs_label": "الطريق المفقود وكتابات أخرى",
+            "foaf_name": "",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Lost_Road_and_Other_Writings",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "",
+                    "lang": "en"
+                },
+                {
+                    "value": "The Lost Road and Other Writings – Language and Legend before 'The Lord of the Rings'",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Lord_of_the_Rings",
+            "nl_value": "The Lord of the Rings",
+            "rdfs_label": "The Lord of the Rings",
+            "foaf_name": "The Lord of the Rings",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Lord_of_the_Rings",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Lord of the Rings",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Beowulf_and_the_Critics",
+            "nl_value": "Beowulf and the Critics",
+            "rdfs_label": "Beowulf and the Critics",
+            "foaf_name": "Beowulf and the Critics",
+            "dbpedia_uri": "http://dbpedia.org/resource/Beowulf_and_the_Critics",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Beowulf and the Critics",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Beren_and_Lúthien",
+            "nl_value": "Beren and Lúthien",
+            "rdfs_label": "Beren and Lúthien",
+            "foaf_name": "Beren and Lúthien",
+            "dbpedia_uri": "http://dbpedia.org/resource/Beren_and_Lúthien",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Beren and Lúthien",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Two_Towers",
+            "nl_value": "The Two Towers",
+            "rdfs_label": "The Two Towers",
+            "foaf_name": "The Two Towers",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Two_Towers",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Two Towers",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Monsters_and_the_Critics,_and_Other_Essays",
+            "nl_value": "The Monsters and the Critics, and Other Essays",
+            "rdfs_label": "Los monstruos y los críticos y otros ensayos",
+            "foaf_name": "The Monsters and the Critics, and Other Essays",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Monsters_and_the_Critics,_and_Other_Essays",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Monsters and the Critics, and Other Essays",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Farmer_Giles_of_Ham",
+            "nl_value": "Farmer Giles of Ham",
+            "rdfs_label": "المزارع غايل من هام",
+            "foaf_name": "Farmer Giles of Ham",
+            "dbpedia_uri": "http://dbpedia.org/resource/Farmer_Giles_of_Ham",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Farmer Giles of Ham",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable",
+            "nl_value": "Alice's Adventures in Wonderland Retold in Words of One Syllable",
+            "rdfs_label": "Alice's Adventures in Wonderland Retold in Words of One Syllable",
+            "foaf_name": "Alice's Adventures in Wonderland retold in words of one syllable",
+            "dbpedia_uri": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland_Retold_in_Words_of_One_Syllable",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Alice's Adventures in Wonderland retold in words of one syllable",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Sylvie_and_Bruno",
+            "nl_value": "Sylvie and Bruno",
+            "rdfs_label": "سيلفي وبرونو",
+            "foaf_name": "Sylvie and Bruno",
+            "dbpedia_uri": "http://dbpedia.org/resource/Sylvie_and_Bruno",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Sylvie and Bruno",
+                    "lang": "en"
+                },
+                {
+                    "value": "Sylvie and Bruno Concluded",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Through_the_Looking-Glass",
+            "nl_value": "Through the Looking-Glass",
+            "rdfs_label": "Through the Looking-Glass",
+            "foaf_name": "Through the Looking-Glass",
+            "dbpedia_uri": "http://dbpedia.org/resource/Through_the_Looking-Glass",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Through the Looking-Glass",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Alice's_Adventures_in_Wonderland",
+            "nl_value": "Alice's Adventures in Wonderland",
+            "rdfs_label": "Alice's Adventures in Wonderland",
+            "foaf_name": "Alice's Adventures in Wonderland",
+            "dbpedia_uri": "http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Alice's Adventures in Wonderland",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Hunting_of_the_Snark",
+            "nl_value": "The Hunting of the Snark",
+            "rdfs_label": "The Hunting of the Snark",
+            "foaf_name": "The_Hunting_of_the_Snark",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Hunting_of_the_Snark",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The_Hunting_of_the_Snark",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "A_Tangled_Tale",
+            "nl_value": "A Tangled Tale",
+            "rdfs_label": "A Tangled Tale",
+            "foaf_name": "A Tangled Tale",
+            "dbpedia_uri": "http://dbpedia.org/resource/A_Tangled_Tale",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "A Tangled Tale",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Nursery_%22Alice%22",
+            "nl_value": "The Nursery %22Alice%22",
+            "rdfs_label": "The Nursery “Alice”",
+            "foaf_name": "The Nursery “Alice”",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Nursery_%22Alice%22",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Nursery “Alice”",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Night_Flight_(novel)",
+            "nl_value": "Night Flight (novel)",
+            "rdfs_label": "Noční let",
+            "foaf_name": "Night Flight",
+            "dbpedia_uri": "http://dbpedia.org/resource/Night_Flight_(novel)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Night Flight",
+                    "lang": "en"
+                },
+                {
+                    "value": "Vol de Nuit",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Little_Prince",
+            "nl_value": "The Little Prince",
+            "rdfs_label": "The Little Prince",
+            "foaf_name": "The Little Prince",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Little_Prince",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Little Prince",
+                    "lang": "en"
+                },
+                {
+                    "value": "Le Petit Prince",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Courrier_sud_(novel)",
+            "nl_value": "Courrier sud (novel)",
+            "rdfs_label": "بريد الجنوب",
+            "foaf_name": "Courrier sud",
+            "dbpedia_uri": "http://dbpedia.org/resource/Courrier_sud_(novel)",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Courrier sud",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Micah_Clarke",
+            "nl_value": "Micah Clarke",
+            "rdfs_label": "ميخا كلارك",
+            "foaf_name": "Micah Clarke",
+            "dbpedia_uri": "http://dbpedia.org/resource/Micah_Clarke",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Micah Clarke",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Land_of_Mist",
+            "nl_value": "The Land of Mist",
+            "rdfs_label": "أرض الضباب",
+            "foaf_name": "The Land of Mist",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Land_of_Mist",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Land of Mist",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Stark_Munro_Letters",
+            "nl_value": "The Stark Munro Letters",
+            "rdfs_label": "The Stark Munro Letters",
+            "foaf_name": "The Stark Munro Letters",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Stark_Munro_Letters",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Stark Munro Letters",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Sign_of_the_Four",
+            "nl_value": "The Sign of the Four",
+            "rdfs_label": "علامة الأربعة",
+            "foaf_name": "The Sign of the Four",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Sign_of_the_Four",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Sign of the Four",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Sir_Nigel",
+            "nl_value": "Sir Nigel",
+            "rdfs_label": "السير نايجل",
+            "foaf_name": "Sir Nigel",
+            "dbpedia_uri": "http://dbpedia.org/resource/Sir_Nigel",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Sir Nigel",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "How_It_Happened",
+            "nl_value": "How It Happened",
+            "rdfs_label": "How It Happened",
+            "foaf_name": "How it happened",
+            "dbpedia_uri": "http://dbpedia.org/resource/How_It_Happened",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "How it happened",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Hound_of_the_Baskervilles",
+            "nl_value": "The Hound of the Baskervilles",
+            "rdfs_label": "كلب آل باسكرفيل",
+            "foaf_name": "The Hound of the Baskervilles",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Hound_of_the_Baskervilles",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Hound of the Baskervilles",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "His_Last_Bow",
+            "nl_value": "His Last Bow",
+            "rdfs_label": "قوسه الأخير",
+            "foaf_name": "His Last Bow",
+            "dbpedia_uri": "http://dbpedia.org/resource/His_Last_Bow",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "His Last Bow",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_New_Annotated_Sherlock_Holmes",
+            "nl_value": "The New Annotated Sherlock Holmes",
+            "rdfs_label": "The New Annotated Sherlock Holmes",
+            "foaf_name": "The New Annotated Sherlock Holmes",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_New_Annotated_Sherlock_Holmes",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The New Annotated Sherlock Holmes",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "A_Study_in_Scarlet",
+            "nl_value": "A Study in Scarlet",
+            "rdfs_label": "A Study in Scarlet",
+            "foaf_name": "A Study in Scarlet",
+            "dbpedia_uri": "http://dbpedia.org/resource/A_Study_in_Scarlet",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "A Study in Scarlet",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Arsène_Lupin,_Gentleman_Burglar",
+            "nl_value": "Arsène Lupin, Gentleman Burglar",
+            "rdfs_label": "Arsène Lupin, Gentleman Burglar",
+            "foaf_name": "Arsène Lupin, Gentleman Burglar",
+            "dbpedia_uri": "http://dbpedia.org/resource/Arsène_Lupin,_Gentleman_Burglar",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Arsène Lupin, Gentleman Burglar",
+                    "lang": "en"
+                },
+                {
+                    "value": "Arsène Lupin, gentleman-cambrioleur",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Arsène_Lupin_versus_Herlock_Sholmes",
+            "nl_value": "Arsène Lupin versus Herlock Sholmes",
+            "rdfs_label": "أرسين لوبين ضد هرلوك شولمز",
+            "foaf_name": "Arsène Lupin contre Herlock Sholmès",
+            "dbpedia_uri": "http://dbpedia.org/resource/Arsène_Lupin_versus_Herlock_Sholmes",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Arsène Lupin contre Herlock Sholmès",
+                    "lang": "en"
+                },
+                {
+                    "value": "Arsène Lupin versus Herlock Sholmès",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Island_of_Thirty_Coffins",
+            "nl_value": "The Island of Thirty Coffins",
+            "rdfs_label": "جزيرة الثلاثين تابوتا",
+            "foaf_name": "The Island of Thirty Coffins / The Secret of Sarek",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Island_of_Thirty_Coffins",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Island of Thirty Coffins / The Secret of Sarek",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Hollow_Needle",
+            "nl_value": "The Hollow Needle",
+            "rdfs_label": "الإبرة المجوفة",
+            "foaf_name": "The Hollow Needle (French: L'Aiguille creuse)",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Hollow_Needle",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Hollow Needle (French: L'Aiguille creuse)",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Belief_or_Nonbelief%3F",
+            "nl_value": "Belief or Nonbelief%3F",
+            "rdfs_label": "Belief or Nonbelief?",
+            "foaf_name": "Belief or Nonbelief?",
+            "dbpedia_uri": "http://dbpedia.org/resource/Belief_or_Nonbelief%3F",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Belief or Nonbelief?",
+                    "lang": "en"
+                },
+                {
+                    "value": "In cosa crede chi non crede?",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Numero_Zero",
+            "nl_value": "Numero Zero",
+            "rdfs_label": "Número zero",
+            "foaf_name": "Numero Zero",
+            "dbpedia_uri": "http://dbpedia.org/resource/Numero_Zero",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Numero Zero",
+                    "lang": "en"
+                },
+                {
+                    "value": "Numero zero",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Island_of_the_Day_Before",
+            "nl_value": "The Island of the Day Before",
+            "rdfs_label": "L'illa de despús-ahir",
+            "foaf_name": "The Island of the Day Before",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Island_of_the_Day_Before",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Island of the Day Before",
+                    "lang": "en"
+                },
+                {
+                    "value": "L’isola del giorno prima",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Mysterious_Flame_of_Queen_Loana",
+            "nl_value": "The Mysterious Flame of Queen Loana",
+            "rdfs_label": "La misteriosa flama de la reina Loana",
+            "foaf_name": "The Mysterious Flame of Queen Loana",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Mysterious_Flame_of_Queen_Loana",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Mysterious Flame of Queen Loana",
+                    "lang": "en"
+                },
+                {
+                    "value": "La Misteriosa fiamma della Regina Loana",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Baudolino",
+            "nl_value": "Baudolino",
+            "rdfs_label": "Baudolino",
+            "foaf_name": "Baudolino",
+            "dbpedia_uri": "http://dbpedia.org/resource/Baudolino",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Baudolino",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Foucault's_Pendulum",
+            "nl_value": "Foucault's Pendulum",
+            "rdfs_label": "El pèndol de Foucault",
+            "foaf_name": "Foucault's Pendulum",
+            "dbpedia_uri": "http://dbpedia.org/resource/Foucault's_Pendulum",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Foucault's Pendulum",
+                    "lang": "en"
+                },
+                {
+                    "value": "Il pendolo di Foucault",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Name_of_the_Rose",
+            "nl_value": "The Name of the Rose",
+            "rdfs_label": "The Name of the Rose",
+            "foaf_name": "The Name of the Rose",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Name_of_the_Rose",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "The Name of the Rose",
+                    "lang": "en"
+                },
+                {
+                    "value": "",
+                    "lang": "en"
+                },
+                {
+                    "value": "Il nome della rosa",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "The_Prague_Cemetery",
+            "nl_value": "The Prague Cemetery",
+            "rdfs_label": "El cementiri de Praga",
+            "foaf_name": "Il cimitero di Praga",
+            "dbpedia_uri": "http://dbpedia.org/resource/The_Prague_Cemetery",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Il cimitero di Praga",
+                    "lang": "en"
+                },
+                {
+                    "value": "The Prague Cemetery",
+                    "lang": "en"
+                }
+            ]
+        },
+        {
+            "id": "Six_Walks_in_the_Fictional_Woods",
+            "nl_value": "Six Walks in the Fictional Woods",
+            "rdfs_label": "Šest procházek literárními lesy",
+            "foaf_name": "Six Walks in the Fictional Woods",
+            "dbpedia_uri": "http://dbpedia.org/resource/Six_Walks_in_the_Fictional_Woods",
+            "extraction_errors": [],
+            "foaf_name_list": [
+                {
+                    "value": "Six Walks in the Fictional Woods",
+                    "lang": "en"
+                }
+            ]
+        }
+    ]
+}
