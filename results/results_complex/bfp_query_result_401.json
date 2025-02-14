@@ -14,7 +14,7 @@
             "exec_mode": "cold",
             "WEB_QUERY_MAX": null
         },
-        "processing_total_time": 69.51512479782104
+        "processing_total_time": 77.6360092163086
     },
     "queries": [
         {
@@ -42,11 +42,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nad91850b64eb42ecb1beb0d410e2f973"
+                            "value": "N98aa0ae883bd4be48db262ae419003e0"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nc2ec62be1d21431fa1370247c83c9917"
+                            "value": "Ne0659c078c8c436e97a37a37baa13940"
                         },
                         "bookName": {
                             "type": "uri",
@@ -64,11 +64,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N7bb1964d927b4e1dac9cb4a55176ec78"
+                            "value": "N93b9ad878a1747beba8386760f78f13e"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nf11930b1ab844548a53341f11caa6199"
+                            "value": "Nf6c8bfc2135648c78e08c2b40c607ed9"
                         },
                         "bookName": {
                             "type": "uri",
@@ -86,11 +86,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nbb48a1f6805b45cf88bc62aca8b8b98d"
+                            "value": "Nb82bb85d7ad646eaae49a865997247f2"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N84be2321bd994ed4b12195a931a7a297"
+                            "value": "Na3dcddb222f44b6e82420243e737343c"
                         },
                         "bookName": {
                             "type": "uri",
@@ -108,11 +108,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Ne9418c69cb8347c7a360d3f2eb9c5f27"
+                            "value": "N9e1d6dee3f68498f857de27638d2f08b"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N8223cd317ed14b14a695067687aaf3aa"
+                            "value": "N22d51b48eacb4bca8a4cb745e520823b"
                         },
                         "bookName": {
                             "type": "uri",
@@ -130,11 +130,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nb394942d51ed4638a44b32b2895d8ea1"
+                            "value": "N8c1ff688564c4fbd8803cf11f74998b6"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Neeec54d442514f1f9b4feed1fb3ca5dc"
+                            "value": "Nac3ce1a2a2e94420b3635a574d090513"
                         },
                         "bookName": {
                             "type": "uri",
@@ -152,11 +152,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N10132c20886f4f359cf2a0e1939d1b7a"
+                            "value": "Nfe46bf1de8014fbd8d6447ef21105005"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nf4862a998f1342bf882b7ee9bf87f95f"
+                            "value": "N4618071700a94b678a716850546f0187"
                         },
                         "bookName": {
                             "type": "uri",
@@ -172,44 +172,44 @@
                 "number_of_extracted_microdata": 9,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 1.6111512184143066,
+            "evaluation_time": 6.0560948848724365,
             "processing_times": {
-                "query_decomposition": 0.04919147491455078,
-                "static_query_evakluation": 0.0904684066772461,
-                "web_data_retrieval": 4.6833860874176025,
-                "dynamic_query_evaluation": 0.006956338882446289,
-                "result_merge": 0.0007405281066894531,
-                "total": 4.830742835998535
+                "query_decomposition": 0.07384896278381348,
+                "static_query_evakluation": 3.8122143745422363,
+                "web_data_retrieval": 5.3719518184661865,
+                "dynamic_query_evaluation": 0.0071125030517578125,
+                "result_merge": 0.0008149147033691406,
+                "total": 9.265942573547363
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.002597808837890625,
-                    "searches": 3.2677087783813477,
-                    "web_formatting": 0.00048732757568359375,
-                    "total": 3.270793914794922
+                    "init": 0.014469623565673828,
+                    "searches": 3.267709255218506,
+                    "web_formatting": 0.0010676383972167969,
+                    "total": 3.2832465171813965
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 4.291534423828125e-06,
+                    "updater_init": 1.0728836059570312e-05,
                     "graph_computing": {
-                        "extraction": 0.0002334117889404297,
-                        "building": 1.421095371246338,
-                        "builder_init": 0.004067659378051758,
-                        "microdata_adding": 1.4123587608337402,
-                        "total": 1.4280648231506348
+                        "extraction": 0.0002219676971435547,
+                        "building": 2.097546100616455,
+                        "builder_init": 0.004287004470825195,
+                        "microdata_adding": 2.0884833335876465,
+                        "total": 2.117954969406128
                     },
-                    "property_access_init": 0.007189750671386719,
-                    "properties_update": 0.00039649009704589844,
-                    "total": 1.4356770515441895
+                    "property_access_init": 0.007199764251708984,
+                    "properties_update": 0.000423431396484375,
+                    "total": 2.125609874725342
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 3.270793914794922,
-                    "microdata_extraction": 0.0002334117889404297,
-                    "storing": 1.4123587608337402,
-                    "total": 4.6833860874176025
+                    "url_finding": 3.2832465171813965,
+                    "microdata_extraction": 0.0002219676971435547,
+                    "storing": 2.0884833335876465,
+                    "total": 5.3719518184661865
                 },
-                "microdata_query_evaluation": 0.006899833679199219,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.007056236267089844,
+                "microdata_stats_computing": 1.430511474609375e-06
             }
         },
         {
@@ -237,11 +237,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N42f165b525854550939f018102c9273c"
+                            "value": "Naa1701b6e15b4426bb5ec50e2b0190a2"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N2ff3858445dc4f9eaf7b0f0142925c7b"
+                            "value": "N1b311a2e5d6c41dd91291c698ad88f75"
                         },
                         "price": {
                             "type": "uri",
@@ -259,11 +259,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Ne090a686420344bc85318d5b77c009b8"
+                            "value": "N9d5ddb7d731c4a27a8273202546df117"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Ncc5bd2758ae4491ba15071a9b46b6063"
+                            "value": "N7856eb0d496a4554905e06b2fd959084"
                         },
                         "price": {
                             "type": "uri",
@@ -281,11 +281,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N3b47a760b56846df9463afd2e60b7519"
+                            "value": "N648385be6da44187b6832c75f5f939c8"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nc17a78b9821c420eae90120305e2cf5d"
+                            "value": "Nee9c9e5f6de84b5ca6e0bb192cb72335"
                         },
                         "price": {
                             "type": "uri",
@@ -303,11 +303,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Ne4343571211046d19ef36778084bff73"
+                            "value": "N009acfda5e0e43a1bc7893a9594a165a"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Ne07657a661c340d2a61ea8d97253ab42"
+                            "value": "N447b1c5f2c9445718ed35fa8e5ba567a"
                         },
                         "price": {
                             "type": "uri",
@@ -325,11 +325,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N55e94598426c470c92aee470eb680e9a"
+                            "value": "N2c02eb9226424d8299f06c09f4636d52"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nf52aa18038e94941a75d2c7fabfdfe19"
+                            "value": "N0bd60c30d2f2426ca428062e72bcd418"
                         },
                         "price": {
                             "type": "uri",
@@ -347,11 +347,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N01f42d7f080b4b7a8bb7fd091a6c4b32"
+                            "value": "Ndb47e8261f3d4ba4a085a13e9f9b5140"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nbd8fb52409b24219b93c53dd6df4ac02"
+                            "value": "N7a4120a2cbb044eaa52ab5b1ce5a74e2"
                         },
                         "price": {
                             "type": "uri",
@@ -367,51 +367,51 @@
                 "number_of_extracted_microdata": 9,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 1.66506028175354,
+            "evaluation_time": 11.426101684570312,
             "processing_times": {
-                "query_decomposition": 0.05137205123901367,
-                "static_query_evakluation": 0.10312056541442871,
-                "web_data_retrieval": 4.724315881729126,
-                "dynamic_query_evaluation": 0.007430315017700195,
-                "result_merge": 0.0006628036499023438,
-                "total": 4.886901617050171
+                "query_decomposition": 0.04795098304748535,
+                "static_query_evakluation": 9.248535394668579,
+                "web_data_retrieval": 5.3475751876831055,
+                "dynamic_query_evaluation": 0.0068073272705078125,
+                "result_merge": 0.001813650131225586,
+                "total": 14.652682542800903
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.004214048385620117,
-                    "searches": 3.2677087783813477,
-                    "web_formatting": 0.0007891654968261719,
-                    "total": 3.272711992263794
+                    "init": 0.0035839080810546875,
+                    "searches": 3.267709255218506,
+                    "web_formatting": 0.0007977485656738281,
+                    "total": 3.2720909118652344
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.9604644775390625e-06,
+                    "updater_init": 7.62939453125e-06,
                     "graph_computing": {
-                        "extraction": 0.00024437904357910156,
-                        "building": 1.4611823558807373,
-                        "builder_init": 0.004781007766723633,
-                        "microdata_adding": 1.451359510421753,
-                        "total": 1.4676454067230225
+                        "extraction": 0.0002474784851074219,
+                        "building": 2.086059093475342,
+                        "builder_init": 0.004828691482543945,
+                        "microdata_adding": 2.0752367973327637,
+                        "total": 2.0943431854248047
                     },
-                    "property_access_init": 0.006990909576416016,
-                    "properties_update": 0.00038933753967285156,
-                    "total": 1.475050449371338
+                    "property_access_init": 0.0071527957916259766,
+                    "properties_update": 0.0004127025604248047,
+                    "total": 2.101940631866455
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 3.272711992263794,
-                    "microdata_extraction": 0.00024437904357910156,
-                    "storing": 1.451359510421753,
-                    "total": 4.724315881729126
+                    "url_finding": 3.2720909118652344,
+                    "microdata_extraction": 0.0002474784851074219,
+                    "storing": 2.0752367973327637,
+                    "total": 5.3475751876831055
                 },
-                "microdata_query_evaluation": 0.007373809814453125,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.00675201416015625,
+                "microdata_stats_computing": 1.1920928955078125e-06
             }
         },
         {
             "query_id": 84,
             "pattern_id": 11,
             "en_query": "Give me the price of the first book whose author is Maurice Leblanc",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 1",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -432,11 +432,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nba307d01673848a3bdcad48f5942fa49"
+                            "value": "N5a09ee08198047bf949088965616bde3"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N8f943cebd50345c780f9910ce2b16fef"
+                            "value": "Nff9f0263c4ac4155a17890c0b5a44592"
                         },
                         "price": {
                             "type": "uri",
@@ -454,11 +454,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N8a0ad0565ac64de999e7aee412732074"
+                            "value": "N2f97bd692edc463eb0cb5dd9344c83db"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N8b66f5c3f0ae4753950fa1741537bec0"
+                            "value": "N27f5f7d464d840489bb064464d7ea2db"
                         },
                         "price": {
                             "type": "uri",
@@ -476,11 +476,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N0e1d70ef7a4649eab468e041898f12a0"
+                            "value": "Neead1cab655f4ce190357a916389936a"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N5b4de207de6e4b7db88daa60493064d1"
+                            "value": "N110600567a47464b8a974f32aa503a81"
                         },
                         "price": {
                             "type": "uri",
@@ -498,11 +498,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Ne39f25d16b24420488506c093163e56c"
+                            "value": "N8b1705e491284348afcbb2ad389ac8b3"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N5397e1c204f3477da423da317c15cff6"
+                            "value": "Nc684df76ce574ed5b8d482dbdc55835f"
                         },
                         "price": {
                             "type": "uri",
@@ -520,11 +520,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N89fd0a17fedc4e4687da2bf1e92a0e84"
+                            "value": "N075809687dfa4b098a3be9298d06d648"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nd6cf00f9a3c44f9ca725fea26680ddf0"
+                            "value": "N383ed6b66cae40e3ba6dc1c96c4d8b15"
                         },
                         "price": {
                             "type": "uri",
@@ -542,11 +542,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N4daa6eda8fae4a6b85b9ba3feecabbe3"
+                            "value": "Nc4ff58a4a25044a3b997d763860f1421"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Ned2751989382469a80929e0a20932f27"
+                            "value": "N741e47a195824cb38b742c00ce31044e"
                         },
                         "price": {
                             "type": "uri",
@@ -557,56 +557,56 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 4,
-                "number_of_web_results": 120,
-                "number_of_extracted_microdata": 36,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 9,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 6.051925897598267,
+            "evaluation_time": 10.352895498275757,
             "processing_times": {
-                "query_decomposition": 0.03657221794128418,
-                "static_query_evakluation": 0.11264920234680176,
-                "web_data_retrieval": 18.571268320083618,
-                "dynamic_query_evaluation": 0.007647275924682617,
-                "result_merge": 0.0007822513580322266,
-                "total": 18.72891926765442
+                "query_decomposition": 0.0787045955657959,
+                "static_query_evakluation": 8.039415121078491,
+                "web_data_retrieval": 5.459867477416992,
+                "dynamic_query_evaluation": 0.00628662109375,
+                "result_merge": 0.0007262229919433594,
+                "total": 13.585000038146973
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.003957033157348633,
-                    "searches": 12.774705410003662,
-                    "web_formatting": 0.0021409988403320312,
-                    "total": 12.780803442001343
+                    "init": 0.003683805465698242,
+                    "searches": 3.2677090167999268,
+                    "web_formatting": 0.000522613525390625,
+                    "total": 3.2719154357910156
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 4.76837158203125e-06,
+                    "updater_init": 5.0067901611328125e-06,
                     "graph_computing": {
-                        "extraction": 0.0017883777618408203,
-                        "building": 5.82133936882019,
-                        "builder_init": 0.014714479446411133,
-                        "microdata_adding": 5.788676500320435,
-                        "total": 5.846419334411621
+                        "extraction": 0.00021147727966308594,
+                        "building": 2.196575164794922,
+                        "builder_init": 0.004100322723388672,
+                        "microdata_adding": 2.1877405643463135,
+                        "total": 2.2030248641967773
                     },
-                    "property_access_init": 0.023819446563720703,
-                    "properties_update": 0.0015208721160888672,
-                    "total": 5.8717875480651855
+                    "property_access_init": 0.006971836090087891,
+                    "properties_update": 0.00040912628173828125,
+                    "total": 2.2104287147521973
                 },
                 "web_microdata_graph_update": 4.76837158203125e-07,
                 "web_data_retrieval": {
-                    "url_finding": 12.780803442001343,
-                    "microdata_extraction": 0.0017883777618408203,
-                    "storing": 5.788676500320435,
-                    "total": 18.571268320083618
+                    "url_finding": 3.2719154357910156,
+                    "microdata_extraction": 0.00021147727966308594,
+                    "storing": 2.1877405643463135,
+                    "total": 5.459867477416992
                 },
-                "microdata_query_evaluation": 0.007468223571777344,
-                "microdata_stats_computing": 7.152557373046875e-07
+                "microdata_query_evaluation": 0.0062351226806640625,
+                "microdata_stats_computing": 4.76837158203125e-07
             }
         },
         {
             "query_id": 85,
             "pattern_id": 12,
             "en_query": "Give me the price and availability of the first book whose author is Maurice Leblanc",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 1",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -628,11 +628,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N1f2dd5fa83844750a6d434398d6efcd2"
+                            "value": "N2c70621401674b429401831b13def3a5"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nef213be20feb42a8b66909189655b0e3"
+                            "value": "N345580e3ddf6419083c1f5a7f90f1fc1"
                         },
                         "price": {
                             "type": "uri",
@@ -654,11 +654,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N4179dc83f6034952aca805d5b2f45e25"
+                            "value": "Nbf46142877b049c99c8af7581c176006"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N30dcff932a004733bd906de4c63cc936"
+                            "value": "N2ce1ef17586c48ab84d54aacfcbf2cee"
                         },
                         "price": {
                             "type": "uri",
@@ -680,11 +680,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N96f67b00794a4e5c9b758c7c87d71a9d"
+                            "value": "N83846912d0134a0aa439300d8ae09e07"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N093abafeb9d04a2093aabba2ecc10b8d"
+                            "value": "N3fb21654d21e480b88d9857b554816d5"
                         },
                         "price": {
                             "type": "uri",
@@ -706,11 +706,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N19ff36b4d3c54157be7f457d236f14b3"
+                            "value": "N65f5c0eaff04486dba5a2eb10d94ff5f"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nbde6f10479214af0b83d9b7e831915eb"
+                            "value": "N45415149e1634dcf9af08997359b429c"
                         },
                         "price": {
                             "type": "uri",
@@ -732,11 +732,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N3042da4ed25d493c8b98e8bce7e8058b"
+                            "value": "N24490c194d2c47fbb67436106cdeacde"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nd38c62eb317f412283ac2d236ded85c7"
+                            "value": "N30b14a6c7a0c41798886425679d44e57"
                         },
                         "price": {
                             "type": "uri",
@@ -758,11 +758,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N7784770dd33f4955b10e22e6a1465c9c"
+                            "value": "Ne771b65d2e8c4fada1b85c67548e2f9a"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N48540bda2557434183ae693a8e911d92"
+                            "value": "N331580ef181c4d33abd88b4fcdd9a445"
                         },
                         "price": {
                             "type": "uri",
@@ -777,56 +777,56 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 4,
-                "number_of_web_results": 120,
-                "number_of_extracted_microdata": 36,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 9,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 5.940464735031128,
+            "evaluation_time": 4.2687742710113525,
             "processing_times": {
-                "query_decomposition": 0.09334373474121094,
-                "static_query_evakluation": 0.10633397102355957,
-                "web_data_retrieval": 18.410194635391235,
-                "dynamic_query_evaluation": 0.007524251937866211,
-                "result_merge": 0.0008001327514648438,
-                "total": 18.618196725845337
+                "query_decomposition": 0.08171653747558594,
+                "static_query_evakluation": 2.0776236057281494,
+                "web_data_retrieval": 5.328701496124268,
+                "dynamic_query_evaluation": 0.006869316101074219,
+                "result_merge": 0.002126932144165039,
+                "total": 7.497037887573242
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.00737762451171875,
-                    "searches": 12.774705648422241,
-                    "web_formatting": 0.002947568893432617,
-                    "total": 12.785030841827393
+                    "init": 0.0067958831787109375,
+                    "searches": 3.2677083015441895,
+                    "web_formatting": 0.00026154518127441406,
+                    "total": 3.274765729904175
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.4836273193359375e-06,
+                    "updater_init": 4.0531158447265625e-06,
                     "graph_computing": {
-                        "extraction": 0.0017940998077392578,
-                        "building": 5.655923843383789,
-                        "builder_init": 0.014800786972045898,
-                        "microdata_adding": 5.6233696937561035,
-                        "total": 5.6804399490356445
+                        "extraction": 0.00023794174194335938,
+                        "building": 2.0640857219696045,
+                        "builder_init": 0.004698514938354492,
+                        "microdata_adding": 2.0536978244781494,
+                        "total": 2.070594072341919
                     },
-                    "property_access_init": 0.024404048919677734,
-                    "properties_update": 0.001378774642944336,
-                    "total": 5.706247806549072
+                    "property_access_init": 0.007082462310791016,
+                    "properties_update": 0.00041794776916503906,
+                    "total": 2.0781195163726807
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 12.785030841827393,
-                    "microdata_extraction": 0.0017940998077392578,
-                    "storing": 5.6233696937561035,
-                    "total": 18.410194635391235
+                    "url_finding": 3.274765729904175,
+                    "microdata_extraction": 0.00023794174194335938,
+                    "storing": 2.0536978244781494,
+                    "total": 5.328701496124268
                 },
-                "microdata_query_evaluation": 0.007348775863647461,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.0068094730377197266,
+                "microdata_stats_computing": 9.5367431640625e-07
             }
         },
         {
             "query_id": 86,
             "pattern_id": 13,
             "en_query": "Give me the books available for the first book whose author is Maurice Leblanc",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 1",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -847,11 +847,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N2a91a53e1eb447a5924f3daaa9818099"
+                            "value": "Nfb5354bb8d87480387e3b3aca5182286"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Ncaa4e66c24594033b04a81cd6c980f5a"
+                            "value": "Ncc0e048e7b1f4aeea663c124b158cb25"
                         },
                         "bookName": {
                             "type": "uri",
@@ -869,11 +869,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N393f6f5138a34602b8a515a8d27679d2"
+                            "value": "N40a466fd9df346af9471a85086edc6d6"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N008878735a084f0d9b670dc89be27fbb"
+                            "value": "N953258aa12594e1c8c457d0cc80b3f15"
                         },
                         "bookName": {
                             "type": "uri",
@@ -891,11 +891,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N30b04e0cda8144819b73896757a82cb7"
+                            "value": "Nf5d5316f39ed499d98f3d59b2456ec9e"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N6bae48121c434e879803ec2058bb47d5"
+                            "value": "N573ec58474a0453f8318129a60ffab47"
                         },
                         "bookName": {
                             "type": "uri",
@@ -913,11 +913,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N4672752568a849b9afecf8c63c903698"
+                            "value": "Nff901fe1908c418687e3cf9ee7c72a29"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nfb59748c8d474192ba8f6afa74502ed6"
+                            "value": "N5c9391b0bf314278b1f6a8283aaa9715"
                         },
                         "bookName": {
                             "type": "uri",
@@ -935,11 +935,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nba8ed299573c42309433b49d5e884893"
+                            "value": "N1407a033d9104b19912c08ca1c4aea47"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N7a1cfab1b40649b6b430f8d734ab34ef"
+                            "value": "Nd7703e20285d45f3a455493afe0246f6"
                         },
                         "bookName": {
                             "type": "uri",
@@ -957,11 +957,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N08626e0353bc4cb7b3df086fe7a488a1"
+                            "value": "N9e97b35455e449c39c772cf66e93f4bb"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nf66d33b275074aae9f3a69c642429ed7"
+                            "value": "Nbca839f85565463486a9b95dc6f11158"
                         },
                         "bookName": {
                             "type": "uri",
@@ -972,48 +972,48 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 4,
-                "number_of_web_results": 120,
-                "number_of_extracted_microdata": 36,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 9,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 6.030217885971069,
+            "evaluation_time": 3.0473930835723877,
             "processing_times": {
-                "query_decomposition": 0.09668135643005371,
-                "static_query_evakluation": 0.09615802764892578,
-                "web_data_retrieval": 18.504361867904663,
-                "dynamic_query_evaluation": 0.008238792419433594,
-                "result_merge": 0.0007815361022949219,
-                "total": 18.70622158050537
+                "query_decomposition": 0.06136274337768555,
+                "static_query_evakluation": 0.7527801990509033,
+                "web_data_retrieval": 5.407922267913818,
+                "dynamic_query_evaluation": 0.007144927978515625,
+                "result_merge": 0.0006730556488037109,
+                "total": 6.229883193969727
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.0038683414459228516,
-                    "searches": 12.774705648422241,
-                    "web_formatting": 0.0022296905517578125,
-                    "total": 12.780803680419922
+                    "init": 0.003585338592529297,
+                    "searches": 3.2677087783813477,
+                    "web_formatting": 0.0004298686981201172,
+                    "total": 3.271723985671997
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 4.291534423828125e-06,
+                    "updater_init": 4.76837158203125e-06,
                     "graph_computing": {
-                        "extraction": 0.0018553733825683594,
-                        "building": 5.754287242889404,
-                        "builder_init": 0.014742374420166016,
-                        "microdata_adding": 5.721702814102173,
-                        "total": 5.779345512390137
+                        "extraction": 0.0002548694610595703,
+                        "building": 2.1464271545410156,
+                        "builder_init": 0.004767894744873047,
+                        "microdata_adding": 2.1359434127807617,
+                        "total": 2.153160572052002
                     },
-                    "property_access_init": 0.024099111557006836,
-                    "properties_update": 0.0014181137084960938,
-                    "total": 5.804888963699341
+                    "property_access_init": 0.007050752639770508,
+                    "properties_update": 0.0003921985626220703,
+                    "total": 2.160627603530884
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 12.780803680419922,
-                    "microdata_extraction": 0.0018553733825683594,
-                    "storing": 5.721702814102173,
-                    "total": 18.504361867904663
+                    "url_finding": 3.271723985671997,
+                    "microdata_extraction": 0.0002548694610595703,
+                    "storing": 2.1359434127807617,
+                    "total": 5.407922267913818
                 },
-                "microdata_query_evaluation": 0.008063316345214844,
+                "microdata_query_evaluation": 0.007089853286743164,
                 "microdata_stats_computing": 7.152557373046875e-07
             }
         },
@@ -1021,7 +1021,7 @@
             "query_id": 87,
             "pattern_id": 14,
             "en_query": "Give me the price of the books available for the first book whose author is Maurice Leblanc",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Maurice_Leblanc> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 1",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -1042,11 +1042,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N2ce92c9ac50641bbb052d2bfce914961"
+                            "value": "Nce30e00752a94459b3f03aafa3873701"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nda5b2e030f784034832cd1845bc7c382"
+                            "value": "N3b6979e6f5614c36b2569342980bd37a"
                         },
                         "price": {
                             "type": "uri",
@@ -1064,11 +1064,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N7d0465dc7d4a437ebe48d7b300865302"
+                            "value": "N80adc535fb464d22af5a1e45e1308bc7"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N7cbd6c6f678546f7a1c8b8a9193daa37"
+                            "value": "Nf98b39344e2e43e4b39db84172457708"
                         },
                         "price": {
                             "type": "uri",
@@ -1086,11 +1086,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N4298bf9a73a44635a4aca75926b3ed56"
+                            "value": "N3fe4ac0a2b5547da8ae37c53911c9e13"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N321bbcd4bc6847bb9a56e16f346989e7"
+                            "value": "Ncfbfbee398a54616a7685021d31d30c1"
                         },
                         "price": {
                             "type": "uri",
@@ -1108,11 +1108,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N08fb543c826842259cca5367d47c8254"
+                            "value": "Nedaae1f0858a4eb389904dfcf5a5c5a8"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N05ed50c1725c4929b5a7b02edcd3b995"
+                            "value": "N28373930419446cd941c574f0caf980b"
                         },
                         "price": {
                             "type": "uri",
@@ -1130,11 +1130,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N9455c9bbd82b40b3bee9ff50b207cbf6"
+                            "value": "N2ff4699d74dc42eeb3b3339c94d0b707"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Ne197b28d49614ddd808cacf705ea31a2"
+                            "value": "Nfb319d7af0144a2aaa2e9f965218fb02"
                         },
                         "price": {
                             "type": "uri",
@@ -1152,11 +1152,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N005c8a9aa25040e9b328dd6e952589f4"
+                            "value": "N5c91f3948df84b5bbba7576e4704a078"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nf06502dc26c2417dbddd3e2bdb19c003"
+                            "value": "N3eb1c1b9fd574724b3368c923a6eac14"
                         },
                         "price": {
                             "type": "uri",
@@ -1167,49 +1167,49 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 4,
-                "number_of_web_results": 120,
-                "number_of_extracted_microdata": 36,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 9,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 6.20548939704895,
+            "evaluation_time": 3.3398752212524414,
             "processing_times": {
-                "query_decomposition": 0.04508161544799805,
-                "static_query_evakluation": 0.0968630313873291,
-                "web_data_retrieval": 18.727218627929688,
-                "dynamic_query_evaluation": 0.008074760437011719,
-                "result_merge": 0.0007607936859130859,
-                "total": 18.87799882888794
+                "query_decomposition": 0.09562826156616211,
+                "static_query_evakluation": 1.0259478092193604,
+                "web_data_retrieval": 5.397983074188232,
+                "dynamic_query_evaluation": 0.0070459842681884766,
+                "result_merge": 0.000751495361328125,
+                "total": 6.5273566246032715
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.003096342086791992,
-                    "searches": 12.774705648422241,
-                    "web_formatting": 0.002611875534057617,
-                    "total": 12.78041386604309
+                    "init": 0.0038356781005859375,
+                    "searches": 3.2677085399627686,
+                    "web_formatting": 0.0004527568817138672,
+                    "total": 3.2719969749450684
                 },
                 "web_microdata_graph_generation": {
                     "updater_init": 5.0067901611328125e-06,
                     "graph_computing": {
-                        "extraction": 0.0017650127410888672,
-                        "building": 5.977112054824829,
-                        "builder_init": 0.014455318450927734,
-                        "microdata_adding": 5.945039749145508,
-                        "total": 6.0023956298828125
+                        "extraction": 0.0002422332763671875,
+                        "building": 2.1358823776245117,
+                        "builder_init": 0.00452113151550293,
+                        "microdata_adding": 2.125743865966797,
+                        "total": 2.142279624938965
                     },
-                    "property_access_init": 0.02393198013305664,
-                    "properties_update": 0.0013689994812011719,
-                    "total": 6.027722358703613
+                    "property_access_init": 0.047777414321899414,
+                    "properties_update": 0.0004780292510986328,
+                    "total": 2.1905627250671387
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 12.78041386604309,
-                    "microdata_extraction": 0.0017650127410888672,
-                    "storing": 5.945039749145508,
-                    "total": 18.727218627929688
+                    "url_finding": 3.2719969749450684,
+                    "microdata_extraction": 0.0002422332763671875,
+                    "storing": 2.125743865966797,
+                    "total": 5.397983074188232
                 },
-                "microdata_query_evaluation": 0.007911443710327148,
-                "microdata_stats_computing": 7.152557373046875e-07
+                "microdata_query_evaluation": 0.006983041763305664,
+                "microdata_stats_computing": 4.76837158203125e-07
             }
         },
         {
@@ -1237,11 +1237,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Na1062d8cc69042b593657be2a7fd530d"
+                            "value": "N0a4b66c5b58a4c3b8e35be0a206252f4"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N191438a8c8a94bd0b24c86c17a3f26a1"
+                            "value": "N51a05a50823d424685b370335653b944"
                         },
                         "price": {
                             "type": "uri",
@@ -1259,11 +1259,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N016b49cebb41411e8895a9e6e77bf396"
+                            "value": "N23a2d8d39e854363826137f07da77263"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N668589545e3448d599a58468541fa9d0"
+                            "value": "Ne40e71e33d024169af86ff298e79603f"
                         },
                         "price": {
                             "type": "uri",
@@ -1281,11 +1281,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N5472b8f7057e44919866b8efa7f59a3e"
+                            "value": "N9f2b1731f0cc4a4c93b8e44348eee8b0"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N78a29f7befa8486c8ceea603d81255b0"
+                            "value": "Nb4878da3b2b54eeb88500676cce62f75"
                         },
                         "price": {
                             "type": "uri",
@@ -1303,11 +1303,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N4896e53bac2b4f9fb33b5222e0f450bc"
+                            "value": "Nda0f2e6ec2d14f78881520593110d0ce"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Ne1d01896bd4d439da8b6cfa39c5abff3"
+                            "value": "N06578b84a9bb4277845d44241c542dd2"
                         },
                         "price": {
                             "type": "uri",
@@ -1325,11 +1325,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N3fb34eacb272455baf3f1eb9f6736951"
+                            "value": "N551a162f746f4bddb79d78478ad81357"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N3d4fb7ce72c5478fbf55bb9fcb08f16f"
+                            "value": "Nf51c47e1e03e41d0a3a89c3e866e9fda"
                         },
                         "price": {
                             "type": "uri",
@@ -1347,11 +1347,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nd7461bc4e8b74766b3ff921d73de6623"
+                            "value": "N143e2476184441798073aa4f61570614"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N6d6d5fea1d2f4a7a9fb141ac8421b3d4"
+                            "value": "Nc8abd909f8504e2ca82b822df5fd7e48"
                         },
                         "price": {
                             "type": "uri",
@@ -1367,43 +1367,43 @@
                 "number_of_extracted_microdata": 36,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 6.031519889831543,
+            "evaluation_time": 10.073355913162231,
             "processing_times": {
-                "query_decomposition": 0.043265581130981445,
-                "static_query_evakluation": 0.10656094551086426,
-                "web_data_retrieval": 18.55139684677124,
-                "dynamic_query_evaluation": 0.006848812103271484,
-                "result_merge": 0.0007536411285400391,
-                "total": 18.708825826644897
+                "query_decomposition": 0.04333138465881348,
+                "static_query_evakluation": 0.5682106018066406,
+                "web_data_retrieval": 22.0687894821167,
+                "dynamic_query_evaluation": 0.007804393768310547,
+                "result_merge": 0.0007092952728271484,
+                "total": 22.68884515762329
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.003489971160888672,
+                    "init": 0.0038034915924072266,
                     "searches": 12.774705410003662,
-                    "web_formatting": 0.0027747154235839844,
-                    "total": 12.780970096588135
+                    "web_formatting": 0.0016603469848632812,
+                    "total": 12.780169248580933
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.4836273193359375e-06,
+                    "updater_init": 5.0067901611328125e-06,
                     "graph_computing": {
-                        "extraction": 0.0018155574798583984,
-                        "building": 5.801715135574341,
-                        "builder_init": 0.0150146484375,
-                        "microdata_adding": 5.768611192703247,
-                        "total": 5.826723575592041
+                        "extraction": 0.001964569091796875,
+                        "building": 9.375729084014893,
+                        "builder_init": 0.0678567886352539,
+                        "microdata_adding": 9.28665566444397,
+                        "total": 9.404839515686035
                     },
-                    "property_access_init": 0.023982524871826172,
-                    "properties_update": 0.0013446807861328125,
-                    "total": 5.852077007293701
+                    "property_access_init": 0.024779558181762695,
+                    "properties_update": 0.0014119148254394531,
+                    "total": 9.431056499481201
                 },
                 "web_microdata_graph_update": 2.384185791015625e-07,
                 "web_data_retrieval": {
-                    "url_finding": 12.780970096588135,
-                    "microdata_extraction": 0.0018155574798583984,
-                    "storing": 5.768611192703247,
-                    "total": 18.55139684677124
+                    "url_finding": 12.780169248580933,
+                    "microdata_extraction": 0.001964569091796875,
+                    "storing": 9.28665566444397,
+                    "total": 22.0687894821167
                 },
-                "microdata_query_evaluation": 0.0066797733306884766,
+                "microdata_query_evaluation": 0.0076446533203125,
                 "microdata_stats_computing": 4.76837158203125e-07
             }
         },
@@ -1433,11 +1433,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N95307487f2684d3da9d824148a188f15"
+                            "value": "N02258cfdd4204ab99539e328df1e5f70"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nc612ed136d0b4b8abba24ac213d21f96"
+                            "value": "N2af99b2447144aadbe9d2ee8b8b76856"
                         },
                         "price": {
                             "type": "uri",
@@ -1459,11 +1459,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nce4fe73c7f93428faafa15a4595e593a"
+                            "value": "Nf2084880517442bc8dceda80b3759d49"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N8bfb37129620475fa4934b60d1c45626"
+                            "value": "N5069e16245124130ad09c25d29c7da26"
                         },
                         "price": {
                             "type": "uri",
@@ -1485,11 +1485,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N59e8b95983ca4d5c92ce2a26d2fabb2b"
+                            "value": "Ne8406feb08774c73a25f929601ca1346"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N25838c5e5e70479aa2a736901920213d"
+                            "value": "N2218f52f9a0a41a9b18d15821bf0a613"
                         },
                         "price": {
                             "type": "uri",
@@ -1511,11 +1511,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N3560541b3cc74b73820fad8ca33f55dc"
+                            "value": "N24ebe5b0cd9f493bb04cae0e8d556870"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N79910edb2f09461c8e586b891b2f0839"
+                            "value": "Nd71ece11c23b4ad692335f3c1f4bb454"
                         },
                         "price": {
                             "type": "uri",
@@ -1537,11 +1537,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N72b3d65fcde14f7bb62f6213d26bdd6a"
+                            "value": "N1a804167d372469492a3a61b700b011e"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N4ffb9402337b42318bff890facefbe81"
+                            "value": "Nbb112bfd8d884aabb0a21a3bd0a2c4c7"
                         },
                         "price": {
                             "type": "uri",
@@ -1563,11 +1563,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nfb3da3df620145deb30111d71930c47b"
+                            "value": "Nb267cca1e5b24162b80894d9d86c2d32"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nb4f42e8047314dcdb5aef8235a18d040"
+                            "value": "N28657a2a5cf44393af356d0f09d9ab64"
                         },
                         "price": {
                             "type": "uri",
@@ -1587,43 +1587,43 @@
                 "number_of_extracted_microdata": 36,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 13.763005018234253,
+            "evaluation_time": 9.001670598983765,
             "processing_times": {
-                "query_decomposition": 0.04276776313781738,
-                "static_query_evakluation": 0.09997344017028809,
-                "web_data_retrieval": 26.288559913635254,
-                "dynamic_query_evaluation": 0.007550954818725586,
-                "result_merge": 0.0017142295837402344,
-                "total": 26.440566301345825
+                "query_decomposition": 0.04451727867126465,
+                "static_query_evakluation": 0.1386563777923584,
+                "web_data_retrieval": 21.48351287841797,
+                "dynamic_query_evaluation": 0.008285284042358398,
+                "result_merge": 0.0008833408355712891,
+                "total": 21.67585515975952
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.007620334625244141,
-                    "searches": 12.774705648422241,
-                    "web_formatting": 0.0022742748260498047,
-                    "total": 12.784600257873535
+                    "init": 0.004754781723022461,
+                    "searches": 12.77470588684082,
+                    "web_formatting": 0.0022585391998291016,
+                    "total": 12.781719207763672
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 4.0531158447265625e-06,
+                    "updater_init": 5.0067901611328125e-06,
                     "graph_computing": {
-                        "extraction": 0.0018031597137451172,
-                        "building": 13.534381628036499,
-                        "builder_init": 0.014702558517456055,
-                        "microdata_adding": 13.502156496047974,
-                        "total": 13.558566808700562
+                        "extraction": 0.0017809867858886719,
+                        "building": 8.737312078475952,
+                        "builder_init": 0.016621828079223633,
+                        "microdata_adding": 8.700012683868408,
+                        "total": 8.762313604354858
                     },
-                    "property_access_init": 0.023938655853271484,
-                    "properties_update": 0.0013620853424072266,
-                    "total": 13.58389139175415
+                    "property_access_init": 0.023747682571411133,
+                    "properties_update": 0.0013880729675292969,
+                    "total": 8.787474393844604
                 },
-                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 12.784600257873535,
-                    "microdata_extraction": 0.0018031597137451172,
-                    "storing": 13.502156496047974,
-                    "total": 26.288559913635254
+                    "url_finding": 12.781719207763672,
+                    "microdata_extraction": 0.0017809867858886719,
+                    "storing": 8.700012683868408,
+                    "total": 21.48351287841797
                 },
-                "microdata_query_evaluation": 0.0073909759521484375,
+                "microdata_query_evaluation": 0.008126974105834961,
                 "microdata_stats_computing": 4.76837158203125e-07
             }
         },
@@ -1652,11 +1652,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nb4c909da4c0a42b6bef91d8550d4859d"
+                            "value": "N1cb4e617e6a24125931558d44d3e1457"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N19778c33b0774cfba60bf6b78c721cc1"
+                            "value": "Nb8bd980151d847df9385cb2313efcd84"
                         },
                         "bookName": {
                             "type": "uri",
@@ -1674,11 +1674,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N6b2e94b1e72c4941aaea7e4c7ec4ed98"
+                            "value": "Nfcc8919bb52e444a9bc947ca31f529ef"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nd27bd0bd638746f78d0f65c911e9556a"
+                            "value": "Nbc89545c414a46a49a18460263b6b6a8"
                         },
                         "bookName": {
                             "type": "uri",
@@ -1696,11 +1696,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Na74e1775d19f45338d993234993d4e03"
+                            "value": "Nf624e34023fa49a8a9a8f2ad1ea3afa9"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N3464c5a5af96496a892310406fcdd1f1"
+                            "value": "N35fa21822a98473eb8283936a3b865de"
                         },
                         "bookName": {
                             "type": "uri",
@@ -1718,11 +1718,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N417a03f0272540f09f691d8d37091fcf"
+                            "value": "Nd59fdeb0294f4a2da4e754b11bd81d26"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N0c9f8ae80aef42dfbe7f4b9359c4bd51"
+                            "value": "N43b651f244144cee85235d9cdafb9d8e"
                         },
                         "bookName": {
                             "type": "uri",
@@ -1740,11 +1740,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N2dcb977847e449e2ab1a6a98a98dd3b5"
+                            "value": "N8f8e25d32c5542f98778121ac171badb"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nd88098f562674d9e946563d7dfafb563"
+                            "value": "Nc2fa99637de14524878b9a1d4abd1514"
                         },
                         "bookName": {
                             "type": "uri",
@@ -1762,11 +1762,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N3f81126ac6c14e4f9f5f2324c6e5b126"
+                            "value": "N6d50669c9a1a43d1a20effb7ed2dd2be"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N7d58abd8bfa044dea7c2ac0911dad57a"
+                            "value": "N5a0a272556c8473b901e4baa59125bc5"
                         },
                         "bookName": {
                             "type": "uri",
@@ -1782,43 +1782,43 @@
                 "number_of_extracted_microdata": 36,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 15.184410095214844,
+            "evaluation_time": 10.930918455123901,
             "processing_times": {
-                "query_decomposition": 0.05062294006347656,
-                "static_query_evakluation": 0.10317254066467285,
-                "web_data_retrieval": 27.695554971694946,
-                "dynamic_query_evaluation": 0.008539915084838867,
-                "result_merge": 0.00069427490234375,
-                "total": 27.85858464241028
+                "query_decomposition": 0.10145950317382812,
+                "static_query_evakluation": 1.8829212188720703,
+                "web_data_retrieval": 21.56954264640808,
+                "dynamic_query_evaluation": 0.008582830429077148,
+                "result_merge": 0.0007498264312744141,
+                "total": 23.56325602531433
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.003343343734741211,
-                    "searches": 12.774705648422241,
-                    "web_formatting": 0.002644062042236328,
-                    "total": 12.780693054199219
+                    "init": 0.004128694534301758,
+                    "searches": 12.774705171585083,
+                    "web_formatting": 0.001966238021850586,
+                    "total": 12.780800104141235
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.0067901611328125e-06,
+                    "updater_init": 4.76837158203125e-06,
                     "graph_computing": {
-                        "extraction": 0.0018246173858642578,
-                        "building": 14.948264837265015,
-                        "builder_init": 0.017758607864379883,
-                        "microdata_adding": 14.913037300109863,
-                        "total": 14.974201679229736
+                        "extraction": 0.0017893314361572266,
+                        "building": 8.821653604507446,
+                        "builder_init": 0.015556812286376953,
+                        "microdata_adding": 8.786953210830688,
+                        "total": 8.849059343338013
                     },
-                    "property_access_init": 0.02363753318786621,
-                    "properties_update": 0.0013914108276367188,
-                    "total": 14.999255657196045
+                    "property_access_init": 0.06460833549499512,
+                    "properties_update": 0.0013949871063232422,
+                    "total": 8.915087461471558
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 12.780693054199219,
-                    "microdata_extraction": 0.0018246173858642578,
-                    "storing": 14.913037300109863,
-                    "total": 27.695554971694946
+                    "url_finding": 12.780800104141235,
+                    "microdata_extraction": 0.0017893314361572266,
+                    "storing": 8.786953210830688,
+                    "total": 21.56954264640808
                 },
-                "microdata_query_evaluation": 0.008375883102416992,
+                "microdata_query_evaluation": 0.00842142105102539,
                 "microdata_stats_computing": 4.76837158203125e-07
             }
         },
@@ -1847,11 +1847,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nc3bf919023524a79a551e39bd90a8c13"
+                            "value": "Nfe297342154c41df8f66f0eeab5a5d74"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N17f7f05580ac4385802741a7b549f87c"
+                            "value": "Nefbd983265be4eb6b241239b476cd93c"
                         },
                         "price": {
                             "type": "uri",
@@ -1869,11 +1869,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nbf1ded3b957f4d0c9b8f7f99ae5960bd"
+                            "value": "Nd946c8d71fca4e7cbcf1585e9880dd61"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nf4af50679dec418682b6c5dc76effd7f"
+                            "value": "N799ecd0c6da04ae1b3ac859ebd71053c"
                         },
                         "price": {
                             "type": "uri",
@@ -1891,11 +1891,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N44ceaccf9f944172b23a5013968dac0c"
+                            "value": "Nde283e77a94a4532bea7279ea12c4f03"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N964c9365502d47028873b238143e20d9"
+                            "value": "Ncc23c0e432fc4f9e9ef0ee6c671bb1b7"
                         },
                         "price": {
                             "type": "uri",
@@ -1913,11 +1913,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N740c8ef2d3494af69bf818b97becc588"
+                            "value": "N9fd93a9e136145cd80e2416792c4abcc"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N4f2a09ed934d44a8be66b0b1e85e1814"
+                            "value": "Nfb218e6f2d0a4950bcaa5374f419b593"
                         },
                         "price": {
                             "type": "uri",
@@ -1935,11 +1935,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nd856e95eb1564dee81784ed32011caae"
+                            "value": "N09a614a6b56744f388dbfbbceae7b282"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N8b98a92393674d82a4fa04e4ae57e445"
+                            "value": "N1c30b135ea3e4df5a6a581ee19ca3135"
                         },
                         "price": {
                             "type": "uri",
@@ -1957,11 +1957,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nb02fdbd0e5194ea69b4334109d2e2077"
+                            "value": "Nba71b128cca1427290840d5933e0d455"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nb8b4f31d4f494008a1566ae890eb9801"
+                            "value": "N31eb499fd88a422eb0851627d4349b3d"
                         },
                         "price": {
                             "type": "uri",
@@ -1977,44 +1977,44 @@
                 "number_of_extracted_microdata": 36,
                 "number_of_query_results": 6
             },
-            "evaluation_time": 7.011446475982666,
+            "evaluation_time": 9.117859125137329,
             "processing_times": {
-                "query_decomposition": 0.05363941192626953,
-                "static_query_evakluation": 0.10081076622009277,
-                "web_data_retrieval": 19.52147889137268,
-                "dynamic_query_evaluation": 0.008239507675170898,
-                "result_merge": 0.0007867813110351562,
-                "total": 19.68495535850525
+                "query_decomposition": 0.05139422416687012,
+                "static_query_evakluation": 0.1357862949371338,
+                "web_data_retrieval": 21.593466758728027,
+                "dynamic_query_evaluation": 0.00829935073852539,
+                "result_merge": 0.0006780624389648438,
+                "total": 21.78962469100952
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.003983736038208008,
+                    "init": 0.004590511322021484,
                     "searches": 12.774705648422241,
-                    "web_formatting": 0.002330303192138672,
-                    "total": 12.781019687652588
+                    "web_formatting": 0.0015819072723388672,
+                    "total": 12.780878067016602
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 4.76837158203125e-06,
+                    "updater_init": 2.6226043701171875e-06,
                     "graph_computing": {
-                        "extraction": 0.0017666816711425781,
-                        "building": 6.770662307739258,
-                        "builder_init": 0.014503240585327148,
-                        "microdata_adding": 6.73869252204895,
-                        "total": 6.794819593429565
+                        "extraction": 0.0017690658569335938,
+                        "building": 8.844677686691284,
+                        "builder_init": 0.015117406845092773,
+                        "microdata_adding": 8.810819625854492,
+                        "total": 8.86989688873291
                     },
-                    "property_access_init": 0.024047136306762695,
-                    "properties_update": 0.0013918876647949219,
-                    "total": 6.820283889770508
+                    "property_access_init": 0.02411174774169922,
+                    "properties_update": 0.0013728141784667969,
+                    "total": 8.895402193069458
                 },
-                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 12.781019687652588,
-                    "microdata_extraction": 0.0017666816711425781,
-                    "storing": 6.73869252204895,
-                    "total": 19.52147889137268
+                    "url_finding": 12.780878067016602,
+                    "microdata_extraction": 0.0017690658569335938,
+                    "storing": 8.810819625854492,
+                    "total": 21.593466758728027
                 },
-                "microdata_query_evaluation": 0.008071422576904297,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.008144140243530273,
+                "microdata_stats_computing": 7.152557373046875e-07
             }
         }
     ]

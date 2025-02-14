@@ -1,9 +1,9 @@
 {
     "total_queries": 466,
     "average_per_query": {
-        "average_books_from_kg_per_query": 8.12,
-        "average_webs_per_query": 243.67,
-        "average_microdatas_per_query": 76.58,
+        "average_books_from_kg_per_query": 8.08,
+        "average_webs_per_query": 242.25,
+        "average_microdatas_per_query": 76.23,
         "average_offers_per_query": 9.42,
         "average_prices_per_query": 7.06,
         "average_availabilities_per_query": 2.32,
@@ -77,13 +77,13 @@
     },
     "average_results_per_successful_query": {
         "books_from_kg": {
-            "average_results_per_successful_query": 8.12
+            "average_results_per_successful_query": 8.08
         },
         "webs": {
-            "average_results_per_successful_query": 243.67
+            "average_results_per_successful_query": 242.25
         },
         "microdatas": {
-            "average_results_per_successful_query": 76.58
+            "average_results_per_successful_query": 76.23
         },
         "offers": {
             "average_results_per_successful_query": 10.33

@@ -14,7 +14,7 @@
             "exec_mode": "cold",
             "WEB_QUERY_MAX": null
         },
-        "processing_total_time": 29.63161587715149
+        "processing_total_time": 32.44521522521973
     },
     "queries": [
         {
@@ -42,11 +42,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N074ae8ccf07d4100bea30cd55dfc0db0"
+                            "value": "Ncac6be5650fb47ab81479e924349b561"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N3613c7174a5a421eb5cf1ad7c1e1cf4c"
+                            "value": "N58584cd059ea45d298fee2b517ab8a78"
                         },
                         "price": {
                             "type": "uri",
@@ -62,43 +62,43 @@
                 "number_of_extracted_microdata": 16,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 2.907364845275879,
+            "evaluation_time": 4.730006694793701,
             "processing_times": {
-                "query_decomposition": 0.041436195373535156,
-                "static_query_evakluation": 0.12208390235900879,
-                "web_data_retrieval": 12.2371985912323,
-                "dynamic_query_evaluation": 0.006205558776855469,
+                "query_decomposition": 0.03779864311218262,
+                "static_query_evakluation": 0.12888121604919434,
+                "web_data_retrieval": 14.062446594238281,
+                "dynamic_query_evaluation": 0.006135463714599609,
                 "result_merge": 0.0004124641418457031,
-                "total": 12.407336711883545
+                "total": 14.235674381256104
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.0032911300659179688,
-                    "searches": 9.571840524673462,
-                    "web_formatting": 0.0015938282012939453,
-                    "total": 9.576725482940674
+                    "init": 0.003664255142211914,
+                    "searches": 9.571841955184937,
+                    "web_formatting": 0.0019309520721435547,
+                    "total": 9.577437162399292
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 8.106231689453125e-06,
+                    "updater_init": 1.239776611328125e-05,
                     "graph_computing": {
-                        "extraction": 0.0011620521545410156,
-                        "building": 2.681088447570801,
-                        "builder_init": 0.011212587356567383,
-                        "microdata_adding": 2.659311056137085,
-                        "total": 2.6946756839752197
+                        "extraction": 0.0009944438934326172,
+                        "building": 4.50724983215332,
+                        "builder_init": 0.011961221694946289,
+                        "microdata_adding": 4.484014987945557,
+                        "total": 4.521949052810669
                     },
-                    "property_access_init": 0.012846946716308594,
-                    "properties_update": 0.0007100105285644531,
-                    "total": 2.7082645893096924
+                    "property_access_init": 0.012835264205932617,
+                    "properties_update": 0.0007617473602294922,
+                    "total": 4.535581111907959
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.576725482940674,
-                    "microdata_extraction": 0.0011620521545410156,
-                    "storing": 2.659311056137085,
-                    "total": 12.2371985912323
+                    "url_finding": 9.577437162399292,
+                    "microdata_extraction": 0.0009944438934326172,
+                    "storing": 4.484014987945557,
+                    "total": 14.062446594238281
                 },
-                "microdata_query_evaluation": 0.006062030792236328,
+                "microdata_query_evaluation": 0.005994558334350586,
                 "microdata_stats_computing": 1.9073486328125e-06
             }
         },
@@ -124,44 +124,44 @@
                 "number_of_extracted_microdata": 16,
                 "number_of_query_results": 0
             },
-            "evaluation_time": 2.902027130126953,
+            "evaluation_time": 4.395008563995361,
             "processing_times": {
-                "query_decomposition": 0.08704519271850586,
-                "static_query_evakluation": 0.10219860076904297,
-                "web_data_retrieval": 12.200315713882446,
-                "dynamic_query_evaluation": 0.0069446563720703125,
-                "result_merge": 0.0003116130828857422,
-                "total": 12.396815776824951
+                "query_decomposition": 0.08289504051208496,
+                "static_query_evakluation": 0.1282355785369873,
+                "web_data_retrieval": 13.681684494018555,
+                "dynamic_query_evaluation": 0.006946086883544922,
+                "result_merge": 0.0002970695495605469,
+                "total": 13.900058269500732
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.004856586456298828,
-                    "searches": 9.571840763092041,
-                    "web_formatting": 0.001556396484375,
-                    "total": 9.578253746032715
+                    "init": 0.0036101341247558594,
+                    "searches": 9.571840286254883,
+                    "web_formatting": 0.001336812973022461,
+                    "total": 9.576787233352661
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 1.049041748046875e-05,
+                    "updater_init": 6.9141387939453125e-06,
                     "graph_computing": {
-                        "extraction": 0.0010073184967041016,
-                        "building": 2.6424927711486816,
-                        "builder_init": 0.010894775390625,
-                        "microdata_adding": 2.6210546493530273,
-                        "total": 2.6676595211029053
+                        "extraction": 0.0010731220245361328,
+                        "building": 4.129023551940918,
+                        "builder_init": 0.012626171112060547,
+                        "microdata_adding": 4.103824138641357,
+                        "total": 4.142607688903809
                     },
-                    "property_access_init": 0.012940168380737305,
-                    "properties_update": 0.0006816387176513672,
-                    "total": 2.681318998336792
+                    "property_access_init": 0.012668132781982422,
+                    "properties_update": 0.0006844997406005859,
+                    "total": 4.155989408493042
                 },
-                "web_microdata_graph_update": 0.0,
+                "web_microdata_graph_update": 4.76837158203125e-07,
                 "web_data_retrieval": {
-                    "url_finding": 9.578253746032715,
-                    "microdata_extraction": 0.0010073184967041016,
-                    "storing": 2.6210546493530273,
-                    "total": 12.200315713882446
+                    "url_finding": 9.576787233352661,
+                    "microdata_extraction": 0.0010731220245361328,
+                    "storing": 4.103824138641357,
+                    "total": 13.681684494018555
                 },
-                "microdata_query_evaluation": 0.006796836853027344,
-                "microdata_stats_computing": 1.1920928955078125e-06
+                "microdata_query_evaluation": 0.0068013668060302734,
+                "microdata_stats_computing": 1.430511474609375e-06
             }
         },
         {
@@ -190,11 +190,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N30133a15f0044e1895dce6e34f55b88f"
+                            "value": "Nc1195ebeade04d9b8b9b269e784a1abb"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N32ed651d418b4abdad7756f0cfa84209"
+                            "value": "N9efde5d3b9ef4d3286e2d831b96172e0"
                         },
                         "price": {
                             "type": "uri",
@@ -214,44 +214,44 @@
                 "number_of_extracted_microdata": 16,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 2.930053949356079,
+            "evaluation_time": 4.522033214569092,
             "processing_times": {
-                "query_decomposition": 0.03879833221435547,
-                "static_query_evakluation": 0.09444141387939453,
-                "web_data_retrieval": 12.290904760360718,
-                "dynamic_query_evaluation": 0.006815671920776367,
-                "result_merge": 0.00038313865661621094,
-                "total": 12.43134331703186
+                "query_decomposition": 0.0381474494934082,
+                "static_query_evakluation": 0.13000869750976562,
+                "web_data_retrieval": 13.851805210113525,
+                "dynamic_query_evaluation": 0.006861448287963867,
+                "result_merge": 0.0003752708435058594,
+                "total": 14.027198076248169
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.0030584335327148438,
-                    "searches": 9.571840286254883,
-                    "web_formatting": 0.0017001628875732422,
-                    "total": 9.576598882675171
+                    "init": 0.0040740966796875,
+                    "searches": 9.571840524673462,
+                    "web_formatting": 0.0014121532440185547,
+                    "total": 9.577326774597168
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.7220458984375e-06,
+                    "updater_init": 5.4836273193359375e-06,
                     "graph_computing": {
-                        "extraction": 0.0009708404541015625,
-                        "building": 2.7346699237823486,
-                        "builder_init": 0.010725975036621094,
-                        "microdata_adding": 2.7133350372314453,
-                        "total": 2.748368501663208
+                        "extraction": 0.0009710788726806641,
+                        "building": 4.295868158340454,
+                        "builder_init": 0.01112222671508789,
+                        "microdata_adding": 4.273507356643677,
+                        "total": 4.311790943145752
                     },
-                    "property_access_init": 0.01298832893371582,
-                    "properties_update": 0.0006659030914306641,
-                    "total": 2.7620463371276855
+                    "property_access_init": 0.01305389404296875,
+                    "properties_update": 0.0007154941558837891,
+                    "total": 4.325586318969727
                 },
-                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.576598882675171,
-                    "microdata_extraction": 0.0009708404541015625,
-                    "storing": 2.7133350372314453,
-                    "total": 12.290904760360718
+                    "url_finding": 9.577326774597168,
+                    "microdata_extraction": 0.0009710788726806641,
+                    "storing": 4.273507356643677,
+                    "total": 13.851805210113525
                 },
-                "microdata_query_evaluation": 0.00669097900390625,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.006731748580932617,
+                "microdata_stats_computing": 7.152557373046875e-07
             }
         },
         {
@@ -279,11 +279,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N0736d5223d2a42d2b550537aff84f3af"
+                            "value": "N14eef2a7e5314905af46978280254271"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nda4ab5ccb7e34aae98a671000bc58763"
+                            "value": "N3cbfedbd048c46b899531fadd3cc4256"
                         },
                         "bookName": {
                             "type": "uri",
@@ -299,43 +299,43 @@
                 "number_of_extracted_microdata": 16,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 2.9027180671691895,
+            "evaluation_time": 6.617516279220581,
             "processing_times": {
-                "query_decomposition": 0.11296606063842773,
-                "static_query_evakluation": 0.10826778411865234,
-                "web_data_retrieval": 12.180482625961304,
-                "dynamic_query_evaluation": 0.0081634521484375,
-                "result_merge": 0.0003936290740966797,
-                "total": 12.410273551940918
+                "query_decomposition": 0.09343409538269043,
+                "static_query_evakluation": 2.213515520095825,
+                "web_data_retrieval": 13.80919361114502,
+                "dynamic_query_evaluation": 0.007775783538818359,
+                "result_merge": 0.0003604888916015625,
+                "total": 16.124279499053955
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.003078937530517578,
+                    "init": 0.00536346435546875,
                     "searches": 9.571840524673462,
-                    "web_formatting": 0.001058340072631836,
-                    "total": 9.575977802276611
+                    "web_formatting": 0.0010960102081298828,
+                    "total": 9.57829999923706
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 4.76837158203125e-06,
+                    "updater_init": 5.4836273193359375e-06,
                     "graph_computing": {
-                        "extraction": 0.0010352134704589844,
-                        "building": 2.6245198249816895,
-                        "builder_init": 0.010859966278076172,
-                        "microdata_adding": 2.6034696102142334,
-                        "total": 2.638895034790039
+                        "extraction": 0.0009961128234863281,
+                        "building": 4.253474473953247,
+                        "builder_init": 0.012078523635864258,
+                        "microdata_adding": 4.229897499084473,
+                        "total": 4.26693058013916
                     },
-                    "property_access_init": 0.013224124908447266,
-                    "properties_update": 0.0007281303405761719,
-                    "total": 2.652876138687134
+                    "property_access_init": 0.012909173965454102,
+                    "properties_update": 0.0007066726684570312,
+                    "total": 4.280573606491089
                 },
-                "web_microdata_graph_update": 0.0,
+                "web_microdata_graph_update": 2.384185791015625e-07,
                 "web_data_retrieval": {
-                    "url_finding": 9.575977802276611,
-                    "microdata_extraction": 0.0010352134704589844,
-                    "storing": 2.6034696102142334,
-                    "total": 12.180482625961304
+                    "url_finding": 9.57829999923706,
+                    "microdata_extraction": 0.0009961128234863281,
+                    "storing": 4.229897499084473,
+                    "total": 13.80919361114502
                 },
-                "microdata_query_evaluation": 0.008024930953979492,
+                "microdata_query_evaluation": 0.007645130157470703,
                 "microdata_stats_computing": 7.152557373046875e-07
             }
         },
@@ -364,11 +364,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N7c6c18fa2d104fa785d75c9f0249786e"
+                            "value": "N4153842abf4a4a41ba20b3ae683506b8"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "Nccd28dc363164cc2aff621378ab8eb48"
+                            "value": "N4ceed15607164b91a788411ab58c5847"
                         },
                         "price": {
                             "type": "uri",
@@ -384,51 +384,51 @@
                 "number_of_extracted_microdata": 16,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 2.9750828742980957,
+            "evaluation_time": 4.549906253814697,
             "processing_times": {
-                "query_decomposition": 0.11370396614074707,
-                "static_query_evakluation": 0.09318017959594727,
-                "web_data_retrieval": 12.268753290176392,
-                "dynamic_query_evaluation": 0.0070040225982666016,
-                "result_merge": 0.00036406517028808594,
-                "total": 12.48300552368164
+                "query_decomposition": 0.1003422737121582,
+                "static_query_evakluation": 0.1422417163848877,
+                "web_data_retrieval": 13.80463433265686,
+                "dynamic_query_evaluation": 0.0067484378814697266,
+                "result_merge": 0.0003638267517089844,
+                "total": 14.054330587387085
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.0025811195373535156,
-                    "searches": 9.571840524673462,
-                    "web_formatting": 0.0012226104736328125,
-                    "total": 9.575644254684448
+                    "init": 0.0040433406829833984,
+                    "searches": 9.571841478347778,
+                    "web_formatting": 0.0015769004821777344,
+                    "total": 9.57746171951294
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.245208740234375e-06,
+                    "updater_init": 6.9141387939453125e-06,
                     "graph_computing": {
-                        "extraction": 0.001039266586303711,
-                        "building": 2.713618755340576,
-                        "builder_init": 0.010656595230102539,
-                        "microdata_adding": 2.6920697689056396,
-                        "total": 2.7270922660827637
+                        "extraction": 0.0010585784912109375,
+                        "building": 4.251451253890991,
+                        "builder_init": 0.012477874755859375,
+                        "microdata_adding": 4.22611403465271,
+                        "total": 4.264991044998169
                     },
-                    "property_access_init": 0.013210535049438477,
-                    "properties_update": 0.0007011890411376953,
-                    "total": 2.7410330772399902
+                    "property_access_init": 0.01273655891418457,
+                    "properties_update": 0.0007042884826660156,
+                    "total": 4.278459310531616
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.575644254684448,
-                    "microdata_extraction": 0.001039266586303711,
-                    "storing": 2.6920697689056396,
-                    "total": 12.268753290176392
+                    "url_finding": 9.57746171951294,
+                    "microdata_extraction": 0.0010585784912109375,
+                    "storing": 4.22611403465271,
+                    "total": 13.80463433265686
                 },
-                "microdata_query_evaluation": 0.006865024566650391,
+                "microdata_query_evaluation": 0.00661015510559082,
                 "microdata_stats_computing": 4.76837158203125e-07
             }
         },
         {
             "query_id": 123,
             "pattern_id": 20,
-            "en_query": "Give me the price of the last book whose author is Antoine de Saint-Exup\u00e9ry",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "en_query": "Give me the price of the books whose genre is fiction and author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:literaryGenre <http://dbpedia.org/resource/Fiction> .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -449,11 +449,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N709e8adf3eb748d9904644223ad4ce5b"
+                            "value": "Nf2376214381947e98b85a035b01338f9"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N2ed3b1a6d3914041a822ff818921876b"
+                            "value": "N7e36414950cf49ba9d7527ac70ffc0a7"
                         },
                         "price": {
                             "type": "uri",
@@ -464,56 +464,56 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 3,
-                "number_of_web_results": 90,
-                "number_of_extracted_microdata": 16,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 5,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 2.884918451309204,
+            "evaluation_time": 1.4575600624084473,
             "processing_times": {
-                "query_decomposition": 0.037368059158325195,
-                "static_query_evakluation": 0.10372781753540039,
-                "web_data_retrieval": 12.243985414505005,
-                "dynamic_query_evaluation": 0.006209135055541992,
-                "result_merge": 0.0003590583801269531,
-                "total": 12.3916494846344
+                "query_decomposition": 0.03942990303039551,
+                "static_query_evakluation": 0.13751673698425293,
+                "web_data_retrieval": 4.591814756393433,
+                "dynamic_query_evaluation": 0.005539894104003906,
+                "result_merge": 0.00034236907958984375,
+                "total": 4.774643659591675
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.008388996124267578,
-                    "searches": 9.571839809417725,
-                    "web_formatting": 0.0011701583862304688,
-                    "total": 9.581398963928223
+                    "init": 0.0042836666107177734,
+                    "searches": 3.3527941703796387,
+                    "web_formatting": 0.0007009506225585938,
+                    "total": 3.357778787612915
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 6.4373016357421875e-06,
+                    "updater_init": 5.7220458984375e-06,
                     "graph_computing": {
-                        "extraction": 0.0010547637939453125,
-                        "building": 2.6833438873291016,
-                        "builder_init": 0.011344671249389648,
-                        "microdata_adding": 2.661531686782837,
-                        "total": 2.6978185176849365
+                        "extraction": 0.00022721290588378906,
+                        "building": 1.2444603443145752,
+                        "builder_init": 0.005448818206787109,
+                        "microdata_adding": 1.2338087558746338,
+                        "total": 1.2489793300628662
                     },
-                    "property_access_init": 0.013046741485595703,
-                    "properties_update": 0.0007202625274658203,
-                    "total": 2.7116146087646484
+                    "property_access_init": 0.004344940185546875,
+                    "properties_update": 0.00023365020751953125,
+                    "total": 1.25358247756958
                 },
-                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.581398963928223,
-                    "microdata_extraction": 0.0010547637939453125,
-                    "storing": 2.661531686782837,
-                    "total": 12.243985414505005
+                    "url_finding": 3.357778787612915,
+                    "microdata_extraction": 0.00022721290588378906,
+                    "storing": 1.2338087558746338,
+                    "total": 4.591814756393433
                 },
-                "microdata_query_evaluation": 0.006077766418457031,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.005486965179443359,
+                "microdata_stats_computing": 7.152557373046875e-07
             }
         },
         {
             "query_id": 124,
             "pattern_id": 21,
-            "en_query": "Give me the publisher of the last book whose author is Antoine de Saint-Exup\u00e9ry",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "en_query": "Give me the publisher of the books whose genre is fiction and author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?publisher\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:literaryGenre <http://dbpedia.org/resource/Fiction> .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?microdata schema:publisher ?publisher .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -526,56 +526,56 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 3,
-                "number_of_web_results": 90,
-                "number_of_extracted_microdata": 16,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 5,
                 "number_of_query_results": 0
             },
-            "evaluation_time": 2.968780040740967,
+            "evaluation_time": 1.3693742752075195,
             "processing_times": {
-                "query_decomposition": 0.08880114555358887,
-                "static_query_evakluation": 0.10544729232788086,
-                "web_data_retrieval": 12.274024248123169,
-                "dynamic_query_evaluation": 0.006711483001708984,
-                "result_merge": 0.0002815723419189453,
-                "total": 12.475265741348267
+                "query_decomposition": 0.0402224063873291,
+                "static_query_evakluation": 0.13633418083190918,
+                "web_data_retrieval": 4.500428915023804,
+                "dynamic_query_evaluation": 0.00582122802734375,
+                "result_merge": 0.00026535987854003906,
+                "total": 4.683072090148926
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.002846240997314453,
-                    "searches": 9.571840286254883,
-                    "web_formatting": 0.00133514404296875,
-                    "total": 9.576021671295166
+                    "init": 0.003572702407836914,
+                    "searches": 3.3527944087982178,
+                    "web_formatting": 0.0004012584686279297,
+                    "total": 3.3567683696746826
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.9604644775390625e-06,
+                    "updater_init": 4.76837158203125e-06,
                     "graph_computing": {
-                        "extraction": 0.0009834766387939453,
-                        "building": 2.7180063724517822,
-                        "builder_init": 0.010616302490234375,
-                        "microdata_adding": 2.697019100189209,
-                        "total": 2.7315683364868164
+                        "extraction": 0.00018596649169921875,
+                        "building": 1.1521527767181396,
+                        "builder_init": 0.00445866584777832,
+                        "microdata_adding": 1.1434745788574219,
+                        "total": 1.1565589904785156
                     },
-                    "property_access_init": 0.012892961502075195,
-                    "properties_update": 0.0007104873657226562,
-                    "total": 2.7452003955841064
+                    "property_access_init": 0.0043141841888427734,
+                    "properties_update": 0.0002276897430419922,
+                    "total": 1.1611237525939941
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.576021671295166,
-                    "microdata_extraction": 0.0009834766387939453,
-                    "storing": 2.697019100189209,
-                    "total": 12.274024248123169
+                    "url_finding": 3.3567683696746826,
+                    "microdata_extraction": 0.00018596649169921875,
+                    "storing": 1.1434745788574219,
+                    "total": 4.500428915023804
                 },
-                "microdata_query_evaluation": 0.0065631866455078125,
+                "microdata_query_evaluation": 0.005770683288574219,
                 "microdata_stats_computing": 4.76837158203125e-07
             }
         },
         {
             "query_id": 125,
             "pattern_id": 22,
-            "en_query": "Give me the price and availability of the last book whose author is Antoine de Saint-Exup\u00e9ry",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "en_query": "Give me the price and availability of the books whose genre is fiction and author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price ?availability\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:literaryGenre <http://dbpedia.org/resource/Fiction> .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:price ?price .\n?offer schema:availability ?availability .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -597,11 +597,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nf2cad2379359479c9237f90c3cd853a8"
+                            "value": "Nd21637d786434f709a299d25bf86037c"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N183bbd4bab524f0aafc3ba48e0a97286"
+                            "value": "Ne01932689cf14d22976eba0b748cb030"
                         },
                         "price": {
                             "type": "uri",
@@ -616,56 +616,56 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 3,
-                "number_of_web_results": 90,
-                "number_of_extracted_microdata": 16,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 5,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 3.1526434421539307,
+            "evaluation_time": 1.4468715190887451,
             "processing_times": {
-                "query_decomposition": 0.0421755313873291,
-                "static_query_evakluation": 0.10180377960205078,
-                "web_data_retrieval": 12.458091020584106,
-                "dynamic_query_evaluation": 0.0076694488525390625,
-                "result_merge": 0.0003726482391357422,
-                "total": 12.610112428665161
+                "query_decomposition": 0.09609699249267578,
+                "static_query_evakluation": 0.13183259963989258,
+                "web_data_retrieval": 4.523983001708984,
+                "dynamic_query_evaluation": 0.0063953399658203125,
+                "result_merge": 0.00036787986755371094,
+                "total": 4.758675813674927
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.0032939910888671875,
-                    "searches": 9.571840286254883,
-                    "web_formatting": 0.0010609626770019531,
-                    "total": 9.576195240020752
+                    "init": 0.004634380340576172,
+                    "searches": 3.3527941703796387,
+                    "web_formatting": 0.0006651878356933594,
+                    "total": 3.358093738555908
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.0067901611328125e-06,
+                    "updater_init": 6.4373016357421875e-06,
                     "graph_computing": {
-                        "extraction": 0.000995635986328125,
-                        "building": 2.9526498317718506,
-                        "builder_init": 0.01123046875,
-                        "microdata_adding": 2.8809001445770264,
-                        "total": 2.9664199352264404
+                        "extraction": 0.0002002716064453125,
+                        "building": 1.1753344535827637,
+                        "builder_init": 0.005292654037475586,
+                        "microdata_adding": 1.1656889915466309,
+                        "total": 1.1850097179412842
                     },
-                    "property_access_init": 0.01275491714477539,
-                    "properties_update": 0.0006866455078125,
-                    "total": 2.9798848628997803
+                    "property_access_init": 0.0067331790924072266,
+                    "properties_update": 0.00022673606872558594,
+                    "total": 1.1919965744018555
                 },
-                "web_microdata_graph_update": 2.384185791015625e-07,
+                "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.576195240020752,
-                    "microdata_extraction": 0.000995635986328125,
-                    "storing": 2.8809001445770264,
-                    "total": 12.458091020584106
+                    "url_finding": 3.358093738555908,
+                    "microdata_extraction": 0.0002002716064453125,
+                    "storing": 1.1656889915466309,
+                    "total": 4.523983001708984
                 },
-                "microdata_query_evaluation": 0.007543325424194336,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.006338357925415039,
+                "microdata_stats_computing": 7.152557373046875e-07
             }
         },
         {
             "query_id": 126,
             "pattern_id": 23,
-            "en_query": "Give me the books available for the last book whose author is Antoine de Saint-Exup\u00e9ry",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "en_query": "Give me the books available for the books whose genre is fiction and author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?bookName\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:literaryGenre <http://dbpedia.org/resource/Fiction> .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?microdata schema:name ?bookName .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -686,11 +686,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "N3c8a1339459c41cdbda7e3f5120f9ee3"
+                            "value": "N5537ff19dd2b41ba814fcb57e64a6a06"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N51a7d82a53834bcf9589075e850d84a1"
+                            "value": "Nea2545c6f76148a7b4d85984bd9bce80"
                         },
                         "bookName": {
                             "type": "uri",
@@ -701,56 +701,56 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 3,
-                "number_of_web_results": 90,
-                "number_of_extracted_microdata": 16,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 5,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 3.0435309410095215,
+            "evaluation_time": 1.4310932159423828,
             "processing_times": {
-                "query_decomposition": 0.044721126556396484,
-                "static_query_evakluation": 0.1038827896118164,
-                "web_data_retrieval": 12.394973278045654,
-                "dynamic_query_evaluation": 0.007280111312866211,
-                "result_merge": 0.00045800209045410156,
-                "total": 12.551315307617188
+                "query_decomposition": 0.09882831573486328,
+                "static_query_evakluation": 0.12348031997680664,
+                "web_data_retrieval": 4.520505428314209,
+                "dynamic_query_evaluation": 0.00706934928894043,
+                "result_merge": 0.0003466606140136719,
+                "total": 4.750230073928833
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.0032472610473632812,
-                    "searches": 9.571840763092041,
-                    "web_formatting": 0.0011119842529296875,
-                    "total": 9.576200008392334
+                    "init": 0.004381418228149414,
+                    "searches": 3.3527941703796387,
+                    "web_formatting": 0.00044035911560058594,
+                    "total": 3.3576159477233887
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.0067901611328125e-06,
+                    "updater_init": 4.5299530029296875e-06,
                     "graph_computing": {
-                        "extraction": 0.0009860992431640625,
-                        "building": 2.838562488555908,
-                        "builder_init": 0.010568618774414062,
-                        "microdata_adding": 2.8177871704101562,
-                        "total": 2.852971076965332
+                        "extraction": 0.00018334388732910156,
+                        "building": 1.171797275543213,
+                        "builder_init": 0.0048334598541259766,
+                        "microdata_adding": 1.1627061367034912,
+                        "total": 1.1764533519744873
                     },
-                    "property_access_init": 0.012856006622314453,
-                    "properties_update": 0.00072479248046875,
-                    "total": 2.866576910018921
+                    "property_access_init": 0.0042722225189208984,
+                    "properties_update": 0.00023865699768066406,
+                    "total": 1.1809871196746826
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.576200008392334,
-                    "microdata_extraction": 0.0009860992431640625,
-                    "storing": 2.8177871704101562,
-                    "total": 12.394973278045654
+                    "url_finding": 3.3576159477233887,
+                    "microdata_extraction": 0.00018334388732910156,
+                    "storing": 1.1627061367034912,
+                    "total": 4.520505428314209
                 },
-                "microdata_query_evaluation": 0.0071489810943603516,
+                "microdata_query_evaluation": 0.00701594352722168,
                 "microdata_stats_computing": 4.76837158203125e-07
             }
         },
         {
             "query_id": 127,
             "pattern_id": 24,
-            "en_query": "Give me the price of the books available for the last book whose author is Antoine de Saint-Exup\u00e9ry",
-            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
+            "en_query": "Give me the price of the books available for the books whose genre is fiction and author is Antoine de Saint-Exup\u00e9ry",
+            "hybrid_query": "PREFIX dbo: <http://dbpedia.org/ontology/>\nPREFIX schema: <https://schema.org/>\nPREFIX md: <http://mekano.org/>\n\nSELECT DISTINCT ?book ?web ?microdata ?offer ?price\n\nWHERE {\n\n?book a dbo:Book .\n?book dbo:literaryGenre <http://dbpedia.org/resource/Fiction> .\n?book dbo:author <http://dbpedia.org/resource/Antoine_de_Saint-Exup\u00e9ry> .\n?web md:containsThing ?book .\n?web md:containsWord \"purchase\" .\n?web md:hasMicrodata ?microdata .\n?microdata schema:offers ?offer .\n?offer schema:availability ?availability .\nVALUES ?availability {\n \"https://schema.org/Instock\" \"http://schema.org/InStock\" \"https://schema.org/InStock\" \"InStock\" \n} .\n?offer schema:price ?price .\n\n}\nORDER BY ASC(?book)\nLIMIT 10",
             "obtained_data_query_result": {
                 "columns": [
                     "book",
@@ -771,11 +771,11 @@
                         },
                         "microdata": {
                             "type": "uri",
-                            "value": "Nb7c284e7ded34181aed1466f97d12583"
+                            "value": "N6e49ff922059470e8b26ef8ea646e29c"
                         },
                         "offer": {
                             "type": "uri",
-                            "value": "N0cb7772548f24059a6b24f74cdc3f3b8"
+                            "value": "N922a409b091545649bb95ce0988f9aae"
                         },
                         "price": {
                             "type": "uri",
@@ -786,49 +786,49 @@
             },
             "execution_mode": "cold",
             "result_stats": {
-                "number_of_static_results": 3,
-                "number_of_web_results": 90,
-                "number_of_extracted_microdata": 16,
+                "number_of_static_results": 1,
+                "number_of_web_results": 30,
+                "number_of_extracted_microdata": 5,
                 "number_of_query_results": 1
             },
-            "evaluation_time": 2.9467597007751465,
+            "evaluation_time": 1.9088244438171387,
             "processing_times": {
-                "query_decomposition": 0.09615421295166016,
-                "static_query_evakluation": 0.09256553649902344,
-                "web_data_retrieval": 12.252094507217407,
-                "dynamic_query_evaluation": 0.008132457733154297,
-                "result_merge": 0.0004897117614746094,
-                "total": 12.44943642616272
+                "query_decomposition": 0.10015988349914551,
+                "static_query_evakluation": 0.6645727157592773,
+                "web_data_retrieval": 4.453826904296875,
+                "dynamic_query_evaluation": 0.00623011589050293,
+                "result_merge": 0.00034165382385253906,
+                "total": 5.225131273269653
             },
             "deep_times": {
                 "web_query_evaluation": {
-                    "init": 0.003144979476928711,
-                    "searches": 9.571840286254883,
-                    "web_formatting": 0.001500844955444336,
-                    "total": 9.576486110687256
+                    "init": 0.0037386417388916016,
+                    "searches": 3.3527944087982178,
+                    "web_formatting": 0.0008935928344726562,
+                    "total": 3.357426643371582
                 },
                 "web_microdata_graph_generation": {
-                    "updater_init": 5.7220458984375e-06,
+                    "updater_init": 6.198883056640625e-06,
                     "graph_computing": {
-                        "extraction": 0.0009980201721191406,
-                        "building": 2.699704170227051,
-                        "builder_init": 0.014439821243286133,
-                        "microdata_adding": 2.6746103763580322,
-                        "total": 2.7137722969055176
+                        "extraction": 0.00019240379333496094,
+                        "building": 1.105189561843872,
+                        "builder_init": 0.004526615142822266,
+                        "microdata_adding": 1.096207857131958,
+                        "total": 1.1096255779266357
                     },
-                    "property_access_init": 0.013053178787231445,
-                    "properties_update": 0.0007169246673583984,
-                    "total": 2.727571964263916
+                    "property_access_init": 0.0043256282806396484,
+                    "properties_update": 0.0002338886260986328,
+                    "total": 1.1142091751098633
                 },
                 "web_microdata_graph_update": 0.0,
                 "web_data_retrieval": {
-                    "url_finding": 9.576486110687256,
-                    "microdata_extraction": 0.0009980201721191406,
-                    "storing": 2.6746103763580322,
-                    "total": 12.252094507217407
+                    "url_finding": 3.357426643371582,
+                    "microdata_extraction": 0.00019240379333496094,
+                    "storing": 1.096207857131958,
+                    "total": 4.453826904296875
                 },
-                "microdata_query_evaluation": 0.007992267608642578,
-                "microdata_stats_computing": 4.76837158203125e-07
+                "microdata_query_evaluation": 0.006173372268676758,
+                "microdata_stats_computing": 7.152557373046875e-07
             }
         }
     ]
